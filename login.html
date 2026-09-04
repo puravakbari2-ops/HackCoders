@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Sign In &amp; Registration — JanSahay AI</title>
+    <meta name="description" content="Sign in or register for JanSahay AI citizen portal to find personalized schemes, track benefits, and access government support.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+    <!-- Ambient glowing backdrop orbs -->
+    <div class="auth-glow-1"></div>
+    <div class="auth-glow-2"></div>
+
+    <!-- Header -->
+    <header class="auth-header">
+        <a href="index.html" class="brand" style="text-decoration: none;">
+            <div class="brand-logo">
+                <i class="fas fa-landmark-dome"></i>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">
+                    <span class="brand-jan">Jan</span><span class="brand-sahay">Sahay</span>
+                    <span class="brand-ai">AI</span>
+                </span>
+                <span class="brand-tagline">National Citizen Scheme Intelligence</span>
+            </div>
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="theme-toggle" id="authThemeToggle" title="Toggle Theme" style="cursor: pointer;">
+                <i class="fas fa-sun"></i>
+            </div>
+            <a href="index.html" class="auth-back-link">
+                <i class="fas fa-arrow-left"></i> Back to Schemes
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Auth Container -->
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-card-badge">
+                <i class="fas fa-shield-halved"></i> Secure Citizen Authentication
+            </div>
+            <h1 class="auth-title" id="authHeaderTitle">Welcome Back</h1>
+            <p class="auth-subtitle" id="authHeaderSubtitle">
+                Access your personalized eligibility profile, saved schemes, and application tracker.
+            </p>
+
+            <!-- Mode Tabs -->
+            <div class="auth-tabs" role="tablist">
+                <button class="auth-tab-btn active" id="tabSignInBtn" role="tab" aria-selected="true">
+                    <i class="fas fa-lock" style="margin-right: 6px;"></i> Sign In
+                </button>
+                <button class="auth-tab-btn" id="tabSignUpBtn" role="tab" aria-selected="false">
+                    <i class="fas fa-user-plus" style="margin-right: 6px;"></i> New Citizen Register
+                </button>
+            </div>
+
+            <!-- TAB 1: SIGN IN FORM -->
+            <div id="signInContainer">
+                <!-- Government Fast SSO Integration -->
+                <div class="sso-group">
+                    <button type="button" class="btn-sso btn-sso-meripehchaan" id="meriPehchaanBtn" title="National Single Sign-On">
+                        <i class="fas fa-fingerprint" style="color: #ea580c; font-size: 1.1rem;"></i>
+                        <span>Continue with <strong>MeriPehchaan (SSO)</strong></span>
+                    </button>
+                    <button type="button" class="btn-sso btn-sso-aadhaar" id="aadhaarOtpBtn" title="Aadhaar Linked Mobile Verification">
+                        <i class="fas fa-mobile-screen" style="color: var(--cyan); font-size: 1.1rem;"></i>
+                        <span>Instant Login via <strong>Aadhaar OTP</strong></span>
+                    </button>
+                </div>
+
+                <div class="auth-divider">
+                    <span>or continue with email</span>
+                </div>
+
+                <!-- Hackathon 1-Click Demo Citizen Login Box -->
+                <div class="demo-badge-box">
+                    <div class="demo-badge-box-text">
+                        <i class="fas fa-bolt"></i> <strong>Hackathon Demo Evaluator?</strong>
+                    </div>
+                    <div style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.3;">
+                        Click below to instantly login as a verified citizen with mock schemes history and eligibility credentials.
+                    </div>
+                    <button type="button" class="btn-demo-quickfill" id="demoCitizenBtn">
+                        <i class="fas fa-user-check"></i> 1-Click Login (Priya Sharma, Maharashtra)
+                    </button>
+                </div>
+
+                <!-- Sign In Form -->
+                <form id="signInForm" autocomplete="on">
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="loginIdentifier">Email or Mobile Number</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-envelope auth-input-icon"></i>
+                            <input type="text" id="loginIdentifier" class="auth-input" placeholder="e.g. priya.sharma@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="loginPassword">Password</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-lock auth-input-icon"></i>
+                            <input type="password" id="loginPassword" class="auth-input" placeholder="••••••••" required>
+                            <button type="button" class="auth-password-toggle" id="toggleLoginPassword" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="auth-options-row">
+                        <label class="auth-checkbox-label">
+                            <input type="checkbox" id="rememberMe" checked>
+                            <span>Remember this device</span>
+                        </label>
+                        <a href="javascript:void(0)" class="auth-link" id="forgotPasswordLink">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-auth-submit" id="submitSignInBtn">
+                        <span>Sign In to Citizen Portal</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    Don't have a citizen account? <a href="javascript:void(0)" id="switchSignUpLink">Register here</a>
+                </div>
+            </div>
+
+            <!-- TAB 2: SIGN UP / REGISTER FORM -->
+            <div id="signUpContainer" style="display: none;">
+                <form id="signUpForm" autocomplete="on">
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="registerName">Full Name (as in Aadhaar/Govt ID)</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-user auth-input-icon"></i>
+                            <input type="text" id="registerName" class="auth-input" placeholder="e.g. Amit Kumar Patel" required>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="registerEmail">Email Address</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-envelope auth-input-icon"></i>
+                            <input type="email" id="registerEmail" class="auth-input" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="registerMobile">Mobile Number</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-phone auth-input-icon"></i>
+                            <input type="tel" id="registerMobile" class="auth-input" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="registerState">State / Union Territory</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-map-pin auth-input-icon"></i>
+                            <select id="registerState" class="auth-select" required>
+                                <option value="" disabled selected>Select your State/UT</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="registerPassword">Create Password</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fas fa-lock auth-input-icon"></i>
+                            <input type="password" id="registerPassword" class="auth-input" placeholder="At least 6 characters" minlength="6" required>
+                            <button type="button" class="auth-password-toggle" id="toggleRegisterPassword" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="auth-options-row">
+                        <label class="auth-checkbox-label">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span>I agree to the <a href="javascript:void(0)" class="auth-link">Terms</a> &amp; <a href="javascript:void(0)" class="auth-link">Privacy Policy</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-auth-submit" id="submitSignUpBtn">
+                        <span>Create Citizen Account</span>
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    Already registered? <a href="javascript:void(0)" id="switchSignInLink">Sign In here</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Authentication JavaScript Logic -->
+    <script>
+        // Tab Switching
+        const tabSignInBtn = document.getElementById('tabSignInBtn');
+        const tabSignUpBtn = document.getElementById('tabSignUpBtn');
+        const signInContainer = document.getElementById('signInContainer');
+        const signUpContainer = document.getElementById('signUpContainer');
+        const authHeaderTitle = document.getElementById('authHeaderTitle');
+        const authHeaderSubtitle = document.getElementById('authHeaderSubtitle');
+        const switchSignUpLink = document.getElementById('switchSignUpLink');
+        const switchSignInLink = document.getElementById('switchSignInLink');
+
+        function setMode(mode) {
+            if (mode === 'signup') {
+                tabSignInBtn.classList.remove('active');
+                tabSignInBtn.setAttribute('aria-selected', 'false');
+                tabSignUpBtn.classList.add('active');
+                tabSignUpBtn.setAttribute('aria-selected', 'true');
+                signInContainer.style.display = 'none';
+                signUpContainer.style.display = 'block';
+                authHeaderTitle.textContent = 'Register Citizen Profile';
+                authHeaderSubtitle.textContent = 'Create your account to unlock personalized scheme matching, auto-eligibility checks, and document vault.';
+            } else {
+                tabSignUpBtn.classList.remove('active');
+                tabSignUpBtn.setAttribute('aria-selected', 'false');
+                tabSignInBtn.classList.add('active');
+                tabSignInBtn.setAttribute('aria-selected', 'true');
+                signUpContainer.style.display = 'none';
+                signInContainer.style.display = 'block';
+                authHeaderTitle.textContent = 'Welcome Back';
+                authHeaderSubtitle.textContent = 'Access your personalized eligibility profile, saved schemes, and application tracker.';
+            }
+        }
+
+        tabSignInBtn.addEventListener('click', () => setMode('signin'));
+        tabSignUpBtn.addEventListener('click', () => setMode('signup'));
+        switchSignUpLink?.addEventListener('click', () => setMode('signup'));
+        switchSignInLink?.addEventListener('click', () => setMode('signin'));
+
+        // Check if URL has ?mode=register
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('mode') === 'register' || urlParams.get('mode') === 'signup') {
+            setMode('signup');
+        }
+
+        // Password Visibility Toggles
+        function setupPasswordToggle(toggleBtnId, inputId) {
+            const toggleBtn = document.getElementById(toggleBtnId);
+            const input = document.getElementById(inputId);
+            if (!toggleBtn || !input) return;
+            toggleBtn.addEventListener('click', () => {
+                const isPassword = input.getAttribute('type') === 'password';
+                input.setAttribute('type', isPassword ? 'text' : 'password');
+                toggleBtn.innerHTML = isPassword ? '<i class="fas fa-eye-slash"></i>' : '<i class="fas fa-eye"></i>';
+            });
+        }
+        setupPasswordToggle('toggleLoginPassword', 'loginPassword');
+        setupPasswordToggle('toggleRegisterPassword', 'registerPassword');
+
+        // Toast Helper
+        function showNotification(msg, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '30px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%) translateY(20px)';
+            toast.style.background = type === 'success' ? '#064e3b' : (type === 'danger' ? '#7f1d1d' : '#0f172a');
+            toast.style.color = '#fff';
+            toast.style.border = type === 'success' ? '1px solid #10b981' : (type === 'danger' ? '1px solid #ef4444' : '1px solid #7c3aed');
+            toast.style.padding = '12px 24px';
+            toast.style.borderRadius = '30px';
+            toast.style.boxShadow = '0 10px 30px rgba(0,0,0,0.6)';
+            toast.style.zIndex = '9999';
+            toast.style.display = 'flex';
+            toast.style.alignItems = 'center';
+            toast.style.gap = '10px';
+            toast.style.fontSize = '0.9rem';
+            toast.style.fontWeight = '500';
+            toast.style.opacity = '0';
+            toast.style.transition = 'all 0.3s ease';
+
+            const icon = type === 'success' ? 'fa-circle-check' : (type === 'danger' ? 'fa-circle-exclamation' : 'fa-circle-info');
+            toast.innerHTML = `<i class="fas ${icon}" style="color: ${type === 'success' ? '#34d399' : '#a78bfa'}"></i> <span>${msg}</span>`;
+            document.body.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateX(-50%) translateY(0)';
+            });
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(-50%) translateY(20px)';
+                setTimeout(() => toast.remove(), 400);
+            }, 3500);
+        }
+
+        // Save session & redirect
+        function completeAuthentication(user) {
+            localStorage.setItem('jansahay_user', JSON.stringify(user));
+            showNotification(`Welcome, ${user.name}! Redirecting to your dashboard...`, 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1200);
+        }
+
+        // Sign In Submission
+        document.getElementById('signInForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const identifier = document.getElementById('loginIdentifier').value.trim();
+            const btn = document.getElementById('submitSignInBtn');
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Verifying credentials...`;
+
+            setTimeout(() => {
+                const user = {
+                    name: identifier.split('@')[0] || "Citizen User",
+                    email: identifier.includes('@') ? identifier : `${identifier}@jansahay.in`,
+                    state: "Maharashtra",
+                    role: "Verified Citizen",
+                    token: "mock_jwt_token_" + Date.now(),
+                    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                };
+                completeAuthentication(user);
+            }, 800);
+        });
+
+        // Sign Up Submission
+        document.getElementById('signUpForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('registerName').value.trim();
+            const email = document.getElementById('registerEmail').value.trim();
+            const state = document.getElementById('registerState').value;
+            const mobile = document.getElementById('registerMobile').value.trim();
+            const btn = document.getElementById('submitSignUpBtn');
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creating citizen account...`;
+
+            setTimeout(() => {
+                const user = {
+                    name: name,
+                    email: email,
+                    mobile: mobile,
+                    state: state,
+                    role: "Registered Citizen",
+                    token: "mock_jwt_token_" + Date.now(),
+                    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80"
+                };
+                completeAuthentication(user);
+            }, 900);
+        });
+
+        // 1-Click Demo Login for Evaluators
+        document.getElementById('demoCitizenBtn')?.addEventListener('click', () => {
+            const demoUser = {
+                name: "Priya Sharma",
+                email: "priya.sharma@jansahay.gov.in",
+                state: "Maharashtra",
+                role: "Verified Citizen",
+                phone: "+91 98765 43210",
+                token: "demo_verified_citizen_token_2026",
+                avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+            };
+            completeAuthentication(demoUser);
+        });
+
+        // MeriPehchaan (National SSO) Simulation
+        document.getElementById('meriPehchaanBtn')?.addEventListener('click', () => {
+            showNotification('Connecting to MeriPehchaan National Single Sign-On gateway...', 'info');
+            setTimeout(() => {
+                const ssoUser = {
+                    name: "Rajesh Verma",
+                    email: "rajesh.verma@meripehchaan.gov.in",
+                    state: "Uttar Pradesh",
+                    role: "DigiLocker Verified Citizen",
+                    token: "meripehchaan_sso_token_" + Date.now(),
+                    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                };
+                completeAuthentication(ssoUser);
+            }, 1000);
+        });
+
+        // Aadhaar OTP Simulation
+        document.getElementById('aadhaarOtpBtn')?.addEventListener('click', () => {
+            const mobileOrAadhaar = prompt("Enter your 12-digit Aadhaar Number or linked Mobile Number:", "9876543210");
+            if (mobileOrAadhaar) {
+                showNotification('OTP sent to your registered mobile number! Verifying OTP 849201...', 'info');
+                setTimeout(() => {
+                    const aadhaarUser = {
+                        name: "Ananya Iyer",
+                        email: "ananya.iyer@uidai.gov.in",
+                        state: "Tamil Nadu",
+                        role: "Aadhaar e-KYC Verified Citizen",
+                        token: "aadhaar_otp_token_" + Date.now(),
+                        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+                    };
+                    completeAuthentication(aadhaarUser);
+                }, 1200);
+            }
+        });
+
+        // Forgot Password
+        document.getElementById('forgotPasswordLink')?.addEventListener('click', () => {
+            const email = prompt("Enter your registered email address to receive password reset link:", "citizen@jansahay.gov.in");
+            if (email) {
+                showNotification(`Password reset instructions have been dispatched to ${email}`, 'success');
+            }
+        });
+
+        // Theme Toggle on Auth Page
+        const authThemeToggle = document.getElementById('authThemeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'light') {
+            authThemeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        authThemeToggle?.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            authThemeToggle.innerHTML = next === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
+</body>
+
+</html>
