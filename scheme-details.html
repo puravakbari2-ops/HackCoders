@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="JanSahay AI - Detailed Government Scheme Information, Benefits, Eligibility, Application Process, Required Documents and FAQs.">
+    <title id="pageTitle">Scheme Details - JanSahay AI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="scheme-details-body">
+
+    <!-- Announcement Ticker -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span><i class="fas fa-bolt"></i> Official Government Welfare Scheme Details · Verified from myScheme Portal</span>
+            <div class="top-bar-right">
+                <a href="#"><i class="fas fa-universal-access"></i> Accessibility</a>
+                <a href="#"><i class="fas fa-language"></i> हिन्दी</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="brand-link" style="text-decoration:none; display:flex; align-items:center;">
+                    <div class="brand-logos">
+                        <div class="emblem-wrapper"></div>
+                        <div class="brand-divider"></div>
+                        <div class="brand-name">
+                            <span class="brand-jan">Jan</span><span class="brand-sahay">Sahay</span> <span class="brand-ai">AI</span>
+                        </div>
+                        <div class="brand-divider"></div>
+                        <div class="powered-badge">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Verified Info</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="navbar-search">
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="Search other schemes..." id="navSearchInput">
+                    <button class="search-btn" id="navSearchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="navbar-actions">
+                <a href="index.html" class="btn-nav-back">
+                    <i class="fas fa-arrow-left"></i> <span>Back to Schemes</span>
+                </a>
+                <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <button class="btn-sign-in" id="signInBtn" onclick="window.location.href='login.html'">
+                    Sign In <i class="fas fa-arrow-right-long"></i>
+                </button>
+                <div class="user-profile-menu" id="userProfileMenu" style="display: none;">
+                    <div class="user-chip" id="userChipDropdownBtn">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Citizen Avatar" class="user-avatar-img" id="navUserAvatar">
+                        <div class="user-info-text">
+                            <span class="user-name" id="navUserName">Citizen</span>
+                            <span class="user-badge" id="navUserBadge"><i class="fas fa-circle-check"></i> Verified</span>
+                        </div>
+                        <i class="fas fa-chevron-down user-caret"></i>
+                    </div>
+                    <div class="user-dropdown-menu" id="userDropdownMenu">
+                        <div class="dropdown-header">
+                            <strong id="dropdownFullName">Citizen</strong>
+                            <small id="dropdownEmail">citizen@jansahay.gov.in</small>
+                        </div>
+                        <a href="index.html" class="dropdown-item"><i class="fas fa-user-check"></i> Eligibility Profile</a>
+                        <a href="javascript:void(0)" class="dropdown-item" onclick="if(window.showToast) window.showToast('You have saved schemes in your vault.', 'info');"><i class="fas fa-bookmark"></i> Saved Schemes</a>
+                        <a href="javascript:void(0)" class="dropdown-item" onclick="if(window.showToast) window.showToast('Application is Under Verification at Ministry.', 'info');"><i class="fas fa-file-lines"></i> Track Applications</a>
+                        <div class="dropdown-divider"></div>
+                        <button type="button" class="dropdown-item text-danger" id="logoutBtn"><i class="fas fa-arrow-right-from-bracket"></i> Sign Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="scheme-details-container">
+        
+        <!-- Breadcrumb & Back Button -->
+        <div class="breadcrumb-bar">
+            <div class="breadcrumbs">
+                <a href="index.html"><i class="fas fa-house"></i> Home</a>
+                <i class="fas fa-chevron-right breadcrumb-separator"></i>
+                <a href="index.html" id="breadcrumbCategory">All Schemes</a>
+                <i class="fas fa-chevron-right breadcrumb-separator"></i>
+                <span class="breadcrumb-current" id="breadcrumbTitle">Scheme Details</span>
+            </div>
+            <button class="btn-action-ghost" onclick="history.back() || (window.location.href='index.html')">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </div>
+
+        <!-- Scheme Hero Card -->
+        <section class="scheme-hero-card" id="schemeHero">
+            <div class="scheme-hero-header">
+                <div class="scheme-badges">
+                    <span class="badge-tag badge-level" id="heroLevelBadge"><i class="fas fa-landmark"></i> Central Scheme</span>
+                    <span class="badge-tag badge-category" id="heroCategoryBadge"><i class="fas fa-layer-group"></i> Banking & Finance</span>
+                    <span class="badge-tag badge-state" id="heroStateBadge" style="display:none;"><i class="fas fa-location-dot"></i> State</span>
+                    <span class="badge-tag badge-match" id="heroMatchBadge"><i class="fas fa-star"></i> High Eligibility Match</span>
+                </div>
+                <div class="scheme-hero-actions">
+                    <button class="btn-hero-action" id="btnShare" title="Share Scheme">
+                        <i class="fas fa-share-nodes"></i> <span>Share</span>
+                    </button>
+                    <button class="btn-hero-action" id="btnBookmark" title="Save to Vault">
+                        <i class="far fa-bookmark"></i> <span>Save</span>
+                    </button>
+                    <button class="btn-hero-action" id="btnPrint" title="Print Scheme Summary">
+                        <i class="fas fa-print"></i> <span>Print</span>
+                    </button>
+                </div>
+            </div>
+
+            <h1 class="scheme-hero-title" id="heroTitle">Pradhan Mantri Jan Dhan Yojana (PMJDY)</h1>
+            <div class="scheme-hero-ministry" id="heroMinistry">
+                <i class="fas fa-building-columns"></i> <span>Ministry of Finance · Government of India</span>
+            </div>
+
+            <p class="scheme-hero-lead" id="heroLead">
+                National Mission for Financial Inclusion to ensure access to financial services, namely, a basic savings & deposit accounts, remittance, credit, insurance, and pension in an affordable manner.
+            </p>
+
+            <div class="scheme-highlights-grid" id="heroHighlights">
+                <!-- Injected highlights pills -->
+            </div>
+
+            <div class="scheme-hero-footer">
+                <div class="hero-dbt-badge">
+                    <i class="fas fa-check-double"></i> <span>DBT (Direct Benefit Transfer) Enabled & Aadhaar Linked</span>
+                </div>
+                <div class="hero-cta-group">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-apply-primary" id="heroApplyBtn">
+                        Apply on Official Portal <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Layout: Content Tabs + Sticky Quick Info Sidebar -->
+        <div class="scheme-content-layout">
+            
+            <!-- Left: Tab Navigation & Tab Panes -->
+            <div class="scheme-main-col">
+                
+                <!-- Sticky Section Tab Bar -->
+                <div class="scheme-nav-tabs" id="schemeTabs">
+                    <button class="scheme-tab-btn active" data-tab="details">
+                        <i class="fas fa-circle-info"></i> Scheme Details
+                    </button>
+                    <button class="scheme-tab-btn" data-tab="benefits">
+                        <i class="fas fa-gift"></i> Benefits
+                    </button>
+                    <button class="scheme-tab-btn" data-tab="eligibility">
+                        <i class="fas fa-user-check"></i> Eligibility
+                    </button>
+                    <button class="scheme-tab-btn" data-tab="process">
+                        <i class="fas fa-list-check"></i> Application Process
+                    </button>
+                    <button class="scheme-tab-btn" data-tab="documents">
+                        <i class="fas fa-file-shield"></i> Documents Required
+                    </button>
+                    <button class="scheme-tab-btn" data-tab="faqs">
+                        <i class="fas fa-circle-question"></i> FAQs
+                    </button>
+                </div>
+
+                <!-- Tab 1: Scheme Details -->
+                <div class="scheme-tab-pane active" id="pane-details">
+                    <div class="pane-card">
+                        <h2 class="pane-title"><i class="fas fa-circle-info text-violet"></i> Scheme Overview & Details</h2>
+                        <div class="pane-body" id="detailsContent">
+                            <!-- Injected content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Benefits -->
+                <div class="scheme-tab-pane" id="pane-benefits">
+                    <div class="pane-card">
+                        <h2 class="pane-title"><i class="fas fa-gift text-cyan"></i> Benefits & Coverage</h2>
+                        <div class="pane-body" id="benefitsContent">
+                            <!-- Injected content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Eligibility Criteria -->
+                <div class="scheme-tab-pane" id="pane-eligibility">
+                    <div class="pane-card">
+                        <h2 class="pane-title"><i class="fas fa-user-check text-emerald"></i> Eligibility Criteria</h2>
+                        <div class="pane-body" id="eligibilityContent">
+                            <!-- Injected content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Application Process -->
+                <div class="scheme-tab-pane" id="pane-process">
+                    <div class="pane-card">
+                        <h2 class="pane-title"><i class="fas fa-list-check text-pink"></i> Step-by-Step Application Process</h2>
+                        <div class="pane-body" id="processContent">
+                            <!-- Injected content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Documents Required -->
+                <div class="scheme-tab-pane" id="pane-documents">
+                    <div class="pane-card">
+                        <h2 class="pane-title"><i class="fas fa-file-shield text-violet"></i> Documents Required</h2>
+                        <div class="pane-body" id="documentsContent">
+                            <!-- Injected content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 6: FAQs -->
+                <div class="scheme-tab-pane" id="pane-faqs">
+                    <div class="pane-card">
+                        <h2 class="pane-title"><i class="fas fa-circle-question text-cyan"></i> Frequently Asked Questions (FAQs)</h2>
+                        <p class="pane-subtitle">Official answers to the most common questions regarding this scheme.</p>
+                        <div class="faqs-accordion" id="faqsContent">
+                            <!-- Injected FAQs -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Official Sources & Helpdesk Note -->
+                <div class="sources-banner">
+                    <div class="sources-icon"><i class="fas fa-shield-check"></i></div>
+                    <div class="sources-text">
+                        <strong>Official Government Data Verification:</strong>
+                        <p>All information provided on this page is aligned with official Gazette notifications, Central & State Government rules, and the <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer">myScheme Portal (Government of India)</a>. Always verify application deadlines and documents with the official nodal department.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Quick Facts Sidebar & Related Schemes -->
+            <aside class="scheme-sidebar">
+                
+                <!-- Quick Summary Card -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title"><i class="fas fa-bolt text-violet"></i> Quick Facts</h3>
+                    <ul class="quick-facts-list" id="quickFactsList">
+                        <!-- Injected -->
+                    </ul>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-sidebar-apply" id="sidebarApplyBtn">
+                        Apply on Official Portal <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <!-- Eligibility Match Checker Card -->
+                <div class="sidebar-card match-checker-card">
+                    <div class="match-score-header">
+                        <div>
+                            <span class="match-label">Your Match Score</span>
+                            <div class="match-percentage" id="sidebarMatchScore">95%</div>
+                        </div>
+                        <div class="match-icon-circle"><i class="fas fa-bullseye"></i></div>
+                    </div>
+                    <p class="match-explanation" id="sidebarMatchDesc">
+                        Based on Indian residency, standard age eligibility, and identity verification requirements.
+                    </p>
+                    <a href="index.html" class="btn-retake-quiz">
+                        <i class="fas fa-sliders"></i> Check Profile Eligibility
+                    </a>
+                </div>
+
+                <!-- Related Schemes Card -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title"><i class="fas fa-sparkles text-cyan"></i> Similar Schemes</h3>
+                    <div class="related-schemes-list" id="relatedSchemesList">
+                        <!-- Injected related schemes -->
+                    </div>
+                </div>
+
+                <!-- Citizen Helpdesk Card -->
+                <div class="sidebar-card helpdesk-card">
+                    <h3 class="sidebar-title"><i class="fas fa-headset text-pink"></i> Need Assistance?</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">
+                        Have questions about applying or documents? Use JanSahay AI citizen assistant for instant guidance.
+                    </p>
+                    <a href="index.html" class="btn-ask-ai">
+                        <i class="fas fa-robot"></i> Ask JanSahay AI Assistant
+                    </a>
+                </div>
+
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="schemes-data.js"></script>
+    <script src="scheme-details.js"></script>
+</body>
+
+</html>

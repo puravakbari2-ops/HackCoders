@@ -70,43 +70,14 @@
 
             <!-- TAB 1: SIGN IN FORM -->
             <div id="signInContainer">
-                <!-- Government Fast SSO Integration -->
-                <div class="sso-group">
-                    <button type="button" class="btn-sso btn-sso-meripehchaan" id="meriPehchaanBtn" title="National Single Sign-On">
-                        <i class="fas fa-fingerprint" style="color: #ea580c; font-size: 1.1rem;"></i>
-                        <span>Continue with <strong>MeriPehchaan (SSO)</strong></span>
-                    </button>
-                    <button type="button" class="btn-sso btn-sso-aadhaar" id="aadhaarOtpBtn" title="Aadhaar Linked Mobile Verification">
-                        <i class="fas fa-mobile-screen" style="color: var(--cyan); font-size: 1.1rem;"></i>
-                        <span>Instant Login via <strong>Aadhaar OTP</strong></span>
-                    </button>
-                </div>
-
-                <div class="auth-divider">
-                    <span>or continue with email</span>
-                </div>
-
-                <!-- Hackathon 1-Click Demo Citizen Login Box -->
-                <div class="demo-badge-box">
-                    <div class="demo-badge-box-text">
-                        <i class="fas fa-bolt"></i> <strong>Hackathon Demo Evaluator?</strong>
-                    </div>
-                    <div style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.3;">
-                        Click below to instantly login as a verified citizen with mock schemes history and eligibility credentials.
-                    </div>
-                    <button type="button" class="btn-demo-quickfill" id="demoCitizenBtn">
-                        <i class="fas fa-user-check"></i> 1-Click Login (Priya Sharma, Maharashtra)
-                    </button>
-                </div>
-
                 <!-- Sign In Form -->
                 <form id="signInForm" autocomplete="on">
                     <div class="auth-form-group">
-                        <label class="auth-label" for="loginIdentifier">Email or Mobile Number</label>
+                        <label class="auth-label" for="loginEmail">Email Address</label>
                         <div class="auth-input-wrapper">
                             <i class="fas fa-envelope auth-input-icon"></i>
-                            <input type="text" id="loginIdentifier" class="auth-input" placeholder="e.g. priya.sharma@example.com" required>
-                        </div>
+                            <input type="email" id="loginEmail" class="auth-input" placeholder="e.g. priya.sharma@example.com" required autocomplete="username">
+                            </div>
                     </div>
 
                     <div class="auth-form-group">
@@ -341,115 +312,158 @@
             }, 3500);
         }
 
+        // Registered Citizens Storage & Authentication
+        const CITIZENS_STORAGE_KEY = 'jansahay_registered_citizens';
+
+        function getRegisteredCitizens() {
+            try {
+                const stored = localStorage.getItem(CITIZENS_STORAGE_KEY);
+                if (stored) {
+                    const parsed = JSON.parse(stored);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        return parsed;
+                    }
+                }
+            } catch (err) {
+                console.error('Error reading citizens data:', err);
+            }
+
+            // Seed default demo citizen account
+            const defaultCitizens = [
+                {
+                    name: "Priya Sharma",
+                    email: "priya.sharma@example.com",
+                    password: "password123",
+                    mobile: "9876543210",
+                    state: "Maharashtra",
+                    role: "Verified Citizen",
+                    token: "demo_verified_citizen_token_2026",
+                    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+                    registeredAt: new Date().toISOString()
+                }
+            ];
+            localStorage.setItem(CITIZENS_STORAGE_KEY, JSON.stringify(defaultCitizens));
+            return defaultCitizens;
+        }
+
+        function saveRegisteredCitizens(citizens) {
+            localStorage.setItem(CITIZENS_STORAGE_KEY, JSON.stringify(citizens));
+        }
+
+        // Initialize citizen storage
+        getRegisteredCitizens();
+
         // Save session & redirect
         function completeAuthentication(user) {
-            localStorage.setItem('jansahay_user', JSON.stringify(user));
+            const sessionUser = {
+                name: user.name,
+                email: user.email,
+                mobile: user.mobile,
+                state: user.state,
+                role: user.role || "Registered Citizen",
+                token: user.token || ("mock_jwt_token_" + Date.now()),
+                avatar: user.avatar || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80"
+            };
+            localStorage.setItem('jansahay_user', JSON.stringify(sessionUser));
             showNotification(`Welcome, ${user.name}! Redirecting to your dashboard...`, 'success');
             setTimeout(() => {
                 window.location.href = 'index.html';
             }, 1200);
         }
 
-        // Sign In Submission
+        // Sign In Submission - strictly Email and Password
         document.getElementById('signInForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            const identifier = document.getElementById('loginIdentifier').value.trim();
+            const emailInput = document.getElementById('loginEmail');
+            const passwordInput = document.getElementById('loginPassword');
+            const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+            const password = passwordInput ? passwordInput.value : '';
             const btn = document.getElementById('submitSignInBtn');
+
             btn.disabled = true;
             btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Verifying credentials...`;
 
             setTimeout(() => {
-                const user = {
-                    name: identifier.split('@')[0] || "Citizen User",
-                    email: identifier.includes('@') ? identifier : `${identifier}@jansahay.in`,
-                    state: "Maharashtra",
-                    role: "Verified Citizen",
-                    token: "mock_jwt_token_" + Date.now(),
-                    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
-                };
-                completeAuthentication(user);
-            }, 800);
+                const citizens = getRegisteredCitizens();
+                const matchedCitizen = citizens.find(c => c.email.toLowerCase() === email);
+
+                if (!matchedCitizen) {
+                    btn.disabled = false;
+                    btn.innerHTML = `<span>Sign In to Citizen Portal</span> <i class="fas fa-arrow-right"></i>`;
+                    showNotification('No citizen account found with this email. Please register first under New Citizen Register.', 'danger');
+                    return;
+                }
+
+                if (matchedCitizen.password !== password) {
+                    btn.disabled = false;
+                    btn.innerHTML = `<span>Sign In to Citizen Portal</span> <i class="fas fa-arrow-right"></i>`;
+                    showNotification('Incorrect password. Please enter the password you created during registration.', 'danger');
+                    return;
+                }
+
+                completeAuthentication(matchedCitizen);
+            }, 750);
         });
 
-        // Sign Up Submission
+        // Sign Up / New Citizen Register Submission
         document.getElementById('signUpForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('registerName').value.trim();
-            const email = document.getElementById('registerEmail').value.trim();
+            const email = document.getElementById('registerEmail').value.trim().toLowerCase();
             const state = document.getElementById('registerState').value;
             const mobile = document.getElementById('registerMobile').value.trim();
+            const password = document.getElementById('registerPassword').value;
             const btn = document.getElementById('submitSignUpBtn');
+
+            const citizens = getRegisteredCitizens();
+            const existingCitizen = citizens.find(c => c.email.toLowerCase() === email);
+
+            if (existingCitizen) {
+                showNotification('An account with this email already exists. Switching to Sign In...', 'danger');
+                setTimeout(() => {
+                    setMode('signin');
+                    const loginEmail = document.getElementById('loginEmail');
+                    if (loginEmail) loginEmail.value = email;
+                    document.getElementById('loginPassword')?.focus();
+                }, 1200);
+                return;
+            }
+
             btn.disabled = true;
             btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creating citizen account...`;
 
             setTimeout(() => {
-                const user = {
+                const newCitizen = {
                     name: name,
                     email: email,
                     mobile: mobile,
                     state: state,
+                    password: password,
                     role: "Registered Citizen",
                     token: "mock_jwt_token_" + Date.now(),
-                    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80"
+                    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80",
+                    registeredAt: new Date().toISOString()
                 };
-                completeAuthentication(user);
+
+                citizens.push(newCitizen);
+                saveRegisteredCitizens(citizens);
+
+                completeAuthentication(newCitizen);
             }, 900);
         });
 
-        // 1-Click Demo Login for Evaluators
-        document.getElementById('demoCitizenBtn')?.addEventListener('click', () => {
-            const demoUser = {
-                name: "Priya Sharma",
-                email: "priya.sharma@jansahay.gov.in",
-                state: "Maharashtra",
-                role: "Verified Citizen",
-                phone: "+91 98765 43210",
-                token: "demo_verified_citizen_token_2026",
-                avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
-            };
-            completeAuthentication(demoUser);
-        });
 
-        // MeriPehchaan (National SSO) Simulation
-        document.getElementById('meriPehchaanBtn')?.addEventListener('click', () => {
-            showNotification('Connecting to MeriPehchaan National Single Sign-On gateway...', 'info');
-            setTimeout(() => {
-                const ssoUser = {
-                    name: "Rajesh Verma",
-                    email: "rajesh.verma@meripehchaan.gov.in",
-                    state: "Uttar Pradesh",
-                    role: "DigiLocker Verified Citizen",
-                    token: "meripehchaan_sso_token_" + Date.now(),
-                    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
-                };
-                completeAuthentication(ssoUser);
-            }, 1000);
-        });
-
-        // Aadhaar OTP Simulation
-        document.getElementById('aadhaarOtpBtn')?.addEventListener('click', () => {
-            const mobileOrAadhaar = prompt("Enter your 12-digit Aadhaar Number or linked Mobile Number:", "9876543210");
-            if (mobileOrAadhaar) {
-                showNotification('OTP sent to your registered mobile number! Verifying OTP 849201...', 'info');
-                setTimeout(() => {
-                    const aadhaarUser = {
-                        name: "Ananya Iyer",
-                        email: "ananya.iyer@uidai.gov.in",
-                        state: "Tamil Nadu",
-                        role: "Aadhaar e-KYC Verified Citizen",
-                        token: "aadhaar_otp_token_" + Date.now(),
-                        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
-                    };
-                    completeAuthentication(aadhaarUser);
-                }, 1200);
-            }
-        });
-
-        // Forgot Password
+        // Forgot Password Recovery
         document.getElementById('forgotPasswordLink')?.addEventListener('click', () => {
-            const email = prompt("Enter your registered email address to receive password reset link:", "citizen@jansahay.gov.in");
+            const email = prompt("Enter your registered email address to recover your password:", "priya.sharma@example.com");
             if (email) {
-                showNotification(`Password reset instructions have been dispatched to ${email}`, 'success');
+                const citizens = getRegisteredCitizens();
+                const matched = citizens.find(c => c.email.toLowerCase() === email.trim().toLowerCase());
+                if (matched) {
+                    showNotification(`Account verified for ${matched.name}. Password hint: "${matched.password.slice(0, 2)}***"`, 'success');
+                } else {
+                    showNotification(`No citizen account registered under ${email}. Please register first.`, 'danger');
+                }
             }
         });
 

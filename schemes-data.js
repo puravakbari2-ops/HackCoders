@@ -1,4 +1,5 @@
-[
+/* JanSahay AI - 432 Verified Government Schemes Data */
+window.ALL_SCHEMES = [
   {
     "id": "1",
     "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
@@ -85082,4 +85083,5 @@
       }
     ]
   }
-]
+];
+var ALL_SCHEMES = window.ALL_SCHEMES;
