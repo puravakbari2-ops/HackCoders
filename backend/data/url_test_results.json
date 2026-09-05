@@ -1,0 +1,5345 @@
+[
+  {
+    "url": "https://enps.nsdl.com/",
+    "schemes": [
+      "4"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://agricoop.nic.in/",
+    "schemes": [
+      "10",
+      "agri-pmfby2",
+      "agri-nmeo-os",
+      "agri-atma-extension"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://beneficiary.nha.gov.in/",
+    "schemes": [
+      "15",
+      "health-pmjay-seniors"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://beneficiary.nha.gov.in/"
+  },
+  {
+    "url": "https://pmkisan.gov.in/",
+    "schemes": [
+      "8",
+      "agri-pm-kisan"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmkisan.gov.in/"
+  },
+  {
+    "url": "https://pmmvy.wcd.gov.in/",
+    "schemes": [
+      "17"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmmvy.wcd.gov.in/"
+  },
+  {
+    "url": "https://yet.nta.ac.in/",
+    "schemes": [
+      "23",
+      "soc-prematric-obc"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.nikshay.in/",
+    "schemes": [
+      "19"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.nikshay.in/"
+  },
+  {
+    "url": "https://nhm.gov.in/",
+    "schemes": [
+      "18",
+      "20",
+      "health-nrhm",
+      "health-jsy",
+      "health-nbvv",
+      "health-free-drugs",
+      "health-pmndp-dialysis"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nhm.gov.in/"
+  },
+  {
+    "url": "https://janaushadhi.gov.in/",
+    "schemes": [
+      "16",
+      "chem-1",
+      "chem-pmbjp"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://janaushadhi.gov.in/"
+  },
+  {
+    "url": "https://www.pmrf.in/",
+    "schemes": [
+      "24",
+      "edu-pmrf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.pmrf.in/"
+  },
+  {
+    "url": "https://pmayg.nic.in/",
+    "schemes": [
+      "28",
+      "rural-pmay-g"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://soilhealth.dac.gov.in/",
+    "schemes": [
+      "12",
+      "agri-shc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://soilhealth.dac.gov.in/"
+  },
+  {
+    "url": "https://www.mudra.org.in/",
+    "schemes": [
+      "31",
+      "fin-mudra",
+      "fin-mudra-tarun"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.mudra.org.in/"
+  },
+  {
+    "url": "https://www.kviconline.gov.in/pmegpeportal/",
+    "schemes": [
+      "33"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "EAI_AGAIN"
+  },
+  {
+    "url": "https://pmkusum.mnre.gov.in/",
+    "schemes": [
+      "11",
+      "mnre-kusum-a",
+      "mnre-kusum-b",
+      "mnre-kusum-c"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmkusum.mnre.gov.in/"
+  },
+  {
+    "url": "https://seedfund.startupindia.gov.in/",
+    "schemes": [
+      "35",
+      "comm-sisfs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://seedfund.startupindia.gov.in/"
+  },
+  {
+    "url": "https://agrimachinery.nic.in/",
+    "schemes": [
+      "14",
+      "agri-smam"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://agrimachinery.nic.in/"
+  },
+  {
+    "url": "https://pmvishwakarma.gov.in/",
+    "schemes": [
+      "34",
+      "msme-vishwakarma"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmvishwakarma.gov.in/"
+  },
+  {
+    "url": "https://pmfby.gov.in/",
+    "schemes": [
+      "9",
+      "agri-pmfby",
+      "agri-pmfby-restructured",
+      "agri-wbcis"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmfby.gov.in/"
+  },
+  {
+    "url": "https://pmsvanidhi.mohua.gov.in/",
+    "schemes": [
+      "38",
+      "fin-pm-svnidhi"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmsvanidhi.mohua.gov.in/"
+  },
+  {
+    "url": "https://www.cgtmse.in/",
+    "schemes": [
+      "36",
+      "msme-2",
+      "msme-cgtmse"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.cgtmse.in/"
+  },
+  {
+    "url": "https://arhc.mohua.gov.in/",
+    "schemes": [
+      "30"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://arhc.mohua.gov.in/"
+  },
+  {
+    "url": "https://www.pmkvyofficial.org/",
+    "schemes": [
+      "39",
+      "msde-pmkvy4"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "http://ddugky.gov.in/",
+    "schemes": [
+      "41"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://jansuraksha.gov.in/",
+    "schemes": [
+      "2",
+      "3",
+      "fin-pmsby",
+      "fin-pmjjby"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://jansuraksha.gov.in/"
+  },
+  {
+    "url": "https://nsap.nic.in/",
+    "schemes": [
+      "44",
+      "45",
+      "46"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.apprenticeshipindia.gov.in/",
+    "schemes": [
+      "40",
+      "msde-naps"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.apprenticeshipindia.gov.in/"
+  },
+  {
+    "url": "https://nrega.nic.in/",
+    "schemes": [
+      "37"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nrega.nic.in/"
+  },
+  {
+    "url": "https://wcd.nic.in/bbbp-schemes",
+    "schemes": [
+      "50"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://wcd.nic.in/",
+    "schemes": [
+      "51",
+      "52",
+      "wcd-1",
+      "wcd-2",
+      "wcd-mission-vatsalya"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.indiapost.gov.in/Financial/Pages/Content/Mahila-Samman-Savings-Certificate.aspx",
+    "schemes": [
+      "5"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://www.indiapost.gov.in/Financial/Pages/Content/Mahila-Samman-Savings-Certificate.aspx"
+  },
+  {
+    "url": "https://scholarships.gov.in/",
+    "schemes": [
+      "21",
+      "22",
+      "27",
+      "70",
+      "edu-nsp-central",
+      "min-1",
+      "min-2",
+      "sj-3",
+      "edu-nmms",
+      "sj-11",
+      "min-4",
+      "edu-central-sector",
+      "edu-ishaan-uday",
+      "soc-top-class-sc",
+      "soc-prematric-sc",
+      "soc-postmatric-sc",
+      "soc-ambedkar-overseas-subsidy",
+      "soc-postmatric-obc",
+      "soc-top-class-obc",
+      "soc-hazardous-prematric",
+      "mha-pmss-capf",
+      "min-begum-hazrat",
+      "min-prematric",
+      "min-postmatric"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://scholarships.gov.in/"
+  },
+  {
+    "url": "https://pmsuryaghar.gov.in/",
+    "schemes": [
+      "53",
+      "nre-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmsuryaghar.gov.in/"
+  },
+  {
+    "url": "https://www.aicte-pragati-saksham-gov.in/",
+    "schemes": [
+      "25",
+      "26"
+    ],
+    "ok": false,
+    "status": 403,
+    "finalUrl": "https://www.aicte-pragati-saksham-gov.in/"
+  },
+  {
+    "url": "https://www.pmgdisha.in/",
+    "schemes": [
+      "57",
+      "meity-1",
+      "meity-pmgdish-extension"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.pmgdisha.in/"
+  },
+  {
+    "url": "https://socialjustice.gov.in/",
+    "schemes": [
+      "47",
+      "72",
+      "sj-5",
+      "sj-6",
+      "sj-8",
+      "sj-9",
+      "soc-smile-beggary",
+      "soc-avyay-ipsrc",
+      "soc-elderline",
+      "soc-napddr",
+      "soc-bjrcy-hostels",
+      "soc-ambedkar-medical",
+      "soc-pcr-poa-act",
+      "soc-irca-deaddiction",
+      "soc-intercaste-marriage"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://socialjustice.gov.in/"
+  },
+  {
+    "url": "https://www.indiapost.gov.in/Financial/Pages/Content/Senior-Citizens-Savings-Scheme.aspx",
+    "schemes": [
+      "6"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://www.indiapost.gov.in/Financial/Pages/Content/Senior-Citizens-Savings-Scheme.aspx"
+  },
+  {
+    "url": "https://www.pmuy.gov.in/",
+    "schemes": [
+      "49"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.pmuy.gov.in/index.aspx",
+    "initialUrl": "https://www.pmuy.gov.in/",
+    "redirectChain": [
+      "https://www.pmuy.gov.in/",
+      "https://www.pmuy.gov.in/index.aspx"
+    ]
+  },
+  {
+    "url": "https://www.tele-law.in/",
+    "schemes": [
+      "59",
+      "law-tele-law"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.tele-law.in/"
+  },
+  {
+    "url": "https://dfpd.gov.in/",
+    "schemes": [
+      "43"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dfpd.gov.in/"
+  },
+  {
+    "url": "https://jaljeevanmission.gov.in/",
+    "schemes": [
+      "55",
+      "jal-1",
+      "jal-har-ghar-jal"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://jaljeevanmission.gov.in/"
+  },
+  {
+    "url": "https://pmjdy.gov.in/",
+    "schemes": [
+      "1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmjdy.gov.in/"
+  },
+  {
+    "url": "https://online-inspire.gov.in/",
+    "schemes": [
+      "58",
+      "sci-1",
+      "sci-2",
+      "sci-7",
+      "scitech-inspire-she",
+      "scitech-inspire-fellowship",
+      "scitech-inspire-faculty"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://online-inspire.gov.in/"
+  },
+  {
+    "url": "https://kheloindia.gov.in/",
+    "schemes": [
+      "62",
+      "youth-1",
+      "yas-khelo-india"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.kheloindia.gov.in/",
+    "initialUrl": "https://kheloindia.gov.in/",
+    "redirectChain": [
+      "https://kheloindia.gov.in/",
+      "https://www.kheloindia.gov.in/"
+    ]
+  },
+  {
+    "url": "http://omms.nic.in/",
+    "schemes": [
+      "67"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nfsa.gov.in/",
+    "schemes": [
+      "42"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nfsa.gov.in/"
+  },
+  {
+    "url": "https://nats.education.gov.in/",
+    "schemes": [
+      "71",
+      "edu-nats"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nats.education.gov.in/"
+  },
+  {
+    "url": "https://sbm.gov.in/sbmgramin/",
+    "schemes": [
+      "54"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://sbm.gov.in/sbmgramin/"
+  },
+  {
+    "url": "https://www.civilaviation.gov.in/",
+    "schemes": [
+      "66",
+      "comm-pli-drones"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.civilaviation.gov.in/"
+  },
+  {
+    "url": "https://agri-atma.in/",
+    "schemes": [
+      "agri-atma"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://pmaymis.gov.in/",
+    "schemes": [
+      "29",
+      "hua-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmaymis.gov.in/"
+  },
+  {
+    "url": "https://pmkisan.gov.in/kcc.aspx",
+    "schemes": [
+      "agri-kcc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmkisan.gov.in/ErrorPage.aspx?status=404",
+    "initialUrl": "https://pmkisan.gov.in/kcc.aspx",
+    "redirectChain": [
+      "https://pmkisan.gov.in/kcc.aspx",
+      "https://pmkisan.gov.in/ErrorPage.aspx?status=404"
+    ]
+  },
+  {
+    "url": "https://meity.gov.in/",
+    "schemes": [
+      "56"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.meity.gov.in/",
+    "initialUrl": "https://meity.gov.in/",
+    "redirectChain": [
+      "https://meity.gov.in/",
+      "https://www.meity.gov.in/"
+    ]
+  },
+  {
+    "url": "https://www.fert.nic.in/",
+    "schemes": [
+      "chem-2",
+      "chem-3"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.startupindia.gov.in/",
+    "schemes": [
+      "comm-1",
+      "comm-rcep",
+      "comm-ipr",
+      "comm-district-level",
+      "comm-ffs",
+      "comm-cgss",
+      "comm-startup-national-awards"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.startupindia.gov.in/"
+  },
+  {
+    "url": "https://ayush.gov.in/",
+    "schemes": [
+      "ayush-1",
+      "ayush-2",
+      "ayush-3",
+      "ayush-4",
+      "ayush-5",
+      "ayush-6",
+      "ayush-7",
+      "ayush-pharmacovigilance"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ayush.gov.in/"
+  },
+  {
+    "url": "https://www.makeinindia.com/",
+    "schemes": [
+      "comm-2",
+      "comm-make-in-india"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.makeinindia.com/"
+  },
+  {
+    "url": "https://www.mha.gov.in/",
+    "schemes": [
+      "61"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.mha.gov.in/hi",
+    "initialUrl": "https://www.mha.gov.in/",
+    "redirectChain": [
+      "https://www.mha.gov.in/",
+      "http://www.mha.gov.in/hi",
+      "https://www.mha.gov.in/hi"
+    ]
+  },
+  {
+    "url": "https://www.probono-doj.in/",
+    "schemes": [
+      "60"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.probono-doj.in:443/home/index",
+    "initialUrl": "https://www.probono-doj.in/",
+    "redirectChain": [
+      "https://www.probono-doj.in/",
+      "http://www.probono-doj.in/home/index",
+      "https://www.probono-doj.in:443/home/index"
+    ]
+  },
+  {
+    "url": "https://www.dpiit.gov.in/",
+    "schemes": [
+      "comm-3",
+      "comm-gii"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.dpiit.gov.in/"
+  },
+  {
+    "url": "https://odop.in/",
+    "schemes": [
+      "comm-4"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://odop.in/"
+  },
+  {
+    "url": "https://www.standupmitra.in/",
+    "schemes": [
+      "32",
+      "fin-kgfs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.standupmitra.in/"
+  },
+  {
+    "url": "https://consumerhelpline.gov.in/",
+    "schemes": [
+      "cons-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://consumerhelpline.gov.in/public/",
+    "initialUrl": "https://consumerhelpline.gov.in/",
+    "redirectChain": [
+      "https://consumerhelpline.gov.in/",
+      "https://consumerhelpline.gov.in/public/"
+    ]
+  },
+  {
+    "url": "https://www.indiapost.gov.in/Financial/Pages/Content/Public-Provident-Fund.aspx",
+    "schemes": [
+      "7"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://www.indiapost.gov.in/Financial/Pages/Content/Public-Provident-Fund.aspx"
+  },
+  {
+    "url": "https://www.mca.gov.in/",
+    "schemes": [
+      "corp-2"
+    ],
+    "ok": false,
+    "status": 403,
+    "finalUrl": "https://www.mca.gov.in/"
+  },
+  {
+    "url": "https://cag.gov.in/",
+    "schemes": [
+      "cag-1",
+      "cag-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cag.gov.in/en",
+    "initialUrl": "https://cag.gov.in/",
+    "redirectChain": [
+      "https://cag.gov.in/",
+      "https://cag.gov.in/en"
+    ]
+  },
+  {
+    "url": "https://iepf.gov.in/",
+    "schemes": [
+      "corp-1"
+    ],
+    "ok": false,
+    "status": 403,
+    "finalUrl": "https://www.iepf.gov.in/",
+    "initialUrl": "https://iepf.gov.in/",
+    "redirectChain": [
+      "https://iepf.gov.in/",
+      "https://www.iepf.gov.in/"
+    ]
+  },
+  {
+    "url": "https://pmvidya.mhrd.gov.in/",
+    "schemes": [
+      "edu-pm-vidya"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.indiapost.gov.in/Financial/Pages/Content/Sukanya-Samriddhi-Account.aspx",
+    "schemes": [
+      "48"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://www.indiapost.gov.in/Financial/Pages/Content/Sukanya-Samriddhi-Account.aspx"
+  },
+  {
+    "url": "https://echs.gov.in/",
+    "schemes": [
+      "def-1",
+      "def-echs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.echs.gov.in/",
+    "initialUrl": "https://echs.gov.in/",
+    "redirectChain": [
+      "https://echs.gov.in/",
+      "https://www.echs.gov.in/"
+    ]
+  },
+  {
+    "url": "https://emrs.tribal.gov.in/",
+    "schemes": [
+      "edu-eklavya",
+      "trib-emrs"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://tourism.gov.in/",
+    "schemes": [
+      "68",
+      "69",
+      "tour-1",
+      "tour-2",
+      "tour-3",
+      "tour-prashad"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.tourism.gov.in/",
+    "initialUrl": "https://tourism.gov.in/",
+    "redirectChain": [
+      "https://tourism.gov.in/",
+      "https://www.tourism.gov.in/"
+    ]
+  },
+  {
+    "url": "https://mdoner.gov.in/",
+    "schemes": [
+      "ner-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.mdoner.gov.in/",
+    "initialUrl": "https://mdoner.gov.in/",
+    "redirectChain": [
+      "https://mdoner.gov.in/",
+      "https://www.mdoner.gov.in/"
+    ]
+  },
+  {
+    "url": "https://ksb.gov.in/",
+    "schemes": [
+      "def-3",
+      "home-1",
+      "def-pmss-ksb",
+      "def-rmewf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ksb.gov.in/"
+  },
+  {
+    "url": "https://joinindianarmy.nic.in/",
+    "schemes": [
+      "def-2",
+      "def-agnipath"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://joinindianarmy.nic.in/Authentication.aspx",
+    "initialUrl": "https://joinindianarmy.nic.in/",
+    "redirectChain": [
+      "https://joinindianarmy.nic.in/",
+      "https://joinindianarmy.nic.in/Authentication.aspx"
+    ]
+  },
+  {
+    "url": "https://moes.gov.in/",
+    "schemes": [
+      "earth-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.moes.gov.in/",
+    "initialUrl": "https://moes.gov.in/",
+    "redirectChain": [
+      "https://moes.gov.in/",
+      "https://www.moes.gov.in/"
+    ]
+  },
+  {
+    "url": "https://pmcaresforchildren.in/",
+    "schemes": [
+      "comm-post-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmcaresforchildren.in/"
+  },
+  {
+    "url": "https://futureskillsprime.in/",
+    "schemes": [
+      "meity-3",
+      "meity-futureskills-prime"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.futureskillsprime.in:443/",
+    "initialUrl": "https://futureskillsprime.in/",
+    "redirectChain": [
+      "https://futureskillsprime.in/",
+      "https://www.futureskillsprime.in:443/"
+    ]
+  },
+  {
+    "url": "https://mea.gov.in/",
+    "schemes": [
+      "ea-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.mea.gov.in:443/",
+    "initialUrl": "https://mea.gov.in/",
+    "redirectChain": [
+      "https://mea.gov.in/",
+      "https://www.mea.gov.in:443/"
+    ]
+  },
+  {
+    "url": "https://pmmsy.dof.gov.in/",
+    "schemes": [
+      "fish-1",
+      "fish-pmmsy-aqua",
+      "fish-pmmsy-vessels"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmmsy.dof.gov.in/"
+  },
+  {
+    "url": "https://emigrate.gov.in/",
+    "schemes": [
+      "ea-1",
+      "mea-pkvk"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://emigrate.gov.in/"
+  },
+  {
+    "url": "https://nlm.udyamimitra.in/",
+    "schemes": [
+      "fish-3",
+      "fish-nlm"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nlm.udyamimitra.in/"
+  },
+  {
+    "url": "https://prasarbharati.gov.in/",
+    "schemes": [
+      "ib-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://prasarbharati.gov.in/"
+  },
+  {
+    "url": "https://dof.gov.in/",
+    "schemes": [
+      "fish-2",
+      "fish-fidf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.dof.gov.in/",
+    "initialUrl": "https://dof.gov.in/",
+    "redirectChain": [
+      "https://dof.gov.in/",
+      "https://www.dof.gov.in/"
+    ]
+  },
+  {
+    "url": "https://pgsindia-ncof.gov.in/",
+    "schemes": [
+      "13",
+      "agri-pkvy"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://maandhan.in/",
+    "schemes": [
+      "lab-1",
+      "agri-pmkisan2",
+      "lab-5",
+      "agri-pmkmy",
+      "lab-pmsym"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://maandhan.in/"
+  },
+  {
+    "url": "https://heavyindustries.gov.in/",
+    "schemes": [
+      "heavy-2",
+      "comm-pli-auto",
+      "comm-pli-battery",
+      "heavy-capital-goods"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://heavyindustries.gov.in/hi",
+    "initialUrl": "https://heavyindustries.gov.in/",
+    "redirectChain": [
+      "https://heavyindustries.gov.in/",
+      "https://heavyindustries.gov.in/hi"
+    ]
+  },
+  {
+    "url": "https://tele-law.in/",
+    "schemes": [
+      "law-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://tele-law.in/"
+  },
+  {
+    "url": "https://swachhbharatmission.gov.in/",
+    "schemes": [
+      "jal-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://swachhbharatmission.ddws.gov.in",
+    "initialUrl": "https://swachhbharatmission.gov.in/",
+    "redirectChain": [
+      "https://swachhbharatmission.gov.in/",
+      "https://swachhbharatmission.ddws.gov.in"
+    ]
+  },
+  {
+    "url": "https://esic.gov.in/",
+    "schemes": [
+      "lab-3"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://esic.gov.in/"
+  },
+  {
+    "url": "https://pmjvk.nic.in/",
+    "schemes": [
+      "min-3"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nalsa.gov.in/",
+    "schemes": [
+      "law-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nalsa.gov.in/"
+  },
+  {
+    "url": "https://egramswaraj.gov.in/",
+    "schemes": [
+      "pr-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://egramswaraj.gov.in/"
+  },
+  {
+    "url": "https://svamitva.nic.in/",
+    "schemes": [
+      "pr-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://svamitva.nic.in/"
+  },
+  {
+    "url": "https://www.indiapost.gov.in/",
+    "schemes": [
+      "comm-post-1",
+      "comm-post-4",
+      "comm-post-5",
+      "comm-post-6",
+      "comm-post-7",
+      "fin-mssc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.indiapost.gov.in/"
+  },
+  {
+    "url": "https://sportsauthorityofindia.nic.in/",
+    "schemes": [
+      "63",
+      "youth-2",
+      "youth-5"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sportsauthorityofindia.nic.in/sai_new/",
+    "initialUrl": "https://sportsauthorityofindia.nic.in/",
+    "redirectChain": [
+      "https://sportsauthorityofindia.nic.in/",
+      "https://sportsauthorityofindia.nic.in/sai_new",
+      "https://sportsauthorityofindia.nic.in/sai_new/"
+    ]
+  },
+  {
+    "url": "https://moef.gov.in/",
+    "schemes": [
+      "env-1",
+      "env-2",
+      "moef-nagar-van"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://moef.gov.in/"
+  },
+  {
+    "url": "https://npscra.nsdl.co.in/",
+    "schemes": [
+      "pers-2",
+      "fin-atal-pension"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mnre.gov.in/kusum/",
+    "schemes": [
+      "nre-2"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://mnre.gov.in/kusum/"
+  },
+  {
+    "url": "https://mylpg.in/",
+    "schemes": [
+      "petro-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mylpg.in/"
+  },
+  {
+    "url": "https://indiaculture.gov.in/",
+    "schemes": [
+      "64",
+      "cult-1",
+      "cult-2",
+      "cult-3",
+      "cult-4",
+      "cult-5",
+      "cult-6",
+      "cul-veteran-artists",
+      "cul-fellowship-artistes",
+      "cul-cultural-orgs",
+      "cul-guru-shishya",
+      "cul-infrastructure-tagore",
+      "cul-ich-safeguarding",
+      "cul-festival-of-india",
+      "cul-buddhist-tibetan"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://omms.nic.in/",
+    "schemes": [
+      "road-1"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://fame2.heavyindustries.gov.in/",
+    "schemes": [
+      "65",
+      "heavy-1"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://dgll.nic.in/",
+    "schemes": [
+      "port-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dgll.nic.in/"
+  },
+  {
+    "url": "https://pmkvyofficial.org/",
+    "schemes": [
+      "skill-1"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://aim.gov.in/atl.php",
+    "schemes": [
+      "sci-3"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://aim.gov.in/atl.php"
+  },
+  {
+    "url": "https://jss.gov.in/",
+    "schemes": [
+      "skill-2",
+      "msde-jss"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.skillindiadigital.gov.in//",
+    "initialUrl": "https://jss.gov.in/",
+    "redirectChain": [
+      "https://jss.gov.in/",
+      "http://www.skillindiadigital.gov.in//",
+      "https://www.skillindiadigital.gov.in//"
+    ]
+  },
+  {
+    "url": "https://bharatsarkar.gov.in/",
+    "schemes": [
+      "sj-2"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mkisan.gov.in/",
+    "schemes": [
+      "agri-mkisan"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://mospi.gov.in/",
+    "schemes": [
+      "stat-1",
+      "stat-3"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mospi.gov.in/"
+  },
+  {
+    "url": "https://ugc.gov.in/",
+    "schemes": [
+      "edu-nef"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ministryoftextiles.gov.in/",
+    "schemes": [
+      "text-1"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mofpi.gov.in/pmfme/",
+    "schemes": [
+      "food-1"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://mofpi.gov.in/pmfme/"
+  },
+  {
+    "url": "https://bbnl.nic.in/",
+    "schemes": [
+      "meity-2"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://mofpi.gov.in/",
+    "schemes": [
+      "food-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mofpi.gov.in/"
+  },
+  {
+    "url": "https://samagrashiksha.gov.in/",
+    "schemes": [
+      "edu-samagra"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://steel.gov.in/",
+    "schemes": [
+      "steel-1",
+      "steel-2",
+      "steel-3",
+      "comm-pli-steel"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://steel.gov.in/"
+  },
+  {
+    "url": "https://www.pmujjwalayojana.com/",
+    "schemes": [
+      "petro-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmujjwalayojana.com/",
+    "initialUrl": "https://www.pmujjwalayojana.com/",
+    "redirectChain": [
+      "https://www.pmujjwalayojana.com/",
+      "https://pmujjwalayojana.com/"
+    ]
+  },
+  {
+    "url": "https://samarth-textiles.gov.in/",
+    "schemes": [
+      "text-2",
+      "tex-samarth"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://samarth-textiles.gov.in/"
+  },
+  {
+    "url": "https://lokpal.gov.in/",
+    "schemes": [
+      "lokpal-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://lokpal.gov.in/"
+  },
+  {
+    "url": "https://handlooms.nic.in/",
+    "schemes": [
+      "text-3",
+      "text-4",
+      "tex-nhdp",
+      "tex-weaver-insurance",
+      "tex-hss-looms"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://handlooms.nic.in/"
+  },
+  {
+    "url": "https://nyks.nic.in/",
+    "schemes": [
+      "youth-3",
+      "youth-7",
+      "yas-nyc",
+      "yas-nyks-clubs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nyks.nic.in/"
+  },
+  {
+    "url": "https://nfsm.gov.in/",
+    "schemes": [
+      "agri-nfsm"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nfsm.gov.in/"
+  },
+  {
+    "url": "https://tribal.nic.in/",
+    "schemes": [
+      "tribal-1",
+      "tribal-3",
+      "tribal-4",
+      "tribal-5",
+      "tribal-6"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://tribal.nic.in/ResourcesHindi/Homeh.aspx",
+    "initialUrl": "https://tribal.nic.in/",
+    "redirectChain": [
+      "https://tribal.nic.in/",
+      "https://tribal.nic.in/ResourcesHindi/Homeh.aspx"
+    ]
+  },
+  {
+    "url": "https://enam.gov.in/",
+    "schemes": [
+      "agri-enam"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://enam.gov.in/"
+  },
+  {
+    "url": "https://pmrpy.gov.in/",
+    "schemes": [
+      "lab-2"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://agmarknet.gov.in/",
+    "schemes": [
+      "agri-isam"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://agmarknet.gov.in/"
+  },
+  {
+    "url": "https://nmsa.dac.gov.in/",
+    "schemes": [
+      "agri-nmsop",
+      "agri-rad"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nmsa.dac.gov.in/"
+  },
+  {
+    "url": "https://pmksy.gov.in/",
+    "schemes": [
+      "agri-pmksy",
+      "water-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmksy.gov.in/"
+  },
+  {
+    "url": "https://sfac.in/",
+    "schemes": [
+      "agri-fpofpo"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNRESET"
+  },
+  {
+    "url": "https://agriinfra.dac.gov.in/",
+    "schemes": [
+      "agri-agmark",
+      "agri-agriinfra"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://agriinfra.dac.gov.in/"
+  },
+  {
+    "url": "https://www.ippbonline.com/",
+    "schemes": [
+      "comm-post-3"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ippbonline.bank.in/",
+    "initialUrl": "https://www.ippbonline.com/",
+    "redirectChain": [
+      "https://www.ippbonline.com/",
+      "https://ippbonline.bank.in/"
+    ]
+  },
+  {
+    "url": "https://rte.education.gov.in/",
+    "schemes": [
+      "edu-rte"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://swayam.gov.in/",
+    "schemes": [
+      "edu-swayam"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://swayam.gov.in/"
+  },
+  {
+    "url": "https://trifed.in/",
+    "schemes": [
+      "tribal-2"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://trifed.in/"
+  },
+  {
+    "url": "https://pmposhan.education.gov.in/",
+    "schemes": [
+      "edu-mid-day",
+      "edu-poshan-tithi"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://pmposhan.education.gov.in/"
+  },
+  {
+    "url": "https://ibm.gov.in/",
+    "schemes": [
+      "mines-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ibm.gov.in:443/IBMPortal/",
+    "initialUrl": "https://ibm.gov.in/",
+    "redirectChain": [
+      "https://ibm.gov.in/",
+      "https://ibm.gov.in/IBMPortal",
+      "http://ibm.gov.in/IBMPortal/",
+      "https://ibm.gov.in:443/IBMPortal/"
+    ]
+  },
+  {
+    "url": "https://cghs.gov.in/",
+    "schemes": [
+      "pers-1"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://jkstudentsfoundation.com/",
+    "schemes": [
+      "edu-pmsss"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://niti.gov.in/",
+    "schemes": [
+      "niti-1"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNRESET"
+  },
+  {
+    "url": "https://www.nsmindia.gov.in/",
+    "schemes": [
+      "meity-6"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.meity.gov.in/",
+    "schemes": [
+      "meity-4",
+      "meity-5"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.meity.gov.in/"
+  },
+  {
+    "url": "https://web.umang.gov.in/",
+    "schemes": [
+      "meity-7"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://web.umang.gov.in/"
+  },
+  {
+    "url": "https://wcd.nic.in/pmmvy/",
+    "schemes": [
+      "health-pmmvy"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://sagarmala.gov.in/",
+    "schemes": [
+      "port-1",
+      "port-3",
+      "port-sagarmala"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://pmegp.kvic.gov.in/",
+    "schemes": [
+      "msme-1"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://navodaya.gov.in/",
+    "schemes": [
+      "edu-jnvst",
+      "edu-jnv-lateral"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://navodaya.gov.in/nvs/",
+    "initialUrl": "https://navodaya.gov.in/",
+    "redirectChain": [
+      "https://navodaya.gov.in/",
+      "https://navodaya.gov.in/nvs/"
+    ]
+  },
+  {
+    "url": "https://www.indianrailways.gov.in/",
+    "schemes": [
+      "rail-1"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://aajeevika.gov.in/",
+    "schemes": [
+      "rural-nrlm"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ncert.nic.in/",
+    "schemes": [
+      "edu-ntse"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNRESET"
+  },
+  {
+    "url": "https://gem.gov.in/",
+    "schemes": [
+      "comm-gst-comp"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://gem.gov.in/"
+  },
+  {
+    "url": "https://pmdaksh.dosje.gov.in/",
+    "schemes": [
+      "sj-1",
+      "soc-pm-daksh"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://cbse.gov.in/",
+    "schemes": [
+      "edu-cbse-merits"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.cbse.gov.in/",
+    "initialUrl": "https://cbse.gov.in/",
+    "redirectChain": [
+      "https://cbse.gov.in/",
+      "https://www.cbse.gov.in/"
+    ]
+  },
+  {
+    "url": "https://dbtindia.gov.in/",
+    "schemes": [
+      "sci-4",
+      "sci-6",
+      "scitech-dbt-jrf",
+      "scitech-dbt-pdf",
+      "scitech-dbt-ramalingaswami",
+      "scitech-dbt-star-college",
+      "scitech-dbt-skill-vigyan",
+      "scitech-dbt-builder"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://texmin.nic.in/",
+    "schemes": [
+      "text-7",
+      "tex-pm-mitra",
+      "tex-sitp",
+      "tex-kasturi-cotton"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://education.gov.in/",
+    "schemes": [
+      "edu-iit-jee-sc",
+      "edu-pm-usha",
+      "edu-spqem",
+      "edu-idmi",
+      "edu-shreyas",
+      "edu-vidya-samiksha"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.education.gov.in/",
+    "initialUrl": "https://education.gov.in/",
+    "redirectChain": [
+      "https://education.gov.in/",
+      "https://www.education.gov.in/"
+    ]
+  },
+  {
+    "url": "https://mplads.gov.in/",
+    "schemes": [
+      "stat-2"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://udyamregistration.gov.in/",
+    "schemes": [
+      "msme-6"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://udyamregistration.gov.in/"
+  },
+  {
+    "url": "https://pmagy.gov.in/",
+    "schemes": [
+      "sj-4"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmagy.gov.in/"
+  },
+  {
+    "url": "https://vahan.nic.in/",
+    "schemes": [
+      "road-2"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://msme.gov.in/",
+    "schemes": [
+      "msme-3",
+      "msme-4"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.msme.gov.in/",
+    "initialUrl": "https://msme.gov.in/",
+    "redirectChain": [
+      "https://msme.gov.in/",
+      "https://www.msme.gov.in/"
+    ]
+  },
+  {
+    "url": "https://bocwwelfareboard.nic.in/",
+    "schemes": [
+      "lab-6"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://serb.gov.in/",
+    "schemes": [
+      "sci-5",
+      "sci-8"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://serb.gov.in/"
+  },
+  {
+    "url": "https://naee.ac.in/",
+    "schemes": [
+      "min-6"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://amrut.gov.in/",
+    "schemes": [
+      "hua-2"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://apprenticeship.gov.in/",
+    "schemes": [
+      "skill-3"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://rkvy.nic.in/",
+    "schemes": [
+      "agri-rkvy"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://nimhans.ac.in/",
+    "schemes": [
+      "sj-10"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.nimhans.ac.in/",
+    "initialUrl": "https://nimhans.ac.in/",
+    "redirectChain": [
+      "https://nimhans.ac.in/",
+      "https://www.nimhans.ac.in/"
+    ]
+  },
+  {
+    "url": "https://aps-csb.in/",
+    "schemes": [
+      "def-4"
+    ],
+    "ok": false,
+    "status": 403,
+    "finalUrl": "https://aps-csb.in/"
+  },
+  {
+    "url": "https://dgr.gov.in/",
+    "schemes": [
+      "def-5"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nfdb.gov.in/",
+    "schemes": [
+      "fish-4"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://dahd.nic.in/",
+    "schemes": [
+      "fish-5",
+      "fish-gokul-mission",
+      "fish-npdd",
+      "fish-didf"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mha.gov.in/",
+    "schemes": [
+      "home-2",
+      "home-3",
+      "home-4",
+      "mha-civilian-victims",
+      "mha-mpf",
+      "mha-vibrant-villages",
+      "mha-police-martyrs"
+    ],
+    "ok": false,
+    "status": "TIMEOUT",
+    "initialUrl": "https://mha.gov.in/",
+    "redirectChain": [
+      "https://mha.gov.in/",
+      "https://xn--i1b5bzbybhfo5c8b4bxh.xn--11b7cb3a6a.xn--h2brj9c/",
+      "http://xn--i1b5bzbybhfo5c8b4bxh.xn--11b7cb3a6a.xn--h2brj9c/hi"
+    ]
+  },
+  {
+    "url": "https://cpengrams.gov.in/",
+    "schemes": [
+      "pers-3"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://eshram.gov.in/",
+    "schemes": [
+      "lab-4",
+      "lab-eshram"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://eshram.gov.in/"
+  },
+  {
+    "url": "https://pmevidya.education.gov.in/",
+    "schemes": [
+      "edu-pmevidya"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmevidya.education.gov.in/"
+  },
+  {
+    "url": "https://minorityaffairs.gov.in/",
+    "schemes": [
+      "min-5",
+      "min-7",
+      "min-pm-vikas"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://minorityaffairs.gov.in/"
+  },
+  {
+    "url": "https://diksha.gov.in/",
+    "schemes": [
+      "edu-diksha"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://diksha.gov.in/"
+  },
+  {
+    "url": "https://nipunbharat.education.gov.in/",
+    "schemes": [
+      "edu-nipun-bharat"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://nipunbharat.education.gov.in/"
+  },
+  {
+    "url": "https://ncert.nic.in/prashast.php",
+    "schemes": [
+      "edu-prashast"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://ncert.nic.in/prashast.php"
+  },
+  {
+    "url": "https://pmjay.gov.in/",
+    "schemes": [
+      "health-pmjay"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://pmshrischools.education.gov.in/",
+    "schemes": [
+      "edu-pm-shri"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmshrischools.education.gov.in/"
+  },
+  {
+    "url": "https://rusa.nic.in/",
+    "schemes": [
+      "edu-rusa-grant"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://aspire.msme.gov.in/",
+    "schemes": [
+      "msme-5",
+      "msme-aspire"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://skillindiadigital.gov.in/",
+    "schemes": [
+      "skill-5"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.skillindiadigital.gov.in//",
+    "initialUrl": "https://skillindiadigital.gov.in/",
+    "redirectChain": [
+      "https://skillindiadigital.gov.in/",
+      "http://www.skillindiadigital.gov.in//",
+      "https://www.skillindiadigital.gov.in//"
+    ]
+  },
+  {
+    "url": "https://ugc.ac.in/stride/",
+    "schemes": [
+      "edu-stride"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://stars.iisc.ac.in/",
+    "schemes": [
+      "edu-stars"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nss.gov.in/",
+    "schemes": [
+      "youth-4",
+      "yas-nss"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nss.gov.in/"
+  },
+  {
+    "url": "https://sparc.iitkgp.ac.in/",
+    "schemes": [
+      "edu-sparc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sparc.iitkgp.ac.in/"
+  },
+  {
+    "url": "https://vidyanjali.education.gov.in/",
+    "schemes": [
+      "edu-vidyanjali"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://vidyanjali.education.gov.in/"
+  },
+  {
+    "url": "https://ndl.iitkgp.ac.in/",
+    "schemes": [
+      "edu-ndl"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ndl.iitkgp.ac.in/"
+  },
+  {
+    "url": "https://swayamprabha.gov.in/",
+    "schemes": [
+      "edu-swayam-prabha"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.swayamprabha.gov.in/",
+    "initialUrl": "https://swayamprabha.gov.in/",
+    "redirectChain": [
+      "https://swayamprabha.gov.in/",
+      "https://www.swayamprabha.gov.in/"
+    ]
+  },
+  {
+    "url": "https://nskfdc.nic.in/",
+    "schemes": [
+      "sj-7",
+      "soc-srms",
+      "soc-nskfdc-term",
+      "soc-nskfdc-mahila",
+      "soc-nskfdc-swachhta"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.handicrafts.nic.in/",
+    "schemes": [
+      "text-5",
+      "text-6"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://lilavati.aicte-india.org/",
+    "schemes": [
+      "edu-aicte-lilavati"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.aicte-india.org/",
+    "schemes": [
+      "edu-aicte-pragati",
+      "edu-aicte-saksham",
+      "edu-aicte-swanath",
+      "edu-aicte-adf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.aicte.gov.in/",
+    "initialUrl": "https://www.aicte-india.org/",
+    "redirectChain": [
+      "https://www.aicte-india.org/",
+      "https://www.aicte.gov.in/"
+    ]
+  },
+  {
+    "url": "https://dgt.gov.in/",
+    "schemes": [
+      "skill-4",
+      "msde-cts-iti"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dgt.gov.in/hi",
+    "initialUrl": "https://dgt.gov.in/",
+    "redirectChain": [
+      "https://dgt.gov.in/",
+      "https://dgt.gov.in/hi"
+    ]
+  },
+  {
+    "url": "https://yas.nic.in/",
+    "schemes": [
+      "youth-6",
+      "youth-8",
+      "yas-rysk",
+      "yas-nsdf",
+      "yas-hrd-sports",
+      "yas-nsf-assistance"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://solarrooftop.gov.in/",
+    "schemes": [
+      "power-1"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://qip.aicte-india.org/",
+    "schemes": [
+      "edu-aicte-qip"
+    ],
+    "ok": false,
+    "status": 502,
+    "finalUrl": "https://qip.aicte-india.org/"
+  },
+  {
+    "url": "https://pgscholarship.aicte-india.org/",
+    "schemes": [
+      "edu-aicte-pg"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pgscholarship.aicte.gov.in/",
+    "initialUrl": "https://pgscholarship.aicte-india.org/",
+    "redirectChain": [
+      "https://pgscholarship.aicte-india.org/",
+      "https://pgscholarship.aicte.gov.in/"
+    ]
+  },
+  {
+    "url": "http://dskpdf.unipune.ac.in/",
+    "schemes": [
+      "edu-kothari-pdf"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://ugcnet.nta.ac.in/",
+    "schemes": [
+      "edu-ugc-jrf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ugcnet.nta.ac.in/"
+  },
+  {
+    "url": "https://www.nittt.ac.in/",
+    "schemes": [
+      "edu-nittt"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.nittt.ac.in/"
+  },
+  {
+    "url": "https://www.vlab.co.in/",
+    "schemes": [
+      "edu-virtual-labs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.vlab.co.in/"
+  },
+  {
+    "url": "https://www.e-yantra.org/",
+    "schemes": [
+      "edu-eyantra"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.e-yantra.org/"
+  },
+  {
+    "url": "https://www.nirfindia.org/",
+    "schemes": [
+      "edu-nirf-encouragement"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.nirfindia.org/"
+  },
+  {
+    "url": "https://www.ugc.gov.in/",
+    "schemes": [
+      "edu-ugc-emeritus",
+      "edu-ugc-pdf-scst",
+      "edu-ugc-pdf-women",
+      "edu-sv-girl-fellowship",
+      "edu-phule-fellowship",
+      "soc-nfobc",
+      "soc-nfpwd"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.ugc.gov.in/"
+  },
+  {
+    "url": "https://fossee.in/",
+    "schemes": [
+      "edu-fossee"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://fossee.in/"
+  },
+  {
+    "url": "https://ullas.education.gov.in/",
+    "schemes": [
+      "edu-ullas-literacy"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ullas.education.gov.in/nilp",
+    "initialUrl": "https://ullas.education.gov.in/",
+    "redirectChain": [
+      "https://ullas.education.gov.in/",
+      "https://ullas.education.gov.in/nilp"
+    ]
+  },
+  {
+    "url": "https://spoken-tutorial.org/",
+    "schemes": [
+      "edu-spoken-tutorial"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://spoken-tutorial.org/"
+  },
+  {
+    "url": "https://icds-wcd.nic.in/",
+    "schemes": [
+      "wcd-3"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.abc.gov.in/",
+    "schemes": [
+      "edu-abc-portal"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.abc.gov.in/"
+  },
+  {
+    "url": "https://apaar.education.gov.in/",
+    "schemes": [
+      "edu-apaar-id"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://apaar.education.gov.in/"
+  },
+  {
+    "url": "https://www.inspireawards-dst.gov.in/",
+    "schemes": [
+      "scitech-inspire-manak"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.inspireawards-dst.gov.in/"
+  },
+  {
+    "url": "https://nmcg.nic.in/",
+    "schemes": [
+      "water-1"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nmcg.nic.in/"
+  },
+  {
+    "url": "https://studyinindia.gov.in/",
+    "schemes": [
+      "edu-sii-scholarship"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://studyinindia.gov.in/"
+  },
+  {
+    "url": "https://unnatbharatabhiyan.gov.in/",
+    "schemes": [
+      "edu-unnat-bharat"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://unnatbharatabhiyan.gov.in/"
+  },
+  {
+    "url": "https://nishtha.ncert.gov.in/",
+    "schemes": [
+      "edu-nishtha"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ekbharat.gov.in/",
+    "schemes": [
+      "edu-ebsb-exchange"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ekbharat.gov.in/"
+  },
+  {
+    "url": "https://gian.iitkgp.ac.in/",
+    "schemes": [
+      "edu-gian"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://gian.iitkgp.ac.in/"
+  },
+  {
+    "url": "https://samagra.education.gov.in/",
+    "schemes": [
+      "edu-samagra-transport",
+      "edu-samagra-uniform",
+      "edu-samagra-textbooks",
+      "edu-kgbv",
+      "edu-iedss",
+      "edu-vocational-school",
+      "edu-ict-schools",
+      "edu-girls-hostel"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://vigyanjyoti.in/",
+    "schemes": [
+      "scitech-dst-vigyan-jyoti"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://fist-dst.gov.in/",
+    "schemes": [
+      "scitech-dst-fist"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nidhi-eir.uk/eir/",
+    "schemes": [
+      "scitech-nidhi-eir"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://tifac.org.in/",
+    "schemes": [
+      "scitech-dst-wos-c"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNRESET"
+  },
+  {
+    "url": "https://vigyanprasar.gov.in/",
+    "schemes": [
+      "scitech-dst-vigyan-prasar"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://acceleratevigyan.gov.in/",
+    "schemes": [
+      "scitech-serb-accelerate-vigyan"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://csirnet.nta.ac.in/",
+    "schemes": [
+      "scitech-csir-jrf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://csirnet.nta.ac.in/"
+  },
+  {
+    "url": "https://shreshta.nta.nic.in/",
+    "schemes": [
+      "soc-shreshta"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://serbonline.in/",
+    "schemes": [
+      "scitech-serb-npdf",
+      "scitech-serb-power-grant",
+      "scitech-serb-power-fell",
+      "scitech-serb-crg",
+      "scitech-serb-tare",
+      "scitech-serb-matrics",
+      "scitech-serb-star",
+      "scitech-serb-its",
+      "scitech-csir-ramanujan"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://anrfonline.in/ANRF/HomePage",
+    "initialUrl": "https://serbonline.in/",
+    "redirectChain": [
+      "https://serbonline.in/",
+      "https://anrfonline.in/ANRF/HomePage"
+    ]
+  },
+  {
+    "url": "https://www.nidhi-prayas.org/",
+    "schemes": [
+      "scitech-nidhi-prayas"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nidhi-prayas.org/",
+    "initialUrl": "https://www.nidhi-prayas.org/",
+    "redirectChain": [
+      "https://www.nidhi-prayas.org/",
+      "https://nidhi-prayas.org/"
+    ]
+  },
+  {
+    "url": "https://namaste.dosje.gov.in/",
+    "schemes": [
+      "soc-namaste"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://birac.nic.in/",
+    "schemes": [
+      "scitech-birac-sparsh",
+      "scitech-birac-bipp",
+      "scitech-birac-sbiri",
+      "scitech-birac-pace",
+      "scitech-birac-bionest"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://birac.nic.in/"
+  },
+  {
+    "url": "https://birac.nic.in/big.php",
+    "schemes": [
+      "scitech-birac-big"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://birac.nic.in/big.php"
+  },
+  {
+    "url": "https://dst.gov.in/",
+    "schemes": [
+      "scitech-dst-wos-a",
+      "scitech-dst-wos-b",
+      "scitech-dst-curie",
+      "scitech-dst-gati",
+      "scitech-dst-purse",
+      "scitech-dst-saif",
+      "scitech-dst-sathi",
+      "scitech-nidhi-sss",
+      "scitech-nidhi-tbi",
+      "scitech-nidhi-accelerator",
+      "scitech-dst-tdp",
+      "scitech-dst-waste-management",
+      "scitech-dst-ceri",
+      "scitech-dst-wti",
+      "scitech-dst-climate",
+      "scitech-dst-csri",
+      "scitech-dst-icps",
+      "scitech-dst-seed",
+      "scitech-dst-quantum"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dst.gov.in/"
+  },
+  {
+    "url": "https://www.csir.res.in/",
+    "schemes": [
+      "scitech-csir-800"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.csir.res.in/hi",
+    "initialUrl": "https://www.csir.res.in/",
+    "redirectChain": [
+      "https://www.csir.res.in/",
+      "https://www.csir.res.in/hi"
+    ]
+  },
+  {
+    "url": "https://www.nhfdc.nic.in/",
+    "schemes": [
+      "soc-divyangjan-swavalamban"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://csirhrdg.res.in/",
+    "schemes": [
+      "scitech-csir-srf",
+      "scitech-csir-ra",
+      "scitech-csir-nehru-pdf",
+      "scitech-csir-ssb-prize",
+      "scitech-csir-young-scientist",
+      "scitech-csir-ciasc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://csirhrdg.res.in/"
+  },
+  {
+    "url": "https://cegssc.in/",
+    "schemes": [
+      "soc-cegssc"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nmba.dosje.gov.in/",
+    "schemes": [
+      "soc-nmba"
+    ],
+    "ok": false,
+    "status": 500,
+    "finalUrl": "https://nmba.dosje.gov.in/"
+  },
+  {
+    "url": "https://seed.dosje.gov.in/",
+    "schemes": [
+      "soc-seed-dnt"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://vcfsc.in/",
+    "schemes": [
+      "soc-vcf-sc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://vcfsc.in/"
+  },
+  {
+    "url": "https://adip.depwd.gov.in/",
+    "schemes": [
+      "soc-adip"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://adip.depwd.gov.in/"
+  },
+  {
+    "url": "https://coaching.dosje.gov.in/",
+    "schemes": [
+      "soc-free-coaching"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://imprint-india.org/",
+    "schemes": [
+      "edu-imprint"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cocoro-kusuri.com/",
+    "initialUrl": "https://imprint-india.org/",
+    "redirectChain": [
+      "https://imprint-india.org/",
+      "https://cocoro-kusuri.com/"
+    ]
+  },
+  {
+    "url": "https://ngograntsmis.gov.in/",
+    "schemes": [
+      "soc-ddrs"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://sacred.dosje.gov.in/",
+    "schemes": [
+      "soc-sacred-portal"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://sage.dosje.gov.in/",
+    "schemes": [
+      "soc-sage-fund"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://pmajay.dosje.gov.in/",
+    "schemes": [
+      "soc-pm-ajay-adarsh",
+      "soc-pm-ajay-livelihood"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmajay.dosje.gov.in/"
+  },
+  {
+    "url": "https://alimco.in/",
+    "schemes": [
+      "soc-rvy-vayoshri"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://alimco.in/"
+  },
+  {
+    "url": "https://pharmaceuticals.gov.in/",
+    "schemes": [
+      "comm-pli-pharma",
+      "comm-pli-medtech",
+      "chem-bulk-drug-parks",
+      "chem-pli-bulk-drugs",
+      "chem-spi-pharma"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://shodhganga.inflibnet.ac.in/",
+    "schemes": [
+      "edu-shodhganga"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://nad.digitallocker.gov.in/",
+    "schemes": [
+      "edu-nad"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.meity.gov.in/esdm/pli",
+    "schemes": [
+      "comm-pli-electronics"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.meity.gov.in/esdm/pli"
+  },
+  {
+    "url": "https://gatishakti.gov.in/",
+    "schemes": [
+      "comm-gatishakti"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://nsfdc.nic.in/",
+    "schemes": [
+      "soc-nsfdc-direct",
+      "soc-nsfdc-mahila",
+      "soc-nsfdc-mcf",
+      "soc-nsfdc-laghu",
+      "soc-nsfdc-dhosti"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nsfdc.nic.in/"
+  },
+  {
+    "url": "https://thenationaltrust.gov.in/",
+    "schemes": [
+      "soc-nt-niramaya",
+      "soc-nt-samarth",
+      "soc-nt-gharaunda",
+      "soc-nt-vikas",
+      "soc-nt-sahyogi",
+      "soc-nt-prerna",
+      "soc-nt-sambhav",
+      "soc-nt-gyan-prabha",
+      "soc-nt-disha"
+    ],
+    "ok": false,
+    "status": 403,
+    "finalUrl": "https://thenationaltrust.gov.in/auth/login.php",
+    "initialUrl": "https://thenationaltrust.gov.in/",
+    "redirectChain": [
+      "https://thenationaltrust.gov.in/",
+      "https://thenationaltrust.gov.in/auth/login.php"
+    ]
+  },
+  {
+    "url": "https://www.nsws.gov.in/",
+    "schemes": [
+      "comm-nsws"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.nsws.gov.in/"
+  },
+  {
+    "url": "https://pmg.gov.in/",
+    "schemes": [
+      "comm-pmg"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.investindia.gov.in/",
+    "schemes": [
+      "comm-invest-india"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.investindia.gov.in/"
+  },
+  {
+    "url": "https://www.dgft.gov.in/",
+    "schemes": [
+      "comm-mai",
+      "comm-tma-agri",
+      "comm-interest-equalisation",
+      "comm-epcg",
+      "comm-advance-authorisation",
+      "comm-dfia",
+      "comm-rodtep",
+      "comm-rosctl",
+      "comm-status-holder",
+      "comm-eou",
+      "comm-seis"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.dgft.gov.in/"
+  },
+  {
+    "url": "https://dpiit.gov.in/",
+    "schemes": [
+      "comm-pli-white-goods",
+      "comm-iprs",
+      "comm-sip",
+      "comm-ifldp-clusters",
+      "comm-ifldp-tech",
+      "comm-ifldp-brand"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.dpiit.gov.in/",
+    "initialUrl": "https://dpiit.gov.in/",
+    "redirectChain": [
+      "https://dpiit.gov.in/",
+      "https://www.dpiit.gov.in/"
+    ]
+  },
+  {
+    "url": "https://sezindia.nic.in/",
+    "schemes": [
+      "comm-sez-incentives"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.stpi.in/",
+    "schemes": [
+      "comm-ehtp",
+      "comm-stpi-export"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.stpi.in/"
+  },
+  {
+    "url": "https://nipam.ipindia.gov.in/",
+    "schemes": [
+      "comm-nipam"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.investindia.gov.in/odop",
+    "schemes": [
+      "comm-odop"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://www.investindia.gov.in/odop"
+  },
+  {
+    "url": "https://www.nicdc.in/",
+    "schemes": [
+      "comm-nicdc"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nicdc.in/",
+    "initialUrl": "https://www.nicdc.in/",
+    "redirectChain": [
+      "https://www.nicdc.in/",
+      "https://nicdc.in/"
+    ]
+  },
+  {
+    "url": "https://ipindia.gov.in/gi.htm",
+    "schemes": [
+      "comm-gi-registry"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://ipindia.gov.in/gi.htm"
+  },
+  {
+    "url": "https://www.kviconline.gov.in/pmegp/",
+    "schemes": [
+      "msme-pmegp"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "EAI_AGAIN"
+  },
+  {
+    "url": "https://www.swavlambancard.gov.in/",
+    "schemes": [
+      "soc-udid"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://swavlambancard.gov.in/",
+    "initialUrl": "https://www.swavlambancard.gov.in/",
+    "redirectChain": [
+      "https://www.swavlambancard.gov.in/",
+      "https://swavlambancard.gov.in/"
+    ]
+  },
+  {
+    "url": "https://zed.msme.gov.in/",
+    "schemes": [
+      "comm-zed-export",
+      "msme-zed-scheme"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "HPE_CR_EXPECTED"
+  },
+  {
+    "url": "https://ipindia.gov.in/",
+    "schemes": [
+      "comm-pph",
+      "comm-sipp-ii"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ipindia.gov.in/"
+  },
+  {
+    "url": "https://indianbusinessportal.in/",
+    "schemes": [
+      "comm-ibp-trade"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.indianbusinessportal.in/",
+    "initialUrl": "https://indianbusinessportal.in/",
+    "redirectChain": [
+      "https://indianbusinessportal.in/",
+      "https://www.indianbusinessportal.in/"
+    ]
+  },
+  {
+    "url": "https://cluster.msme.gov.in/",
+    "schemes": [
+      "msme-mse-cdp"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://ipr.msme.gov.in/",
+    "schemes": [
+      "msme-ipr-scheme"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://dcmsme.gov.in/",
+    "schemes": [
+      "msme-esdp"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dcmsme.gov.in/"
+  },
+  {
+    "url": "https://champions.gov.in/",
+    "schemes": [
+      "msme-digital"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://champions.gov.in/Government-India/Ministry-MSME-Portal-handholding/msme-problem-complaint-welcome.htm",
+    "initialUrl": "https://champions.gov.in/",
+    "redirectChain": [
+      "https://champions.gov.in/",
+      "https://champions.gov.in/MyMsme/grievance/COM_Grievance_Welcome.aspx",
+      "https://champions.gov.in/Government-India/Ministry-MSME-Portal-handholding/msme-problem-complaint-welcome.htm"
+    ]
+  },
+  {
+    "url": "https://lean.msme.gov.in/",
+    "schemes": [
+      "msme-lean"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://lean.msme.gov.in/"
+  },
+  {
+    "url": "https://my.msme.gov.in/pms/",
+    "schemes": [
+      "msme-pms"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://my.msme.gov.in/pms/"
+  },
+  {
+    "url": "https://commerce.gov.in/",
+    "schemes": [
+      "comm-ties"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.commerce.gov.in/",
+    "initialUrl": "https://commerce.gov.in/",
+    "redirectChain": [
+      "https://commerce.gov.in/",
+      "https://www.commerce.gov.in/"
+    ]
+  },
+  {
+    "url": "http://manodarpan.education.gov.in/",
+    "schemes": [
+      "edu-manodarpan"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://design.msme.gov.in/",
+    "schemes": [
+      "msme-design-clinic"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://design.msme.gov.in/"
+  },
+  {
+    "url": "https://seednet.gov.in/",
+    "schemes": [
+      "agri-smsp"
+    ],
+    "ok": false,
+    "status": 503,
+    "finalUrl": "https://seednet.gov.in/"
+  },
+  {
+    "url": "https://www.nbcfdc.gov.in/",
+    "schemes": [
+      "soc-nbcfdc-swarnima",
+      "soc-nbcfdc-saksham",
+      "soc-nbcfdc-shilp",
+      "soc-nbcfdc-kisan"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.nbcfdc.gov.in/nbcfdc/web/",
+    "initialUrl": "https://www.nbcfdc.gov.in/",
+    "redirectChain": [
+      "https://www.nbcfdc.gov.in/",
+      "https://www.nbcfdc.gov.in/nbcfdc/web",
+      "https://www.nbcfdc.gov.in/nbcfdc/web/"
+    ]
+  },
+  {
+    "url": "https://nmeo.gov.in/",
+    "schemes": [
+      "agri-nmeo-op"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://depwd.gov.in/",
+    "schemes": [
+      "soc-nos-pwd",
+      "soc-sipda",
+      "soc-national-institutes-pwd",
+      "soc-crc-centres",
+      "soc-ddrc-scheme"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://depwd.gov.in/"
+  },
+  {
+    "url": "https://www.kvic.gov.in/",
+    "schemes": [
+      "msme-honey-mission",
+      "msme-kumhar-sashaktikaran",
+      "msme-agarbatti-mission"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.kvic.gov.in/kvicres/index.php",
+    "initialUrl": "https://www.kvic.gov.in/",
+    "redirectChain": [
+      "https://www.kvic.gov.in/",
+      "https://www.kvic.gov.in/kvicres/index.php"
+    ]
+  },
+  {
+    "url": "https://nbhm.gov.in/",
+    "schemes": [
+      "agri-nbhm"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://midh.gov.in/",
+    "schemes": [
+      "agri-midh"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://midh.gov.in/"
+  },
+  {
+    "url": "https://pmksy.gov.in/microirrigation/",
+    "schemes": [
+      "agri-pdmc"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://pmksy.gov.in/microirrigation/"
+  },
+  {
+    "url": "https://mksp.gov.in/",
+    "schemes": [
+      "agri-mksp"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://pgsindia-ncof.gov.in/pkvy/index.aspx",
+    "schemes": [
+      "agri-pkvy-cluster"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pgsindia-ncof.gov.in/pkvy/index.aspx"
+  },
+  {
+    "url": "https://www.myscheme.gov.in/schemes/kcc",
+    "schemes": [
+      "agri-kcc-crops"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.myscheme.gov.in/schemes/kcc"
+  },
+  {
+    "url": "https://plitextiles.gov.in/",
+    "schemes": [
+      "tex-pli"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://movcd.dac.gov.in/",
+    "schemes": [
+      "agri-movcdner"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://movcd.dac.gov.in/"
+  },
+  {
+    "url": "https://kisansuvidha.gov.in/",
+    "schemes": [
+      "agri-kisan-call-centre"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://kisansuvidha.gov.in/"
+  },
+  {
+    "url": "https://crafts.gov.in/",
+    "schemes": [
+      "tex-ahvy",
+      "tex-handicrafts-design"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://ic.msme.gov.in/",
+    "schemes": [
+      "msme-ic-scheme"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ic.msme.gov.in/IC_APP/IC_Welcome.aspx",
+    "initialUrl": "https://ic.msme.gov.in/",
+    "redirectChain": [
+      "https://ic.msme.gov.in/",
+      "https://ic.msme.gov.in/IC_APP/IC_Welcome.aspx"
+    ]
+  },
+  {
+    "url": "https://txcindia.gov.in/",
+    "schemes": [
+      "tex-atufs",
+      "tex-powertex"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://txcindia.gov.in/"
+  },
+  {
+    "url": "https://csb.gov.in/",
+    "schemes": [
+      "tex-silk-samagra"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://csb.gov.in/"
+  },
+  {
+    "url": "https://sambandh.msme.gov.in/",
+    "schemes": [
+      "msme-sambandh"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sambandh.msme.gov.in/PPP_Index.aspx",
+    "initialUrl": "https://sambandh.msme.gov.in/",
+    "redirectChain": [
+      "https://sambandh.msme.gov.in/",
+      "https://sambandh.msme.gov.in/PPP_Index.aspx"
+    ]
+  },
+  {
+    "url": "https://www.scsthub.in/",
+    "schemes": [
+      "msme-nssh"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.scsthub.in/"
+  },
+  {
+    "url": "https://dot.gov.in/",
+    "schemes": [
+      "comm-pli-telecom",
+      "dot-5g-testbed"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.dot.gov.in/",
+    "initialUrl": "https://dot.gov.in/",
+    "redirectChain": [
+      "https://dot.gov.in/",
+      "https://www.dot.gov.in/"
+    ]
+  },
+  {
+    "url": "https://jutecomm.gov.in/",
+    "schemes": [
+      "tex-jute-icare"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://jutecomm.gov.in/"
+  },
+  {
+    "url": "https://sevabhoj.nic.in/",
+    "schemes": [
+      "cul-seva-bhoj"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mgmd.gov.in/",
+    "schemes": [
+      "cul-cultural-mapping"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mgmd.gov.in/"
+  },
+  {
+    "url": "https://ism.gov.in/",
+    "schemes": [
+      "meity-dli-semiconductor",
+      "meity-semiconductor-fabs",
+      "meity-display-fabs",
+      "meity-compound-semis"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ism.gov.in/"
+  },
+  {
+    "url": "https://tide.meity.gov.in/",
+    "schemes": [
+      "meity-tide-2"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.meity.gov.in/esdm/specs",
+    "schemes": [
+      "meity-specs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.meity.gov.in/esdm/specs"
+  },
+  {
+    "url": "https://bhashini.gov.in/",
+    "schemes": [
+      "meity-bhashini"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://bhashini.gov.in/"
+  },
+  {
+    "url": "https://ncf.nic.in/",
+    "schemes": [
+      "cul-ncf-partnerships"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ncf.nic.in/"
+  },
+  {
+    "url": "https://www.digilocker.gov.in/",
+    "schemes": [
+      "meity-digilocker-scheme"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.digilocker.gov.in/"
+  },
+  {
+    "url": "https://capfeawas.gov.in/",
+    "schemes": [
+      "mha-capf-eawas"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.csk.gov.in/",
+    "schemes": [
+      "meity-cyber-swachhta"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.csk.gov.in/"
+  },
+  {
+    "url": "https://ehs.capf.gov.in/",
+    "schemes": [
+      "mha-ayushman-capf"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://innovate.stpinext.in/",
+    "schemes": [
+      "meity-chunauti"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://innovate.stpinext.in/"
+  },
+  {
+    "url": "https://digitalpolice.gov.in/",
+    "schemes": [
+      "mha-cctns"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://digitalpolice.gov.in/"
+  },
+  {
+    "url": "https://cybercrime.gov.in/",
+    "schemes": [
+      "mha-cybercrime-portal"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cybercrime.gov.in/"
+  },
+  {
+    "url": "https://ndma.gov.in/",
+    "schemes": [
+      "mha-aapda-mitra"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ndma.gov.in/"
+  },
+  {
+    "url": "https://sportsauthorityofindia.nic.in/tops/",
+    "schemes": [
+      "yas-tops-core",
+      "yas-tops-junior"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://sportsauthorityofindia.nic.in/tops/"
+  },
+  {
+    "url": "https://transgender.dosje.gov.in/",
+    "schemes": [
+      "soc-smile-transgender",
+      "soc-garima-greh",
+      "soc-transgender-portal"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://accessibleindia.gov.in/",
+    "schemes": [
+      "soc-sugamya-bharat"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://nosmsje.gov.in/",
+    "schemes": [
+      "soc-nos-sc"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://idex.gov.in/",
+    "schemes": [
+      "def-idex",
+      "def-idex-prime"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://idex.gov.in/"
+  },
+  {
+    "url": "https://kvsangathan.nic.in/",
+    "schemes": [
+      "edu-kv-girl-exemption"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://tdf.drdo.gov.in/",
+    "schemes": [
+      "def-tdf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://tdf.drdo.gov.in/"
+  },
+  {
+    "url": "https://desw.gov.in/",
+    "schemes": [
+      "def-orop"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://desw.gov.in/"
+  },
+  {
+    "url": "https://fitindia.gov.in/",
+    "schemes": [
+      "yas-fit-india"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://fitindia.gov.in/"
+  },
+  {
+    "url": "https://ahidf.udyamimitra.in/",
+    "schemes": [
+      "fish-ahidf"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ahidf.udyamimitra.in/"
+  },
+  {
+    "url": "https://sparsh.defencepension.gov.in/",
+    "schemes": [
+      "def-sparsh"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sparsh.defencepension.gov.in/"
+  },
+  {
+    "url": "https://awhosena.in/",
+    "schemes": [
+      "def-awho"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.awhosena.in/",
+    "initialUrl": "https://awhosena.in/",
+    "redirectChain": [
+      "https://awhosena.in/",
+      "https://www.awhosena.in/"
+    ]
+  },
+  {
+    "url": "https://www.epfindia.gov.in/",
+    "schemes": [
+      "lab-epf-edli",
+      "lab-abry"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.epfo.gov.in:443/",
+    "initialUrl": "https://www.epfindia.gov.in/",
+    "redirectChain": [
+      "https://www.epfindia.gov.in/",
+      "https://www.epfo.gov.in:443/"
+    ]
+  },
+  {
+    "url": "https://penciltraining.nic.in/",
+    "schemes": [
+      "lab-nclp"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.ncs.gov.in/",
+    "schemes": [
+      "lab-ncs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ncs.gov.in",
+    "initialUrl": "https://www.ncs.gov.in/",
+    "redirectChain": [
+      "https://www.ncs.gov.in/",
+      "https://ncs.gov.in"
+    ]
+  },
+  {
+    "url": "https://abha.abdm.gov.in/",
+    "schemes": [
+      "health-abdm-abha"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://abha.abdm.gov.in/abha/v3",
+    "initialUrl": "https://abha.abdm.gov.in/",
+    "redirectChain": [
+      "https://abha.abdm.gov.in/",
+      "https://abha.abdm.gov.in/abha/v3"
+    ]
+  },
+  {
+    "url": "https://fert.gov.in/",
+    "schemes": [
+      "chem-one-nation-fertilizer",
+      "chem-nbs-fertilizer"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://fert.gov.in/"
+  },
+  {
+    "url": "https://nikshay.in/",
+    "schemes": [
+      "health-tb-mukt"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://nikshay.in/"
+  },
+  {
+    "url": "https://www.esic.gov.in/",
+    "schemes": [
+      "lab-esic"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://esic.gov.in/",
+    "initialUrl": "https://www.esic.gov.in/",
+    "redirectChain": [
+      "https://www.esic.gov.in/",
+      "https://esic.gov.in/"
+    ]
+  },
+  {
+    "url": "https://indiaai.gov.in/",
+    "schemes": [
+      "meity-indiaai"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://indiaai.gov.in/"
+  },
+  {
+    "url": "https://silkmarkindia.com/",
+    "schemes": [
+      "tex-silk-handloom-mark"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://silkmarkindia.com/"
+  },
+  {
+    "url": "https://namayush.gov.in/",
+    "schemes": [
+      "ayush-nam"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://usof.gov.in/",
+    "schemes": [
+      "dot-bharatnet",
+      "dot-sanction-spectrum"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dbn.gov.in/en/home",
+    "initialUrl": "https://usof.gov.in/",
+    "redirectChain": [
+      "https://usof.gov.in/",
+      "https://dbn.gov.in/",
+      "https://dbn.gov.in/en/home"
+    ]
+  },
+  {
+    "url": "https://yoga.ayush.gov.in/",
+    "schemes": [
+      "ayush-iec-yoga"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://yoga.ayush.gov.in/"
+  },
+  {
+    "url": "https://tribal.gov.in/",
+    "schemes": [
+      "trib-pmjuga",
+      "trib-janman"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://tribal.gov.in/ResourcesHindi/Homeh.aspx",
+    "initialUrl": "https://tribal.gov.in/",
+    "redirectChain": [
+      "https://tribal.gov.in/",
+      "https://tribal.gov.in/ResourcesHindi/Homeh.aspx"
+    ]
+  },
+  {
+    "url": "https://trifed.tribal.gov.in/",
+    "schemes": [
+      "trib-pmvdy"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://trifed.tribal.gov.in/"
+  },
+  {
+    "url": "https://sfurti.msme.gov.in/",
+    "schemes": [
+      "msme-sfurti"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://awards.gov.in/",
+    "schemes": [
+      "soc-national-award-pwd",
+      "soc-vayoshreshtha-samman",
+      "cul-gandhi-peace-prize",
+      "yas-national-youth-award"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.eclgs.com/",
+    "schemes": [
+      "fin-eclgs"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.ncgtc.in/en/product-details/ECLGS/Emergency-Credit-Line-Guarantee-Scheme-(ECLGS)/",
+    "initialUrl": "https://www.eclgs.com/",
+    "redirectChain": [
+      "https://www.eclgs.com/",
+      "https://www.ncgtc.in/en/product-details/ECLGS/Emergency-Credit-Line-Guarantee-Scheme-(ECLGS)/"
+    ]
+  },
+  {
+    "url": "https://www.itecgoi.in/",
+    "schemes": [
+      "mea-itec"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.itecgoi.in/index",
+    "initialUrl": "https://www.itecgoi.in/",
+    "redirectChain": [
+      "https://www.itecgoi.in/",
+      "https://www.itecgoi.in/index"
+    ]
+  },
+  {
+    "url": "https://prana.cpcb.gov.in/",
+    "schemes": [
+      "moef-ncap"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://prana.cpcb.gov.in/"
+  },
+  {
+    "url": "https://igotkarmayogi.gov.in/",
+    "schemes": [
+      "pers-karmayogi"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://igotkarmayogi.gov.in/"
+  },
+  {
+    "url": "https://pgportal.gov.in/",
+    "schemes": [
+      "pers-cpgrams"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pgportal.gov.in/"
+  },
+  {
+    "url": "https://pmfme.mofpi.gov.in/",
+    "schemes": [
+      "food-pmfme"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmfme.mofpi.gov.in/"
+  },
+  {
+    "url": "https://csrxchange.gov.in/",
+    "schemes": [
+      "mca-csr-exchange"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://csrxchange.gov.in/"
+  },
+  {
+    "url": "https://coirboard.gov.in/",
+    "schemes": [
+      "msme-coir-vikas",
+      "msme-citus",
+      "msme-mahila-coir"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://pmjvk.minorityaffairs.gov.in/",
+    "schemes": [
+      "min-pmjvk"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmjvk.minorityaffairs.gov.in/"
+  },
+  {
+    "url": "https://pmwani.gov.in/",
+    "schemes": [
+      "dot-pm-wani"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pmwani.gov.in/"
+  },
+  {
+    "url": "https://nttm.texmin.gov.in/",
+    "schemes": [
+      "tex-nttm"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://woolboard.nic.in/",
+    "schemes": [
+      "tex-wool-development"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.namami.gov.in/",
+    "schemes": [
+      "cul-manuscripts-mission"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://112.gov.in/",
+    "schemes": [
+      "mha-erss-112"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ndmindia.mha.gov.in/",
+    "schemes": [
+      "mha-ndrf-relief"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://rbsk.gov.in/",
+    "schemes": [
+      "health-rbsk"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://edistrict.andaman.gov.in/",
+    "schemes": [
+      "73",
+      "74",
+      "76",
+      "78",
+      "79",
+      "80"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "EAI_AGAIN"
+  },
+  {
+    "url": "https://dhs.andaman.gov.in/",
+    "schemes": [
+      "75"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "EAI_AGAIN"
+  },
+  {
+    "url": "https://kip.gov.in/",
+    "schemes": [
+      "mea-kip"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ataljal.mowr.gov.in/",
+    "schemes": [
+      "jal-atal-bhujal"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://pbmc.gov.in/",
+    "schemes": [
+      "77"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pbmc.gov.in/"
+  },
+  {
+    "url": "https://iwai.nic.in/",
+    "schemes": [
+      "port-jmvp"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://transport.andaman.gov.in/",
+    "schemes": [
+      "81"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://vidyut.andaman.gov.in/",
+    "schemes": [
+      "82"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ysrrythubharosa.ap.gov.in/",
+    "schemes": [
+      "83"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://jaganannaammavodi.ap.gov.in/",
+    "schemes": [
+      "84",
+      "86"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.ysraarogyasri.ap.gov.in/",
+    "schemes": [
+      "85"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://housing.ap.gov.in/",
+    "schemes": [
+      "87"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://navasakam.ap.gov.in/",
+    "schemes": [
+      "88",
+      "89",
+      "90",
+      "91",
+      "92"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://agri.arunachal.gov.in/",
+    "schemes": [
+      "93"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://eservice.arunachal.gov.in/",
+    "schemes": [
+      "94",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://eservice.arunachal.gov.in/"
+  },
+  {
+    "url": "https://transport.bihar.gov.in/",
+    "schemes": [
+      "121"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://orunodoi.assam.gov.in/",
+    "schemes": [
+      "106"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNRESET"
+  },
+  {
+    "url": "https://www.7nishchay-yuvaupmission.bihar.gov.in/",
+    "schemes": [
+      "114"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.7nishchay-yuvaupmission.bihar.gov.in/"
+  },
+  {
+    "url": "https://serviceonline.bihar.gov.in/",
+    "schemes": [
+      "115",
+      "117",
+      "119",
+      "122"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://serviceonline.bihar.gov.in/"
+  },
+  {
+    "url": "https://crestchd.org.in/",
+    "schemes": [
+      "132"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://dbtagriculture.bihar.gov.in/",
+    "schemes": [
+      "113"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dbtagriculture.bihar.gov.in/"
+  },
+  {
+    "url": "https://udyami.bihar.gov.in/",
+    "schemes": [
+      "120"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://udyami.bihar.gov.in/"
+  },
+  {
+    "url": "https://chandigarh.gov.in/",
+    "schemes": [
+      "123",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://chandigarh.gov.in/"
+  },
+  {
+    "url": "https://chdctu.gov.in/",
+    "schemes": [
+      "131"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://chdctu.gov.in/"
+  },
+  {
+    "url": "https://sewasetu.assam.gov.in/",
+    "schemes": [
+      "103",
+      "104",
+      "107",
+      "108",
+      "109",
+      "110",
+      "112"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sewasetu.assam.gov.in/"
+  },
+  {
+    "url": "https://ddd.gov.in/",
+    "schemes": [
+      "143",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ddd.gov.in/"
+  },
+  {
+    "url": "https://astc.assam.gov.in/",
+    "schemes": [
+      "111"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://astc.assam.gov.in/"
+  },
+  {
+    "url": "https://daman.nic.in/",
+    "schemes": [
+      "144"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://daman.nic.in/"
+  },
+  {
+    "url": "https://edistrict.delhigovt.nic.in/",
+    "schemes": [
+      "153",
+      "154",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.delhigovt.nic.in/"
+  },
+  {
+    "url": "https://dshm.delhi.gov.in/",
+    "schemes": [
+      "155"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://dshm.delhi.gov.in/"
+  },
+  {
+    "url": "https://atalamritabhiyan.assam.gov.in/",
+    "schemes": [
+      "105"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://atalamritabhiyan.assam.gov.in/"
+  },
+  {
+    "url": "https://ikhedut.gujarat.gov.in/",
+    "schemes": [
+      "173"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ikhedut.gujarat.gov.in/"
+  },
+  {
+    "url": "https://serviceonline.gov.in/",
+    "schemes": [
+      "124"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://serviceonline.gov.in/"
+  },
+  {
+    "url": "https://goaonline.gov.in/",
+    "schemes": [
+      "163",
+      "164",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "172"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://goaonline.gov.in/"
+  },
+  {
+    "url": "https://edistrict.cgstate.gov.in/",
+    "schemes": [
+      "134",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sewasetu.cgstate.gov.in/home?lang=hi",
+    "initialUrl": "https://edistrict.cgstate.gov.in/",
+    "redirectChain": [
+      "https://edistrict.cgstate.gov.in/",
+      "https://edistrict.cgstate.gov.in/PACE/login.do",
+      "https://cgedistrict.cgstate.gov.in/home?lang=hi",
+      "https://sewasetu.cgstate.gov.in/home?lang=hi"
+    ]
+  },
+  {
+    "url": "https://goatransport.gov.in/",
+    "schemes": [
+      "171"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://goatransport.gov.in/Default",
+    "initialUrl": "https://goatransport.gov.in/",
+    "redirectChain": [
+      "https://goatransport.gov.in/",
+      "https://goatransport.gov.in/Default"
+    ]
+  },
+  {
+    "url": "https://www.digitalgujarat.gov.in/",
+    "schemes": [
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.digitalgujarat.gov.in/"
+  },
+  {
+    "url": "https://ev.delhi.gov.in/",
+    "schemes": [
+      "162"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ev.delhi.gov.in/"
+  },
+  {
+    "url": "https://saralharyana.gov.in/",
+    "schemes": [
+      "184",
+      "185",
+      "186",
+      "187",
+      "190",
+      "192"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://saralharyana.gov.in/"
+  },
+  {
+    "url": "https://meraparivar.haryana.gov.in/",
+    "schemes": [
+      "188"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://meraparivar.haryana.gov.in/"
+  },
+  {
+    "url": "https://spnfhp.nic.in/",
+    "schemes": [
+      "193"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://fasal.haryana.gov.in/",
+    "schemes": [
+      "183"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://fasal.haryana.gov.in/"
+  },
+  {
+    "url": "https://jkeservices.gov.in/",
+    "schemes": [
+      "203",
+      "206",
+      "207",
+      "208",
+      "210",
+      "211",
+      "212"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://hkrnl.itiharyana.gov.in/",
+    "schemes": [
+      "189"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://hkrnl.itiharyana.gov.in/"
+  },
+  {
+    "url": "https://himcare.hp.gov.in/",
+    "schemes": [
+      "195"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://services.jk.gov.in/",
+    "schemes": [
+      "205"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://hartrans.gov.in/",
+    "schemes": [
+      "191"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://hartrans.gov.in/"
+  },
+  {
+    "url": "https://awas.jharkhand.gov.in/",
+    "schemes": [
+      "217"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://missionyouth.jk.gov.in/",
+    "schemes": [
+      "204",
+      "209"
+    ],
+    "ok": false,
+    "status": 500,
+    "finalUrl": "https://missionyouth.jk.gov.in/"
+  },
+  {
+    "url": "https://mahtarivandan.cgstate.gov.in/",
+    "schemes": [
+      "136"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mahtarivandan.cgstate.gov.in/"
+  },
+  {
+    "url": "https://cmaay.com/",
+    "schemes": [
+      "95"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cmaay.arunachal.gov.in/",
+    "initialUrl": "https://cmaay.com/",
+    "redirectChain": [
+      "https://cmaay.com/",
+      "https://cmaay.arunachal.gov.in/"
+    ]
+  },
+  {
+    "url": "https://agri.jharkhand.gov.in/",
+    "schemes": [
+      "213"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://agri.jharkhand.gov.in/"
+  },
+  {
+    "url": "https://jharsewa.jharkhand.gov.in/",
+    "schemes": [
+      "214",
+      "215",
+      "216",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://jharsewa.jharkhand.gov.in/"
+  },
+  {
+    "url": "https://ksrtc.in/",
+    "schemes": [
+      "231"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ksrtc.in/"
+  },
+  {
+    "url": "https://sevasindhugs.karnataka.gov.in/",
+    "schemes": [
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "232"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sevasindhugs.karnataka.gov.in/"
+  },
+  {
+    "url": "https://raitamitra.karnataka.gov.in/",
+    "schemes": [
+      "223"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://raitamitra.karnataka.gov.in/"
+  },
+  {
+    "url": "https://edistrict.hp.gov.in/",
+    "schemes": [
+      "194",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.hp.gov.in/HPeDistrict/",
+    "initialUrl": "https://edistrict.hp.gov.in/",
+    "redirectChain": [
+      "https://edistrict.hp.gov.in/",
+      "https://edistrict.hp.gov.in/HPeDistrict/"
+    ]
+  },
+  {
+    "url": "https://leh.nic.in/",
+    "schemes": [
+      "243"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://leh.nic.in/"
+  },
+  {
+    "url": "https://edistrict.kerala.gov.in/",
+    "schemes": [
+      "233",
+      "234",
+      "236",
+      "238",
+      "239",
+      "241",
+      "242"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.kerala.gov.in/"
+  },
+  {
+    "url": "https://kargil.nic.in/",
+    "schemes": [
+      "244"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://kargil.nic.in/"
+  },
+  {
+    "url": "https://ladakh.gov.in/",
+    "schemes": [
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ladakh.gov.in/"
+  },
+  {
+    "url": "https://lakshadweep.gov.in/",
+    "schemes": [
+      "253",
+      "254",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://lakshadweep.gov.in/"
+  },
+  {
+    "url": "https://lifemission.kerala.gov.in/",
+    "schemes": [
+      "237"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://lifemission.kerala.gov.in/"
+  },
+  {
+    "url": "https://agridept.cg.gov.in/",
+    "schemes": [
+      "133"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNREFUSED"
+  },
+  {
+    "url": "https://dkbssy.cg.nic.in/",
+    "schemes": [
+      "135"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNREFUSED"
+  },
+  {
+    "url": "https://mpedistrict.gov.in/",
+    "schemes": [
+      "263",
+      "264",
+      "267",
+      "270",
+      "271",
+      "272"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mpedistrict.gov.in/"
+  },
+  {
+    "url": "https://cmladlibahna.mp.gov.in/",
+    "schemes": [
+      "266"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cmladlibahna.mp.gov.in/"
+  },
+  {
+    "url": "https://ladkibahin.maharashtra.gov.in/",
+    "schemes": [
+      "276"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.kudumbashree.org/",
+    "schemes": [
+      "240"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.kudumbashree.org/"
+  },
+  {
+    "url": "https://mmsky.mp.gov.in/",
+    "schemes": [
+      "269"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "EPROTO"
+  },
+  {
+    "url": "https://sha.kerala.gov.in/",
+    "schemes": [
+      "235"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sha.kerala.gov.in/"
+  },
+  {
+    "url": "https://aaplesarkar.mahaonline.gov.in/",
+    "schemes": [
+      "274",
+      "277",
+      "278",
+      "279",
+      "280",
+      "281",
+      "282"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://aaplesarkar.mahaonline.gov.in/"
+  },
+  {
+    "url": "https://krishi.maharashtra.gov.in/",
+    "schemes": [
+      "273"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://krishi.maharashtra.gov.in/"
+  },
+  {
+    "url": "https://samagra.gov.in/",
+    "schemes": [
+      "265",
+      "268"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://samagra.gov.in/"
+  },
+  {
+    "url": "https://megedistrict.gov.in/",
+    "schemes": [
+      "293",
+      "294",
+      "296",
+      "297",
+      "298",
+      "299",
+      "301",
+      "302"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://megedistrict.gov.in/"
+  },
+  {
+    "url": "https://startupmanipur.in/",
+    "schemes": [
+      "290"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://startupmanipur.in/"
+  },
+  {
+    "url": "https://lakshadweep.gov.in/service/",
+    "schemes": [
+      "255"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://lakshadweep.gov.in/services/",
+    "initialUrl": "https://lakshadweep.gov.in/service/",
+    "redirectChain": [
+      "https://lakshadweep.gov.in/service/",
+      "https://lakshadweep.gov.in/services/"
+    ]
+  },
+  {
+    "url": "https://edistrict.nagaland.gov.in/",
+    "schemes": [
+      "313",
+      "314",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320",
+      "321",
+      "322"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mhis.org.in/",
+    "schemes": [
+      "295"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mhis.org.in/"
+  },
+  {
+    "url": "https://msegs.mizoram.gov.in/",
+    "schemes": [
+      "303",
+      "304",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
+      "311",
+      "312"
+    ],
+    "ok": false,
+    "status": 404,
+    "finalUrl": "https://msegs.mizoram.gov.in/"
+  },
+  {
+    "url": "https://kalia.odisha.gov.in/",
+    "schemes": [
+      "323",
+      "324"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://cmhtmanipur.gov.in/",
+    "schemes": [
+      "285"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cmhtmanipur.gov.in/"
+  },
+  {
+    "url": "https://mshcs.mizoram.gov.in/",
+    "schemes": [
+      "305"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mshcs.mizoram.gov.in/"
+  },
+  {
+    "url": "https://cmhis.nagaland.gov.in/",
+    "schemes": [
+      "315"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://cmhis.nagaland.gov.in/"
+  },
+  {
+    "url": "https://edistrict.odisha.gov.in/",
+    "schemes": [
+      "327",
+      "328",
+      "329",
+      "330",
+      "331",
+      "332"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.odisha.gov.in/"
+  },
+  {
+    "url": "https://edistrict.py.gov.in/",
+    "schemes": [
+      "333",
+      "334",
+      "335",
+      "336",
+      "337",
+      "339",
+      "340",
+      "341",
+      "342"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.py.gov.in/"
+  },
+  {
+    "url": "https://missionshakti.odisha.gov.in/",
+    "schemes": [
+      "326"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://missionshakti.odisha.gov.in/"
+  },
+  {
+    "url": "https://eservicesmanipur.gov.in/",
+    "schemes": [
+      "283",
+      "284",
+      "286",
+      "287",
+      "288",
+      "289",
+      "291",
+      "292"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://eservicesmanipur.gov.in/"
+  },
+  {
+    "url": "https://connect.punjab.gov.in/",
+    "schemes": [
+      "343",
+      "344",
+      "346",
+      "347",
+      "348",
+      "350",
+      "351",
+      "352"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://connect.punjab.gov.in/"
+  },
+  {
+    "url": "https://chiranjeevi.rajasthan.gov.in/",
+    "schemes": [
+      "355"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://bsky.odisha.gov.in/",
+    "schemes": [
+      "325"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://gjay.odisha.gov.in/",
+    "initialUrl": "https://bsky.odisha.gov.in/",
+    "redirectChain": [
+      "https://bsky.odisha.gov.in/",
+      "https://gjay.odisha.gov.in/"
+    ]
+  },
+  {
+    "url": "https://pgrkam.com/",
+    "schemes": [
+      "349"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pgrkam.com/"
+  },
+  {
+    "url": "https://sso.rajasthan.gov.in/",
+    "schemes": [
+      "353",
+      "356",
+      "357",
+      "359",
+      "360",
+      "361",
+      "362"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sso.rajasthan.gov.in/"
+  },
+  {
+    "url": "https://edistrict.sikkim.gov.in/",
+    "schemes": [
+      "363",
+      "364",
+      "365",
+      "366",
+      "367",
+      "369",
+      "370",
+      "371",
+      "372"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://sje.rajasthan.gov.in/",
+    "schemes": [
+      "354"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sje.rajasthan.gov.in/"
+  },
+  {
+    "url": "https://sha.punjab.gov.in/",
+    "schemes": [
+      "345"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "http://sha.punjab.gov.in/shapunjab/index.php",
+    "initialUrl": "https://sha.punjab.gov.in/",
+    "redirectChain": [
+      "https://sha.punjab.gov.in/",
+      "http://sha.punjab.gov.in/shapunjab/index.php"
+    ]
+  },
+  {
+    "url": "https://jansoochna.rajasthan.gov.in/",
+    "schemes": [
+      "358"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://jansoochna.rajasthan.gov.in/"
+  },
+  {
+    "url": "https://www.cmchistn.com/",
+    "schemes": [
+      "375"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.cmchistn.com/"
+  },
+  {
+    "url": "https://rythubandhu.telangana.gov.in/",
+    "schemes": [
+      "383"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://tg.meeseva.gov.in/",
+    "schemes": [
+      "384",
+      "386",
+      "387",
+      "388",
+      "389",
+      "390",
+      "391",
+      "392"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://www.tnesevai.tn.gov.in/",
+    "schemes": [
+      "373",
+      "377",
+      "378",
+      "380",
+      "381",
+      "382"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.tnesevai.tn.gov.in/"
+  },
+  {
+    "url": "https://kmut.tn.gov.in/",
+    "schemes": [
+      "376"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://kmut.tn.gov.in/"
+  },
+  {
+    "url": "https://aarogyasri.telangana.gov.in/",
+    "schemes": [
+      "385"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://aarogyasri.telangana.gov.in/"
+  },
+  {
+    "url": "https://edistrict.tripura.gov.in/",
+    "schemes": [
+      "393",
+      "394",
+      "396",
+      "397",
+      "398",
+      "399",
+      "400",
+      "401",
+      "402"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.tripura.gov.in/"
+  },
+  {
+    "url": "https://edistrict.up.gov.in/",
+    "schemes": [
+      "403",
+      "405",
+      "407",
+      "409",
+      "411",
+      "412"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.up.gov.in/"
+  },
+  {
+    "url": "https://naanmudhalvan.tn.gov.in/",
+    "schemes": [
+      "379"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://skilldevelopment.tn.gov.in/",
+    "initialUrl": "https://naanmudhalvan.tn.gov.in/",
+    "redirectChain": [
+      "https://naanmudhalvan.tn.gov.in/",
+      "https://skilldevelopment.tn.gov.in/"
+    ]
+  },
+  {
+    "url": "https://tripura.gov.in/",
+    "schemes": [
+      "395"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://tripura.gov.in/"
+  },
+  {
+    "url": "https://diupmsme.upsdc.gov.in/",
+    "schemes": [
+      "410"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ENOTFOUND"
+  },
+  {
+    "url": "https://mksy.up.gov.in/",
+    "schemes": [
+      "406"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://mksy.up.gov.in/women_welfare/",
+    "initialUrl": "https://mksy.up.gov.in/",
+    "redirectChain": [
+      "https://mksy.up.gov.in/",
+      "http://mksy.up.gov.in/women_welfare/",
+      "https://mksy.up.gov.in/women_welfare/"
+    ]
+  },
+  {
+    "url": "https://eservices.uk.gov.in/",
+    "schemes": [
+      "413",
+      "414",
+      "416",
+      "417",
+      "419",
+      "420",
+      "421",
+      "422"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://eservices.uk.gov.in/"
+  },
+  {
+    "url": "https://sspy-up.gov.in/",
+    "schemes": [
+      "408"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://sspy-up.gov.in/HindiPages/index_h.aspx",
+    "initialUrl": "https://sspy-up.gov.in/",
+    "redirectChain": [
+      "https://sspy-up.gov.in/",
+      "https://sspy-up.gov.in/HindiPages/index_h.aspx"
+    ]
+  },
+  {
+    "url": "https://medhasoft.bih.nic.in/",
+    "schemes": [
+      "116"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://elabharthi.bih.nic.in/",
+    "schemes": [
+      "118"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://ayushmanuttarakhand.org/",
+    "schemes": [
+      "415"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ayushmanuttarakhand.org/"
+  },
+  {
+    "url": "https://socialwelfare.uk.gov.in/",
+    "schemes": [
+      "418"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://socialwelfare.uk.gov.in/"
+  },
+  {
+    "url": "https://krishakbandhu.wb.gov.in/",
+    "schemes": [
+      "423"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "EPROTO"
+  },
+  {
+    "url": "https://swasthyasathi.gov.in/",
+    "schemes": [
+      "425"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://swasthyasathi.gov.in/"
+  },
+  {
+    "url": "https://sikkim.gov.in/",
+    "schemes": [
+      "368"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.sikkim.gov.in/",
+    "initialUrl": "https://sikkim.gov.in/",
+    "redirectChain": [
+      "https://sikkim.gov.in/",
+      "https://www.sikkim.gov.in/"
+    ]
+  },
+  {
+    "url": "https://edistrict.wb.gov.in/",
+    "schemes": [
+      "428"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://edistrict.wb.gov.in/"
+  },
+  {
+    "url": "http://dtc.delhi.gov.in/",
+    "schemes": [
+      "161"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://mysy.guj.nic.in/",
+    "schemes": [
+      "174"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.goa.gov.in/departments/health/",
+    "schemes": [
+      "165"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.magujarat.com/",
+    "schemes": [
+      "175"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://www.pudhumaipenn.tn.gov.in/",
+    "schemes": [
+      "374"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNREFUSED"
+  },
+  {
+    "url": "https://abhyuday.up.gov.in/",
+    "schemes": [
+      "404"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNREFUSED"
+  },
+  {
+    "url": "https://wbkanyashree.gov.in/",
+    "schemes": [
+      "424",
+      "426"
+    ],
+    "ok": false,
+    "status": "ERROR",
+    "error": "ECONNREFUSED"
+  },
+  {
+    "url": "https://www.jeevandayee.gov.in/",
+    "schemes": [
+      "275"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://wb.gov.in/",
+    "schemes": [
+      "427",
+      "429",
+      "430",
+      "431",
+      "432"
+    ],
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://wb.gov.in/"
+  },
+  {
+    "url": "https://cmelevate.in/",
+    "schemes": [
+      "300"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  },
+  {
+    "url": "https://socwelfare.py.gov.in/",
+    "schemes": [
+      "338"
+    ],
+    "ok": false,
+    "status": "TIMEOUT"
+  }
+]

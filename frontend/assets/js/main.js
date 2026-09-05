@@ -222,13 +222,16 @@
             }
         } catch {
             console.warn('Search API unavailable');
-            document.dispatchEvent(new CustomEvent('jansahay:showResults', {
-                detail: window.AppData.SAMPLE_SCHEMES.filter(s =>
+            const cleanQuery = (query || '').toLowerCase().trim().replace(/&/g, 'and');
+            const isMin = window.AppData.MINISTRIES.some(m => m.name.toLowerCase().replace(/&/g, 'and') === cleanQuery);
+            const filtered = isMin
+                ? window.AppData.SAMPLE_SCHEMES.filter(s => (s.ministry || '').toLowerCase().replace(/&/g, 'and') === cleanQuery)
+                : window.AppData.SAMPLE_SCHEMES.filter(s =>
                     s.title.toLowerCase().includes(query.toLowerCase()) || 
                     (s.ministry && s.ministry.toLowerCase().includes(query.toLowerCase())) ||
                     (s.state && s.state.toLowerCase().includes(query.toLowerCase())) || 
-                    (s.tags || []).some(t => t.toLowerCase().includes(query.toLowerCase())))
-            }));
+                    (s.tags || []).some(t => t.toLowerCase().includes(query.toLowerCase())));
+            document.dispatchEvent(new CustomEvent('jansahay:showResults', { detail: filtered }));
         }
     }
 

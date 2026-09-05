@@ -1,0 +1,43 @@
+// API base URL — auto-detects if backend is running
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? `http://${window.location.hostname}:5000/api`
+    : '/api';
+
+const STATES = [
+    { name: "Andaman and Nicobar Islands", icon: "fas fa-map-marker-alt",     count: 42,  color: "#0891b2" },
+    { name: "Andhra Pradesh",             icon: "fas fa-map-marker-alt",     count: 268, color: "#1e40af" },
+    { name: "Arunachal Pradesh",          icon: "fas fa-map-marker-alt",     count: 86,  color: "#059669" },
+    { name: "Assam",                      icon: "fas fa-map-marker-alt",     count: 154, color: "#0d9488" },
+    { name: "Bihar",                      icon: "fas fa-map-marker-alt",     count: 197, color: "#b91c1c" },
+    { name: "Chandigarh",                 icon: "fas fa-map-marker-alt",     count: 68,  color: "#4f46e5" },
+    { name: "Chhattisgarh",               icon: "fas fa-map-marker-alt",     count: 164, color: "#b45309" },
+    { name: "Dadra and Nagar Haveli and Daman and Diu", icon: "fas fa-map-marker-alt", count: 39, color: "#c2410c" },
+    { name: "Delhi",                      icon: "fas fa-map-marker-alt",     count: 184, color: "#0369a1" },
+    { name: "Goa",                        icon: "fas fa-map-marker-alt",     count: 92,  color: "#0284c7" },
+    { name: "Gujarat",                    icon: "fas fa-map-marker-alt",     count: 298, color: "#0d9488" },
+    { name: "Haryana",                    icon: "fas fa-map-marker-alt",     count: 176, color: "#166534" },
+    { name: "Himachal Pradesh",           icon: "fas fa-map-marker-alt",     count: 132, color: "#2563eb" },
+    { name: "Jammu and Kashmir",          icon: "fas fa-map-marker-alt",     count: 145, color: "#7c3aed" },
+    { name: "Jharkhand",                  icon: "fas fa-map-marker-alt",     count: 158, color: "#d97706" },
+    { name: "Karnataka",                  icon: "fas fa-map-marker-alt",     count: 328, color: "#7c3aed" },
+    { name: "Kerala",                     icon: "fas fa-map-marker-alt",     count: 254, color: "#be185d" },
+    { name: "Ladakh",                     icon: "fas fa-map-marker-alt",     count: 37,  color: "#0891b2" },
+    { name: "Lakshadweep",                icon: "fas fa-map-marker-alt",     count: 29,  color: "#059669" },
+    { name: "Madhya Pradesh",             icon: "fas fa-map-marker-alt",     count: 275, color: "#166534" },
+    { name: "Maharashtra",                icon: "fas fa-map-marker-alt",     count: 387, color: "#0369a1" },
+    { name: "Manipur",                    icon: "fas fa-map-marker-alt",     count: 74,  color: "#dc2626" },
+    { name: "Meghalaya",                  icon: "fas fa-map-marker-alt",     count: 69,  color: "#059669" },
+    { name: "Mizoram",                    icon: "fas fa-map-marker-alt",     count: 61,  color: "#d97706" },
+    { name: "Nagaland",                   icon: "fas fa-map-marker-alt",     count: 58,  color: "#7c3aed" },
+    { name: "Odisha",                     icon: "fas fa-map-marker-alt",     count: 215, color: "#c2410c" },
+    { name: "Puducherry",                 icon: "fas fa-map-marker-alt",     count: 53,  color: "#4f46e5" },
+    { name: "Punjab",                     icon: "fas fa-map-marker-alt",     count: 231, color: "#92400e" },
+    { name: "Rajasthan",                  icon: "fas fa-map-marker-alt",     count: 354, color: "#b45309" },
+    { name: "Sikkim",                     icon: "fas fa-map-marker-alt",     count: 52,  color: "#0d9488" },
+    { name: "Tamil Nadu",                 icon: "fas fa-map-marker-alt",     count: 341, color: "#047857" },
+    { name: "Telangana",                  icon: "fas fa-map-marker-alt",     count: 218, color: "#dc2626" },
+    { name: "Tripura",                    icon: "fas fa-map-marker-alt",     count: 77,  color: "#2563eb" },
+    { name: "Uttar Pradesh",              icon: "fas fa-map-marker-alt",     count: 412, color: "#b91c1c" },
+    { name: "Uttarakhand",                icon: "fas fa-map-marker-alt",     count: 148, color: "#0284c7" },
+    { name: "West Bengal",                icon: "fas fa-map-marker-alt",     count: 303, color: "#c2410c" }
+];

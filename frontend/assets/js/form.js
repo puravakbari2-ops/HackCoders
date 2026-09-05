@@ -289,7 +289,7 @@
             ${docs ? `<div class="result-docs"><strong><i class="fas fa-file-alt"></i> Docs:</strong><ul>${docs}</ul></div>` : ''}
             <div class="result-card-tags">${(s.tags || []).map(t => `<span class="result-tag">${t}</span>`).join('')}</div>
             <div class="result-card-footer">
-                <a href="${s.applyLink || '#'}" target="_blank" rel="noopener" class="result-card-link">
+                <a href="${(s.applyLink && s.applyLink !== '#') ? s.applyLink : 'https://www.india.gov.in/'}" target="_blank" rel="noopener noreferrer" class="result-card-link" title="Apply on official portal">
                     Apply Now <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>

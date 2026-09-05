@@ -1,0 +1,5084 @@
+{
+    "id": "cag-1",
+    "title": "CAG Internship Programme",
+    "ministry": "Comptroller and Auditor General of India",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Internship",
+        "Government",
+        "Audit",
+        "Students"
+    ],
+    "benefits": "Selected interns get hands-on experience in government auditing and public finance management. Monthly stipend of ₹10,000 for the duration of internship.",
+    "eligibility_summary": "Graduate/postgraduate students in Finance, Economics, Law or related disciplines.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 28,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban",
+        "rural"
+    ],
+    "applyLink": "https://cag.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "cag-2",
+    "title": "CAG Research Fellowship",
+    "ministry": "Comptroller and Auditor General of India",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Fellowship",
+        "Research",
+        "Audit",
+        "Finance"
+    ],
+    "benefits": "Annual fellowship of ₹1.5 lakh for research in public auditing methodologies and government accountability.",
+    "eligibility_summary": "PhD scholars and researchers in public finance, accounting or governance.",
+    "eligibility": {
+        "minAge": 22,
+        "maxAge": 40,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "rural"
+    ],
+    "applyLink": "https://cag.gov.in/",
+    "baseMatchScore": 52
+},
+{
+    "id": "agri-pm-kisan",
+    "title": "PM-KISAN Samman Nidhi",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Farmer",
+        "Income Support",
+        "Direct Benefit"
+    ],
+    "benefits": "₹6,000 per year in three equal installments of ₹2,000 directly to farmer's bank account.",
+    "eligibility_summary": "Small and marginal farmer families with combined landholding up to 2 hectares.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://pmkisan.gov.in/",
+    "baseMatchScore": 88
+},
+{
+    "id": "agri-pkvy",
+    "title": "Paramparagat Krishi Vikas Yojana (PKVY)",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Organic Farming",
+        "Farmer",
+        "Environment"
+    ],
+    "benefits": "₹50,000 per hectare over 3 years for organic farming adoption, certification and marketing support.",
+    "eligibility_summary": "Farmers willing to adopt organic farming practices and form clusters of 50 acres.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://pgsindia-ncof.gov.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "agri-pmfby",
+    "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Crop Insurance",
+        "Farmer",
+        "Natural Disaster"
+    ],
+    "benefits": "Insurance coverage for crops at low premium — 2% for Kharif, 1.5% for Rabi. Full actuarial premium covered by Govt for residual losses.",
+    "eligibility_summary": "All farmers including sharecroppers and tenant farmers growing notified crops.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://pmfby.gov.in/",
+    "baseMatchScore": 82
+},
+{
+    "id": "agri-kcc",
+    "title": "Kisan Credit Card (KCC) Scheme",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "type": "central",
+    "category": "Banking, Financial Services & Insurance",
+    "tags": [
+        "Credit",
+        "Farmer",
+        "Loan",
+        "Interest Subvention"
+    ],
+    "benefits": "Short-term credit up to ₹3 lakh at 4% interest after 2% interest subvention for prompt repayment. Insurance coverage of ₹50,000 for permanent disability and death.",
+    "eligibility_summary": "All farmers, sharecroppers, oral lessees and SHG members engaged in crop cultivation.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://pmkisan.gov.in/kcc.aspx",
+    "baseMatchScore": 80
+},
+{
+    "id": "agri-atma",
+    "title": "Agricultural Technology Management Agency (ATMA)",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Technology",
+        "Farmer Training",
+        "Extension"
+    ],
+    "benefits": "Farm schools, demonstrations, exposure visits, and training for farmers. ₹5,000–₹10,000 for participating in technology demonstrations.",
+    "eligibility_summary": "Small and marginal farmers interested in learning modern agricultural technologies.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://agri-atma.in/",
+    "baseMatchScore": 70
+},
+{
+    "id": "agri-mkisan",
+    "title": "mKisan Portal – SMS Advisory Services",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Digital",
+        "Farmer",
+        "SMS",
+        "Advisory"
+    ],
+    "benefits": "Free SMS advisory on crop management, weather, market prices, and government schemes in local language.",
+    "eligibility_summary": "Any farmer with a mobile phone registered on the mKisan portal.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://mkisan.gov.in/",
+    "baseMatchScore": 65
+},
+{
+    "id": "ayush-1",
+    "title": "National AYUSH Mission (NAM)",
+    "ministry": "Ministry of Ayush",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Ayurveda",
+        "Yoga",
+        "Healthcare",
+        "Traditional Medicine"
+    ],
+    "benefits": "Free AYUSH healthcare at PHCs and hospitals. Support for AYUSH practitioners and availability of Ayurvedic, Unani, Siddha, and Homeopathic medicines.",
+    "eligibility_summary": "All citizens seeking AYUSH-based healthcare at government AYUSH facilities.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://ayush.gov.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "ayush-2",
+    "title": "Scholarship Scheme for AYUSH Students (Foreign)",
+    "ministry": "Ministry of Ayush",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "AYUSH",
+        "International",
+        "Medical"
+    ],
+    "benefits": "Scholarship for meritorious foreign students pursuing AYUSH courses in Indian institutions. Covers tuition, hostel and monthly stipend.",
+    "eligibility_summary": "Foreign nationals applying to study AYUSH courses in recognized Indian institutions.",
+    "eligibility": {
+        "minAge": 17,
+        "maxAge": 30,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban"
+    ],
+    "applyLink": "https://ayush.gov.in/",
+    "baseMatchScore": 42
+},
+{
+    "id": "ayush-3",
+    "title": "Pradhan Mantri Swasthya Suraksha Yojana – AYUSH Upgradation",
+    "ministry": "Ministry of Ayush",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Healthcare",
+        "Infrastructure",
+        "AYUSH"
+    ],
+    "benefits": "Upgradation of district hospitals to include AYUSH wings. Setting up of 12,500 health and wellness centres providing AYUSH services free of cost.",
+    "eligibility_summary": "Beneficiaries receiving healthcare at upgraded government hospitals across India.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://ayush.gov.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "chem-1",
+    "title": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "ministry": "Ministry of Chemicals and Fertilizers",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Generic Medicines",
+        "Affordable",
+        "Healthcare"
+    ],
+    "benefits": "Quality generic medicines at up to 90% less than branded price at Janaushadhi Kendras. Over 1,900 medicines available.",
+    "eligibility_summary": "All citizens can purchase medicines at Janaushadhi stores. Storeowners get ₹2.5 lakh startup support.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://janaushadhi.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "chem-2",
+    "title": "New Urea Policy 2015 – Neem Coated Urea",
+    "ministry": "Ministry of Chemicals and Fertilizers",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Fertilizer",
+        "Farmer",
+        "Urea",
+        "Subsidy"
+    ],
+    "benefits": "Mandated neem-coating of urea reduces diversion, improves soil health. All urea sold at government-fixed Maximum Retail Price (MRP) with subsidy.",
+    "eligibility_summary": "Farmers purchasing urea from licensed dealers across India.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.fert.nic.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "chem-3",
+    "title": "Nutrient Based Subsidy (NBS) Scheme",
+    "ministry": "Ministry of Chemicals and Fertilizers",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Subsidy",
+        "Fertilizer",
+        "Farmer"
+    ],
+    "benefits": "Fixed per-kg subsidy on P&K fertilizers so farmers can access quality fertilizers at affordable prices.",
+    "eligibility_summary": "Farmers purchasing P&K fertilizers from authorized dealers.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.fert.nic.in/",
+    "baseMatchScore": 70
+},
+{
+    "id": "comm-1",
+    "title": "Startup India Initiative",
+    "ministry": "Ministry of Commerce and Industry",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Startup",
+        "Entrepreneurship",
+        "Tax Exemption",
+        "Funding"
+    ],
+    "benefits": "3-year income tax exemption, 80% rebate on patent fees, self-certification under labour & environmental laws, ₹10,000 crore Fund of Funds.",
+    "eligibility_summary": "Startups incorporated after April 2016 with annual turnover not exceeding ₹100 crore.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.startupindia.gov.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "comm-2",
+    "title": "Make in India",
+    "ministry": "Ministry of Commerce and Industry",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Manufacturing",
+        "Investment",
+        "Industry",
+        "Employment"
+    ],
+    "benefits": "Single-window clearances, eased FDI norms, sector-specific incentives for manufacturers. Support for 27 key sectors.",
+    "eligibility_summary": "Indian and foreign companies looking to set up or expand manufacturing in India.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "salaried"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban",
+        "rural"
+    ],
+    "applyLink": "https://www.makeinindia.com/",
+    "baseMatchScore": 65
+},
+{
+    "id": "comm-3",
+    "title": "Production Linked Incentive (PLI) Scheme",
+    "ministry": "Ministry of Commerce and Industry",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Manufacturing",
+        "Incentive",
+        "PLI",
+        "Industry"
+    ],
+    "benefits": "4–6% incentive on incremental sales over base year for 5 years across 14 key sectors including electronics, pharmaceuticals, automobiles.",
+    "eligibility_summary": "Companies meeting minimum investment thresholds in specified sectors.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.dpiit.gov.in/",
+    "baseMatchScore": 58
+},
+{
+    "id": "comm-4",
+    "title": "One District One Product (ODOP) Scheme",
+    "ministry": "Ministry of Commerce and Industry",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Local Products",
+        "District",
+        "MSME",
+        "Artisan"
+    ],
+    "benefits": "Financial assistance, branding support, and marketing infrastructure for unique products of each district. Micro units get up to ₹10 lakh credit-linked subsidy.",
+    "eligibility_summary": "Artisans, craftspersons and small producers working with district's identified product.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://odop.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "comm-post-1",
+    "title": "Sukanya Samriddhi Yojana (SSY)",
+    "ministry": "Ministry of Communication",
+    "type": "central",
+    "category": "Banking, Financial Services & Insurance",
+    "tags": [
+        "Girl Child",
+        "Savings",
+        "Post Office",
+        "Interest"
+    ],
+    "benefits": "High interest rate (currently 8.2%) savings account for girl child. Tax exemption on deposits, interest and withdrawals under Section 80C.",
+    "eligibility_summary": "Parents/guardians of girl children below 10 years of age.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 10,
+        "gender": [
+            "female"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://www.indiapost.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "comm-post-2",
+    "title": "PM CARES for Children – Post Office Savings",
+    "ministry": "Ministry of Communication",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Children",
+        "Savings",
+        "Orphan",
+        "COVID"
+    ],
+    "benefits": "Post Office savings accounts with ₹10 lakh corpus at age 18 for children who lost parents to COVID-19. Monthly stipend for schooling and health insurance.",
+    "eligibility_summary": "Children who lost both parents or legal guardian to COVID-19.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 18,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://pmcaresforchildren.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "cons-1",
+    "title": "National Consumer Helpline (NCH)",
+    "ministry": "Ministry of Consumer Affairs, Food and Public Distribution",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Consumer Rights",
+        "Helpline",
+        "Grievance"
+    ],
+    "benefits": "Free 24×7 consumer grievance redressal via helpline 1800-11-4000. Online complaint registration and tracking on consumerhelpline.gov.in.",
+    "eligibility_summary": "Any consumer who has been cheated, received defective goods or unsatisfactory services.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://consumerhelpline.gov.in/",
+    "baseMatchScore": 70
+},
+{
+    "id": "corp-1",
+    "title": "IEPF Authority – Unclaimed Dividend Refund",
+    "ministry": "Ministry of Corporate Affairs",
+    "type": "central",
+    "category": "Banking, Financial Services & Insurance",
+    "tags": [
+        "Investor",
+        "Dividend",
+        "Refund",
+        "Shares"
+    ],
+    "benefits": "Recovery of unclaimed dividends and shares transferred to IEPF. No fee for claiming refund.",
+    "eligibility_summary": "Investors who have unclaimed dividends or shares transferred to IEPF by companies.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "salaried",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://iepf.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "corp-2",
+    "title": "MCA21 Portal – Easy Business Registration",
+    "ministry": "Ministry of Corporate Affairs",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Company Registration",
+        "Entrepreneur",
+        "Digital",
+        "Startup"
+    ],
+    "benefits": "Online registration of companies within 24 hours. SPICe+ form integrates PAN, TAN, ESIC, EPFO and bank account opening in single window.",
+    "eligibility_summary": "Indian citizens and foreign nationals looking to incorporate a company in India.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "salaried"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.mca.gov.in/",
+    "baseMatchScore": 62
+},
+{
+    "id": "cult-1",
+    "title": "Cultural Talent Search Scholarship Scheme (CTSS)",
+    "ministry": "Ministry of Culture",
+    "type": "central",
+    "category": "Arts & Culture",
+    "tags": [
+        "Scholarship",
+        "Culture",
+        "Performing Arts",
+        "Young Artists"
+    ],
+    "benefits": "Monthly scholarship of ₹5,000 for 2 years to talented young artists in Indian classical music, dance, theatre, and visual arts.",
+    "eligibility_summary": "Artists aged 10–14 years showing exceptional talent in traditional performing arts.",
+    "eligibility": {
+        "minAge": 10,
+        "maxAge": 14,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://indiaculture.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "cult-2",
+    "title": "Senior/Junior Fellowship Scheme for Cultural Studies",
+    "ministry": "Ministry of Culture",
+    "type": "central",
+    "category": "Arts & Culture",
+    "tags": [
+        "Fellowship",
+        "Research",
+        "Culture",
+        "Artists"
+    ],
+    "benefits": "Junior Fellowship: ₹10,000/month for 2 years. Senior Fellowship: ₹20,000/month for 2 years for outstanding contributions to art, culture, and humanities.",
+    "eligibility_summary": "Artists, scholars and researchers in Indian culture, heritage, and performing arts.",
+    "eligibility": {
+        "minAge": 25,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://indiaculture.gov.in/",
+    "baseMatchScore": 52
+},
+{
+    "id": "cult-3",
+    "title": "National Cultural Exchange Programme (NCEP)",
+    "ministry": "Ministry of Culture",
+    "type": "central",
+    "category": "Arts & Culture",
+    "tags": [
+        "Cultural Exchange",
+        "Artists",
+        "Travel",
+        "International"
+    ],
+    "benefits": "Sponsorship for travel, accommodation and per diem for Indian cultural troupes performing abroad and foreign troupes visiting India.",
+    "eligibility_summary": "Registered cultural organisations and performing arts groups in India.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "salaried"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://indiaculture.gov.in/",
+    "baseMatchScore": 48
+},
+{
+    "id": "def-1",
+    "title": "Ex-Servicemen Contributory Health Scheme (ECHS)",
+    "ministry": "Ministry of Defence",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Ex-Servicemen",
+        "Health",
+        "Veteran",
+        "Medical"
+    ],
+    "benefits": "Comprehensive medical care at 427+ polyclinics, empanelled private hospitals and government medical colleges for ex-servicemen and dependants.",
+    "eligibility_summary": "Retired Armed Forces personnel and their dependants.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "salaried",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://echs.gov.in/",
+    "baseMatchScore": 62
+},
+{
+    "id": "def-2",
+    "title": "Agniveer Seva Nidhi Package",
+    "ministry": "Ministry of Defence",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Agniveer",
+        "Military",
+        "Youth",
+        "Corpus Fund"
+    ],
+    "benefits": "Agniveers receive ₹11.71 lakh tax-free Seva Nidhi package at exit. Additional ₹48 lakh life insurance for death in harness, re-employment priority in CAPFs.",
+    "eligibility_summary": "Youth aged 17.5–23 years enrolled under the Agnipath scheme.",
+    "eligibility": {
+        "minAge": 17,
+        "maxAge": 23,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://joinindianarmy.nic.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "def-3",
+    "title": "Prime Minister's Scholarship Scheme for Ex-Servicemen",
+    "ministry": "Ministry of Defence",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "Ex-Servicemen",
+        "Children",
+        "Education"
+    ],
+    "benefits": "Scholarship of ₹2,500/month for boys and ₹3,000/month for girls pursuing professional degree courses. Priority for wards of ex-servicemen killed/disabled in action.",
+    "eligibility_summary": "Wards/widows of ex-servicemen and coast guard personnel for professional education.",
+    "eligibility": {
+        "minAge": 17,
+        "maxAge": 25,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://ksb.gov.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "ner-1",
+    "title": "PM-DevINE – PM Development Initiative for NE Region",
+    "ministry": "Ministry of Development of North Eastern Region",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "North East",
+        "Development",
+        "Infrastructure",
+        "Connectivity"
+    ],
+    "benefits": "₹6,600 crore outlay for social development, livelihood support, infrastructure and industry in 8 North-Eastern states.",
+    "eligibility_summary": "Residents of Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim and Tripura.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://mdoner.gov.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "earth-1",
+    "title": "National Fellowship for Research in Earth Sciences",
+    "ministry": "Ministry of Earth Sciences",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Research",
+        "Fellowship",
+        "Science",
+        "Earth Science"
+    ],
+    "benefits": "Fellowship of ₹31,000–₹35,000/month plus HRA for PhD research in oceanography, meteorology, seismology and climate science.",
+    "eligibility_summary": "Young scientists pursuing PhD or postdoctoral research in earth and atmospheric sciences.",
+    "eligibility": {
+        "minAge": 21,
+        "maxAge": 35,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban"
+    ],
+    "applyLink": "https://moes.gov.in/",
+    "baseMatchScore": 50
+},
+{
+    "id": "edu-nsp-central",
+    "title": "National Scholarship Portal (NSP) – Central Schemes",
+    "ministry": "Ministry of Education",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "Education",
+        "Students",
+        "Portal"
+    ],
+    "benefits": "Single portal for 50+ scholarship schemes. Amount varies: ₹1,000–₹20,000/year for school level; ₹10,000–₹1,20,000/year for college/university level.",
+    "eligibility_summary": "Students from pre-matric to postgraduate level meeting specific income/merit/category criteria.",
+    "eligibility": {
+        "minAge": 6,
+        "maxAge": 30,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://scholarships.gov.in/",
+    "baseMatchScore": 88
+},
+{
+    "id": "edu-pm-vidya",
+    "title": "PM eVIDYA – Digital Education Platform",
+    "ministry": "Ministry of Education",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Digital Education",
+        "Online",
+        "Students",
+        "Free Learning"
+    ],
+    "benefits": "Free access to 200+ SWAYAM courses, one-class-one-channel DTH TV, DIKSHA digital content and e-books via the NDEAR platform.",
+    "eligibility_summary": "All school and college students across India.",
+    "eligibility": {
+        "minAge": 6,
+        "maxAge": 30,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://pmvidya.mhrd.gov.in/",
+    "baseMatchScore": 85
+},
+{
+    "id": "edu-nef",
+    "title": "National Education Fellowship Scheme",
+    "ministry": "Ministry of Education",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Fellowship",
+        "Higher Education",
+        "Research"
+    ],
+    "benefits": "Monthly fellowship of ₹31,000 (JRF) to ₹35,000 (SRF) plus HRA and research contingency for PhD scholars in universities.",
+    "eligibility_summary": "Candidates qualifying UGC-NET/JRF examination.",
+    "eligibility": {
+        "minAge": 21,
+        "maxAge": 30,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://ugc.gov.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "edu-samagra",
+    "title": "Samagra Shiksha Abhiyan",
+    "ministry": "Ministry of Education",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "School Education",
+        "Inclusive",
+        "Infrastructure",
+        "Teachers"
+    ],
+    "benefits": "Free uniforms (2/year), textbooks, mid-day meals, and ICT labs for government school students. Teacher training and school infrastructure upgradation.",
+    "eligibility_summary": "Students enrolled in government and government-aided schools from pre-primary to Class 12.",
+    "eligibility": {
+        "minAge": 4,
+        "maxAge": 18,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://samagrashiksha.gov.in/",
+    "baseMatchScore": 90
+},
+{
+    "id": "edu-eklavya",
+    "title": "Eklavya Model Residential Schools (EMRS)",
+    "ministry": "Ministry of Education",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Tribal",
+        "School",
+        "Residential",
+        "Education"
+    ],
+    "benefits": "Free residential school education for ST students with modern facilities including sports, cultural activities and ICT. ₹1.38 lakh per student per year covered by Govt.",
+    "eligibility_summary": "ST students from tribal areas where ST population is 50%+ of the block.",
+    "eligibility": {
+        "minAge": 8,
+        "maxAge": 16,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "st"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://emrs.tribal.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "meity-1",
+    "title": "Digital Saksharta Abhiyan (DISHA)",
+    "ministry": "Ministry of Electronics and Information Technology",
+    "type": "central",
+    "category": "Science & Technology",
+    "tags": [
+        "Digital Literacy",
+        "Training",
+        "Rural",
+        "Women"
+    ],
+    "benefits": "Free digital literacy training to 52.5 lakh rural household members. Course covers internet, email, government services, digital payments.",
+    "eligibility_summary": "Economically weaker sections in rural and semi-urban areas who are not digitally literate.",
+    "eligibility": {
+        "minAge": 14,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.pmgdisha.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "meity-2",
+    "title": "BharatNet Broadband Programme",
+    "ministry": "Ministry of Electronics and Information Technology",
+    "type": "central",
+    "category": "Science & Technology",
+    "tags": [
+        "Internet",
+        "Rural",
+        "Broadband",
+        "Connectivity"
+    ],
+    "benefits": "High-speed broadband connectivity to all 2.5 lakh Gram Panchayats. Free Wi-Fi hotspots at gram panchayat offices and public places.",
+    "eligibility_summary": "Residents of villages connected under BharatNet. Businesses and individuals in rural areas.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://bbnl.nic.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "meity-3",
+    "title": "NASSCOM FutureSkills PRIME",
+    "ministry": "Ministry of Electronics and Information Technology",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Skilling",
+        "IT",
+        "Emerging Tech",
+        "Digital Jobs"
+    ],
+    "benefits": "Subsidized and free courses in AI, ML, Cloud, Cybersecurity, AR/VR for IT professionals and students. Certification recognized by industry.",
+    "eligibility_summary": "IT professionals, fresh graduates and students looking to upskill in emerging technologies.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 40,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "salaried",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://futureskillsprime.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "env-1",
+    "title": "National Clean Air Programme (NCAP)",
+    "ministry": "Ministry of Environment, Forest and Climate Change",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Environment",
+        "Air Quality",
+        "Urban",
+        "Climate"
+    ],
+    "benefits": "Pollution reduction targets for 132 non-attainment cities. Grants for dust control, EV fleet, industrial monitoring and citizen awareness.",
+    "eligibility_summary": "Residents of 132 NCAP cities. Industries and municipal bodies for compliance support.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://moef.gov.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "env-2",
+    "title": "Compensatory Afforestation Fund Management (CAMPA)",
+    "ministry": "Ministry of Environment, Forest and Climate Change",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Afforestation",
+        "Forest",
+        "Employment",
+        "Tribal"
+    ],
+    "benefits": "Employment generation for tribal communities through plantation, protection and forest management activities. Wages and skill development for forest workers.",
+    "eligibility_summary": "Tribal and forest-dwelling communities residing in/near forest areas.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://moef.gov.in/",
+    "baseMatchScore": 62
+},
+{
+    "id": "ea-1",
+    "title": "Indian Community Welfare Fund (ICWF)",
+    "ministry": "Ministry of External Affairs",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Overseas Indian",
+        "Welfare",
+        "Emergency",
+        "Labour"
+    ],
+    "benefits": "Emergency financial assistance up to ₹50,000 for distressed Indian workers abroad. Covers emergency medical, legal aid, food, shelter and repatriation.",
+    "eligibility_summary": "Indian workers in distress in foreign countries, particularly unskilled and semi-skilled workers.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "daily-wage-worker",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://emigrate.gov.in/",
+    "baseMatchScore": 48
+},
+{
+    "id": "ea-2",
+    "title": "Scholarship Programme for Diaspora Children (SPDC)",
+    "ministry": "Ministry of External Affairs",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "NRI",
+        "Diaspora",
+        "Education"
+    ],
+    "benefits": "100 scholarships/year for children of PIO/NRI for undergraduate programmes at Indian universities. Covers tuition fees and hostel charges.",
+    "eligibility_summary": "Children of PIO/NRI cardholders seeking admission to undergraduate courses in India.",
+    "eligibility": {
+        "minAge": 17,
+        "maxAge": 25,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://mea.gov.in/",
+    "baseMatchScore": 44
+},
+{
+    "id": "fin-mudra",
+    "title": "Pradhan Mantri MUDRA Yojana (PMMY)",
+    "ministry": "Ministry of Finance",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Loan",
+        "MSME",
+        "Micro Enterprise",
+        "Entrepreneurship"
+    ],
+    "benefits": "Collateral-free loans: Shishu (up to ₹50K), Kishor (₹50K–₹5L), Tarun (₹5L–₹10L) at low interest rates for non-corporate small businesses.",
+    "eligibility_summary": "Non-farm income-generating activities with credit needs up to ₹10 lakh. No collateral required.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 65,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://www.mudra.org.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "fin-pmsby",
+    "title": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "ministry": "Ministry of Finance",
+    "type": "central",
+    "category": "Banking, Financial Services & Insurance",
+    "tags": [
+        "Insurance",
+        "Accident",
+        "Disability",
+        "Low Premium"
+    ],
+    "benefits": "Accidental death and disability insurance cover of ₹2 lakh for death/full disability, ₹1 lakh for partial disability at just ₹20/year premium.",
+    "eligibility_summary": "Bank account holders aged 18–70 years.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://jansuraksha.gov.in/",
+    "baseMatchScore": 88
+},
+{
+    "id": "fish-1",
+    "title": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+    "ministry": "Ministry of Fisheries, Animal Husbandry and Dairying",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Fisheries",
+        "Farmer",
+        "Aquaculture",
+        "Subsidy"
+    ],
+    "benefits": "Subsidy of 40–60% for fishermen (higher for SC/ST/women) on new boats, equipment, ponds, cold storage and processing units.",
+    "eligibility_summary": "Fishermen, fish farmers, SHGs, cooperatives and fish processing units.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "coastal"
+    ],
+    "applyLink": "https://pmmsy.dof.gov.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "fish-2",
+    "title": "Kisan Credit Card for Fisheries & Animal Husbandry",
+    "ministry": "Ministry of Fisheries, Animal Husbandry and Dairying",
+    "type": "central",
+    "category": "Banking, Financial Services & Insurance",
+    "tags": [
+        "KCC",
+        "Credit",
+        "Fishermen",
+        "Animal Husbandry"
+    ],
+    "benefits": "Short-term working capital credit up to ₹2 lakh at subsidized interest rate for fish farming and animal husbandry activities.",
+    "eligibility_summary": "Individual fishers, fish farmers and animal husbandry practitioners.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://dof.gov.in/",
+    "baseMatchScore": 70
+},
+{
+    "id": "fish-3",
+    "title": "National Livestock Mission (NLM)",
+    "ministry": "Ministry of Fisheries, Animal Husbandry and Dairying",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Livestock",
+        "Poultry",
+        "Animal Husbandry",
+        "Subsidy"
+    ],
+    "benefits": "50% subsidy for backward/forward linkages in livestock sector. Support for fodder development, breed improvement and insurance for animals.",
+    "eligibility_summary": "Individual farmers, SHGs and FPOs engaged in livestock rearing.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://nlm.udyamimitra.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "food-1",
+    "title": "PM Formalisation of Micro Food Processing (PM-FME)",
+    "ministry": "Ministry of Food Processing Industries",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Food Processing",
+        "Micro Enterprise",
+        "Subsidy",
+        "MSME"
+    ],
+    "benefits": "35% credit-linked subsidy (max ₹10 lakh) for micro food processing units. Branding support, technical assistance and skilling for 2 lakh units.",
+    "eligibility_summary": "Existing micro food processing units, SHGs, cooperatives and FPOs.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://mofpi.gov.in/pmfme/",
+    "baseMatchScore": 72
+},
+{
+    "id": "food-2",
+    "title": "PLI Scheme for Food Processing Industry",
+    "ministry": "Ministry of Food Processing Industries",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "PLI",
+        "Food Processing",
+        "Manufacturing",
+        "Export"
+    ],
+    "benefits": "Production Linked Incentive of 4–10% for 6 years on incremental sales for processed food manufacturers investing ₹10 crore or more.",
+    "eligibility_summary": "Food processing companies with minimum investment of ₹10 crore for innovative/organic products.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://mofpi.gov.in/",
+    "baseMatchScore": 48
+},
+{
+    "id": "heavy-1",
+    "title": "FAME India Phase II – Faster Adoption of EVs",
+    "ministry": "Ministry of Heavy Industries",
+    "type": "central",
+    "category": "Science & Technology",
+    "tags": [
+        "Electric Vehicle",
+        "EV",
+        "Subsidy",
+        "Clean Energy"
+    ],
+    "benefits": "Demand incentives of ₹10,000 (e-2W) to ₹5 lakh (e-bus) on purchase of electric vehicles. Interest subvention on EV loans for 2-wheelers.",
+    "eligibility_summary": "Individuals purchasing electric two-wheelers, three-wheelers and commercial EVs.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban",
+        "rural"
+    ],
+    "applyLink": "https://fame2.heavyindustries.gov.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "heavy-2",
+    "title": "PLI Scheme for Automobiles and Auto Components",
+    "ministry": "Ministry of Heavy Industries",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "PLI",
+        "Automobile",
+        "Manufacturing",
+        "Advanced Technology"
+    ],
+    "benefits": "Incentive of 8–18% on incremental sales of Advanced Automotive Technology (AAT) products over 5 years for eligible manufacturers.",
+    "eligibility_summary": "Automobile OEMs and component manufacturers with minimum investment commitments.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://heavyindustries.gov.in/",
+    "baseMatchScore": 42
+},
+{
+    "id": "ib-1",
+    "title": "Prasar Bharati Internship Programme",
+    "ministry": "Ministry of Information and Broadcasting",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Media",
+        "Internship",
+        "Doordarshan",
+        "AIR"
+    ],
+    "benefits": "Paid internship at Doordarshan and All India Radio. Stipend of ₹5,000–₹10,000/month. Hands-on media production experience.",
+    "eligibility_summary": "Students enrolled in media, journalism, mass communication or film courses.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 25,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban"
+    ],
+    "applyLink": "https://prasarbharati.gov.in/",
+    "baseMatchScore": 52
+},
+{
+    "id": "jal-1",
+    "title": "Jal Jeevan Mission – Har Ghar Jal",
+    "ministry": "Ministry of Jal Shakti",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Water",
+        "Tap Connection",
+        "Rural",
+        "Household"
+    ],
+    "benefits": "Functional Household Tap Connections (FHTC) to every rural household by 2024. Each connection provides 55 litres/person/day of clean drinking water.",
+    "eligibility_summary": "All rural households in India without piped drinking water supply.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://jaljeevanmission.gov.in/",
+    "baseMatchScore": 85
+},
+{
+    "id": "jal-2",
+    "title": "Swachh Bharat Mission (Grameen) Phase II – ODF+",
+    "ministry": "Ministry of Jal Shakti",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Sanitation",
+        "Toilet",
+        "Rural",
+        "ODF"
+    ],
+    "benefits": "Financial incentive of ₹12,000 per toilet construction for BPL households. Solid/liquid waste management infrastructure at village level.",
+    "eligibility_summary": "BPL households in rural areas without sanitation facilities.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://swachhbharatmission.gov.in/",
+    "baseMatchScore": 82
+},
+{
+    "id": "lab-1",
+    "title": "Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM)",
+    "ministry": "Ministry of Labour and Employment",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Pension",
+        "Unorganized Worker",
+        "Retirement"
+    ],
+    "benefits": "Guaranteed monthly pension of ₹3,000 from age 60 for unorganized sector workers. Government matches employee contribution.",
+    "eligibility_summary": "Unorganised workers aged 18–40 with monthly income up to ₹15,000.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 40,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "daily-wage-worker",
+            "self-employed",
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://maandhan.in/",
+    "baseMatchScore": 82
+},
+{
+    "id": "lab-2",
+    "title": "Pradhan Mantri Rojgar Protsahan Yojana (PMRPY)",
+    "ministry": "Ministry of Labour and Employment",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Employment",
+        "EPF",
+        "Employer",
+        "Incentive"
+    ],
+    "benefits": "Government pays full employer EPF contribution (12%) for 3 years for new employees with salary up to ₹15,000/month added by EPFO-registered employers.",
+    "eligibility_summary": "EPFO-registered establishments hiring new employees with salary up to ₹15,000.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "salaried",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://pmrpy.gov.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "lab-3",
+    "title": "Employees' State Insurance (ESI) Scheme",
+    "ministry": "Ministry of Labour and Employment",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Health Insurance",
+        "Worker",
+        "Medical",
+        "Sickness Benefit"
+    ],
+    "benefits": "Comprehensive medical care for worker and family, sickness cash benefit at 70% of wages for 91 days, maternity benefit for 26 weeks, disability pension.",
+    "eligibility_summary": "Employees in establishments covered under ESI Act with wages up to ₹21,000/month.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 65,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "salaried"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://esic.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "law-1",
+    "title": "Tele-Law Scheme",
+    "ministry": "Ministry of Law and Justice",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Legal Aid",
+        "Tele-Law",
+        "Free Legal",
+        "Rural"
+    ],
+    "benefits": "Free legal advice via video conference at Common Service Centres for marginalized communities. Access to 1 lakh+ CSCs and trained Para Legal Volunteers.",
+    "eligibility_summary": "Marginalized citizens including SC, ST, women, workers, minorities needing legal advice.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://tele-law.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "law-2",
+    "title": "NALSA Legal Services to Victims of Trafficking",
+    "ministry": "Ministry of Law and Justice",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Legal Aid",
+        "Trafficking",
+        "Women",
+        "Children",
+        "Free Legal"
+    ],
+    "benefits": "Free legal representation, compensation claims and rehabilitation support for victims of human trafficking through State Legal Services Authorities.",
+    "eligibility_summary": "Victims of human trafficking, particularly women and children.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://nalsa.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "mines-1",
+    "title": "District Mineral Foundation (DMF) – PMKKKY Welfare",
+    "ministry": "Ministry of Mines",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Mining",
+        "Community",
+        "Welfare",
+        "Mineral"
+    ],
+    "benefits": "Welfare schemes for mining-affected communities — drinking water, healthcare, education, skill development and livelihood support funded by DMF.",
+    "eligibility_summary": "People directly or indirectly affected by mining operations in mining districts.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://ibm.gov.in/",
+    "baseMatchScore": 58
+},
+{
+    "id": "min-1",
+    "title": "Pre-Matric Scholarship for Minorities",
+    "ministry": "Ministry of Minority Affairs",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "Minority",
+        "School",
+        "Students"
+    ],
+    "benefits": "Annual scholarship of ₹1,000 (Day Scholar) to ₹13,500 (Hosteller) for Class 1–10 students from minority communities.",
+    "eligibility_summary": "Students from Muslim, Christian, Sikh, Buddhist, Zoroastrian and Jain communities with family income below ₹1 lakh.",
+    "eligibility": {
+        "minAge": 6,
+        "maxAge": 16,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l"
+        ],
+        "category": [
+            "general",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://scholarships.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "min-2",
+    "title": "Post-Matric Scholarship for Minorities",
+    "ministry": "Ministry of Minority Affairs",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "Minority",
+        "Higher Education",
+        "Students"
+    ],
+    "benefits": "Course fee (full) + maintenance allowance of ₹3,000–₹10,000/year for students from minority communities in Class 11 to PhD level.",
+    "eligibility_summary": "Students from notified minority communities with family income below ₹2 lakh/year.",
+    "eligibility": {
+        "minAge": 14,
+        "maxAge": 32,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l"
+        ],
+        "category": [
+            "general",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://scholarships.gov.in/",
+    "baseMatchScore": 78
+},
+{
+    "id": "min-3",
+    "title": "Pradhan Mantri Jan Vikas Karyakram (PMJVK)",
+    "ministry": "Ministry of Minority Affairs",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Minority",
+        "Infrastructure",
+        "Community",
+        "Development"
+    ],
+    "benefits": "Construction of schools, colleges, ITIs, skill development centres, hospitals and drinking water facilities in identified Minority Concentration Districts.",
+    "eligibility_summary": "Residents of 308 Minority Concentration Districts across India.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://pmjvk.nic.in/",
+    "baseMatchScore": 65
+},
+{
+    "id": "nre-1",
+    "title": "PM Surya Ghar Muft Bijli Yojana",
+    "ministry": "Ministry of New and Renewable Energy",
+    "type": "central",
+    "category": "Science & Technology",
+    "tags": [
+        "Solar",
+        "Free Electricity",
+        "Rooftop",
+        "Subsidy"
+    ],
+    "benefits": "Up to 300 units free electricity/month via rooftop solar. Subsidy of ₹30,000–₹78,000 for 1–3 kW systems. Additional benefits for tribal and BPL families.",
+    "eligibility_summary": "Residential households installing rooftop solar panels (up to 3 kW for full subsidy).",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "self-employed",
+            "salaried",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://pmsuryaghar.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "nre-2",
+    "title": "PM KUSUM – Kisan Urja Suraksha evam Utthaan Mahabhiyan",
+    "ministry": "Ministry of New and Renewable Energy",
+    "type": "central",
+    "category": "Agriculture, Rural & Environment",
+    "tags": [
+        "Solar Pump",
+        "Farmer",
+        "Energy",
+        "Subsidy"
+    ],
+    "benefits": "60% subsidy on solar pumps (Component B) for farmers. Solar power plants on barren agricultural land with ₹60,000/year income per 2 hectares (Component A).",
+    "eligibility_summary": "Farmers for solar pump installation and land owners in rural areas for solar plants.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://mnre.gov.in/kusum/",
+    "baseMatchScore": 78
+},
+{
+    "id": "pr-1",
+    "title": "Rashtriya Gram Swaraj Abhiyan (RGSA)",
+    "ministry": "Ministry of Panchayati Raj",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Panchayat",
+        "Rural Governance",
+        "Training",
+        "Capacity Building"
+    ],
+    "benefits": "Training and capacity building for elected Panchayat representatives. Technology support, e-Gram Swaraj platform and performance-based grants.",
+    "eligibility_summary": "Elected Panchayat representatives, officials and SHG members in rural governance.",
+    "eligibility": {
+        "minAge": 21,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "salaried"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://egramswaraj.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "pr-2",
+    "title": "Svamitva Scheme – Property Rights for Rural Households",
+    "ministry": "Ministry of Panchayati Raj",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Land Rights",
+        "Property Card",
+        "Rural",
+        "Loan"
+    ],
+    "benefits": "Survey of inhabited rural land and distribution of legal property cards. Enables villagers to use property as collateral for institutional loans.",
+    "eligibility_summary": "Rural household owners in villages mapped under the SVAMITVA scheme.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://svamitva.nic.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "pers-1",
+    "title": "Central Government Health Scheme (CGHS)",
+    "ministry": "Ministry of Personnel, Public Grievances and Pensions",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Government Employee",
+        "Healthcare",
+        "Pensioner",
+        "Medical"
+    ],
+    "benefits": "Comprehensive medical care for Central Govt employees and pensioners at CGHS wellness centres and empanelled hospitals. Subsidized medicines.",
+    "eligibility_summary": "Central Government employees, pensioners and their dependent family members in CGHS-covered cities.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "salaried",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://cghs.gov.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "pers-2",
+    "title": "National Pension System (NPS) – Government Sector",
+    "ministry": "Ministry of Personnel, Public Grievances and Pensions",
+    "type": "central",
+    "category": "Banking, Financial Services & Insurance",
+    "tags": [
+        "Pension",
+        "Retirement",
+        "NPS",
+        "Investment"
+    ],
+    "benefits": "Market-linked retirement savings with government contributing 14% of basic pay. Tax deduction under Section 80CCD(1) and 80CCD(2). Portable across jobs.",
+    "eligibility_summary": "Central Government employees (mandatory) and voluntary subscribers aged 18–70.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 70,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "salaried",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban",
+        "rural"
+    ],
+    "applyLink": "https://npscra.nsdl.co.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "petro-1",
+    "title": "Pradhan Mantri Ujjwala Yojana (PMUY) 2.0",
+    "ministry": "Ministry of Petroleum and Natural Gas",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "LPG",
+        "Women",
+        "BPL",
+        "Clean Cooking"
+    ],
+    "benefits": "Free LPG connection with first cylinder refill and stove/hotplate for BPL women. Migrant families get connection without address proof.",
+    "eligibility_summary": "Women from BPL households, SC/ST communities, forest dwellers and tea garden workers.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "female"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://www.pmujjwalayojana.com/",
+    "baseMatchScore": 85
+},
+{
+    "id": "petro-2",
+    "title": "LPG Subsidy – DBT Scheme",
+    "ministry": "Ministry of Petroleum and Natural Gas",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "LPG",
+        "Subsidy",
+        "DBT",
+        "Gas"
+    ],
+    "benefits": "Direct subsidy transfer to bank accounts for domestic LPG cylinder consumption. PAHAL scheme ensures transparent subsidy delivery.",
+    "eligibility_summary": "Domestic LPG consumers with Aadhaar-linked bank accounts.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://mylpg.in/",
+    "baseMatchScore": 82
+},
+{
+    "id": "port-1",
+    "title": "Sagarmala Programme – Port-Led Development",
+    "ministry": "Ministry of Ports, Shipping and Waterways",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Port",
+        "Shipping",
+        "Infrastructure",
+        "Coastal"
+    ],
+    "benefits": "Over 800 projects worth ₹5.5 lakh crore for port modernisation, coastal connectivity and fishing harbour development. Skill development for 4 lakh coastal community youth.",
+    "eligibility_summary": "Coastal communities, fishermen and businesses near port areas benefiting from infrastructure.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "coastal"
+    ],
+    "applyLink": "https://sagarmala.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "port-2",
+    "title": "LADIS – Lighthouse Tourism Initiative",
+    "ministry": "Ministry of Ports, Shipping and Waterways",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Tourism",
+        "Heritage",
+        "Lighthouse",
+        "Coastal"
+    ],
+    "benefits": "Conversion of 71 lighthouses into tourist destinations with hotels, museums and adventure activities. Employment for local coastal communities.",
+    "eligibility_summary": "Tourists visiting lighthouse destinations and local entrepreneurs near lighthouse areas.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "self-employed",
+            "salaried"
+        ]
+    },
+    "area": [
+        "coastal",
+        "semi-urban"
+    ],
+    "applyLink": "https://dgll.nic.in/",
+    "baseMatchScore": 48
+},
+{
+    "id": "rail-1",
+    "title": "Viklangjan Concession – Railway Concession for Disabled",
+    "ministry": "Ministry of Railways",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Disability",
+        "Railway Concession",
+        "Travel",
+        "Persons with Disability"
+    ],
+    "benefits": "75% concession on railway fare for persons with benchmark disabilities in all classes. Companion also gets 50% concession.",
+    "eligibility_summary": "Persons with benchmark disabilities holding valid disability certificate.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://www.indianrailways.gov.in/",
+    "baseMatchScore": 65
+},
+{
+    "id": "road-1",
+    "title": "PM Gram Sadak Yojana (PMGSY) Phase III",
+    "ministry": "Ministry of Road Transport & Highways",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Rural Roads",
+        "Connectivity",
+        "All-Weather Road",
+        "Village"
+    ],
+    "benefits": "All-weather road connectivity to unconnected habitations (500+ population in plains; 250+ in hills/tribal areas). Improves access to markets, schools and hospitals.",
+    "eligibility_summary": "Residents of rural habitations receiving new all-weather road connectivity.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://omms.nic.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "rural-pmay-g",
+    "title": "Pradhan Mantri Awaas Yojana – Gramin (PMAY-G)",
+    "ministry": "Ministry of Rural Development",
+    "type": "central",
+    "category": "Housing & Shelter",
+    "tags": [
+        "Housing",
+        "Rural",
+        "BPL",
+        "Construction Assistance"
+    ],
+    "benefits": "₹1.20 lakh in plains and ₹1.30 lakh in hilly/difficult/IAP areas for construction of 2.95 crore pucca houses. 90–95 days MGNREGS wages for labour.",
+    "eligibility_summary": "Houseless and kutcha/severely damaged house dwellers in rural areas.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://pmayg.nic.in/",
+    "baseMatchScore": 90
+},
+{
+    "id": "rural-nrlm",
+    "title": "Deendayal Antyodaya Yojana – NRLM (DAY-NRLM)",
+    "ministry": "Ministry of Rural Development",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "SHG",
+        "Women",
+        "Livelihood",
+        "Microfinance"
+    ],
+    "benefits": "Interest subvention of 5.5–7% on loans for Women's SHGs. Revolving fund of ₹15,000 and community investment fund up to ₹2.5 lakh per SHG.",
+    "eligibility_summary": "Women from poor rural households willing to join Self-Help Groups.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "female"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://aajeevika.gov.in/",
+    "baseMatchScore": 85
+},
+{
+    "id": "sci-1",
+    "title": "INSPIRE Scholarship for Higher Education (SHE)",
+    "ministry": "Ministry of Science and Technology",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "Science",
+        "Research",
+        "Higher Education"
+    ],
+    "benefits": "₹80,000/year scholarship for 5 years for students pursuing BSc/BS/Int MSc in Natural and Basic Sciences. Research attachment and mentorship.",
+    "eligibility_summary": "Students ranking in top 1% in Class XII boards pursuing science at BSc/BS level.",
+    "eligibility": {
+        "minAge": 17,
+        "maxAge": 22,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://online-inspire.gov.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "sci-2",
+    "title": "DST WISE-KIRAN – Women Scientists Scheme",
+    "ministry": "Ministry of Science and Technology",
+    "type": "central",
+    "category": "Science & Technology",
+    "tags": [
+        "Women Scientists",
+        "Research",
+        "Fellowship",
+        "STEM"
+    ],
+    "benefits": "Fellowship of ₹55,000–₹75,000/month for women scientists with career gap. Research grants up to ₹20 lakh for independent research.",
+    "eligibility_summary": "Women scientists who have taken a career break and wish to return to R&D.",
+    "eligibility": {
+        "minAge": 27,
+        "maxAge": 57,
+        "gender": [
+            "female"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "unemployed",
+            "homemaker",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://online-inspire.gov.in/",
+    "baseMatchScore": 65
+},
+{
+    "id": "sci-3",
+    "title": "Atal Innovation Mission (AIM) – Tinkering Labs",
+    "ministry": "Ministry of Science and Technology",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Innovation",
+        "School",
+        "STEM",
+        "Tinkering"
+    ],
+    "benefits": "₹20 lakh grant for setting up Atal Tinkering Labs in schools with tools for robotics, 3D printing and electronics. Annual grants of ₹10 lakh for operations.",
+    "eligibility_summary": "Schools (Govt, Private, CBSE/ICSE/State board) in India to set up innovation labs for students Class 6–12.",
+    "eligibility": {
+        "minAge": 10,
+        "maxAge": 18,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban",
+        "rural"
+    ],
+    "applyLink": "https://aim.gov.in/atl.php",
+    "baseMatchScore": 72
+},
+{
+    "id": "skill-1",
+    "title": "Pradhan Mantri Kaushal Vikas Yojana 4.0 (PMKVY)",
+    "ministry": "Ministry of Skill Development and Entrepreneurship",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Skill Training",
+        "Youth",
+        "Employment",
+        "Free Certification"
+    ],
+    "benefits": "Free skill training and certification in 300+ job roles. Post-training placement assistance. ₹8,000–₹10,000 reward for successful candidates.",
+    "eligibility_summary": "Indian nationals aged 15–45 seeking employment-oriented skill training.",
+    "eligibility": {
+        "minAge": 15,
+        "maxAge": 45,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "unemployed",
+            "daily-wage-worker",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://pmkvyofficial.org/",
+    "baseMatchScore": 85
+},
+{
+    "id": "skill-2",
+    "title": "Jan Shikshan Sansthan (JSS) – Non-Formal Skill Training",
+    "ministry": "Ministry of Skill Development and Entrepreneurship",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Skill",
+        "Non-Formal",
+        "Women",
+        "Rural",
+        "Livelihood"
+    ],
+    "benefits": "Short-term vocational training programmes at ₹1,500–₹4,000 total course fee. Priority to women, SC, ST and neo-literate learners.",
+    "eligibility_summary": "Neo-literates, non-literates and school dropouts in the 15–45 age group.",
+    "eligibility": {
+        "minAge": 15,
+        "maxAge": 45,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://jss.gov.in/",
+    "baseMatchScore": 78
+},
+{
+    "id": "sj-1",
+    "title": "PM-DAKSH – Skill Development for SC/OBC",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Skill Training",
+        "SC",
+        "OBC",
+        "Employment"
+    ],
+    "benefits": "Free upskilling/reskilling for SC, OBC, EBC and sanitation workers. Stipend of ₹1,000–₹1,500/month during training plus post-training assistance.",
+    "eligibility_summary": "SC, OBC, EBC and Safai Karamchari communities seeking skill development.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 45,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "sc",
+            "obc"
+        ],
+        "occupation": [
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://pmdaksh.dosje.gov.in/",
+    "baseMatchScore": 82
+},
+{
+    "id": "sj-2",
+    "title": "Dr. Ambedkar Medical Aid Scheme",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "type": "central",
+    "category": "Health & Wellness",
+    "tags": [
+        "Medical Aid",
+        "SC",
+        "OBC",
+        "Surgery"
+    ],
+    "benefits": "Medical aid up to ₹50,000 for SC persons with annual income below ₹3 lakh for critical surgeries not covered by government health schemes.",
+    "eligibility_summary": "SC persons with annual family income below ₹3 lakh requiring critical medical treatment.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "sc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://bharatsarkar.gov.in/",
+    "baseMatchScore": 70
+},
+{
+    "id": "sj-3",
+    "title": "National Scholarship for Persons with Disability",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Disability",
+        "Scholarship",
+        "Education",
+        "PwD"
+    ],
+    "benefits": "Scholarship of ₹3,500 (Class 1–5) to ₹25,000/year (postgraduate) for students with benchmark disabilities from Class 1 to postgraduate level.",
+    "eligibility_summary": "Students with at least 40% disability pursuing education from Class 1 to postgraduate level.",
+    "eligibility": {
+        "minAge": 6,
+        "maxAge": 35,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://scholarships.gov.in/",
+    "baseMatchScore": 78
+},
+{
+    "id": "stat-1",
+    "title": "NSSO Socio-Economic Surveys – Data for Policy",
+    "ministry": "Ministry of Statistics and Programme Implementation",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Survey",
+        "Research",
+        "Data",
+        "Statistics"
+    ],
+    "benefits": "Participation in nationally representative surveys. Field investigators and supervisors get employment. Survey data available free for academic research.",
+    "eligibility_summary": "Researchers and academics for data access; field staff for survey employment opportunities.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "salaried",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://mospi.gov.in/",
+    "baseMatchScore": 45
+},
+{
+    "id": "stat-2",
+    "title": "MP Local Area Development Scheme (MPLADS)",
+    "ministry": "Ministry of Statistics and Programme Implementation",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Local Development",
+        "MP Fund",
+        "Infrastructure",
+        "Community"
+    ],
+    "benefits": "MPs can recommend works of ₹5 crore per year in their constituency for durable community assets like schools, hospitals, roads and water facilities.",
+    "eligibility_summary": "Residents of any Parliamentary constituency — works nominated by local MP.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://mplads.gov.in/",
+    "baseMatchScore": 55
+},
+{
+    "id": "steel-1",
+    "title": "PLI Scheme for Specialty Steel",
+    "ministry": "Ministry of Steel",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Steel",
+        "PLI",
+        "Manufacturing",
+        "Specialty Steel"
+    ],
+    "benefits": "Incentive of 4–12% on incremental production of specialty steel over 5 years for domestic steel producers.",
+    "eligibility_summary": "Steel producers investing in specialty steel capacity in India.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://steel.gov.in/",
+    "baseMatchScore": 42
+},
+{
+    "id": "steel-2",
+    "title": "National Steel Policy 2017 Reforms",
+    "ministry": "Ministry of Steel",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Steel",
+        "Policy",
+        "Investment",
+        "Infrastructure"
+    ],
+    "benefits": "Target 300 MT steel production by 2030-31. Rationalized import duties, promotion of domestic manufacturing and export of value-added steel products.",
+    "eligibility_summary": "Steel manufacturers, investors and downstream industries in the steel value chain.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "salaried"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://steel.gov.in/",
+    "baseMatchScore": 40
+},
+{
+    "id": "text-1",
+    "title": "PM MITRA – Mega Integrated Textile Region and Apparel Parks",
+    "ministry": "Ministry of Textiles",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Textiles",
+        "Industry",
+        "Employment",
+        "Mega Park"
+    ],
+    "benefits": "₹4,445 crore for 7 PM MITRA parks with world-class plug-and-play infrastructure. 21 lakh direct and indirect jobs. Competitive incentives for investors.",
+    "eligibility_summary": "Textile and apparel manufacturers looking to set up or expand operations.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://ministryoftextiles.gov.in/",
+    "baseMatchScore": 45
+},
+{
+    "id": "text-2",
+    "title": "Samarth – Scheme for Capacity Building in Textiles Sector",
+    "ministry": "Ministry of Textiles",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Skill",
+        "Textiles",
+        "Apparel",
+        "Women",
+        "Training"
+    ],
+    "benefits": "Free skill training for 10 lakh persons in organised and traditional textile sectors. Placement assistance and stipend during training.",
+    "eligibility_summary": "Youth and women seeking employment in the textile and apparel sector.",
+    "eligibility": {
+        "minAge": 14,
+        "maxAge": 35,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://samarth-textiles.gov.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "text-3",
+    "title": "National Handloom Development Programme (NHDP)",
+    "ministry": "Ministry of Textiles",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Handloom",
+        "Weaver",
+        "Subsidy",
+        "Artisan"
+    ],
+    "benefits": "Financial assistance for weavers: subsidized yarn, design development, marketing exposure at national exhibitions, tool kits and cluster development.",
+    "eligibility_summary": "Handloom weavers, master weavers and weaver cooperatives.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://handlooms.nic.in/",
+    "baseMatchScore": 70
+},
+{
+    "id": "tour-1",
+    "title": "PRASHAD – Pilgrimage Rejuvenation and Spiritual Heritage Augmentation Drive",
+    "ministry": "Ministry of Tourism",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Tourism",
+        "Pilgrimage",
+        "Heritage",
+        "Infrastructure"
+    ],
+    "benefits": "Development of 25+ pilgrimage destinations with better roads, parking, lighting, sanitation and visitor amenities. Employment for local tourism workers.",
+    "eligibility_summary": "Tourists visiting PRASHAD-developed pilgrimage sites. Local service providers and guides.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "self-employed",
+            "salaried",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://tourism.gov.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "tour-2",
+    "title": "SWADESH DARSHAN 2.0 – Eco & Wellness Tourism",
+    "ministry": "Ministry of Tourism",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Tourism",
+        "Eco Tourism",
+        "Rural",
+        "Sustainable"
+    ],
+    "benefits": "Development of eco, wellness and tribal tourism circuits. Homestay promotion, skill training for local guides and service providers.",
+    "eligibility_summary": "Local communities, homestay owners and tourism entrepreneurs in identified circuits.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "self-employed",
+            "farmer"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://tourism.gov.in/",
+    "baseMatchScore": 62
+},
+{
+    "id": "tribal-1",
+    "title": "Eklavya Model Residential Schools (EMRS) – Tribal Education",
+    "ministry": "Ministry of Tribal Affairs",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Tribal",
+        "Residential School",
+        "ST",
+        "Free Education"
+    ],
+    "benefits": "Free residential school education with boarding for ST children with sports, cultural and ICT facilities. ₹1.38 lakh per student per year.",
+    "eligibility_summary": "Scheduled Tribe students in blocks with 50%+ ST population, Class 6–12.",
+    "eligibility": {
+        "minAge": 10,
+        "maxAge": 18,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "st"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://tribal.nic.in/",
+    "baseMatchScore": 80
+},
+{
+    "id": "tribal-2",
+    "title": "Van Dhan Vikas Kendras (VDVK) – Tribal Livelihood",
+    "ministry": "Ministry of Tribal Affairs",
+    "type": "central",
+    "category": "Business & Entrepreneurship",
+    "tags": [
+        "Tribal",
+        "Van Dhan",
+        "Livelihood",
+        "Forest Produce"
+    ],
+    "benefits": "Primary processing of Minor Forest Produce at cluster level. ₹15 lakh grant per cluster of 15 SHGs (300 tribal members). Skill training and marketing support.",
+    "eligibility_summary": "Tribal community members involved in collection of Minor Forest Produce.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "st"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker"
+        ]
+    },
+    "area": [
+        "rural"
+    ],
+    "applyLink": "https://trifed.in/",
+    "baseMatchScore": 75
+},
+{
+    "id": "tribal-3",
+    "title": "Scholarship for Scheduled Tribe Students – Pre & Post-Matric",
+    "ministry": "Ministry of Tribal Affairs",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "ST",
+        "Education",
+        "Higher Studies"
+    ],
+    "benefits": "Pre-matric: ₹150–₹350/month + annual allowance. Post-matric: Full maintenance, tuition and non-refundable charges for ST students in Class 11 to PhD.",
+    "eligibility_summary": "Scheduled Tribe students studying from Class 9 onwards with family income below ₹2.5 lakh.",
+    "eligibility": {
+        "minAge": 12,
+        "maxAge": 32,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l"
+        ],
+        "category": [
+            "st"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://tribal.nic.in/",
+    "baseMatchScore": 82
+},
+{
+    "id": "wcd-1",
+    "title": "Mission Shakti – Sambal & Samarthya for Women",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Women",
+        "Safety",
+        "Empowerment",
+        "One-Stop Centre"
+    ],
+    "benefits": "One-Stop Centres at district level for women victims of violence — medical, legal, psychological aid and shelter under one roof. Safety and helpline services (181).",
+    "eligibility_summary": "Women facing any form of violence — domestic, trafficking, acid attack, etc.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://wcd.nic.in/",
+    "baseMatchScore": 78
+},
+{
+    "id": "youth-1",
+    "title": "Khelo India Youth Games",
+    "ministry": "Ministry of Youth Affairs & Sports",
+    "type": "central",
+    "category": "Sports & Adventure",
+    "tags": [
+        "Sports",
+        "Youth",
+        "Games",
+        "Talent"
+    ],
+    "benefits": "Annual scholarship of ₹5 lakh for 8 years for talented athletes selected at Khelo India Games. Access to top coaching, equipment and sporting infrastructure.",
+    "eligibility_summary": "Student athletes under 18 years competing in Khelo India School Games or University Games.",
+    "eligibility": {
+        "minAge": 10,
+        "maxAge": 22,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://kheloindia.gov.in/",
+    "baseMatchScore": 72
+},
+{
+    "id": "youth-2",
+    "title": "Target Olympic Podium Scheme (TOPS)",
+    "ministry": "Ministry of Youth Affairs & Sports",
+    "type": "central",
+    "category": "Sports & Adventure",
+    "tags": [
+        "Olympics",
+        "Elite Athletes",
+        "Sports",
+        "Funding"
+    ],
+    "benefits": "Monthly out-of-pocket allowance of ₹50,000. Customized training abroad, international competition exposure, equipment, sports science and medical support.",
+    "eligibility_summary": "Elite athletes with realistic potential to win medals at the next Olympics/Paralympics.",
+    "eligibility": {
+        "minAge": 14,
+        "maxAge": 35,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "salaried",
+            "self-employed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://sportsauthorityofindia.nic.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "youth-3",
+    "title": "National Youth Corps (NYC)",
+    "ministry": "Ministry of Youth Affairs & Sports",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Youth",
+        "Community Service",
+        "Volunteer",
+        "Employment"
+    ],
+    "benefits": "Monthly honorarium of ₹5,000 for youth volunteers engaged in community service in rural areas. Certificate of service for future employment.",
+    "eligibility_summary": "Youth aged 18–25 years willing to serve in rural areas for 1 year.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 25,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "unemployed"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://nyks.nic.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "niti-1",
+    "title": "Aspirational Districts Programme",
+    "ministry": "NITI Aayog (National Institution for Transforming India)",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Development",
+        "Backward Districts",
+        "Convergence",
+        "Governance"
+    ],
+    "benefits": "Focused development across 112 most backward districts in health, nutrition, education, agriculture, financial inclusion and infrastructure. Real-time monitoring.",
+    "eligibility_summary": "Residents of 112 Aspirational Districts across 28 states in India.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban"
+    ],
+    "applyLink": "https://niti.gov.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "lokpal-1",
+    "title": "Lokpal Complaint Portal",
+    "ministry": "The Lokpal of India",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Anti-Corruption",
+        "Grievance",
+        "Public Officials",
+        "Complaint"
+    ],
+    "benefits": "Free online/offline complaint mechanism against corruption by Group A, B, C, D Central Government employees. Status tracking and protection for complainants.",
+    "eligibility_summary": "Any person having knowledge of or being affected by corruption by a public servant.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://lokpal.gov.in/",
+    "baseMatchScore": 60
+},
+{
+    "id": "home-1",
+    "title": "PM Scholarship Scheme for Central Armed Police Forces (CAPF)",
+    "ministry": "Ministry of Home Affairs",
+    "type": "central",
+    "category": "Education & Learning",
+    "tags": [
+        "Scholarship",
+        "CAPF",
+        "Paramilitary",
+        "Children"
+    ],
+    "benefits": "₹2,500/month (boys) and ₹3,000/month (girls) for wards and widows of CAPF/Assam Rifles personnel for professional courses.",
+    "eligibility_summary": "Children/widows of CAPF and Assam Rifles personnel who died in action or are disabled.",
+    "eligibility": {
+        "minAge": 17,
+        "maxAge": 25,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student"
+        ]
+    },
+    "area": [
+        "rural",
+        "semi-urban",
+        "urban"
+    ],
+    "applyLink": "https://ksb.gov.in/",
+    "baseMatchScore": 68
+},
+{
+    "id": "home-2",
+    "title": "Modernisation of Police Forces (MPF) Scheme",
+    "ministry": "Ministry of Home Affairs",
+    "type": "central",
+    "category": "Social Welfare & Empowerment",
+    "tags": [
+        "Police",
+        "Modernisation",
+        "Security",
+        "Infrastructure"
+    ],
+    "benefits": "Central assistance for police force modernisation: equipment, training, forensics, police housing and CCTNS digital connectivity.",
+    "eligibility_summary": "State governments and UT administrations implementing police modernisation projects.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 60,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "salaried"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban",
+        "rural"
+    ],
+    "applyLink": "https://mha.gov.in/",
+    "baseMatchScore": 50
+},
+{
+    "id": "hua-1",
+    "title": "Pradhan Mantri Awas Yojana – Urban (PMAY-U)",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "type": "central",
+    "category": "Housing & Shelter",
+    "tags": [
+        "Housing",
+        "Urban",
+        "BPL",
+        "EWS",
+        "Home Loan Subsidy"
+    ],
+    "benefits": "Credit-linked subsidy of 3–6.5% on home loans: EWS/LIG (6.5%, max ₹2.67 lakh), MIG-I (4%, max ₹2.35 lakh), MIG-II (3%, max ₹2.30 lakh).",
+    "eligibility_summary": "Urban households earning up to ₹18 lakh/year who do not own a pucca house.",
+    "eligibility": {
+        "minAge": 18,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://pmaymis.gov.in/",
+    "baseMatchScore": 85
+},
+{
+    "id": "hua-2",
+    "title": "AMRUT 2.0 – Atal Mission for Urban Transformation",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "type": "central",
+    "category": "Infrastructure & Connectivity",
+    "tags": [
+        "Urban",
+        "Water Supply",
+        "Sewerage",
+        "Parks"
+    ],
+    "benefits": "Universal household water supply and sewerage/septage management in 500 cities. Development of green spaces and parks for urban residents.",
+    "eligibility_summary": "Residents of 500 AMRUT cities for improved water, sanitation and urban amenities.",
+    "eligibility": {
+        "minAge": 0,
+        "maxAge": 100,
+        "gender": [
+            "male",
+            "female",
+            "transgender"
+        ],
+        "income": [
+            "below-1l",
+            "1l-2.5l",
+            "2.5l-5l",
+            "5l-8l",
+            "8l-10l",
+            "above-10l"
+        ],
+        "category": [
+            "general",
+            "sc",
+            "st",
+            "obc"
+        ],
+        "occupation": [
+            "student",
+            "farmer",
+            "daily-wage-worker",
+            "self-employed",
+            "salaried",
+            "unemployed",
+            "homemaker"
+        ]
+    },
+    "area": [
+        "urban",
+        "semi-urban"
+    ],
+    "applyLink": "https://amrut.gov.in/",
+    "baseMatchScore": 70
+}
