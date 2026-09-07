@@ -25,10 +25,13 @@ app.use(express.urlencoded({ extended: true }));
 
 // ── Serve Frontend Static Files ─────────────────────────────
 // Serves static files when backend is running
-const frontendPath = fs.existsSync(path.join(__dirname, '..', 'frontend'))
-    ? path.join(__dirname, '..', 'frontend')
-    : path.join(__dirname, '..');
-app.use(express.static(frontendPath));
+const rootPath = path.join(__dirname, '..');
+const frontendPath = path.join(rootPath, 'frontend');
+
+app.use(express.static(rootPath));
+if (fs.existsSync(frontendPath)) {
+    app.use(express.static(frontendPath));
+}
 
 // ── Health Check ────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
@@ -47,7 +50,7 @@ app.use('/api/search',  searchRouter);
 
 // ── Catch-all: serve frontend for any non-API route ─────────
 app.get('*', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
+    res.sendFile(path.join(rootPath, 'index.html'));
 });
 
 // ── Global Error Handler ─────────────────────────────────────

@@ -18,14 +18,22 @@ exports.search = (req, res) => {
     }
 
     const results = schemes.filter(scheme => {
+        const title = (scheme.title || '').toLowerCase();
+        const ministry = (scheme.ministry || '').toLowerCase();
+        const state = (scheme.state || '').toLowerCase();
+        const category = (scheme.category || '').toLowerCase();
+        const benefits = (scheme.benefits || '').toLowerCase();
+        const elig = (scheme.eligibility_summary || '').toLowerCase();
+        const tags = Array.isArray(scheme.tags) ? scheme.tags : [];
+
         return (
-            scheme.title.toLowerCase().includes(query)           ||
-            scheme.ministry.toLowerCase().includes(query)        ||
-            (scheme.state && scheme.state.toLowerCase().includes(query)) ||
-            scheme.category.toLowerCase().includes(query)        ||
-            scheme.benefits.toLowerCase().includes(query)        ||
-            scheme.eligibility_summary.toLowerCase().includes(query) ||
-            scheme.tags.some(tag => tag.toLowerCase().includes(query))
+            title.includes(query) ||
+            ministry.includes(query) ||
+            state.includes(query) ||
+            category.includes(query) ||
+            benefits.includes(query) ||
+            elig.includes(query) ||
+            tags.some(tag => (tag || '').toLowerCase().includes(query))
         );
     });
 

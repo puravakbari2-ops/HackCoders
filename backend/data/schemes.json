@@ -45458,10 +45458,6 @@
       "Fishermen Biometric Card",
       "Bank Passbook"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://ksb.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://edistrict.andaman.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -45559,7 +45555,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "74",
@@ -45617,10 +45612,6 @@
       "Admission Letter",
       "Bank Details"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://echs.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://edistrict.andaman.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": false,
@@ -45719,7 +45710,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "75",
@@ -45772,10 +45762,6 @@
       "Medical Referral Board Certificate",
       "Aadhaar Card"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://dhs.andaman.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -45873,7 +45859,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "76",
@@ -45926,10 +45911,6 @@
       "Income Certificate",
       "Aadhaar Card"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://swadeshdarshan.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://edistrict.andaman.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": false,
@@ -46028,7 +46009,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "77",
@@ -46079,10 +46059,6 @@
       "Islander Certificate",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://agriinfra.dac.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://pbmc.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": true,
@@ -46331,7 +46307,6 @@
         "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?status=ByVibhag&pointvalue=2&Schemeid=812"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "78",
@@ -46384,10 +46359,6 @@
       "Project Report",
       "Aadhaar Card"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://dahd.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://edistrict.andaman.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -46486,7 +46457,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "79",
@@ -46544,10 +46514,6 @@
       "Aadhaar Card",
       "Employment Exchange Card"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://pmmsy.dof.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.andaman.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": true,
@@ -46705,7 +46671,6 @@
         "url": "https://uk.gov.in/department92/library_file/file-25-02-2025-06-08-25.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "80",
@@ -46756,10 +46721,6 @@
       "BPL Ration Card",
       "Bank Passbook"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://swayam.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://edistrict.andaman.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": true,
@@ -47204,7 +47165,6 @@
         "url": "https://kbocwwb.karnataka.gov.in/static/media/user_manual_eng.c0bc6338.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "81",
@@ -47259,10 +47219,6 @@
       "Bank Account",
       "Vehicle Invoice"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://pmshrischools.education.gov.in/",
-    "baseMatchScore": 87
-=======
     "applyLink": "https://transport.andaman.gov.in/",
     "baseMatchScore": 87,
     "myscheme_verified": false,
@@ -47361,7 +47317,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "82",
@@ -47418,10 +47373,6 @@
       "Islander Certificate",
       "Bank Account"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://pmusha.education.gov.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://vidyut.andaman.gov.in/",
     "baseMatchScore": 90,
     "myscheme_verified": false,
@@ -47519,7 +47470,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "83",
@@ -47571,10 +47521,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://abdm.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://ysrrythubharosa.ap.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -47673,7 +47619,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "84",
@@ -47730,10 +47675,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://nhm.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://jaganannaammavodi.ap.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -47832,7 +47773,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "85",
@@ -47887,10 +47827,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://champions.gov.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://www.ysraarogyasri.ap.gov.in/",
     "baseMatchScore": 90,
     "myscheme_verified": false,
@@ -47989,7 +47925,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "86",
@@ -48046,10 +47981,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://www.startupindia.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://jaganannaammavodi.ap.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -48148,7 +48079,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "87",
@@ -48201,10 +48131,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://fitindia.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://housing.ap.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": true,
@@ -48384,7 +48310,6 @@
         "url": "https://housing.ap.gov.in/BeneficiarySearch"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "88",
@@ -48444,10 +48369,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://www.digilocker.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://navasakam.ap.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": true,
@@ -48892,7 +48813,6 @@
         "url": "https://kbocwwb.karnataka.gov.in/static/media/user_manual_eng.c0bc6338.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "89",
@@ -48951,10 +48871,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://web.umang.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://navasakam.ap.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": false,
@@ -49053,7 +48969,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "90",
@@ -49106,10 +49021,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://csb.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://navasakam.ap.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -49208,7 +49119,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "91",
@@ -49277,10 +49187,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://handlooms.nic.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://navasakam.ap.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -49379,7 +49285,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "92",
@@ -49436,10 +49341,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://handicrafts.nic.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://navasakam.ap.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -49538,7 +49439,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "93",
@@ -49590,10 +49490,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serbonline.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://agri.arunachal.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -49692,7 +49588,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "94",
@@ -49749,10 +49644,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://www.csir.res.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://eservice.arunachal.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": true,
@@ -49869,7 +49760,6 @@
         "url": "https://ditc.arunachal.gov.in/pdf/notice/Vidya-Scheme-Guidelines2019Revised-1-1.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "95",
@@ -49924,10 +49814,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://eservice.arunachal.gov.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://cmaay.com/",
     "baseMatchScore": 90,
     "myscheme_verified": true,
@@ -50176,7 +50062,6 @@
         "url": "https://cmaay.com/Hospitalization.aspx"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "96",
@@ -50230,10 +50115,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://www.dgft.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://eservice.arunachal.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": true,
@@ -50396,7 +50277,6 @@
         "url": "http://health.arunachal.gov.in/wp-content/uploads/2018/08/Dulari-Kanya.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "97",
@@ -50449,10 +50329,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://apeda.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://eservice.arunachal.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -50551,7 +50427,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "98",
@@ -50611,10 +50486,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://mpeda.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://eservice.arunachal.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": false,
@@ -50713,7 +50584,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "99",
@@ -50772,10 +50642,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://www.investindia.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://eservice.arunachal.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": false,
@@ -50874,7 +50740,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "100",
@@ -50927,10 +50792,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://www.investindia.gov.in/one-district-one-product",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://eservice.arunachal.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -51029,7 +50890,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "101",
@@ -55456,10 +55316,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.bihar.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://transport.bihar.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": true,
@@ -55667,7 +55523,6 @@
         "url": "http://mmgpy.bihar.gov.in/attachments/instruction.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "122",
@@ -56027,10 +55882,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://serviceonline.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -56129,7 +55980,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "125",
@@ -57467,10 +57317,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://chandigarh.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://crestchd.org.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -57569,7 +57415,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "133",
@@ -57828,10 +57673,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.cgstate.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -57930,7 +57771,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "135",
@@ -63594,10 +63434,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://dtc.delhi.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "http://dtc.delhi.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -63696,7 +63532,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "162",
@@ -68754,10 +68589,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://saralharyana.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -68856,7 +68687,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "185",
@@ -70805,10 +70635,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://edistrict.hp.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://spnfhp.nic.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -70907,7 +70733,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "194",
@@ -71116,10 +70941,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://hpsbys.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://himcare.hp.gov.in/",
     "baseMatchScore": 90,
     "myscheme_verified": false,
@@ -71218,7 +71039,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "196",
@@ -72397,10 +72217,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -72499,7 +72315,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "204",
@@ -72708,10 +72523,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://beneficiary.nha.gov.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://services.jk.gov.in/",
     "baseMatchScore": 90,
     "myscheme_verified": false,
@@ -72810,7 +72621,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "206",
@@ -72867,10 +72677,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": true,
@@ -73019,7 +72825,6 @@
         "url": "https://jkb.bank.in/deposits/ladli-beti"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "207",
@@ -73072,10 +72877,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -73174,7 +72975,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "208",
@@ -73234,10 +73034,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": false,
@@ -73336,7 +73132,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "209",
@@ -73551,10 +73346,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -73653,7 +73444,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "211",
@@ -73722,10 +73512,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -73824,7 +73610,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "212",
@@ -73881,10 +73666,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://jkeservices.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -73983,7 +73764,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "213",
@@ -74904,10 +74684,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://jharsewa.jharkhand.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://awas.jharkhand.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": true,
@@ -75088,7 +74864,6 @@
         "url": "https://aay.jharkhand.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "218",
@@ -76143,10 +75918,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://sevasindhugs.karnataka.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -76245,7 +76016,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "225",
@@ -79611,10 +79381,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://kargil.nic.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -79713,7 +79479,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "245",
@@ -81158,10 +80923,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://lakshadweep.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -81260,7 +81021,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "255",
@@ -84396,10 +84156,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://aaplesarkar.mahaonline.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -84498,7 +84254,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "275",
@@ -84812,10 +84567,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://aaplesarkar.mahaonline.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://ladkibahin.maharashtra.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": true,
@@ -85148,7 +84899,6 @@
         "url": "https://ladlibahinstorage.s3.ap-south-1.amazonaws.com/site-pdf/%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%B6%E0%A4%95+%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE+%E0%A4%A6%E0%A4%BF.%E0%A5%A8%E0%A5%AD.%E0%A5%A6%E0%A5%AD.%E0%A5%A8%E0%A5%AA.pdf#toolbar=0"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "277",
@@ -85669,10 +85419,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://aaplesarkar.mahaonline.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -85771,7 +85517,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "281",
@@ -89617,10 +89362,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -89719,7 +89460,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "304",
@@ -89776,10 +89516,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -89878,7 +89614,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "305",
@@ -90087,10 +89822,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -90189,7 +89920,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "307",
@@ -90242,10 +89972,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -90344,7 +90070,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "308",
@@ -90404,10 +90129,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": false,
@@ -90506,7 +90227,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "309",
@@ -90565,10 +90285,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": false,
@@ -90667,7 +90383,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "310",
@@ -90720,10 +90435,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -90822,7 +90533,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "311",
@@ -90891,10 +90601,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -90993,7 +90699,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "312",
@@ -91050,10 +90755,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://msegs.mizoram.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -91152,7 +90853,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "313",
@@ -91204,10 +90904,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -91306,7 +91002,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "314",
@@ -91363,10 +91058,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -91465,7 +91156,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "315",
@@ -91812,10 +91502,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -91914,7 +91600,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "317",
@@ -91967,10 +91652,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -92069,7 +91750,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "318",
@@ -92129,10 +91809,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": true,
@@ -92348,7 +92024,6 @@
         "url": "https://www.barrackpore.gov.in/files/contents/forms/handicapped/sdo_bkp_widow_stipend_application_form_bengali.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "319",
@@ -92407,10 +92082,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": true,
@@ -92561,7 +92232,6 @@
         "url": "https://credit.nagaland.gov.in/cmmfi"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "320",
@@ -92614,10 +92284,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -92716,7 +92382,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "321",
@@ -92785,10 +92450,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -92887,7 +92548,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "322",
@@ -92944,10 +92604,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.nagaland.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -93046,7 +92702,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "323",
@@ -93098,10 +92753,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://odisha.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://kalia.odisha.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -93200,7 +92851,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "324",
@@ -93257,10 +92907,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://kalia.odisha.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -93359,7 +93005,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "325",
@@ -98640,10 +98285,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://sso.rajasthan.gov.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://chiranjeevi.rajasthan.gov.in/",
     "baseMatchScore": 90,
     "myscheme_verified": false,
@@ -98742,7 +98383,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "356",
@@ -99881,10 +99521,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -99983,7 +99619,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "364",
@@ -100040,10 +99675,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -100142,7 +99773,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "365",
@@ -100197,10 +99827,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 90
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 90,
     "myscheme_verified": false,
@@ -100299,7 +99925,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "366",
@@ -100356,10 +99981,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -100458,7 +100079,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "367",
@@ -100511,10 +100131,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -100613,7 +100229,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "368",
@@ -100829,10 +100444,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": true,
@@ -101027,7 +100638,6 @@
         "url": "https://industries.sikkim.gov.in/schemedoc/dcKnMRZtT1BAFaojSbxG110KbPQdHieY25oRlwJr.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "370",
@@ -101080,10 +100690,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -101182,7 +100788,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "371",
@@ -101251,10 +100856,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -101353,7 +100954,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "372",
@@ -101410,10 +101010,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.sikkim.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -101512,7 +101108,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "373",
@@ -103449,10 +103044,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://telangana.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://rythubandhu.telangana.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -103551,7 +103142,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "384",
@@ -103608,10 +103198,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -103710,7 +103296,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "385",
@@ -103919,10 +103504,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -104021,7 +103602,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "387",
@@ -104074,10 +103654,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -104176,7 +103752,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "388",
@@ -104236,10 +103811,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": true,
@@ -104684,7 +104255,6 @@
         "url": "https://kbocwwb.karnataka.gov.in/static/media/user_manual_eng.c0bc6338.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "389",
@@ -104743,10 +104313,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": true,
@@ -104905,7 +104471,6 @@
         "url": "https://uk.gov.in/department92/library_file/file-25-02-2025-06-08-25.pdf"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "390",
@@ -104958,10 +104523,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": true,
@@ -105241,7 +104802,6 @@
         "url": "https://cm.telangana.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "391",
@@ -105310,10 +104870,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -105412,7 +104968,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "392",
@@ -105469,10 +105024,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://meeseva.telangana.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://tg.meeseva.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -105571,7 +105122,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "393",
@@ -105623,10 +105173,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -105725,7 +105271,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "394",
@@ -105782,10 +105327,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -105884,7 +105425,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "395",
@@ -106093,10 +105633,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 91
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 91,
     "myscheme_verified": false,
@@ -106195,7 +105731,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "397",
@@ -106248,10 +105783,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 92
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 92,
     "myscheme_verified": false,
@@ -106350,7 +105881,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "398",
@@ -106410,10 +105940,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 93
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 93,
     "myscheme_verified": false,
@@ -106512,7 +106038,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "399",
@@ -106570,10 +106095,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://scholarships.gov.in/",
-    "baseMatchScore": 94
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 94,
     "myscheme_verified": false,
@@ -106672,7 +106193,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "400",
@@ -106725,10 +106245,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -106827,7 +106343,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "401",
@@ -106896,10 +106411,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 88
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 88,
     "myscheme_verified": false,
@@ -106998,7 +106509,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "402",
@@ -107055,10 +106565,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://serviceonline.gov.in/",
-    "baseMatchScore": 89
-=======
     "applyLink": "https://edistrict.tripura.gov.in/",
     "baseMatchScore": 89,
     "myscheme_verified": false,
@@ -107157,7 +106663,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "403",
@@ -109300,10 +108805,6 @@
       "Bank Passbook",
       "Income Certificate"
     ],
-<<<<<<< HEAD
-    "applyLink": "https://edistrict.up.gov.in/",
-    "baseMatchScore": 95
-=======
     "applyLink": "https://diupmsme.upsdc.gov.in/",
     "baseMatchScore": 95,
     "myscheme_verified": false,
@@ -109402,7 +108903,6 @@
         "url": "https://www.myscheme.gov.in/"
       }
     ]
->>>>>>> 7844df8ad56616fa472a5c10177167b1bd8f3d8c
   },
   {
     "id": "411",

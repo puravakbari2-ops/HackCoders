@@ -14,8 +14,14 @@ const allowedOrigins = [
 
 const corsOptions = {
     origin: function (origin, callback) {
-        // Allow requests with no origin (mobile apps, curl, Postman, file://)
-        if (!origin) return callback(null, true);
+        // Allow requests with no origin or 'null' (mobile apps, curl, Postman, file://)
+        if (!origin || origin === 'null') return callback(null, true);
+
+        // Allow any localhost / 127.0.0.1 port in development
+        if (/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) {
+            return callback(null, true);
+        }
+
         if (allowedOrigins.includes(origin)) {
             return callback(null, true);
         }

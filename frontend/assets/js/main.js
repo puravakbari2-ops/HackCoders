@@ -7,29 +7,30 @@
 (function () {
     'use strict';
 
-    const { CATEGORIES, STATES, MINISTRIES, FAQS, API_BASE } = window.AppData;
+    const { CATEGORIES, STATES, MINISTRIES, FAQS, SAMPLE_SCHEMES, API_BASE } = window.AppData;
 
     // ── DOM References ────────────────────────────────────────
-    const navbar           = document.getElementById('navbar');
-    const themeToggle      = document.getElementById('themeToggle');
-    const mobileMenuBtn    = document.getElementById('mobileMenuBtn');
-    const mobileMenuClose  = document.getElementById('mobileMenuClose');
-    const mobileMenu       = document.getElementById('mobileMenu');
-    const mobileMenuOverlay= document.getElementById('mobileMenuOverlay');
-    const categoriesGrid   = document.getElementById('categoriesGrid');
-    const faqList          = document.getElementById('faqList');
-    const signInBtn        = document.getElementById('signInBtn');
-    const heroSearchInput  = document.getElementById('heroSearchInput');
-    const navSearchInput   = document.getElementById('navSearchInput');
-    const sectionTitle     = document.querySelector('.categories-section .section-title');
+    const navbar            = document.getElementById('navbar');
+    const themeToggle       = document.getElementById('themeToggle');
+    const mobileMenuBtn     = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose   = document.getElementById('mobileMenuClose');
+    const mobileMenu        = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const categoriesGrid    = document.getElementById('categoriesGrid');
+    const faqList           = document.getElementById('faqList');
+    const heroSearchInput   = document.getElementById('heroSearchInput');
+    const navSearchInput    = document.getElementById('navSearchInput');
+    const sectionTitle      = document.querySelector('.categories-section .section-title');
 
     // ── Theme ─────────────────────────────────────────────────
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
-        themeToggle && (themeToggle.innerHTML = savedTheme === 'dark'
-            ? '<i class="fas fa-moon"></i>'
-            : '<i class="fas fa-sun"></i>');
+        if (themeToggle) {
+            themeToggle.innerHTML = savedTheme === 'dark'
+                ? '<i class="fas fa-moon"></i>'
+                : '<i class="fas fa-sun"></i>';
+        }
     }
 
     themeToggle && themeToggle.addEventListener('click', () => {
@@ -51,7 +52,7 @@
         document.body.style.overflow = '';
     }
 
-    mobileMenuBtn    && mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn && mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.add('active');
         mobileMenuOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -60,8 +61,34 @@
     mobileMenuOverlay && mobileMenuOverlay.addEventListener('click', closeMobileMenu);
     document.querySelectorAll('.mobile-nav-links a').forEach(l => l.addEventListener('click', closeMobileMenu));
 
+    // ── User Profile Dropdown ─────────────────────────────────
+    const userChipBtn    = document.getElementById('userChipDropdownBtn');
+    const userDropdown   = document.getElementById('userDropdownMenu');
+    const logoutBtn      = document.getElementById('logoutBtn');
+    const mobileLogoutBtn= document.getElementById('mobileLogoutBtn');
+
+    userChipBtn && userChipBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        userDropdown && userDropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', () => {
+        userDropdown && userDropdown.classList.remove('open');
+    });
+
+    function doLogout() {
+        localStorage.removeItem('jansahay_user');
+        sessionStorage.clear();
+        document.getElementById('userProfileMenu') && (document.getElementById('userProfileMenu').style.display = 'none');
+        document.getElementById('signInBtn')       && (document.getElementById('signInBtn').style.display = '');
+        document.getElementById('mobileUserProfile') && (document.getElementById('mobileUserProfile').style.display = 'none');
+        document.querySelector('.mobile-sign-in') && (document.querySelector('.mobile-sign-in').style.display = '');
+        showToast('Signed out successfully.', 'info');
+    }
+    logoutBtn       && logoutBtn.addEventListener('click', doLogout);
+    mobileLogoutBtn && mobileLogoutBtn.addEventListener('click', doLogout);
+
     // ── Categories/States/Ministries Renderer ────────────────
-    let currentTabData = CATEGORIES;
+    let currentTabData  = CATEGORIES;
     let currentTabLabel = 'categories';
 
     function renderCategories(data) {
@@ -76,42 +103,35 @@
             </div>
         `).join('');
 
-        // Attach click handlers to each card
         categoriesGrid.querySelectorAll('.category-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const name = card.getAttribute('data-name');
-                handleCategoryClick(name);
-            });
+            card.addEventListener('click', () => handleCategoryClick(card.getAttribute('data-name')));
             card.addEventListener('keypress', e => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    const name = card.getAttribute('data-name');
-                    handleCategoryClick(name);
+                    handleCategoryClick(card.getAttribute('data-name'));
                 }
             });
         });
 
-        // Entrance animations
         requestAnimationFrame(() => {
             categoriesGrid.querySelectorAll('.category-card').forEach((el, i) => {
-                el.style.opacity = '0';
+                el.style.opacity   = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = `opacity 0.4s ease ${i * 0.05}s, transform 0.4s ease ${i * 0.05}s`;
                 setTimeout(() => {
-                    el.style.opacity = '1';
+                    el.style.opacity   = '1';
                     el.style.transform = 'translateY(0)';
                 }, 50 + i * 50);
             });
         });
     }
 
-    // When a category/state/ministry card is clicked, open the Find Schemes modal
     function handleCategoryClick(name) {
-        showToast(`Showing schemes for: ${name}`, 'info');
-        handleSearch(name);
+        showToast(`Searching schemes for: ${name}`, 'info');
+        localSearch(name);
     }
 
-    // ── Tab switching (Categories / States / Ministries) ──────
+    // ── Tab switching ─────────────────────────────────────────
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -151,19 +171,17 @@
             </div>
         `).join('');
 
-        // Use event delegation for FAQ clicks — robust, no inline onclick needed
         faqList.addEventListener('click', e => {
             const question = e.target.closest('.faq-question');
             if (!question) return;
             const index = parseInt(question.getAttribute('data-faq'));
-            const item = document.getElementById(`faq-item-${index}`);
+            const item  = document.getElementById(`faq-item-${index}`);
             const wasActive = item.classList.contains('active');
             faqList.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
             if (!wasActive) item.classList.add('active');
         });
     }
 
-    // Keep window.toggleFAQ for backward compat
     window.toggleFAQ = function (index) {
         const item = document.getElementById(`faq-item-${index}`);
         if (!item) return;
@@ -184,7 +202,6 @@
                 }
             });
         }, { threshold: 0.5 });
-
         document.querySelectorAll('.stat-number').forEach(el => observer.observe(el));
     }
 
@@ -192,8 +209,8 @@
         const duration = 2000;
         const start    = performance.now();
         function update(now) {
-            const p       = Math.min((now - start) / duration, 1);
-            const eased   = 1 - Math.pow(1 - p, 3);
+            const p     = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
             el.textContent = Math.floor(eased * target).toLocaleString();
             if (p < 1) requestAnimationFrame(update);
             else el.textContent = target.toLocaleString();
@@ -211,53 +228,103 @@
         });
     }, { threshold: 0.1 });
 
-    // ── Search ────────────────────────────────────────────────
-    async function handleSearch(query) {
-        if (!query.trim()) return;
-        try {
-            const res  = await fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`);
-            const json = await res.json();
-            if (json.success && json.data) {
-                document.dispatchEvent(new CustomEvent('jansahay:showResults', { detail: json.data }));
-            }
-        } catch {
-            console.warn('Search API unavailable');
-            const cleanQuery = (query || '').toLowerCase().trim().replace(/&/g, 'and');
-            const isMin = window.AppData.MINISTRIES.some(m => m.name.toLowerCase().replace(/&/g, 'and') === cleanQuery);
-            const filtered = isMin
-                ? window.AppData.SAMPLE_SCHEMES.filter(s => (s.ministry || '').toLowerCase().replace(/&/g, 'and') === cleanQuery)
-                : window.AppData.SAMPLE_SCHEMES.filter(s =>
-                    s.title.toLowerCase().includes(query.toLowerCase()) || 
-                    (s.ministry && s.ministry.toLowerCase().includes(query.toLowerCase())) ||
-                    (s.state && s.state.toLowerCase().includes(query.toLowerCase())) || 
-                    (s.tags || []).some(t => t.toLowerCase().includes(query.toLowerCase())));
-            document.dispatchEvent(new CustomEvent('jansahay:showResults', { detail: filtered }));
+    // ── Local Search (no backend needed) ─────────────────────
+    function localSearch(query) {
+        if (!query || !query.trim()) return;
+        const q          = query.toLowerCase().trim();
+        const qClean     = q.replace(/&/g, 'and');
+        const isMinistry = MINISTRIES.some(m => m.name.toLowerCase().replace(/&/g, 'and') === qClean);
+        const isState    = STATES.some(s => s.name.toLowerCase() === q);
+        const isCategory = CATEGORIES.some(c => c.name.toLowerCase() === q);
+
+        let filtered;
+        if (isMinistry) {
+            filtered = SAMPLE_SCHEMES.filter(s =>
+                (s.ministry || '').toLowerCase().replace(/&/g, 'and') === qClean
+            );
+        } else if (isState) {
+            filtered = SAMPLE_SCHEMES.filter(s =>
+                (s.state || '').toLowerCase() === q || (s.state || '') === 'All India'
+            );
+        } else if (isCategory) {
+            filtered = SAMPLE_SCHEMES.filter(s =>
+                (s.category || '').toLowerCase() === q
+            );
+        } else {
+            filtered = SAMPLE_SCHEMES.filter(s =>
+                s.title.toLowerCase().includes(q) ||
+                (s.ministry  && s.ministry.toLowerCase().includes(q))  ||
+                (s.category  && s.category.toLowerCase().includes(q))  ||
+                (s.state     && s.state.toLowerCase().includes(q))     ||
+                (s.eligibility_summary && s.eligibility_summary.toLowerCase().includes(q)) ||
+                (s.tags || []).some(t => t.toLowerCase().includes(q))
+            );
         }
+
+        document.dispatchEvent(new CustomEvent('jansahay:showResults', { detail: filtered }));
     }
 
-    document.querySelector('.hero-search-btn')?.addEventListener('click', () => {
-        handleSearch(heroSearchInput.value);
+    // ── Search (tries API first, falls back to local) ─────────
+    async function handleSearch(query) {
+        if (!query || !query.trim()) {
+            showToast('Please enter a search term.', 'info');
+            return;
+        }
+
+        const isLocal = window.location.protocol === 'file:' ||
+                        window.location.hostname === 'localhost' ||
+                        window.location.hostname === '127.0.0.1';
+
+        if (!isLocal) {
+            // Try API only when hosted
+            try {
+                const res  = await fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`);
+                const json = await res.json();
+                if (json.success && json.data && json.data.length > 0) {
+                    document.dispatchEvent(new CustomEvent('jansahay:showResults', { detail: json.data }));
+                    return;
+                }
+            } catch { /* fall through to local search */ }
+        }
+
+        localSearch(query);
+    }
+
+    // ── Bind All Search Bars ──────────────────────────────────
+    // Hero search
+    const heroSearchBtn = document.querySelector('.hero-search-btn');
+    heroSearchBtn && heroSearchBtn.addEventListener('click', () => {
+        handleSearch(heroSearchInput ? heroSearchInput.value : '');
     });
-    heroSearchInput?.addEventListener('keypress', e => {
+    heroSearchInput && heroSearchInput.addEventListener('keypress', e => {
         if (e.key === 'Enter') handleSearch(heroSearchInput.value);
     });
-    navSearchInput?.addEventListener('keypress', e => {
-        if (e.key === 'Enter') handleSearch(navSearchInput.value);
-    });
-    document.querySelector('#navbarSearch .search-btn')?.addEventListener('click', () => {
+
+    // Navbar search
+    const navSearchBtn = document.querySelector('#navbarSearch .search-btn');
+    navSearchBtn && navSearchBtn.addEventListener('click', () => {
         if (navSearchInput) handleSearch(navSearchInput.value);
     });
-
-    // ── Sign In ───────────────────────────────────────────────
-    signInBtn && signInBtn.addEventListener('click', () => {
-        showToast('Sign In will be integrated with MeriPehchaan (National Single Sign-On) in the production version.', 'info');
+    navSearchInput && navSearchInput.addEventListener('keypress', e => {
+        if (e.key === 'Enter') handleSearch(navSearchInput.value);
     });
 
-    // ── Toast Notification ─────────────────────────────────────
+    // Mobile search
+    const mobileSearchInput = document.querySelector('.mobile-search input');
+    const mobileSearchBtn   = document.querySelector('.mobile-search button');
+    mobileSearchBtn && mobileSearchBtn.addEventListener('click', () => {
+        if (mobileSearchInput) { handleSearch(mobileSearchInput.value); closeMobileMenu(); }
+    });
+    mobileSearchInput && mobileSearchInput.addEventListener('keypress', e => {
+        if (e.key === 'Enter') { handleSearch(mobileSearchInput.value); closeMobileMenu(); }
+    });
+
+    // ── Toast Notification ────────────────────────────────────
     function showToast(msg, type = 'info') {
+        const icons = { info: 'fa-info-circle', success: 'fa-check-circle', error: 'fa-exclamation-circle' };
         const toast = document.createElement('div');
         toast.className = `toast toast-${type}`;
-        toast.innerHTML = `<i class="fas fa-info-circle"></i> ${msg}`;
+        toast.innerHTML = `<i class="fas ${icons[type] || icons.info}"></i> ${msg}`;
         document.body.appendChild(toast);
         requestAnimationFrame(() => toast.classList.add('show'));
         setTimeout(() => {
@@ -267,26 +334,36 @@
     }
     window.showToast = showToast;
 
-    // ── Init on DOM Ready ─────────────────────────────────────
-    document.addEventListener('DOMContentLoaded', () => {
+    // ── Init ─────────────────────────────────────────────────
+    // Scripts load at end of <body>, so DOM is already ready.
+    // We use a helper that calls immediately if DOM is ready,
+    // or waits for DOMContentLoaded if somehow not yet ready.
+    function onReady(fn) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fn);
+        } else {
+            fn();
+        }
+    }
+
+    onReady(() => {
         renderCategories(CATEGORIES);
         renderFAQs();
         initCountAnimation();
 
-        // Animate static cards via observer
         document.querySelectorAll('.step-card, .stat-card').forEach(el => {
-            el.style.opacity   = '0';
-            el.style.transform = 'translateY(20px)';
+            el.style.opacity    = '0';
+            el.style.transform  = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             animationObserver.observe(el);
         });
     });
 
-    // Listen for search results event from form.js
+    // ── Listen for search results event ──────────────────────
     document.addEventListener('jansahay:showResults', e => {
         const resultsPage = document.getElementById('resultsPage');
         if (!resultsPage) return;
-        document.querySelector('main').style.display = 'none';
+        document.querySelector('main').style.display  = 'none';
         document.getElementById('footer').style.display = 'none';
         resultsPage.style.display = 'block';
         window.scrollTo(0, 0);

@@ -57,7 +57,7 @@ exports.getCategories = (req, res) => {
 // ── GET /api/schemes/:id ─────────────────────────────────────
 // Get a single scheme by ID
 exports.getSchemeById = (req, res, next) => {
-    const scheme = schemes.find(s => s.id === req.params.id);
+    const scheme = schemes.find(s => String(s.id) === String(req.params.id));
 
     if (!scheme) {
         const err = new Error(`Scheme with ID ${req.params.id} not found`);
