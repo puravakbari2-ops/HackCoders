@@ -1,19 +1,17 @@
 /* ============================================================
-   Routes: RAG
-   RAG-powered scheme recommendation & chat endpoints
+   Routes: RAG Query (Unified Text + Voice Pipeline)
    ============================================================ */
 
-const express = require('express');
-const router  = express.Router();
-const ctrl    = require('../controllers/ragController');
+'use strict';
 
-// POST /api/rag/query    → profile-based AI recommendation
+const express = require('express');
+const router = express.Router();
+const ctrl = require('../controllers/ragController');
+
+// POST /api/rag/query  → unified RAG pipeline (text + voice)
 router.post('/query', ctrl.query);
 
-// POST /api/rag/chat     → natural language chat with RAG
-router.post('/chat',  ctrl.chat);
-
-// GET  /api/rag/status   → pipeline health check
+// GET  /api/rag/status → pipeline health and index stats
 router.get('/status', ctrl.status);
 
 module.exports = router;

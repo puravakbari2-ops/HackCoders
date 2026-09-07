@@ -1,0 +1,852 @@
+﻿{
+  "kb": {
+    "totalSchemes": 1074,
+    "validSchemes": 1074,
+    "invalidRecords": 0,
+    "duplicates": 0,
+    "uniqueSchemeIds": 1074,
+    "totalCategories": 19,
+    "totalStates": 37,
+    "totalMinistries": 411,
+    "totalDocuments": 1673
+  },
+  "categories": {
+    "Banking, Financial Services & Insurance": 25,
+    "Agriculture, Rural & Environment": 109,
+    "Health & Wellness": 83,
+    "Education & Learning": 196,
+    "Housing & Shelter": 43,
+    "Business & Entrepreneurship": 164,
+    "Skills & Employment": 70,
+    "Social Welfare & Empowerment": 109,
+    "Women & Child": 42,
+    "Utility & Sanitation": 40,
+    "Science, IT & Communications": 83,
+    "Public Safety, Law & Justice": 10,
+    "Sports & Culture": 11,
+    "Transport & Infrastructure": 47,
+    "Travel & Tourism": 3,
+    "Arts & Culture": 6,
+    "Infrastructure & Connectivity": 15,
+    "Science & Technology": 14,
+    "Sports & Adventure": 4
+  },
+  "index": {
+    "embeddingModel": "gemini-embedding-001",
+    "vectorDatabase": "Pure-JS Cosine Vector Store (disk-persisted in data/vector_index/)",
+    "collectionName": "jansahay_vector_index",
+    "indexedSchemes": 0,
+    "indexedChunks": 0,
+    "failedEmbeddings": 0,
+    "orphanChunks": 0,
+    "duplicateChunks": 0,
+    "lastIndexingTime": "Not indexed via npm run ingest yet (direct KB fallback active)"
+  },
+  "education": [
+    {
+      "query": "What education schemes are available?",
+      "detectedLanguage": "en",
+      "detectedIntent": "CATEGORY_SEARCH",
+      "extractedFilters": {
+        "category": "EDUCATION",
+        "canonicalCategory": "EDUCATION"
+      },
+      "rewrittenQuery": "What education schemes are available?",
+      "candidatesRetrievedCount": 15,
+      "uniqueSchemesCount": 15,
+      "top10Retrieved": [
+        {
+          "title": "National Scholarship Portal - Pre-Matric Scholarship",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Scholarship Portal - Post-Matric Scholarship",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "PM-YASASVI Scholarship Scheme",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Prime Minister's Research Fellowship (PMRF)",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "AICTE Pragati Scholarship for Girl Students",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "AICTE Saksham Scholarship for Differently Abled Students",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "PM Scholarship Scheme for Central Armed Police Forces (CAPF)",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Prime Minister's Scholarship Scheme for Ex-Servicemen",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Scholarship Portal (NSP) ΓÇô Central Schemes",
+          "score": 0.75,
+          "category": "Education & Learning",
+          "state": "All India"
+        }
+      ],
+      "finalTop5": [
+        "National Scholarship Portal - Pre-Matric Scholarship",
+        "National Scholarship Portal - Post-Matric Scholarship",
+        "PM-YASASVI Scholarship Scheme",
+        "Prime Minister's Research Fellowship (PMRF)",
+        "AICTE Pragati Scholarship for Girl Students"
+      ],
+      "inspireOnly": false
+    },
+    {
+      "query": "Mujhe education ke liye government scheme chahiye",
+      "detectedLanguage": "hi",
+      "detectedIntent": "CATEGORY_SEARCH",
+      "extractedFilters": {
+        "category": "EDUCATION",
+        "canonicalCategory": "EDUCATION"
+      },
+      "rewrittenQuery": "Mujhe education ke liye government scheme chahiye",
+      "candidatesRetrievedCount": 15,
+      "uniqueSchemesCount": 15,
+      "top10Retrieved": [
+        {
+          "title": "National Scholarship Portal - Pre-Matric Scholarship",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Scholarship Portal - Post-Matric Scholarship",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "PM-YASASVI Scholarship Scheme",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Prime Minister's Research Fellowship (PMRF)",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "AICTE Pragati Scholarship for Girl Students",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "AICTE Saksham Scholarship for Differently Abled Students",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "PM Scholarship Scheme for Central Armed Police Forces (CAPF)",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Jawahar Navodaya Vidyalaya Lateral Entry Scheme (Class 9 & 11)",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Andaman Island Student Mainland Higher Education Scholarship",
+          "score": 0.95,
+          "category": "Education & Learning",
+          "state": "Andaman and Nicobar Islands"
+        }
+      ],
+      "finalTop5": [
+        "National Scholarship Portal - Pre-Matric Scholarship",
+        "National Scholarship Portal - Post-Matric Scholarship",
+        "PM-YASASVI Scholarship Scheme",
+        "Prime Minister's Research Fellowship (PMRF)",
+        "AICTE Pragati Scholarship for Girl Students"
+      ],
+      "inspireOnly": false
+    },
+    {
+      "query": "α¬«α¬╛α¬░α½ç α¬╢α¬┐α¬òα½ìα¬╖α¬ú α¬«α¬╛α¬ƒα½ç α¬╕α¬░α¬òα¬╛α¬░α½Ç α¬»α½ïα¬£α¬¿α¬╛ α¬£α½ïα¬êα¬Å",
+      "detectedLanguage": "gu",
+      "detectedIntent": "FIND_SCHEMES",
+      "extractedFilters": {
+        "category": "EDUCATION",
+        "canonicalCategory": "EDUCATION"
+      },
+      "rewrittenQuery": "α¬«α¬╛α¬░α½ç α¬╢α¬┐α¬òα½ìα¬╖α¬ú α¬«α¬╛α¬ƒα½ç α¬╕α¬░α¬òα¬╛α¬░α½Ç α¬»α½ïα¬£α¬¿α¬╛ α¬£α½ïα¬êα¬Å",
+      "candidatesRetrievedCount": 15,
+      "uniqueSchemesCount": 15,
+      "top10Retrieved": [
+        {
+          "title": "National Scholarship Portal - Pre-Matric Scholarship",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Scholarship Portal - Post-Matric Scholarship",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "PM-YASASVI Scholarship Scheme",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Prime Minister's Research Fellowship (PMRF)",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "AICTE Pragati Scholarship for Girl Students",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "AICTE Saksham Scholarship for Differently Abled Students",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "PM Scholarship Scheme for Central Armed Police Forces (CAPF)",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "CAG Internship Programme",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "CAG Research Fellowship",
+          "score": 0.55,
+          "category": "Education & Learning",
+          "state": "All India"
+        }
+      ],
+      "finalTop5": [
+        "National Scholarship Portal - Pre-Matric Scholarship",
+        "National Scholarship Portal - Post-Matric Scholarship",
+        "PM-YASASVI Scholarship Scheme",
+        "Prime Minister's Research Fellowship (PMRF)",
+        "AICTE Pragati Scholarship for Girl Students"
+      ],
+      "inspireOnly": false
+    },
+    {
+      "query": "student scholarship schemes",
+      "detectedLanguage": "en",
+      "detectedIntent": "FIND_SCHEMES",
+      "extractedFilters": {
+        "occupation": "student",
+        "canonicalOccupation": "STUDENT",
+        "category": "EDUCATION",
+        "canonicalCategory": "EDUCATION"
+      },
+      "rewrittenQuery": "student scholarship schemes",
+      "candidatesRetrievedCount": 15,
+      "uniqueSchemesCount": 15,
+      "top10Retrieved": [
+        {
+          "title": "National Scholarship Portal (NSP) ΓÇô Central Schemes",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Pre-Matric Scholarship Scheme for SC Students (Classes 9 and 10)",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Post-Matric Scholarship for Scheduled Caste Students (PMS-SC)",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Pre-Matric Scholarship Scheme for Minority Students (Classes 9 and 10)",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "Andaman Island Student Mainland Higher Education Scholarship",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "Andaman and Nicobar Islands"
+        },
+        {
+          "title": "Chandigarh Meritorious Student Higher Scholarship",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "Chandigarh"
+        },
+        {
+          "title": "Ladakh Rewa Student Scholarship Scheme",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "Ladakh"
+        },
+        {
+          "title": "Mizoram Student Scholarship Top-up",
+          "score": 1.45,
+          "category": "Education & Learning",
+          "state": "Mizoram"
+        },
+        {
+          "title": "National Scholarship Portal - Pre-Matric Scholarship",
+          "score": 1.383,
+          "category": "Education & Learning",
+          "state": "All India"
+        },
+        {
+          "title": "National Scholarship Portal - Post-Matric Scholarship",
+          "score": 1.383,
+          "category": "Education & Learning",
+          "state": "All India"
+        }
+      ],
+      "finalTop5": [
+        "National Scholarship Portal (NSP) ΓÇô Central Schemes",
+        "Pre-Matric Scholarship Scheme for SC Students (Classes 9 and 10)",
+        "Post-Matric Scholarship for Scheduled Caste Students (PMS-SC)",
+        "Pre-Matric Scholarship Scheme for Minority Students (Classes 9 and 10)",
+        "Andaman Island Student Mainland Higher Education Scholarship"
+      ],
+      "inspireOnly": false
+    }
+  ],
+  "farmer": [
+    {
+      "query": "Mujhe Kisan ki sari scheme do",
+      "language": "hi",
+      "intent": "FIND_SCHEMES",
+      "category": "AGRICULTURE",
+      "occupation": "farmer",
+      "state": null,
+      "candidatesCount": 15,
+      "uniqueSchemesCount": 15,
+      "topRetrieved": [
+        {
+          "title": "PM-KISAN Samman Nidhi Yojana",
+          "score": 1.45
+        },
+        {
+          "title": "Kisan Credit Card (KCC) Scheme",
+          "score": 1.45
+        },
+        {
+          "title": "Rajiv Gandhi Kisan Nyay Yojana",
+          "score": 1.45
+        },
+        {
+          "title": "Mukhyamantri Kisan Sahay Yojana",
+          "score": 1.45
+        },
+        {
+          "title": "HP Prakritik Kheti Khushhal Kisan Yojana",
+          "score": 1.45
+        }
+      ],
+      "finalSchemes": [
+        "PM-KISAN Samman Nidhi Yojana",
+        "Rajiv Gandhi Kisan Nyay Yojana",
+        "Mukhyamantri Kisan Sahay Yojana",
+        "HP Prakritik Kheti Khushhal Kisan Yojana",
+        "Namo Shetkari Mahasanman Nidhi"
+      ]
+    },
+    {
+      "query": "Give me government schemes for farmers",
+      "language": "en",
+      "intent": "CATEGORY_SEARCH",
+      "category": "AGRICULTURE",
+      "occupation": "farmer",
+      "state": null,
+      "candidatesCount": 15,
+      "uniqueSchemesCount": 15,
+      "topRetrieved": [
+        {
+          "title": "PM-KISAN Samman Nidhi Yojana",
+          "score": 1.45
+        },
+        {
+          "title": "Kisan Credit Card (KCC) Scheme",
+          "score": 1.45
+        },
+        {
+          "title": "PM KUSUM Yojana (Solar Pumps for Farmers)",
+          "score": 1.45
+        },
+        {
+          "title": "Soil Health Card Scheme",
+          "score": 1.45
+        },
+        {
+          "title": "Paramparagat Krishi Vikas Yojana (PKVY) - Organic Farming",
+          "score": 1.45
+        }
+      ],
+      "finalSchemes": [
+        "PM-KISAN Samman Nidhi Yojana",
+        "PM KUSUM Yojana (Solar Pumps for Farmers)",
+        "mKisan Portal ΓÇô SMS Advisory Services",
+        "New Urea Policy 2015 ΓÇô Neem Coated Urea",
+        "PM Annadata Aay SanraksHan Abhiyan (PM-AASHA)"
+      ]
+    },
+    {
+      "query": "α¬«α¬¿α½ç α¬ûα½çα¬íα½éα¬ñα½ï α¬«α¬╛α¬ƒα½ç α¬╕α¬░α¬òα¬╛α¬░α½Ç α¬»α½ïα¬£α¬¿α¬╛α¬ô α¬£α½ïα¬êα¬Å",
+      "language": "gu",
+      "intent": "FIND_SCHEMES",
+      "category": "AGRICULTURE",
+      "occupation": "farmer",
+      "state": null,
+      "candidatesCount": 15,
+      "uniqueSchemesCount": 14,
+      "topRetrieved": [
+        {
+          "title": "PM-KISAN Samman Nidhi Yojana",
+          "score": 1.05
+        },
+        {
+          "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+          "score": 1.05
+        },
+        {
+          "title": "Kisan Credit Card (KCC) Scheme",
+          "score": 1.05
+        },
+        {
+          "title": "PM KUSUM Yojana (Solar Pumps for Farmers)",
+          "score": 1.05
+        },
+        {
+          "title": "Soil Health Card Scheme",
+          "score": 1.05
+        }
+      ],
+      "finalSchemes": [
+        "PM-KISAN Samman Nidhi Yojana",
+        "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+        "PM KUSUM Yojana (Solar Pumps for Farmers)",
+        "PM-KISAN Samman Nidhi",
+        "Paramparagat Krishi Vikas Yojana (PKVY)"
+      ]
+    },
+    {
+      "query": "kisan yojana Gujarat",
+      "language": "en",
+      "intent": "FIND_SCHEMES",
+      "category": "AGRICULTURE",
+      "occupation": "farmer",
+      "state": "Gujarat",
+      "candidatesCount": 15,
+      "uniqueSchemesCount": 14,
+      "topRetrieved": [
+        {
+          "title": "Mukhyamantri Kisan Sahay Yojana",
+          "score": 1.7
+        },
+        {
+          "title": "PM-KISAN Samman Nidhi Yojana",
+          "score": 1.45
+        },
+        {
+          "title": "NBCFDC Mahila Kisan Yojana for Rural OBC Women Farmers",
+          "score": 1.45
+        },
+        {
+          "title": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+          "score": 1.383
+        },
+        {
+          "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+          "score": 1.25
+        }
+      ],
+      "finalSchemes": [
+        "Mukhyamantri Kisan Sahay Yojana",
+        "PM-KISAN Samman Nidhi Yojana",
+        "NBCFDC Mahila Kisan Yojana for Rural OBC Women Farmers",
+        "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+        "Pradhan Mantri Fasal Bima Yojana (PMFBY)"
+      ]
+    }
+  ],
+  "exactSearch": {
+    "query": "Tell me about PM-KISAN",
+    "exactMatchFound": true,
+    "matchingRecordsCount": 2,
+    "retrievedChunksCount": 10,
+    "topChunkTitle": "PM-KISAN Samman Nidhi Yojana",
+    "topChunkScore": 2.9499999999999997,
+    "finalContextExcerpt": "You are JanSahay AI, an accurate government scheme assistant for Indian citizens.\n\nCRITICAL RULES:\n1. Answer ONLY using the VERIFIED CONTEXT provided below.\n2. NEVER invent or fabricate scheme names, benefits, amounts, eligibility criteria, documents...",
+    "finalAnswer": "Based on verified government records, here are the details for the **PM-KISAN Samman Nidhi Yojana**:\n\n---\n\n### **Overview**\n* **Ministry:** Ministry of Agriculture and Farmers Welfare\n* **Scope:** All India\n* **Official Portal:** [https://pmkisan.gov.in/](https://pmkisan.gov.in/)\n\n---\n\n### **Key Benefits (Verified Data)**\n* **Direct Financial Support:** Eligible farmer families receive **Γé╣6,000 per year**.\n* **Payment Schedule:** The amount is paid in **3 equal installments of Γé╣2,000** every four months, transferred directly into the beneficiary's bank account.\n\n---\n\n### **Eligibility Criteria**\n* Landholding farmer families with cultivable land in their names.\n* Small and marginal farmer families with a combined landholding of up to 2 hectares.\n\n---\n*Source: myScheme (Verified Data)*",
+    "sourceUrl": "https://pmkisan.gov.in/",
+    "groundingResult": {
+      "isGrounded": false,
+      "warnings": [
+        "Amount \"Γé╣6,000 per year\" may not be verified in context",
+        "Amount \"Γé╣2,000\" may not be verified in context",
+        "URL \"https://pmkisan.gov.in/](https://pmkisan.gov.in/\" may not be from retrieved context"
+      ]
+    }
+  },
+  "hybridStages": {
+    "query": "What education schemes are available?",
+    "keywordResults": [
+      {
+        "title": "National Scholarship Portal - Pre-Matric Scholarship",
+        "score": 0.75
+      },
+      {
+        "title": "National Scholarship Portal - Post-Matric Scholarship",
+        "score": 0.75
+      },
+      {
+        "title": "PM-YASASVI Scholarship Scheme",
+        "score": 0.75
+      }
+    ],
+    "vectorResults": [],
+    "mergedResults": [
+      {
+        "title": "National Scholarship Portal - Pre-Matric Scholarship",
+        "score": 0.75,
+        "source": "catalog"
+      },
+      {
+        "title": "National Scholarship Portal - Post-Matric Scholarship",
+        "score": 0.75,
+        "source": "catalog"
+      },
+      {
+        "title": "PM-YASASVI Scholarship Scheme",
+        "score": 0.75,
+        "source": "catalog"
+      },
+      {
+        "title": "Prime Minister's Research Fellowship (PMRF)",
+        "score": 0.75,
+        "source": "catalog"
+      },
+      {
+        "title": "AICTE Pragati Scholarship for Girl Students",
+        "score": 0.75,
+        "source": "catalog"
+      }
+    ],
+    "rerankedResults": [
+      {
+        "title": "National Scholarship Portal - Pre-Matric Scholarship",
+        "rerankScore": 0.5975
+      },
+      {
+        "title": "National Scholarship Portal - Post-Matric Scholarship",
+        "rerankScore": 0.5975
+      },
+      {
+        "title": "PM-YASASVI Scholarship Scheme",
+        "rerankScore": 0.5975
+      },
+      {
+        "title": "Prime Minister's Research Fellowship (PMRF)",
+        "rerankScore": 0.5975
+      },
+      {
+        "title": "AICTE Pragati Scholarship for Girl Students",
+        "rerankScore": 0.5975
+      }
+    ]
+  },
+  "duplicatesCheck": {
+    "totalRetrievedCandidates": 15,
+    "uniqueSchemesCount": 15,
+    "schemeToChunkCountMap": {
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 1,
+      "26": 1,
+      "27": 1,
+      "70": 1,
+      "def-3": 1,
+      "edu-nsp-central": 1,
+      "edu-pm-vidya": 1,
+      "edu-nef": 1,
+      "edu-eklavya": 1,
+      "sci-1": 1,
+      "sj-3": 1
+    }
+  },
+  "languageDiagnostics": [
+    {
+      "label": "ENGLISH",
+      "query": "What schemes are available for students?",
+      "expected": "en",
+      "detected": "en",
+      "responseLanguage": "en",
+      "status": "PASS",
+      "sampleText": "Based on verified information from the JanSahay knowledge base, here are the government schemes avai"
+    },
+    {
+      "label": "HINDI",
+      "query": "αñ«αÑüαñ¥αÑç αñ¢αñ╛αññαÑìαñ░αÑïαñé αñòαÑç αñ▓αñ┐αñÅ αñ╕αñ░αñòαñ╛αñ░αÑÇ αñ»αÑïαñ£αñ¿αñ╛ αñÜαñ╛αñ╣αñ┐αñÅ",
+      "expected": "hi",
+      "detected": "hi",
+      "responseLanguage": "en",
+      "status": "FAIL",
+      "sampleText": "I'm experiencing high demand right now. Please try again in a moment."
+    },
+    {
+      "label": "GUJARATI",
+      "query": "α¬«α¬╛α¬░α½ç α¬╡α¬┐α¬ªα½ìα¬»α¬╛α¬░α½ìα¬Ñα½Çα¬ô α¬«α¬╛α¬ƒα½ç α¬╕α¬░α¬òα¬╛α¬░α½Ç α¬»α½ïα¬£α¬¿α¬╛ α¬£α½ïα¬êα¬Å",
+      "expected": "gu",
+      "detected": "gu",
+      "responseLanguage": "en",
+      "status": "FAIL",
+      "sampleText": "I'm experiencing high demand right now. Please try again in a moment."
+    },
+    {
+      "label": "HINGLISH",
+      "query": "Mujhe students ke liye scholarship chahiye",
+      "expected": "hi",
+      "detected": "hi",
+      "responseLanguage": "en",
+      "status": "FAIL",
+      "sampleText": "I'm experiencing high demand right now. Please try again in a moment."
+    },
+    {
+      "label": "GUJARATI MIXED",
+      "query": "Mare student mate scholarship joiye",
+      "expected": "gu",
+      "detected": "gu",
+      "responseLanguage": "en",
+      "status": "FAIL",
+      "sampleText": "I'm experiencing high demand right now. Please try again in a moment."
+    }
+  ],
+  "unicodeDiagnostics": [
+    {
+      "language": "English",
+      "inputText": "Hello, I need a government scheme.",
+      "stages": {
+        "browserInput": "PASS",
+        "httpRequest": "FAIL",
+        "backend": "PASS",
+        "bufferUtf8": "PASS",
+        "apiResponse": "FAIL"
+      },
+      "corruptionsFound": "NO"
+    },
+    {
+      "language": "Hindi",
+      "inputText": "αñ«αÑüαñ¥αÑç αñ╕αñ░αñòαñ╛αñ░αÑÇ αñ»αÑïαñ£αñ¿αñ╛ αñÜαñ╛αñ╣αñ┐αñÅαÑñ",
+      "stages": {
+        "browserInput": "PASS",
+        "httpRequest": "FAIL",
+        "backend": "PASS",
+        "bufferUtf8": "PASS",
+        "apiResponse": "FAIL"
+      },
+      "corruptionsFound": "NO"
+    },
+    {
+      "language": "Gujarati",
+      "inputText": "α¬«α¬╛α¬░α½ç α¬╕α¬░α¬òα¬╛α¬░α½Ç α¬»α½ïα¬£α¬¿α¬╛ α¬£α½ïα¬êα¬Å.",
+      "stages": {
+        "browserInput": "PASS",
+        "httpRequest": "FAIL",
+        "backend": "PASS",
+        "bufferUtf8": "PASS",
+        "apiResponse": "FAIL"
+      },
+      "corruptionsFound": "NO"
+    }
+  ],
+  "hallucination": {
+    "query": "Tell me about XYZ Government Scheme 999999",
+    "retrievedSchemes": [
+      "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+      "Atal Pension Yojana (APY)",
+      "Senior Citizens Savings Scheme (SCSS)",
+      "Public Provident Fund (PPF) Scheme",
+      "PM-KISAN Samman Nidhi Yojana"
+    ],
+    "retrievalConfidence": "LOW",
+    "finalAnswer": "I don't have verified information about that scheme in the current JanSahay knowledge base.",
+    "groundingCheck": "GROUNDED",
+    "hallucinationDetected": "NO",
+    "status": "PASS"
+  },
+  "groundingTest": {
+    "query": "What is the rocket launch schedule under PM-KISAN?",
+    "answerExcerpt": "I'm experiencing high demand right now. Please try again in a moment.",
+    "claimsRocketLaunch": "NO",
+    "groundingValidation": "PASS",
+    "status": "PASS"
+  },
+  "cannedResponses": {
+    "cannedResponsesFound": "NO",
+    "details": []
+  },
+  "apiDiagnostics": [
+    {
+      "endpoint": "GET /api/knowledge-base/status",
+      "status": 200,
+      "responseTimeMs": 56,
+      "result": "PASS",
+      "error": null
+    },
+    {
+      "endpoint": "POST /api/chat",
+      "status": 200,
+      "responseTimeMs": 12,
+      "result": "PASS",
+      "error": null
+    },
+    {
+      "endpoint": "POST /api/search",
+      "status": 404,
+      "responseTimeMs": 7,
+      "result": "FAIL",
+      "error": "HTTP 404"
+    },
+    {
+      "endpoint": "POST /api/schemes/recommend",
+      "status": 200,
+      "responseTimeMs": 35,
+      "result": "PASS",
+      "error": null
+    },
+    {
+      "endpoint": "POST /api/eligibility/check",
+      "status": 200,
+      "responseTimeMs": 4,
+      "result": "PASS",
+      "error": null
+    }
+  ],
+  "eligibilityTest": {
+    "userProfile": {
+      "age": 32,
+      "state": "Gujarat",
+      "occupation": "farmer",
+      "income": "120000",
+      "education": "10th Pass",
+      "category": "General"
+    },
+    "scheme": {
+      "id": "8",
+      "title": "PM-KISAN Samman Nidhi Yojana",
+      "criteriaSummary": "All landholding farmer families with cultivable landholding in their names."
+    },
+    "evaluation": {
+      "status": "NOT_ELIGIBLE",
+      "score": 0,
+      "matchedCriteria": [],
+      "failedCriteria": [
+        "State: Γ£ù Your state (All India) ΓÇö scheme is for Gujarat"
+      ],
+      "missingCriteria": [],
+      "explanation": "**undefined**\n\nΓ¥î **Status: Not Eligible** (based on available criteria)\n\n**Not Matching:**\nState: Γ£ù Your state (All India) ΓÇö scheme is for Gujarat"
+    }
+  },
+  "sourceValidation": [
+    {
+      "title": "National Scholarship Portal - Pre-Matric Scholarship",
+      "source": "Ministry of Education",
+      "sourceUrl": "https://www.backwardwelfareup.gov.in/en/page/pre-matric-scholarship-scheme",
+      "verified": true,
+      "urlPresentInDb": true
+    },
+    {
+      "title": "National Scholarship Portal - Post-Matric Scholarship",
+      "source": "Ministry of Education",
+      "sourceUrl": "https://scholarships.gov.in/",
+      "verified": true,
+      "urlPresentInDb": true
+    },
+    {
+      "title": "PM-YASASVI Scholarship Scheme",
+      "source": "Ministry of Social Justice and Empowerment",
+      "sourceUrl": "https://yet.nta.ac.in/",
+      "verified": true,
+      "urlPresentInDb": true
+    },
+    {
+      "title": "Prime Minister's Research Fellowship (PMRF)",
+      "source": "Ministry of Education",
+      "sourceUrl": "https://www.pmrf.in/",
+      "verified": true,
+      "urlPresentInDb": true
+    },
+    {
+      "title": "AICTE Pragati Scholarship for Girl Students",
+      "source": "Ministry of Education",
+      "sourceUrl": "https://www.aicte-pragati-saksham-gov.in/",
+      "verified": true,
+      "urlPresentInDb": true
+    }
+  ]
+}

@@ -1,21 +1,32 @@
 {
   "name": "jansahay-ai-backend",
-  "version": "1.0.0",
-  "description": "JanSahay AI - Government Scheme Recommendation Backend API",
+  "version": "2.0.0",
+  "description": "JanSahay AI - RAG-Based Government Scheme Recommendation Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "ingest": "node scripts/ingestKnowledgeBase.js",
+    "validate-kb": "node scripts/validateKnowledgeBase.js",
+    "evaluate-rag": "node scripts/evaluateRag.js"
   },
-  "keywords": ["government", "schemes", "india", "ai", "recommendation"],
+  "keywords": [
+    "government",
+    "schemes",
+    "india",
+    "ai",
+    "recommendation",
+    "rag"
+  ],
   "author": "HackCoders Team",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/text-to-speech": "^5.7.0",
     "@google/generative-ai": "^0.21.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "natural": "^8.0.0"
+    "natural": "^8.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

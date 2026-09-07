@@ -7,8 +7,12 @@ const cors = require('cors');
 const allowedOrigins = [
     'http://localhost:3000',
     'http://localhost:5000',
+    'http://localhost:5500',
     'http://127.0.0.1:5000',
     'http://127.0.0.1:3000',
+    'http://127.0.0.1:5500',  // VS Code Live Server
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
     process.env.FRONTEND_URL
 ].filter(Boolean);
 
@@ -25,7 +29,7 @@ const corsOptions = {
         if (allowedOrigins.includes(origin)) {
             return callback(null, true);
         }
-        callback(new Error(`CORS policy: Origin ${origin} not allowed`));
+        return callback(null, false);
     },
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],

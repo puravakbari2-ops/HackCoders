@@ -13,28 +13,26 @@
         content="Discover government schemes you are eligible for using AI-powered recommendations based on your personal information.">
     <meta property="og:type" content="website">
     <title>JanSahay AI - AI-Powered Government Scheme Recommendation</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- JanSahay Multilingual Voice Assistant Styles -->
-    <link rel="stylesheet" href="frontend/assets/css/voice.css">
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Voice Assistant Styles -->
+    <link rel="stylesheet" href="assets/css/voice.css">
 </head>
 
 <body>
-
-    <!-- Announcement Ticker (replaces gov top-bar) -->
+    <!-- Top Info Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
-            <span><i class="fas fa-bolt"></i> 4,700+ Government Schemes · AI-Powered Matching · Instant Results</span>
+            <span><i class="fas fa-flag"></i> A Government of India Initiative</span>
             <div class="top-bar-right">
                 <a href="#"><i class="fas fa-universal-access"></i> Accessibility</a>
-                <a href="#"><i class="fas fa-language"></i> हिन्दी</a>
+                <a href="#"><i class="fas fa-text-height"></i> A+ A A-</a>
             </div>
         </div>
     </div>
@@ -44,8 +42,10 @@
         <div class="container navbar-content">
             <div class="navbar-brand">
                 <div class="brand-logos">
-                    <!-- emblem hidden via CSS, logo mark rendered via ::before -->
-                    <div class="emblem-wrapper"></div>
+                    <div class="emblem-wrapper">
+                        <img src="https://cdn.myscheme.in/images/logos/emblem-black.svg"
+                            alt="Government of India Emblem" class="emblem-logo">
+                    </div>
                     <div class="brand-divider"></div>
                     <div class="brand-name">
                         <span class="brand-jan">Jan</span><span class="brand-sahay">Sahay</span> <span
@@ -53,18 +53,22 @@
                     </div>
                     <div class="brand-divider"></div>
                     <div class="powered-badge">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-robot"></i>
                         <span>AI-Powered</span>
                     </div>
                 </div>
             </div>
             <div class="navbar-search" id="navbarSearch">
                 <div class="search-input-wrapper">
-                    <input type="text" placeholder="Search schemes, categories, states..." id="navSearchInput">
+                    <input type="text" placeholder="Search for schemes..." id="navSearchInput">
                     <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
                 </div>
             </div>
             <div class="navbar-actions">
+                <button class="nav-voice-btn js-trigger-voice" id="navVoiceBtn"
+                    title="Talk to JanSahay Voice AI in English, Hindi, or Gujarati">
+                    <i class="fas fa-microphone"></i> Voice AI
+                </button>
                 <div class="lang-selector">
                     <div class="lang-icon-wrapper">
                         <i class="fas fa-language"></i>
@@ -74,39 +78,9 @@
                 <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
                     <i class="fas fa-sun"></i>
                 </div>
-                <button class="btn-sign-in" id="signInBtn" onclick="window.location.href='login.html'">
+                <button class="btn-sign-in" id="signInBtn">
                     Sign In <i class="fas fa-arrow-right-long"></i>
                 </button>
-                <div class="user-profile-menu" id="userProfileMenu" style="display: none;">
-                    <div class="user-chip" id="userChipDropdownBtn">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
-                            alt="Citizen Avatar" class="user-avatar-img" id="navUserAvatar">
-                        <div class="user-info-text">
-                            <span class="user-name" id="navUserName">Priya Sharma</span>
-                            <span class="user-badge" id="navUserBadge"><i class="fas fa-circle-check"></i>
-                                Verified</span>
-                        </div>
-                        <i class="fas fa-chevron-down user-caret"></i>
-                    </div>
-                    <div class="user-dropdown-menu" id="userDropdownMenu">
-                        <div class="dropdown-header">
-                            <strong id="dropdownFullName">Priya Sharma</strong>
-                            <small id="dropdownEmail">citizen@jansahay.gov.in</small>
-                        </div>
-                        <a href="javascript:void(0)" class="dropdown-item"
-                            onclick="if(window.showToast) window.showToast('Your active eligibility profile has 12 matching schemes!', 'info');"><i
-                                class="fas fa-user-check"></i> Eligibility Profile</a>
-                        <a href="javascript:void(0)" class="dropdown-item"
-                            onclick="if(window.showToast) window.showToast('You have 3 saved schemes in your vault.', 'info');"><i
-                                class="fas fa-bookmark"></i> Saved Schemes</a>
-                        <a href="javascript:void(0)" class="dropdown-item"
-                            onclick="if(window.showToast) window.showToast('Application #JS-2026-8849 is Under Verification at Ministry.', 'info');"><i
-                                class="fas fa-file-lines"></i> Track Applications</a>
-                        <div class="dropdown-divider"></div>
-                        <button type="button" class="dropdown-item text-danger" id="logoutBtn"><i
-                                class="fas fa-arrow-right-from-bracket"></i> Sign Out</button>
-                    </div>
-                </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -133,66 +107,47 @@
             <ul class="mobile-nav-links">
                 <li><a href="#categories"><i class="fas fa-th-large"></i> Categories</a></li>
                 <li><a href="#how-it-works"><i class="fas fa-info-circle"></i> How It Works</a></li>
-                <li><a href="#about"><i class="fas fa-robot"></i> About</a></li>
+                <li><a href="#about"><i class="fas fa-building-columns"></i> About</a></li>
                 <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQs</a></li>
             </ul>
-            <button class="btn-sign-in mobile-sign-in" onclick="window.location.href='login.html'">Sign In <i
-                    class="fas fa-arrow-right-long"></i></button>
-            <div class="mobile-user-profile" id="mobileUserProfile" style="display: none;">
-                <div class="mobile-user-header">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
-                        alt="Avatar" id="mobileUserAvatar">
-                    <div>
-                        <div class="user-name" id="mobileUserName">Priya Sharma</div>
-                        <div class="user-badge"><i class="fas fa-circle-check"></i> Verified Citizen</div>
-                    </div>
-                </div>
-                <button type="button" class="mobile-logout-btn" id="mobileLogoutBtn"><i
-                        class="fas fa-arrow-right-from-bracket"></i> Sign Out</button>
-            </div>
+            <button class="btn-sign-in mobile-sign-in">Sign In <i class="fas fa-arrow-right-long"></i></button>
         </div>
     </div>
 
     <main>
         <!-- Hero Section -->
         <section class="hero" id="hero">
-            <!-- Animated particle canvas -->
-            <canvas id="heroCanvas"></canvas>
-
             <div class="hero-bg-elements">
                 <div class="hero-circle hero-circle-1"></div>
                 <div class="hero-circle hero-circle-2"></div>
                 <div class="hero-circle hero-circle-3"></div>
                 <div class="hero-dots"></div>
             </div>
-
             <div class="container hero-content">
                 <div class="hero-text">
                     <div class="hero-badge">
-                        <i class="fas fa-microchip"></i>
-                        <span>India's First AI-Powered Scheme Discovery Engine</span>
+                        <i class="fas fa-sparkles"></i>
+                        <span>AI-Powered Scheme Discovery</span>
                     </div>
                     <h1 class="hero-title">
-                        Unlock <span class="gradient-text">Government Benefits</span>
-                        <br>Built For <em style="font-style: normal; color: var(--cyan);">You</em>
+                        Find <span class="gradient-text">Government Schemes</span>
+                        <br>Made For You
                     </h1>
                     <p class="hero-subtitle">
-                        JanSahay AI uses advanced artificial intelligence to match your profile with
-                        <strong style="color: var(--text-primary);">4,700+</strong> Central &amp; State Government
-                        schemes — in seconds.
+                        Discover and apply for Central &amp; State Government schemes tailored to your profile.
+                        Our AI analyzes your eligibility from <strong>4,700+</strong> schemes instantly.
                     </p>
                     <div class="hero-search">
                         <div class="hero-search-wrapper">
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Search any scheme, ministry, or category..."
-                                id="heroSearchInput">
+                            <input type="text" placeholder="Enter scheme name to search..." id="heroSearchInput">
                             <button class="hero-search-btn">Search</button>
                         </div>
                     </div>
                     <div class="hero-cta-group">
                         <button class="btn-primary btn-find-schemes" id="findSchemesBtn">
                             <i class="fas fa-wand-magic-sparkles"></i>
-                            Find Schemes For Me
+                            Find Schemes For You
                             <i class="fas fa-arrow-right-long"></i>
                         </button>
                         <button class="btn-voice-hero js-trigger-voice" id="heroVoiceAssistantBtn"
@@ -210,7 +165,7 @@
                 <div class="hero-visual">
                     <div class="hero-card-stack">
                         <div class="hero-float-card card-1">
-                            <div class="float-card-icon" style="background: rgba(124,58,237,0.15); color: #A78BFA;">
+                            <div class="float-card-icon" style="background: rgba(34,197,94,0.15); color: #16a34a;">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <div>
@@ -219,16 +174,16 @@
                             </div>
                         </div>
                         <div class="hero-float-card card-2">
-                            <div class="float-card-icon" style="background: rgba(6,182,212,0.15); color: #67E8F9;">
+                            <div class="float-card-icon" style="background: rgba(59,130,246,0.15); color: #2563eb;">
                                 <i class="fas fa-heartbeat"></i>
                             </div>
                             <div>
-                                <div class="float-card-title">Health & Wellness</div>
+                                <div class="float-card-title">Health &amp; Wellness</div>
                                 <div class="float-card-count">286+ Schemes</div>
                             </div>
                         </div>
                         <div class="hero-float-card card-3">
-                            <div class="float-card-icon" style="background: rgba(16,185,129,0.15); color: #34D399;">
+                            <div class="float-card-icon" style="background: rgba(249,115,22,0.15); color: #ea580c;">
                                 <i class="fas fa-seedling"></i>
                             </div>
                             <div>
@@ -251,12 +206,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Wave transition to body bg -->
             <div class="hero-wave">
                 <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M0 60L60 52C120 44 240 28 360 24C480 20 600 28 720 40C840 52 960 68 1080 72C1200 76 1320 68 1380 64L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V60Z"
-                        fill="#050B18" />
+                        fill="var(--bg-primary)" />
                 </svg>
             </div>
         </section>
@@ -303,7 +257,7 @@
                 </div>
                 <h2 class="section-title">Find schemes based on <span class="gradient-text">categories</span></h2>
                 <div class="categories-grid" id="categoriesGrid">
-                    <!-- Categories will be populated by JS -->
+                    <!-- Populated by data.js + main.js -->
                 </div>
             </div>
         </section>
@@ -311,17 +265,18 @@
         <!-- How It Works Section -->
         <section class="how-it-works" id="how-it-works">
             <div class="container">
-                <div class="section-label">Simple 3-step process</div>
-                <h2 class="section-title">How <span class="gradient-text">JanSahay AI</span> Works</h2>
+                <div class="section-label">How it works</div>
+                <h2 class="section-title">Easy steps to find<br><span class="gradient-text">Government Schemes</span>
+                </h2>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-number">1</div>
                         <div class="step-icon">
                             <i class="fas fa-user-edit"></i>
                         </div>
-                        <h3 class="step-title">Enter Your Details</h3>
-                        <p class="step-desc">Share your basic info — age, location, income, occupation and education
-                            level</p>
+                        <h3 class="step-title">Enter Details</h3>
+                        <p class="step-desc">Share your basic information like age, location, income, occupation and
+                            education</p>
                     </div>
                     <div class="step-connector">
                         <i class="fas fa-chevron-right"></i>
@@ -331,9 +286,9 @@
                         <div class="step-icon">
                             <i class="fas fa-wand-magic-sparkles"></i>
                         </div>
-                        <h3 class="step-title">AI Analyzes</h3>
-                        <p class="step-desc">Our AI engine matches your profile against eligibility criteria of
-                            thousands of schemes instantly</p>
+                        <h3 class="step-title">AI Analysis</h3>
+                        <p class="step-desc">Our AI engine analyzes your profile against eligibility criteria of
+                            thousands of schemes</p>
                     </div>
                     <div class="step-connector">
                         <i class="fas fa-chevron-right"></i>
@@ -343,8 +298,8 @@
                         <div class="step-icon">
                             <i class="fas fa-hand-pointer"></i>
                         </div>
-                        <h3 class="step-title">Apply & Benefit</h3>
-                        <p class="step-desc">View personalized recommendations with benefits, required documents, and
+                        <h3 class="step-title">Select &amp; Apply</h3>
+                        <p class="step-desc">View personalized recommendations with benefits, documents required, and
                             direct application links</p>
                     </div>
                 </div>
@@ -376,9 +331,8 @@
                         </div>
                     </div>
                     <div class="about-content">
-                        <div class="section-label" style="text-align:left;">About JanSahay AI</div>
-                        <h2 class="section-title text-left">What is <span class="gradient-text">JanSahay AI</span>?
-                        </h2>
+                        <div class="section-label">About</div>
+                        <h2 class="section-title text-left">What is <span class="gradient-text">JanSahay AI</span>?</h2>
                         <p>
                             JanSahay AI is an <strong>AI-powered government scheme recommendation platform</strong> that
                             helps citizens discover government schemes they are eligible for based on their personal
@@ -415,7 +369,7 @@
                         </div>
                         <button class="btn-outline"
                             onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})">
-                            Learn More <i class="fas fa-arrow-right"></i>
+                            View More <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
@@ -426,9 +380,9 @@
         <section class="faq-section" id="faq">
             <div class="container">
                 <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
-                <p class="section-subtitle">Everything you need to know about JanSahay AI</p>
+                <p class="section-subtitle">Get answers to common queries about JanSahay AI</p>
                 <div class="faq-list" id="faqList">
-                    <!-- FAQs populated by JS -->
+                    <!-- Populated by main.js -->
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
                     <button class="btn-outline">View More <i class="fas fa-arrow-right"></i></button>
@@ -443,10 +397,10 @@
             <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="fas fa-times"></i></button>
             <h2 class="modal-title">Help us find the best schemes for you</h2>
             <div class="stepper" id="stepper">
-                <!-- Stepper dots populated by JS -->
+                <!-- Populated by form.js -->
             </div>
             <div class="form-steps" id="formSteps">
-                <!-- Form steps populated by JS -->
+                <!-- Populated by form.js -->
             </div>
             <div class="modal-actions">
                 <button class="btn-outline btn-prev" id="prevBtn" style="display:none;">
@@ -460,7 +414,7 @@
         </div>
     </div>
 
-    <!-- Results Section (Hidden by default) -->
+    <!-- Results Page (hidden by default) -->
     <div class="results-page" id="resultsPage" style="display: none;">
         <div class="results-header">
             <div class="container">
@@ -474,10 +428,10 @@
         </div>
         <div class="container results-body">
             <div class="results-summary" id="resultsSummary">
-                <!-- Populated by JS -->
+                <!-- Populated by form.js -->
             </div>
             <div class="results-grid" id="resultsGrid">
-                <!-- Populated by JS -->
+                <!-- Populated by form.js -->
             </div>
         </div>
     </div>
@@ -506,7 +460,7 @@
                     <ul>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Disclaimer</a></li>
                         <li><a href="#">Terms &amp; Conditions</a></li>
@@ -515,11 +469,12 @@
                 <div class="footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><a href="https://www.digitalindia.gov.in/" target="_blank">Digital India</a></li>
-                        <li><a href="https://www.india.gov.in/" target="_blank">India.gov.in</a></li>
-                        <li><a href="https://www.myscheme.gov.in/" target="_blank">myScheme</a></li>
-                        <li><a href="https://www.data.gov.in/" target="_blank">Data.gov.in</a></li>
-                        <li><a href="https://umang.gov.in/" target="_blank">UMANG</a></li>
+                        <li><a href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener">Digital India</a>
+                        </li>
+                        <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener">India.gov.in</a></li>
+                        <li><a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener">myScheme</a></li>
+                        <li><a href="https://www.data.gov.in/" target="_blank" rel="noopener">Data.gov.in</a></li>
+                        <li><a href="https://umang.gov.in/" target="_blank" rel="noopener">UMANG</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -539,7 +494,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 JanSahay AI. All rights reserved. | Hackathon Project — HackCoders</p>
+                <p>© 2026 JanSahay AI. All rights reserved. | Built for HackCoders Hackathon ❤️</p>
             </div>
         </div>
     </footer>
@@ -571,27 +526,26 @@
                         <li>Understand scheme benefits and requirements</li>
                         <li>Guide you through the application process</li>
                     </ul>
-                    <p>How can I help you today?</p>
+                    <p>How can I help you today? You can also use our Multilingual Voice Assistant in English, Hindi,
+                        and Gujarati!</p>
                 </div>
             </div>
         </div>
         <div class="chat-input-area">
             <input type="text" placeholder="Type your question or speak..." id="chatInput">
-            <button class="chat-mic-btn" id="chatMicBtn" title="Speak your question" aria-label="Speak"><i
-                    class="fas fa-microphone"></i></button>
+            <button class="chat-mic-btn" id="chatMicBtn" title="Speak your question" aria-label="Speak"><i class="fas fa-microphone"></i></button>
             <button class="chat-send" id="chatSend" aria-label="Send message"><i
                     class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
-    <script src="frontend/assets/js/data.js"></script>
-    <script src="frontend/assets/js/rule-engine.js"></script>
-    <script src="frontend/assets/js/particles.js"></script>
-    <script src="frontend/assets/js/main.js"></script>
-    <script src="frontend/assets/js/form.js"></script>
-    <script src="frontend/assets/js/chat.js"></script>
+    <!-- Modular JavaScript — ORDER MATTERS -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/chat.js"></script>
+    <script src="assets/js/main.js"></script>
     <!-- JanSahay Multilingual Voice AI Assistant -->
-    <script src="frontend/assets/js/voice.js"></script>
+    <script src="assets/js/voice.js"></script>
 </body>
 
 </html>

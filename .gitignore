@@ -1,2 +1,38 @@
+# Dependency directories
 node_modules/
+
+# Environment configuration
 .env
+.env.local
+.env.*.local
+
+# Google Cloud Service Account Keys & Secrets
+*service-account*.json
+*google-credentials*.json
+*-credentials.json
+credentials.json
+client_secret*.json
+
+# Audio test outputs
+test-output*.mp3
+*.wav
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated RAG/vector data
+backend/data/vector_index/
+
+# Backups
+backend/backups/
+
+# Temporary workspace
+workspace-*/

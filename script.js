@@ -52098,18 +52098,25 @@ chatClose.addEventListener('click', () => {
     aiChatWindow.style.display = 'none';
 });
 
-const chatResponses = [
-    "I can help you find the right government schemes! Try clicking the 'Find Schemes For You' button to get personalized recommendations based on your profile. 🎯",
-    "There are over 4,700 Central and State Government schemes available. Tell me about yourself and I'll help narrow down the best options for you! 📋",
-    "The most popular schemes include PM-KISAN for farmers (₹6,000/year), Ayushman Bharat for health coverage (₹5 lakh), and PM Awas Yojana for housing assistance. Would you like to know more about any of these? 🏠",
-    "To check your eligibility, I'd need to know your age, gender, state, income level, occupation, and education. You can provide these details through our 'Find Schemes' feature! 📝",
-    "Great question! JanSahay AI uses artificial intelligence to match your profile against thousands of schemes instantly. Unlike other portals, you don't need to search manually — we bring the relevant schemes to you! 🤖",
-    "Documents commonly required include Aadhaar Card, Income Certificate, Domicile Certificate, Bank Passbook, and Passport Size Photos. Specific requirements vary by scheme. 📄"
-];
+// ── JanSahay AI Chat API Integration with Session Continuity ──
+const CHAT_API_BASE = (window.location.protocol === 'file:' || window.location.port !== '5000') ? 'http://localhost:5000' : '';
+let chatSessionId = sessionStorage.getItem('jansahay_chat_sid');
+if (!chatSessionId) {
+    chatSessionId = 'chat_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
+    sessionStorage.setItem('jansahay_chat_sid', chatSessionId);
+}
 
-let chatResponseIndex = 0;
+function formatChatMarkdown(txt) {
+    if (!txt) return '';
+    return txt
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--secondary-color, #2563eb);text-decoration:underline;">$1</a>')
+        .replace(/\n\n/g, '<br><br>')
+        .replace(/\n/g, '<br>');
+}
 
-function sendChatMessage() {
+async function sendChatMessage() {
     const text = chatInput.value.trim();
     if (!text) return;
 
@@ -52120,21 +52127,85 @@ function sendChatMessage() {
         </div>
     `;
     chatInput.value = '';
-
-    // Scroll to bottom
     chatBody.scrollTop = chatBody.scrollHeight;
 
-    // Bot response after delay
-    setTimeout(() => {
-        const response = chatResponses[chatResponseIndex % chatResponses.length];
-        chatResponseIndex++;
+    // Temporary typing indicator
+    const typingId = 'typing_' + Date.now();
+    chatBody.innerHTML += `
+        <div class="chat-message bot" id="${typingId}">
+            <div class="message-content"><p><i class="fas fa-spinner fa-spin"></i> Finding relevant schemes...</p></div>
+        </div>
+    `;
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    try {
+        const res = await fetch(`${CHAT_API_BASE}/api/chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                message: text,
+                sessionId: chatSessionId
+            })
+        });
+
+        const typingEl = document.getElementById(typingId);
+        if (typingEl) typingEl.remove();
+
+        if (res.ok) {
+            const data = await res.json();
+            if (data.sessionId) {
+                chatSessionId = data.sessionId;
+                sessionStorage.setItem('jansahay_chat_sid', chatSessionId);
+            }
+            const replyMsg = data.message || data.reply || '';
+            let cardsHtml = '';
+            if (data.schemes && data.schemes.length > 0) {
+                cardsHtml = '<div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">' +
+                    data.schemes.map(s => `
+                        <div style="background:var(--card-bg, #f8fafc);border:1px solid var(--border-color, #e2e8f0);border-radius:8px;padding:10px;font-size:0.9rem;">
+                            <strong>${s.title || ''}</strong>
+                            ${s.category ? `<div style="font-size:0.75rem;color:var(--text-muted, #64748b);margin-top:2px;">${s.category} • ${s.state || 'All India'}</div>` : ''}
+                            ${s.applyLink ? `<div style="margin-top:6px;"><a href="${s.applyLink}" target="_blank" rel="noopener" style="display:inline-block;font-size:0.8rem;padding:4px 10px;background:var(--primary-color, #2563eb);color:#fff;border-radius:4px;text-decoration:none;">Apply Officially ↗</a></div>` : ''}
+                        </div>
+                    `).join('') +
+                    '</div>';
+            }
+            chatBody.innerHTML += `
+                <div class="chat-message bot">
+                    <div class="message-content"><p>${formatChatMarkdown(replyMsg)}</p>${cardsHtml}</div>
+                </div>
+            `;
+        } else {
+            throw new Error('HTTP ' + res.status);
+        }
+    } catch (err) {
+        console.warn('[JanSahay Chat] Backend call fallback:', err);
+        const typingEl = document.getElementById(typingId);
+        if (typingEl) typingEl.remove();
+
+        // Intelligent local contextual response
+        const lower = text.toLowerCase();
+        let fallbackMsg = '';
+        if (lower.includes('education') || lower.includes('scholarship') || lower.includes('student') || lower.includes('study') || lower.includes('shikshan') || lower.includes('vidhyarthi') || lower.includes('વિદ્યાર્થી') || lower.includes('શિક્ષણ') || lower.includes('शिक्षा') || lower.includes('छात्र')) {
+            fallbackMsg = "🎓 **Post-Matric Scholarships**, **MYSY**, and **Dr. Ambedkar Educational Loans** provide financial assistance and fee waivers. Tell me your state and education level to view details!";
+        } else if (lower.includes('kisan') || lower.includes('farmer') || lower.includes('agriculture') || lower.includes('crop') || lower.includes('khedut') || lower.includes('ખેડૂત') || lower.includes('किसान') || lower.includes('ખેતી')) {
+            fallbackMsg = "🌾 **PM-KISAN** provides ₹6,000/year to small farmers, and **PMFBY** offers crop insurance at minimal premium. Which state are your lands in?";
+        } else if (lower.includes('ayushman') || lower.includes('health') || lower.includes('hospital') || lower.includes('swasthya')) {
+            fallbackMsg = "🏥 **Ayushman Bharat (PM-JAY)** provides ₹5 Lakh free annual health coverage for eligible families. Would you like to know how to apply?";
+        } else if (lower.includes('loan') || lower.includes('business') || lower.includes('mudra') || lower.includes('vyapar')) {
+            fallbackMsg = "💼 **PM MUDRA Yojana** offers collateral-free business loans up to ₹10 Lakh (Shishu, Kishore, Tarun) for small enterprises.";
+        } else {
+            fallbackMsg = "Namaste! 🙏 I can help you discover 4,700+ Central and State Government schemes. Please tell me your **occupation** or **state** to personalize results!";
+        }
+
         chatBody.innerHTML += `
             <div class="chat-message bot">
-                <div class="message-content"><p>${response}</p></div>
+                <div class="message-content"><p>${formatChatMarkdown(fallbackMsg)}</p></div>
             </div>
         `;
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }, 800);
+    }
+
+    chatBody.scrollTop = chatBody.scrollHeight;
 }
 
 chatSend.addEventListener('click', sendChatMessage);
