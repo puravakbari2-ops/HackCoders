@@ -5,6 +5,7 @@
 
 require('dotenv').config();
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const corsMiddleware = require('./middleware/cors');
 const errorHandler = require('./middleware/errorHandler');
@@ -23,8 +24,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ── Serve Frontend Static Files ─────────────────────────────
-// Serves the frontend/index.html when backend is running
-const frontendPath = path.join(__dirname, '..', 'frontend');
+// Serves static files when backend is running
+const frontendPath = fs.existsSync(path.join(__dirname, '..', 'frontend'))
+    ? path.join(__dirname, '..', 'frontend')
+    : path.join(__dirname, '..');
 app.use(express.static(frontendPath));
 
 // ── Health Check ────────────────────────────────────────────

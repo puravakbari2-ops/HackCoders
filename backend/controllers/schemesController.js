@@ -6,6 +6,14 @@
 const path    = require('path');
 const schemes = require(path.join(__dirname, '..', 'data', 'schemes.json'));
 
+let RuleEngine;
+try {
+    const ruleEngineModule = require(path.join(__dirname, '..', '..', 'rule-engine.js'));
+    RuleEngine = ruleEngineModule.RuleEngine || ruleEngineModule;
+} catch (e) {
+    console.warn('RuleEngine module could not be loaded, using fallback scoring:', e.message);
+}
+
 // ── GET /api/schemes ─────────────────────────────────────────
 // List all schemes with optional pagination
 exports.getAllSchemes = (req, res) => {
@@ -63,6 +71,26 @@ exports.getSchemeById = (req, res, next) => {
 // ── POST /api/schemes/recommend ──────────────────────────────
 // AI-powered scheme matching based on user profile
 exports.recommendSchemes = (req, res) => {
+    const profile = req.body || {};
+
+    if (RuleEngine && typeof RuleEngine.matchSchemes === 'function') {
+        const minScore = parseInt(req.query.minScore) || 40;
+        const limit = parseInt(req.query.limit) || 100;
+        const matched = RuleEngine.matchSchemes(profile, schemes, {
+            minScore,
+            maxResults: limit
+        });
+
+        return res.json({
+            success: true,
+            total: matched.length,
+            profileSummary: RuleEngine.getProfileSummary ? RuleEngine.getProfileSummary(profile) : '',
+            profile,
+            data: matched
+        });
+    }
+
+    // Fallback if RuleEngine is not loaded
     const {
         gender,
         age,
@@ -74,63 +102,49 @@ exports.recommendSchemes = (req, res) => {
         occupation,
         education,
         maritalStatus
-    } = req.body;
+    } = profile;
 
     const ageNum = parseInt(age) || 25;
 
-    // Score each scheme against the user profile
     const scored = schemes.map(scheme => {
         let score = 0;
         const e   = scheme.eligibility;
+        if (!e) return { ...scheme, matchScore: 50, matchQuality: 'Partial Match' };
 
-        // Age check
         if (ageNum >= e.minAge && ageNum <= e.maxAge) score += 25;
-
-        // Gender match
         if (gender && e.gender && e.gender.includes(gender.toLowerCase())) score += 15;
-
-        // Area match
         if (area && e.area && e.area.includes(area.toLowerCase())) score += 10;
-
-        // Category/Caste match
         if (category && e.category && e.category.includes(category.toLowerCase())) score += 15;
-
-        // Income match
         if (income && e.income && e.income.includes(income)) score += 15;
-
-        // Occupation match
         if (occupation && e.occupation && e.occupation.includes(occupation.toLowerCase())) score += 15;
 
-        // Marital status match (optional)
         if (maritalStatus && e.maritalStatus) {
             if (e.maritalStatus.includes(maritalStatus.toLowerCase())) score += 5;
         } else {
-            score += 5; // No restriction on marital status
+            score += 5;
         }
 
-        // Education match (optional)
         if (education && e.education) {
             if (e.education.includes(education.toLowerCase())) score += 10;
         } else {
             score += 5;
         }
 
-        // Disability bonus
         if (disability === 'yes') score += 5;
 
-        // Normalize to 0–100
         const matchPercent = Math.min(Math.round((score / 105) * 100), 99);
+        const quality = matchPercent >= 85 ? 'Excellent Match' : (matchPercent >= 65 ? 'Good Match' : (matchPercent >= 50 ? 'Partial Match' : 'Low Match'));
 
         return {
             ...scheme,
-            matchScore: matchPercent + '%'
+            matchScore: matchPercent,
+            matchQuality: quality
         };
     });
 
-    // Filter > 40% match and sort descending
     const recommended = scored
-        .filter(s => parseInt(s.matchScore) >= 40)
-        .sort((a, b) => parseInt(b.matchScore) - parseInt(a.matchScore));
+        .filter(s => s.matchScore >= 40)
+        .sort((a, b) => b.matchScore - a.matchScore);
 
     res.json({
         success:      true,
