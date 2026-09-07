@@ -74,8 +74,8 @@ exports.recommendSchemes = (req, res) => {
     const profile = req.body || {};
 
     if (RuleEngine && typeof RuleEngine.matchSchemes === 'function') {
-        const minScore = parseInt(req.query.minScore) || 40;
-        const limit = parseInt(req.query.limit) || 100;
+        const minScore = parseInt(req.query.minScore) || 75;
+        const limit = req.query.limit ? parseInt(req.query.limit) : null;
         const matched = RuleEngine.matchSchemes(profile, schemes, {
             minScore,
             maxResults: limit

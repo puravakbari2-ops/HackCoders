@@ -176,7 +176,7 @@
         } else {
             // Final step — fetch recommendations
             isLoading = true;
-            nextBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Searching...';
+            nextBtn.innerHTML = '<i class="fas fa-brain fa-spin"></i> AI Analyzing Profile...';
             nextBtn.disabled  = true;
 
             const schemes = await fetchRecommendations();
@@ -214,21 +214,63 @@
         updateStepper();
     });
 
-    // ── API: Fetch Recommendations ────────────────────────────
+    // ── Recommendation Engine: RAG + LLM Pipeline with Fallbacks ─────────────
     async function fetchRecommendations() {
+        window._lastRagData = null;
+
+        // 1. Try RAG + LLM Pipeline Endpoint (Primary AI Layer)
         try {
+            const controller = new AbortController();
+            const timeoutId  = setTimeout(() => controller.abort(), 25000);
+            const res = await fetch(`${API_BASE}/rag/query`, {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body:    JSON.stringify({ profile: formData }),
+                signal:  controller.signal
+            });
+            clearTimeout(timeoutId);
+            if (res.ok) {
+                const json = await res.json();
+                if (json.success && Array.isArray(json.recommendations) && json.recommendations.length > 0) {
+                    window._lastRagData = json;
+                    return json.recommendations;
+                }
+            }
+        } catch (e) {
+            console.info('RAG Pipeline offline or timed out; trying rule recommendation endpoint:', e.message);
+        }
+
+        // 2. Try standard backend recommend endpoint
+        try {
+            const controller = new AbortController();
+            const timeoutId  = setTimeout(() => controller.abort(), 2500);
             const res = await fetch(`${API_BASE}/schemes/recommend`, {
                 method:  'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body:    JSON.stringify(formData)
+                body:    JSON.stringify(formData),
+                signal:  controller.signal
             });
-            if (!res.ok) throw new Error('API error');
-            const json = await res.json();
-            return json.data || [];
-        } catch {
-            console.warn('Backend not reachable, using sample data');
-            return SAMPLE_SCHEMES;
+            clearTimeout(timeoutId);
+            if (res.ok) {
+                const json = await res.json();
+                if (json.data && Array.isArray(json.data) && json.data.length > 0) {
+                    return json.data;
+                }
+            }
+        } catch (e) {
+            console.info('JanSahay Backend API offline or timed out; running client-side RuleEngine matching:', e.message);
         }
+
+        // 3. Client-side RuleEngine matching (Zero network fallback)
+        if (window.RuleEngine && typeof window.RuleEngine.matchSchemes === 'function') {
+            const allSchemes = (window.AppData && window.AppData.SAMPLE_SCHEMES) ? window.AppData.SAMPLE_SCHEMES : [];
+            return window.RuleEngine.matchSchemes(formData, allSchemes, {
+                minScore: 70,
+                maxResults: null
+            });
+        }
+
+        return [];
     }
 
     // ── Results Page ──────────────────────────────────────────
@@ -248,20 +290,46 @@
 
     function renderResults(schemes) {
         const summary = document.getElementById('resultsSummary');
+        const profileSummaryText = (window.RuleEngine && typeof window.RuleEngine.getProfileSummary === 'function')
+            ? window.RuleEngine.getProfileSummary(formData)
+            : '';
+
+        const centralCount = schemes.filter(s => s.type === 'central').length;
+        const stateCount = schemes.filter(s => s.type === 'state').length;
+
+        const ragData = window._lastRagData;
+        const aiSummaryHtml = (ragData && ragData.summary) ? `
+            <div class="ai-summary-banner" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(168, 85, 247, 0.08)); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 12px; padding: 14px 18px; margin-top: 14px; margin-bottom: 8px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+                    <div style="display:flex; align-items:center; gap:8px; font-weight:600; color:var(--primary); font-size: 0.95rem;">
+                        <i class="fas fa-brain"></i> AI Eligibility Assessment
+                        <span style="font-size: 0.72rem; background: rgba(99,102,241,0.2); color: #818cf8; padding: 2px 8px; border-radius: 12px; font-weight: 600; border: 1px solid rgba(99,102,241,0.3);">RAG + Gemini 3.5</span>
+                    </div>
+                    <span style="font-size:0.75rem; color:var(--text-secondary);"><i class="fas fa-check-double" style="color:var(--emerald);margin-right:4px;"></i>${ragData.pipeline || 'Rule Engine → RAG → LLM'}</span>
+                </div>
+                <div style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.55;">${ragData.summary}</div>
+            </div>
+        ` : '';
+
         summary.innerHTML = `
-            <div class="results-count">${schemes.length} Schemes Found</div>
-            <div class="results-filters">
-                <div class="filter-chip active" onclick="filterResults('all', this)">All Schemes</div>
-                <div class="filter-chip" onclick="filterResults('central', this)">Central</div>
-                <div class="filter-chip" onclick="filterResults('state', this)">State</div>
+            <div class="results-count">
+                <span>${schemes.length} Schemes Found</span>
+                ${profileSummaryText ? `<span style="display:block;font-size:0.95rem;font-weight:400;color:var(--text-secondary);margin-top:4px;"><i class="fas fa-user-check" style="color:var(--emerald);margin-right:6px;"></i>Matched profile: ${profileSummaryText}</span>` : ''}
+            </div>
+            ${aiSummaryHtml}
+            <div class="results-filters" style="margin-top:14px;">
+                <div class="filter-chip active" onclick="filterResults('all', this)">All Schemes (${schemes.length})</div>
+                <div class="filter-chip" onclick="filterResults('central', this)">Central (${centralCount})</div>
+                <div class="filter-chip" onclick="filterResults('state', this)">State (${stateCount})</div>
             </div>
         `;
 
         const grid = document.getElementById('resultsGrid');
         grid.innerHTML = schemes.length ? schemes.map(s => schemeCard(s)).join('') : `
-            <div style="text-align:center;padding:3rem;color:var(--text-secondary);">
-                <i class="fas fa-search" style="font-size:3rem;margin-bottom:1rem;opacity:0.4;"></i>
-                <p>No schemes matched your profile. Try adjusting your inputs.</p>
+            <div style="text-align:center;padding:3.5rem 1.5rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">
+                <i class="fas fa-filter-circle-xmark" style="font-size:3.5rem;margin-bottom:1.25rem;color:var(--amber);opacity:0.75;"></i>
+                <h3 style="color:var(--text-primary);font-size:1.4rem;margin-bottom:0.5rem;">No Schemes Found For This Specific Combination</h3>
+                <p style="font-size:0.95rem;line-height:1.6;color:var(--text-secondary);">No active schemes passed all strict eligibility gates for the selected profile. Try clicking "Reset Form" or adjusting criteria such as occupation or location to explore available programs.</p>
             </div>`;
 
         // Store for filter
@@ -272,26 +340,49 @@
     window._renderResults = renderResults;
 
     function schemeCard(s) {
-        const match = s.matchScore || s.baseMatchScore ? `${s.matchScore || s.baseMatchScore + '%'}` : 'N/A';
+        const scoreVal = s.matchScore || s.baseMatchScore || 75;
+        const match = `${scoreVal}%`;
+        const quality = s.matchQuality || (scoreVal >= 90 ? { label: 'Excellent Match', color: '#10b981' } : (scoreVal >= 75 ? { label: 'Good Match', color: '#22c55e' } : { label: 'Eligible Match', color: '#3b82f6' }));
         const docs  = s.documents ? s.documents.slice(0, 3).map(d => `<li>${d}</li>`).join('') : '';
+
+        const aiReasonHtml = s.matchReason ? `
+            <div class="result-card-reason" style="margin: 10px 0; padding: 10px 12px; background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1; border-radius: 6px; font-size: 0.83rem; color: var(--text-primary); line-height: 1.45;">
+                <div style="color: #6366f1; font-weight: 600; display: flex; align-items: center; gap: 5px; font-size: 0.78rem; margin-bottom: 3px;">
+                    <i class="fas fa-wand-magic-sparkles"></i> AI Eligibility Evidence
+                </div>
+                <div>${s.matchReason}</div>
+            </div>
+        ` : '';
+
         return `
-        <div class="result-card" data-type="${s.type}">
+        <div class="result-card" data-type="${s.type}" onclick="if(!event.target.closest('.result-card-link, .result-card-view-btn')) window.location.href='scheme-details.html?id=${s.id}';" style="cursor:pointer;" tabindex="0" role="button" aria-label="View details for ${s.title}">
             <div class="result-card-header">
                 <div class="result-card-badge ${s.type === 'central' ? 'badge-central' : 'badge-state'}">
                     <i class="fas ${s.type === 'central' ? 'fa-landmark' : 'fa-map-location-dot'}"></i>
                     ${s.type === 'central' ? 'Central' : (s.state || 'State')}
                 </div>
-                <div class="result-eligibility"><i class="fas fa-check-circle"></i> ${match} Match</div>
+                <div class="result-eligibility" style="color:${quality.color || 'inherit'};">
+                    <i class="fas fa-check-circle"></i> ${match} Match
+                </div>
             </div>
-            <div class="result-card-title">${s.title}</div>
+            <a href="scheme-details.html?id=${s.id}" class="result-card-title-link" onclick="event.stopPropagation();">
+                <div class="result-card-title">${s.title}</div>
+            </a>
             <div class="result-card-ministry"><i class="fas fa-building-columns"></i> ${s.ministry}</div>
+            ${aiReasonHtml}
             <p class="result-card-benefits">${s.benefits}</p>
             ${docs ? `<div class="result-docs"><strong><i class="fas fa-file-alt"></i> Docs:</strong><ul>${docs}</ul></div>` : ''}
             <div class="result-card-tags">${(s.tags || []).map(t => `<span class="result-tag">${t}</span>`).join('')}</div>
             <div class="result-card-footer">
-                <a href="${(s.applyLink && s.applyLink !== '#') ? s.applyLink : 'https://www.india.gov.in/'}" target="_blank" rel="noopener noreferrer" class="result-card-link" title="Apply on official portal">
-                    Apply Now <i class="fas fa-external-link-alt"></i>
-                </a>
+                <div class="result-card-actions">
+                    <a href="scheme-details.html?id=${s.id}" class="result-card-view-btn" onclick="event.stopPropagation();">
+                        <i class="fas fa-circle-info"></i> View Details
+                    </a>
+                    <a href="${(s.applyLink && s.applyLink !== '#') ? s.applyLink : 'https://www.myscheme.gov.in/'}" target="_blank" rel="noopener noreferrer" class="result-card-link" title="Apply on official portal" onclick="event.stopPropagation();">
+                        Apply Now <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="result-match-score" style="color:${quality.color || 'inherit'};"><i class="fas fa-star"></i> ${match} ${quality.label ? `· ${quality.label}` : 'Match'}</div>
             </div>
         </div>`;
     }

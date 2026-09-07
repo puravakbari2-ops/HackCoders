@@ -79,17 +79,38 @@ const KB = [
     }
 ];
 
+const ragService = require('../services/ragService');
+
 // ── POST /api/chat ────────────────────────────────────────────
-exports.chat = (req, res) => {
-    const { message } = req.body;
+exports.chat = async (req, res) => {
+    const { message, profile } = req.body;
 
     if (!message || !message.trim()) {
         return res.status(400).json({ success: false, error: 'Message cannot be empty' });
     }
 
+    // 1. Try RAG Service first if initialized
+    if (ragService && ragService.isReady) {
+        try {
+            const ragResult = await ragService.chatQuery(message, profile || null);
+            if (ragResult && ragResult.answer) {
+                return res.json({
+                    success:          true,
+                    message:          ragResult.answer,
+                    mentionedSchemes: ragResult.mentionedSchemes || [],
+                    suggestFindSchemes: !!ragResult.suggestFindSchemes,
+                    source:           ragResult.source || 'rag-llm',
+                    timestamp:        new Date().toISOString()
+                });
+            }
+        } catch (err) {
+            console.warn('RAG chat query failed, falling back to KB:', err.message);
+        }
+    }
+
     const lowerMsg = message.toLowerCase();
 
-    // Search knowledge base for matching keywords
+    // 2. Search knowledge base for matching keywords
     let botResponse = null;
     for (const entry of KB) {
         if (entry.keywords.some(kw => lowerMsg.includes(kw))) {
@@ -98,14 +119,15 @@ exports.chat = (req, res) => {
         }
     }
 
-    // Default fallback
+    // 3. Default fallback
     if (!botResponse) {
         botResponse = `I found your question about **"${message}"**. While I may not have a specific answer ready, I suggest:\n\n1. 🔍 Use the **Find Schemes For You** button for personalized recommendations\n2. 📋 Browse our **Categories** section to explore schemes by topic\n3. 🏛️ Visit [myScheme.gov.in](https://www.myscheme.gov.in/) for the official government portal\n\nIs there anything specific I can help clarify? 😊`;
     }
 
     res.json({
-        success:  true,
-        message:  botResponse,
+        success:   true,
+        message:   botResponse,
+        source:    'knowledge-base',
         timestamp: new Date().toISOString()
     });
 };
