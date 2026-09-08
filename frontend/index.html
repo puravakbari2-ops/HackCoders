@@ -78,9 +78,39 @@
                 <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
                     <i class="fas fa-sun"></i>
                 </div>
-                <button class="btn-sign-in" id="signInBtn">
+                <button class="btn-sign-in" id="signInBtn" onclick="window.location.href='login.html'">
                     Sign In <i class="fas fa-arrow-right-long"></i>
                 </button>
+                <div class="user-profile-menu" id="userProfileMenu" style="display: none;">
+                    <div class="user-chip" id="userChipDropdownBtn">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                            alt="Citizen Avatar" class="user-avatar-img" id="navUserAvatar">
+                        <div class="user-info-text">
+                            <span class="user-name" id="navUserName">Citizen</span>
+                            <span class="user-badge" id="navUserBadge"><i class="fas fa-circle-check"></i>
+                                Verified</span>
+                        </div>
+                        <i class="fas fa-chevron-down user-caret"></i>
+                    </div>
+                    <div class="user-dropdown-menu" id="userDropdownMenu">
+                        <div class="dropdown-header">
+                            <strong id="dropdownFullName">Citizen</strong>
+                            <small id="dropdownEmail">citizen@jansahay.gov.in</small>
+                        </div>
+                        <a href="javascript:void(0)" class="dropdown-item"
+                            onclick="if(window.showToast) window.showToast('Your active eligibility profile has matching schemes!', 'info');"><i
+                                class="fas fa-user-check"></i> Eligibility Profile</a>
+                        <a href="javascript:void(0)" class="dropdown-item"
+                            onclick="if(window.showToast) window.showToast('Your schemes are saved in your vault.', 'info');"><i
+                                class="fas fa-bookmark"></i> Saved Schemes</a>
+                        <a href="javascript:void(0)" class="dropdown-item"
+                            onclick="if(window.showToast) window.showToast('Application tracking active at Ministry.', 'info');"><i
+                                class="fas fa-file-lines"></i> Track Applications</a>
+                        <div class="dropdown-divider"></div>
+                        <button type="button" class="dropdown-item text-danger" id="logoutBtn"><i
+                                class="fas fa-arrow-right-from-bracket"></i> Sign Out</button>
+                    </div>
+                </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -110,7 +140,19 @@
                 <li><a href="#about"><i class="fas fa-building-columns"></i> About</a></li>
                 <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQs</a></li>
             </ul>
-            <button class="btn-sign-in mobile-sign-in">Sign In <i class="fas fa-arrow-right-long"></i></button>
+            <button class="btn-sign-in mobile-sign-in" onclick="window.location.href='login.html'">Sign In <i class="fas fa-arrow-right-long"></i></button>
+            <div class="mobile-user-profile" id="mobileUserProfile" style="display: none;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" id="mobileUserAvatar" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #a855f7; object-fit: cover;" alt="Citizen Avatar">
+                    <div>
+                        <div id="mobileUserName" style="font-weight: 600; color: #f8fafc; font-size: 0.92rem;">Citizen</div>
+                        <div style="font-size: 0.72rem; color: #10b981;"><i class="fas fa-circle-check"></i> Verified Citizen</div>
+                    </div>
+                </div>
+                <button type="button" id="mobileLogoutBtn" class="dropdown-item text-danger" style="width: 100%; border-radius: 8px; justify-content: center; background: rgba(239,68,68,0.12); padding: 10px;">
+                    <i class="fas fa-arrow-right-from-bracket"></i> Sign Out
+                </button>
+            </div>
         </div>
     </div>
 

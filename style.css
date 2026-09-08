@@ -2952,9 +2952,17 @@ img {
     animation: fadeInDropdown 0.2s ease forwards;
 }
 
-.user-profile-menu.open .user-dropdown-menu {
-    display: block;
+.user-profile-menu.open .user-dropdown-menu,
+.user-dropdown-menu.open {
+    display: block !important;
 }
+
+.mobile-user-profile {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 15px;
+}
+
 
 @keyframes fadeInDropdown {
     from {

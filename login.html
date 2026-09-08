@@ -372,7 +372,7 @@
             }, 800);
         }
 
-        // Sign In Submission - connected to /api/auth/login with local fallback
+        // Sign In Submission - connected to /api/auth/login with resilient local fallback
         document.getElementById('signInForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const emailInput = document.getElementById('loginEmail');
@@ -389,6 +389,8 @@
                 btn.innerHTML = `<span>Sign In to Citizen Portal</span> <i class="fas fa-arrow-right"></i>`;
             }
 
+            let serverError = null;
+
             // 1. Try Backend / Supabase Auth API
             try {
                 const response = await fetch('/api/auth/login', {
@@ -403,33 +405,45 @@
                         completeAuthentication(data.user);
                         return;
                     }
-                } else if (response.status === 401) {
+                } else {
                     const data = await response.json().catch(() => ({}));
-                    resetBtn();
-                    showNotification(data.error || 'Incorrect email or password. Please try again.', 'danger');
-                    return;
+                    serverError = data.error || null;
                 }
             } catch (err) {
                 console.warn('[Auth] Server login fetch failed, trying local fallback:', err.message);
             }
 
-            // 2. Local Fallback (ensures offline and pre-table resilience)
+            // 2. Local Fallback (guarantees newly registered citizens verify immediately)
             const citizens = getRegisteredCitizens();
-            const matchedCitizen = citizens.find(c => c.email.toLowerCase() === email);
+            const matchedCitizen = citizens.find(c => (c.email || '').toLowerCase() === email);
 
-            if (!matchedCitizen) {
-                resetBtn();
-                showNotification('No citizen account found with this email. Please register first under New Citizen Register.', 'danger');
-                return;
+            if (matchedCitizen) {
+                if (matchedCitizen.password === password) {
+                    // Sync to backend in background so future visits work across devices
+                    fetch('/api/auth/register', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: matchedCitizen.name,
+                            email: matchedCitizen.email,
+                            mobile: matchedCitizen.mobile,
+                            state: matchedCitizen.state,
+                            password: matchedCitizen.password
+                        })
+                    }).catch(() => {});
+
+                    completeAuthentication(matchedCitizen);
+                    return;
+                } else {
+                    resetBtn();
+                    showNotification('Incorrect password. Please enter the password you created during registration.', 'danger');
+                    return;
+                }
             }
 
-            if (matchedCitizen.password !== password) {
-                resetBtn();
-                showNotification('Incorrect password. Please enter the password you created during registration.', 'danger');
-                return;
-            }
-
-            completeAuthentication(matchedCitizen);
+            // Not found in local either
+            resetBtn();
+            showNotification(serverError || 'No citizen account found with this email. Please register first under New Citizen Register.', 'danger');
         });
 
         // Sign Up / New Citizen Register Submission
@@ -447,48 +461,12 @@
 
             function resetBtn() {
                 btn.disabled = false;
-                btn.innerHTML = `<span>Complete Registration</span> <i class="fas fa-arrow-right"></i>`;
+                btn.innerHTML = `<span>Create Citizen Account</span> <i class="fas fa-user-plus"></i>`;
             }
 
-            // 1. Try Backend / Supabase Auth API
-            try {
-                const response = await fetch('/api/auth/register', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, email, mobile, state, password })
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.success && data.user) {
-                        // Also store in local cache
-                        const citizens = getRegisteredCitizens();
-                        citizens.push({ name, email, mobile, state, password, role: 'Verified Citizen' });
-                        saveRegisteredCitizens(citizens);
-                        completeAuthentication(data.user);
-                        return;
-                    }
-                } else {
-                    const data = await response.json().catch(() => ({}));
-                    if (data.error && data.error.includes('already exists')) {
-                        resetBtn();
-                        showNotification('An account with this email already exists. Switching to Sign In...', 'danger');
-                        setTimeout(() => {
-                            setMode('signin');
-                            const loginEmail = document.getElementById('loginEmail');
-                            if (loginEmail) loginEmail.value = email;
-                            document.getElementById('loginPassword')?.focus();
-                        }, 1200);
-                        return;
-                    }
-                }
-            } catch (err) {
-                console.warn('[Auth] Server registration fetch failed, using local fallback:', err.message);
-            }
-
-            // 2. Local Fallback
+            // 1. Check local citizens first to prevent duplicate registrations
             const citizens = getRegisteredCitizens();
-            const existingCitizen = citizens.find(c => c.email.toLowerCase() === email);
+            const existingCitizen = citizens.find(c => (c.email || '').toLowerCase() === email);
 
             if (existingCitizen) {
                 resetBtn();
@@ -514,9 +492,30 @@
                 registeredAt: new Date().toISOString()
             };
 
+            // 2. Store in local citizens storage immediately (zero-loss guarantee)
             citizens.push(newCitizen);
             saveRegisteredCitizens(citizens);
 
+            // 3. Sync to Backend / Supabase Auth API
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, mobile, state, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.success && data.user) {
+                        completeAuthentication(data.user);
+                        return;
+                    }
+                }
+            } catch (err) {
+                console.warn('[Auth] Server registration fetch failed, using local registration:', err.message);
+            }
+
+            // Complete auth with local citizen profile
             completeAuthentication(newCitizen);
         });
 

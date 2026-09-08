@@ -3501,3 +3501,203 @@ img {
     color: var(--primary);
     font-weight: 600;
 }
+
+/* ============================================
+   Citizen Profile Menu in Navbar & Mobile
+   ============================================ */
+.user-profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px 6px 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(124, 58, 237, 0.35);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.user-chip:hover {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: #a855f7;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.user-avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #a855f7;
+}
+
+.user-info-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.user-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+[data-theme="light"] .user-name {
+    color: #0f172a;
+}
+
+.user-badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.user-caret {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    transition: transform 0.2s ease;
+}
+
+.user-profile-menu.open .user-caret {
+    transform: rotate(180deg);
+}
+
+.user-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 240px;
+    background: #090F22;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(124, 58, 237, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 8px 0;
+    display: none;
+    z-index: 1000;
+    animation: fadeInDropdown 0.2s ease forwards;
+}
+
+[data-theme="light"] .user-dropdown-menu {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.user-profile-menu.open .user-dropdown-menu,
+.user-dropdown-menu.open {
+    display: block !important;
+}
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-header {
+    padding: 10px 16px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+[data-theme="light"] .dropdown-header {
+    border-bottom-color: #e2e8f0;
+}
+
+.dropdown-header strong {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+[data-theme="light"] .dropdown-header strong {
+    color: #0f172a;
+}
+
+.dropdown-header small {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    color: #cbd5e1;
+    font-size: 0.84rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+[data-theme="light"] .dropdown-item {
+    color: #334155;
+}
+
+.dropdown-item:hover {
+    background: rgba(124, 58, 237, 0.12);
+    color: #a855f7;
+}
+
+.dropdown-item i {
+    font-size: 0.85rem;
+    width: 16px;
+    color: #a855f7;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 6px 0;
+}
+
+[data-theme="light"] .dropdown-divider {
+    background: #e2e8f0;
+}
+
+.dropdown-item.text-danger {
+    color: #ef4444 !important;
+}
+
+.dropdown-item.text-danger:hover {
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.dropdown-item.text-danger i {
+    color: #ef4444 !important;
+}
+
+.mobile-user-profile {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 15px;
+}
+

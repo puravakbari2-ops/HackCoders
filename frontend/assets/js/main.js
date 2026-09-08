@@ -61,18 +61,57 @@
     mobileMenuOverlay && mobileMenuOverlay.addEventListener('click', closeMobileMenu);
     document.querySelectorAll('.mobile-nav-links a').forEach(l => l.addEventListener('click', closeMobileMenu));
 
-    // ── User Profile Dropdown ─────────────────────────────────
-    const userChipBtn    = document.getElementById('userChipDropdownBtn');
-    const userDropdown   = document.getElementById('userDropdownMenu');
-    const logoutBtn      = document.getElementById('logoutBtn');
-    const mobileLogoutBtn= document.getElementById('mobileLogoutBtn');
+    // ── User Profile Dropdown & Session Management ───────────
+    function toggleUserDropdown(e) {
+        if (e) e.stopPropagation();
+        const menu = document.getElementById('userProfileMenu');
+        const dropdown = document.getElementById('userDropdownMenu');
+        if (menu) menu.classList.toggle('open');
+        if (dropdown) dropdown.classList.toggle('open');
+    }
 
-    userChipBtn && userChipBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        userDropdown && userDropdown.classList.toggle('open');
-    });
-    document.addEventListener('click', () => {
-        userDropdown && userDropdown.classList.remove('open');
+    function closeUserDropdown() {
+        const menu = document.getElementById('userProfileMenu');
+        const dropdown = document.getElementById('userDropdownMenu');
+        if (menu) menu.classList.remove('open');
+        if (dropdown) dropdown.classList.remove('open');
+    }
+
+    function doLogout() {
+        localStorage.removeItem('jansahay_user');
+        sessionStorage.clear();
+        closeUserDropdown();
+        checkUserSession();
+        if (typeof showToast === 'function') {
+            showToast('Signed out successfully.', 'info');
+        }
+    }
+
+    // Event delegation for user dropdown, logout, and sign-in buttons
+    document.addEventListener('click', (e) => {
+        const chip = e.target.closest('#userChipDropdownBtn');
+        if (chip) {
+            e.stopPropagation();
+            toggleUserDropdown();
+            return;
+        }
+
+        if (e.target.closest('#logoutBtn') || e.target.closest('#mobileLogoutBtn')) {
+            e.preventDefault();
+            doLogout();
+            return;
+        }
+
+        if (e.target.closest('#signInBtn') || e.target.closest('.mobile-sign-in')) {
+            if (!window.location.pathname.endsWith('login.html')) {
+                window.location.href = 'login.html';
+            }
+            return;
+        }
+
+        if (!e.target.closest('#userDropdownMenu')) {
+            closeUserDropdown();
+        }
     });
 
     function checkUserSession() {
@@ -80,35 +119,99 @@
             const rawUser = localStorage.getItem('jansahay_user');
             const signInBtn = document.getElementById('signInBtn');
             const mobileSignInBtn = document.querySelector('.mobile-sign-in');
-            const userProfileMenu = document.getElementById('userProfileMenu');
-            const mobileUserProfile = document.getElementById('mobileUserProfile');
-            const navUserName = document.getElementById('navUserName');
-            const navUserAvatar = document.getElementById('navUserAvatar');
-            const dropdownFullName = document.getElementById('dropdownFullName');
-            const dropdownEmail = document.getElementById('dropdownEmail');
-            const mobileUserName = document.getElementById('mobileUserName');
-            const mobileUserAvatar = document.getElementById('mobileUserAvatar');
+            let userProfileMenu = document.getElementById('userProfileMenu');
+            let mobileUserProfile = document.getElementById('mobileUserProfile');
 
             if (rawUser) {
-                const user = JSON.parse(rawUser);
+                let user;
+                try {
+                    user = JSON.parse(rawUser);
+                } catch (pe) {
+                    console.warn('Corrupted citizen session, clearing:', pe);
+                    localStorage.removeItem('jansahay_user');
+                    checkUserSession();
+                    return;
+                }
+
                 if (signInBtn) signInBtn.style.display = 'none';
                 if (mobileSignInBtn) mobileSignInBtn.style.display = 'none';
+
+                // Resilient dynamic injection if markup is missing on any page
+                if (!userProfileMenu && signInBtn && signInBtn.parentNode) {
+                    const menuDiv = document.createElement('div');
+                    menuDiv.className = 'user-profile-menu';
+                    menuDiv.id = 'userProfileMenu';
+                    menuDiv.innerHTML = `
+                        <div class="user-chip" id="userChipDropdownBtn">
+                            <img src="" alt="Citizen Avatar" class="user-avatar-img" id="navUserAvatar">
+                            <div class="user-info-text">
+                                <span class="user-name" id="navUserName">Citizen</span>
+                                <span class="user-badge" id="navUserBadge"><i class="fas fa-circle-check"></i> Verified</span>
+                            </div>
+                            <i class="fas fa-chevron-down user-caret"></i>
+                        </div>
+                        <div class="user-dropdown-menu" id="userDropdownMenu">
+                            <div class="dropdown-header">
+                                <strong id="dropdownFullName">Citizen</strong>
+                                <small id="dropdownEmail">citizen@jansahay.gov.in</small>
+                            </div>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="if(window.showToast) window.showToast('Your active eligibility profile has matching schemes!', 'info');"><i class="fas fa-user-check"></i> Eligibility Profile</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="if(window.showToast) window.showToast('Your schemes are saved in your vault.', 'info');"><i class="fas fa-bookmark"></i> Saved Schemes</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="if(window.showToast) window.showToast('Application tracking active at Ministry.', 'info');"><i class="fas fa-file-lines"></i> Track Applications</a>
+                            <div class="dropdown-divider"></div>
+                            <button type="button" class="dropdown-item text-danger" id="logoutBtn"><i class="fas fa-arrow-right-from-bracket"></i> Sign Out</button>
+                        </div>
+                    `;
+                    signInBtn.parentNode.insertBefore(menuDiv, signInBtn.nextSibling);
+                    userProfileMenu = menuDiv;
+                }
+
+                if (!mobileUserProfile && mobileSignInBtn && mobileSignInBtn.parentNode) {
+                    const mobDiv = document.createElement('div');
+                    mobDiv.className = 'mobile-user-profile';
+                    mobDiv.id = 'mobileUserProfile';
+                    mobDiv.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <img src="" id="mobileUserAvatar" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #a855f7; object-fit: cover;" alt="Citizen Avatar">
+                            <div>
+                                <div id="mobileUserName" style="font-weight: 600; color: #f8fafc; font-size: 0.92rem;">Citizen</div>
+                                <div style="font-size: 0.72rem; color: #10b981;"><i class="fas fa-circle-check"></i> Verified Citizen</div>
+                            </div>
+                        </div>
+                        <button type="button" id="mobileLogoutBtn" class="dropdown-item text-danger" style="width: 100%; border-radius: 8px; justify-content: center; background: rgba(239,68,68,0.12); padding: 10px;">
+                            <i class="fas fa-arrow-right-from-bracket"></i> Sign Out
+                        </button>
+                    `;
+                    mobileSignInBtn.parentNode.appendChild(mobDiv);
+                    mobileUserProfile = mobDiv;
+                }
+
                 if (userProfileMenu) userProfileMenu.style.display = 'inline-block';
                 if (mobileUserProfile) mobileUserProfile.style.display = 'block';
 
                 const displayName = user.name || 'Citizen';
+                const navUserName = document.getElementById('navUserName');
+                const dropdownFullName = document.getElementById('dropdownFullName');
+                const dropdownEmail = document.getElementById('dropdownEmail');
+                const mobileUserName = document.getElementById('mobileUserName');
+                const navUserAvatar = document.getElementById('navUserAvatar');
+                const mobileUserAvatar = document.getElementById('mobileUserAvatar');
+
                 if (navUserName) navUserName.textContent = displayName;
                 if (dropdownFullName) dropdownFullName.textContent = displayName;
                 if (dropdownEmail) dropdownEmail.textContent = user.email || 'citizen@jansahay.gov.in';
                 if (mobileUserName) mobileUserName.textContent = displayName;
 
-                const avatarUrl = user.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80';
+                const avatarUrl = user.avatar || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(displayName)}`;
                 if (navUserAvatar) navUserAvatar.src = avatarUrl;
                 if (mobileUserAvatar) mobileUserAvatar.src = avatarUrl;
             } else {
                 if (signInBtn) signInBtn.style.display = '';
                 if (mobileSignInBtn) mobileSignInBtn.style.display = '';
-                if (userProfileMenu) userProfileMenu.style.display = 'none';
+                if (userProfileMenu) {
+                    userProfileMenu.style.display = 'none';
+                    userProfileMenu.classList.remove('open');
+                }
                 if (mobileUserProfile) mobileUserProfile.style.display = 'none';
             }
         } catch (e) {
@@ -116,16 +219,7 @@
         }
     }
 
-    function doLogout() {
-        localStorage.removeItem('jansahay_user');
-        sessionStorage.clear();
-        checkUserSession();
-        showToast('Signed out successfully.', 'info');
-    }
-    logoutBtn       && logoutBtn.addEventListener('click', doLogout);
-    mobileLogoutBtn && mobileLogoutBtn.addEventListener('click', doLogout);
-
-    // Run check on initialization
+    // Run check on initialization & on storage event (multi-tab sync)
     checkUserSession();
     window.addEventListener('storage', checkUserSession);
 

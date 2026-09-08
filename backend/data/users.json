@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "email": "priya.sharma@example.com",
+    "mobile": "9876543210",
+    "state": "Maharashtra",
+    "password": "password123",
+    "role": "Verified Citizen",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+    "created_at": "2026-09-08T00:00:00.000Z"
+  }
+]

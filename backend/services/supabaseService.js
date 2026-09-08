@@ -4,6 +4,8 @@
    Uses service-role key for server-side writes (safe — server only).
    ============================================================ */
 
+const fs = require('fs');
+const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 
 // ── Environment variable resolution (with backwards-compatible aliases) ──
@@ -131,95 +133,165 @@ async function getFeedbackStats() {
     }
 }
 
-// ── Citizen Authentication (Supabase) ─────────────────────────
+// ── Citizen Authentication (Supabase Primary + Local JSON Fallback) ──
 const crypto = require('crypto');
+const USERS_FILE = path.join(__dirname, '..', 'data', 'users.json');
+
+function readLocalUsers() {
+    try {
+        if (fs.existsSync(USERS_FILE)) {
+            return JSON.parse(fs.readFileSync(USERS_FILE, 'utf8'));
+        }
+    } catch (e) {
+        console.warn('[Users] Error reading local users file:', e.message);
+    }
+    return [];
+}
+
+function saveLocalUsers(users) {
+    try {
+        const dir = path.dirname(USERS_FILE);
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+        fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2), 'utf8');
+    } catch (e) {
+        console.error('[Users] Error saving local users file:', e.message);
+    }
+}
 
 function hashPassword(password) {
     return crypto.createHash('sha256').update(String(password)).digest('hex');
 }
 
 async function registerUser({ name, email, mobile, state, password, role, avatar }) {
-    const client = getAdminClient();
-    if (!client) return { success: false, reason: 'supabase_not_configured' };
-
     const cleanEmail = (email || '').trim().toLowerCase();
     if (!cleanEmail || !password) {
         return { success: false, error: 'Email and password are required.' };
     }
 
-    try {
-        const { data: existing } = await client
-            .from('users')
-            .select('id, email')
-            .eq('email', cleanEmail)
-            .maybeSingle();
-
-        if (existing) {
-            return { success: false, error: 'An account with this email already exists.' };
-        }
-
-        const passwordHash = hashPassword(password);
-        const defaultAvatar = avatar || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name || cleanEmail)}`;
-
-        const newUser = {
-            name: name || cleanEmail.split('@')[0],
-            email: cleanEmail,
-            mobile: mobile || null,
-            state: state || null,
-            password: passwordHash,
-            role: role || 'Verified Citizen',
-            avatar: defaultAvatar,
-            created_at: new Date().toISOString()
-        };
-
-        const { data: inserted, error: insertErr } = await client
-            .from('users')
-            .insert(newUser)
-            .select('id, name, email, mobile, state, role, avatar, created_at')
-            .single();
-
-        if (insertErr) throw insertErr;
-        return { success: true, user: inserted };
-    } catch (err) {
-        console.error('[Supabase] User registration error:', err.message);
-        return { success: false, error: err.message };
+    const localUsers = readLocalUsers();
+    if (localUsers.some(u => (u.email || '').toLowerCase() === cleanEmail)) {
+        return { success: false, error: 'An account with this email already exists.' };
     }
+
+    const client = getAdminClient();
+    if (client) {
+        try {
+            const { data: existing } = await client
+                .from('users')
+                .select('id, email')
+                .eq('email', cleanEmail)
+                .maybeSingle();
+
+            if (existing) {
+                return { success: false, error: 'An account with this email already exists.' };
+            }
+        } catch (e) {
+            // users table may not exist yet in Supabase; proceed with local storage
+        }
+    }
+
+    const passwordHash = hashPassword(password);
+    const defaultAvatar = avatar || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name || cleanEmail)}`;
+
+    const newUser = {
+        id: Date.now(),
+        name: name || cleanEmail.split('@')[0],
+        email: cleanEmail,
+        mobile: mobile || null,
+        state: state || null,
+        password: password,
+        passwordHash: passwordHash,
+        role: role || 'Verified Citizen',
+        avatar: defaultAvatar,
+        created_at: new Date().toISOString()
+    };
+
+    // Save to local JSON first (instant resilience)
+    localUsers.push(newUser);
+    saveLocalUsers(localUsers);
+
+    // Also attempt Supabase insert if client configured
+    if (client) {
+        try {
+            const { data: inserted, error: insertErr } = await client
+                .from('users')
+                .insert({
+                    name: newUser.name,
+                    email: newUser.email,
+                    mobile: newUser.mobile,
+                    state: newUser.state,
+                    password: passwordHash,
+                    role: newUser.role,
+                    avatar: newUser.avatar,
+                    created_at: newUser.created_at
+                })
+                .select('id, name, email, mobile, state, role, avatar, created_at')
+                .maybeSingle();
+
+            if (!insertErr && inserted) {
+                return { success: true, user: inserted, storage: 'supabase' };
+            }
+        } catch (err) {
+            console.warn('[Supabase] Note: Supabase users table not active yet, user stored in local users.json');
+        }
+    }
+
+    const { password: _, passwordHash: __, ...safeUser } = newUser;
+    return { success: true, user: safeUser, storage: 'local' };
 }
 
 async function loginUser({ email, password }) {
-    const client = getAdminClient();
-    if (!client) return { success: false, reason: 'supabase_not_configured' };
-
     const cleanEmail = (email || '').trim().toLowerCase();
     if (!cleanEmail || !password) {
         return { success: false, error: 'Email and password are required.' };
     }
 
-    try {
-        const { data: user, error } = await client
-            .from('users')
-            .select('id, name, email, mobile, state, password, role, avatar, created_at')
-            .eq('email', cleanEmail)
-            .maybeSingle();
+    const passwordHash = hashPassword(password);
 
-        if (error) throw error;
-        if (!user) {
-            return { success: false, error: 'No citizen account found with this email address.' };
+    // 1. Try Supabase first if available
+    const client = getAdminClient();
+    if (client) {
+        try {
+            const { data: user, error } = await client
+                .from('users')
+                .select('id, name, email, mobile, state, password, role, avatar, created_at')
+                .eq('email', cleanEmail)
+                .maybeSingle();
+
+            if (!error && user) {
+                const isMatch = (user.password === passwordHash || user.password === password);
+                if (isMatch) {
+                    const { password: _, ...safeUser } = user;
+                    return { success: true, user: safeUser, source: 'supabase' };
+                } else {
+                    return { success: false, error: 'Incorrect password. Please enter the password you created during registration.' };
+                }
+            }
+        } catch (err) {
+            console.warn('[Supabase] Login check fallback to local users:', err.message);
         }
-
-        const passwordHash = hashPassword(password);
-        const isMatch = (user.password === passwordHash || user.password === password);
-
-        if (!isMatch) {
-            return { success: false, error: 'Incorrect password. Please check and try again.' };
-        }
-
-        const { password: _, ...safeUser } = user;
-        return { success: true, user: safeUser };
-    } catch (err) {
-        console.error('[Supabase] User login error:', err.message);
-        return { success: false, error: err.message };
     }
+
+    // 2. Check local users.json fallback
+    const localUsers = readLocalUsers();
+    const matched = localUsers.find(u => (u.email || '').toLowerCase() === cleanEmail);
+
+    if (matched) {
+        const isMatch = (
+            matched.password === password ||
+            matched.passwordHash === passwordHash ||
+            matched.password === passwordHash
+        );
+
+        if (isMatch) {
+            const { password: _, passwordHash: __, ...safeUser } = matched;
+            return { success: true, user: safeUser, source: 'local' };
+        } else {
+            return { success: false, error: 'Incorrect password. Please enter the password you created during registration.' };
+        }
+    }
+
+    return { success: false, error: 'No citizen account found with this email. Please register first under New Citizen Register.' };
 }
 
 // ── Health Check ──────────────────────────────────────────────
