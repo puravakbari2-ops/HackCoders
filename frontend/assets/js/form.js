@@ -215,23 +215,29 @@
     });
 
     // ── Recommendation Engine: RAG + LLM Pipeline with Fallbacks ─────────────
-    async function fetchRecommendations() {
+    async function fetchRecommendations(filtersOverride) {
         window._lastRagData = null;
+        // Use any overriding filters passed directly, else use the active filter module state
+        const activeFilters = filtersOverride || (window.FilterModule ? window.FilterModule.getActive() : {});
+        const hasFilters    = activeFilters && Object.keys(activeFilters).length > 0;
 
         // 1. Try RAG + LLM Pipeline Endpoint (Primary AI Layer)
         try {
             const controller = new AbortController();
-            const timeoutId  = setTimeout(() => controller.abort(), 25000);
+            const timeoutId  = setTimeout(() => controller.abort(), 35000); // extended for larger filtered sets
             const res = await fetch(`${API_BASE}/rag/query`, {
                 method:  'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body:    JSON.stringify({ profile: formData }),
+                body:    JSON.stringify({
+                    profile: formData,
+                    filters: hasFilters ? activeFilters : undefined
+                }),
                 signal:  controller.signal
             });
             clearTimeout(timeoutId);
             if (res.ok) {
                 const json = await res.json();
-                if (json.success && Array.isArray(json.recommendations) && json.recommendations.length > 0) {
+                if (json.success && Array.isArray(json.recommendations)) {
                     window._lastRagData = json;
                     return json.recommendations;
                 }
@@ -253,8 +259,16 @@
             clearTimeout(timeoutId);
             if (res.ok) {
                 const json = await res.json();
-                if (json.data && Array.isArray(json.data) && json.data.length > 0) {
-                    return json.data;
+                if (json.data && Array.isArray(json.data)) {
+                    let data = json.data;
+                    // Client-side post-filter if backend filters not supported on this endpoint
+                    if (hasFilters && window.FilterModule) {
+                        const filteredIds = new Set(
+                            (await fetchFilteredIds(activeFilters))
+                        );
+                        data = data.filter(s => filteredIds.has(String(s.id)));
+                    }
+                    return data;
                 }
             }
         } catch (e) {
@@ -264,12 +278,36 @@
         // 3. Client-side RuleEngine matching (Zero network fallback)
         if (window.RuleEngine && typeof window.RuleEngine.matchSchemes === 'function') {
             const allSchemes = (window.AppData && window.AppData.SAMPLE_SCHEMES) ? window.AppData.SAMPLE_SCHEMES : [];
-            return window.RuleEngine.matchSchemes(formData, allSchemes, {
+            let matched = window.RuleEngine.matchSchemes(formData, allSchemes, {
                 minScore: 70,
                 maxResults: null
             });
+            // Client-side filter fallback
+            if (hasFilters) {
+                try {
+                    const filteredIds = new Set(await fetchFilteredIds(activeFilters));
+                    matched = matched.filter(s => filteredIds.has(String(s.id)));
+                } catch (_) {}
+            }
+            return matched;
         }
 
+        return [];
+    }
+
+    // Helper: get filtered IDs from backend (used as fallback filter for non-RAG endpoints)
+    async function fetchFilteredIds(filters) {
+        try {
+            const resp = await fetch(`${API_BASE}/filter/apply`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(filters)
+            });
+            if (resp.ok) {
+                const d = await resp.json();
+                return d.schemeIds || [];
+            }
+        } catch (_) {}
         return [];
     }
 
@@ -280,6 +318,11 @@
         resultsPage.style.display = 'block';
         window.scrollTo(0, 0);
         renderResults(schemes);
+
+        // Init filter module once results are shown
+        if (window.FilterModule) {
+            window.FilterModule.init();
+        }
     }
 
     backToHome && backToHome.addEventListener('click', () => {
@@ -311,11 +354,27 @@
             </div>
         ` : '';
 
-        summary.innerHTML = `
-            <div class="results-count">
-                <span>${schemes.length} Schemes Found</span>
-                ${profileSummaryText ? `<span style="display:block;font-size:0.95rem;font-weight:400;color:var(--text-secondary);margin-top:4px;"><i class="fas fa-user-check" style="color:var(--emerald);margin-right:6px;"></i>Matched profile: ${profileSummaryText}</span>` : ''}
+        // Filter stats banner
+        const filterStats = ragData?.filterStats;
+        const filterStatsBanner = (filterStats && filterStats.filtersApplied) ? `
+            <div class="filter-stats-banner">
+                <i class="fas fa-filter"></i>
+                <span>Filtered: <strong>${filterStats.afterFilter}</strong> of ${filterStats.totalSchemes} schemes matched your filters</span>
+                <span class="filter-stats-filters">${(filterStats.activeFilters || []).join(' • ')}</span>
             </div>
+        ` : '';
+
+        summary.innerHTML = `
+            <div class="results-count-row">
+                <div class="results-count">
+                    <span>${schemes.length} Schemes Found</span>
+                    ${profileSummaryText ? `<span style="display:block;font-size:0.95rem;font-weight:400;color:var(--text-secondary);margin-top:4px;"><i class="fas fa-user-check" style="color:var(--emerald);margin-right:6px;"></i>Matched profile: ${profileSummaryText}</span>` : ''}
+                </div>
+                <button class="filter-btn" id="mainFilterBtn" onclick="window.FilterModule && window.FilterModule.open()" aria-label="Open filter panel">
+                    <i class="fas fa-sliders"></i> Filter
+                </button>
+            </div>
+            ${filterStatsBanner}
             ${aiSummaryHtml}
             <div class="results-filters" style="margin-top:14px;">
                 <div class="filter-chip active" onclick="filterResults('all', this)">All Schemes (${schemes.length})</div>
@@ -324,20 +383,45 @@
             </div>
         `;
 
+        // Update filter button state and chips
+        if (window.FilterModule) {
+            window.FilterModule.updateButton();
+            window.FilterModule.renderChips();
+        }
+
         const grid = document.getElementById('resultsGrid');
         grid.innerHTML = schemes.length ? schemes.map(s => schemeCard(s)).join('') : `
             <div style="text-align:center;padding:3.5rem 1.5rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">
                 <i class="fas fa-filter-circle-xmark" style="font-size:3.5rem;margin-bottom:1.25rem;color:var(--amber);opacity:0.75;"></i>
-                <h3 style="color:var(--text-primary);font-size:1.4rem;margin-bottom:0.5rem;">No Schemes Found For This Specific Combination</h3>
-                <p style="font-size:0.95rem;line-height:1.6;color:var(--text-secondary);">No active schemes passed all strict eligibility gates for the selected profile. Try clicking "Reset Form" or adjusting criteria such as occupation or location to explore available programs.</p>
+                <h3 style="color:var(--text-primary);font-size:1.4rem;margin-bottom:0.5rem;">No Schemes Found</h3>
+                <p style="font-size:0.95rem;line-height:1.6;color:var(--text-secondary);">
+                    ${window.FilterModule && window.FilterModule.hasActive()
+                        ? 'No government schemes match all your selected filters. Try removing one or more filters.'
+                        : 'No active schemes matched the selected profile. Try adjusting your criteria.'}
+                </p>
+                ${window.FilterModule && window.FilterModule.hasActive() ? `
+                    <button onclick="window.FilterModule.clearAll()" style="margin-top:1rem;padding:10px 24px;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem;">
+                        <i class="fas fa-rotate-left"></i> Clear Filters
+                    </button>` : ''}
             </div>`;
 
-        // Store for filter
+        // Store for type filter chips
         window._allResults = schemes;
     }
 
-    // Expose renderResults globally for main.js event handler
+    // Expose renderResults globally for main.js event handler and filter module
     window._renderResults = renderResults;
+
+    // Re-run recommendations with a given filter set (called by FilterModule)
+    window._rerunWithFilters = async function(filters) {
+        // Show loading state on the grid
+        const grid = document.getElementById('resultsGrid');
+        if (grid) {
+            grid.innerHTML = `<div style="text-align:center;padding:3rem;color:var(--text-secondary);"><i class="fas fa-brain fa-spin" style="font-size:2rem;color:var(--primary);margin-bottom:1rem;"></i><p>Re-ranking with filters...</p></div>`;
+        }
+        const schemes = await fetchRecommendations(filters);
+        renderResults(schemes);
+    };
 
     function schemeCard(s) {
         const scoreVal = s.matchScore || s.baseMatchScore || 75;
