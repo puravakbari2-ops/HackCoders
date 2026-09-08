@@ -131,6 +131,97 @@ async function getFeedbackStats() {
     }
 }
 
+// ── Citizen Authentication (Supabase) ─────────────────────────
+const crypto = require('crypto');
+
+function hashPassword(password) {
+    return crypto.createHash('sha256').update(String(password)).digest('hex');
+}
+
+async function registerUser({ name, email, mobile, state, password, role, avatar }) {
+    const client = getAdminClient();
+    if (!client) return { success: false, reason: 'supabase_not_configured' };
+
+    const cleanEmail = (email || '').trim().toLowerCase();
+    if (!cleanEmail || !password) {
+        return { success: false, error: 'Email and password are required.' };
+    }
+
+    try {
+        const { data: existing } = await client
+            .from('users')
+            .select('id, email')
+            .eq('email', cleanEmail)
+            .maybeSingle();
+
+        if (existing) {
+            return { success: false, error: 'An account with this email already exists.' };
+        }
+
+        const passwordHash = hashPassword(password);
+        const defaultAvatar = avatar || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name || cleanEmail)}`;
+
+        const newUser = {
+            name: name || cleanEmail.split('@')[0],
+            email: cleanEmail,
+            mobile: mobile || null,
+            state: state || null,
+            password: passwordHash,
+            role: role || 'Verified Citizen',
+            avatar: defaultAvatar,
+            created_at: new Date().toISOString()
+        };
+
+        const { data: inserted, error: insertErr } = await client
+            .from('users')
+            .insert(newUser)
+            .select('id, name, email, mobile, state, role, avatar, created_at')
+            .single();
+
+        if (insertErr) throw insertErr;
+        return { success: true, user: inserted };
+    } catch (err) {
+        console.error('[Supabase] User registration error:', err.message);
+        return { success: false, error: err.message };
+    }
+}
+
+async function loginUser({ email, password }) {
+    const client = getAdminClient();
+    if (!client) return { success: false, reason: 'supabase_not_configured' };
+
+    const cleanEmail = (email || '').trim().toLowerCase();
+    if (!cleanEmail || !password) {
+        return { success: false, error: 'Email and password are required.' };
+    }
+
+    try {
+        const { data: user, error } = await client
+            .from('users')
+            .select('id, name, email, mobile, state, password, role, avatar, created_at')
+            .eq('email', cleanEmail)
+            .maybeSingle();
+
+        if (error) throw error;
+        if (!user) {
+            return { success: false, error: 'No citizen account found with this email address.' };
+        }
+
+        const passwordHash = hashPassword(password);
+        const isMatch = (user.password === passwordHash || user.password === password);
+
+        if (!isMatch) {
+            return { success: false, error: 'Incorrect password. Please check and try again.' };
+        }
+
+        const { password: _, ...safeUser } = user;
+        return { success: true, user: safeUser };
+    } catch (err) {
+        console.error('[Supabase] User login error:', err.message);
+        return { success: false, error: err.message };
+    }
+}
+
 // ── Health Check ──────────────────────────────────────────────
 async function healthCheck() {
     const { url, serviceKey } = getConfig();
@@ -154,13 +245,19 @@ async function healthCheck() {
     }
 
     try {
-        const { error } = await client.from('feedback').select('id').limit(1);
-        if (error) {
-            const isTableMissing = error.code === 'PGRST204' ||
-                (error.message && (
-                    error.message.includes('schema cache') ||
-                    error.message.includes('relation') ||
-                    error.message.includes('does not exist')
+        const { error: fbErr } = await client.from('feedback').select('id').limit(1);
+        const { error: userErr } = await client.from('users').select('id').limit(1);
+
+        const feedbackTableExists = !fbErr;
+        const usersTableExists = !userErr;
+
+        if (fbErr) {
+            const isTableMissing = fbErr.code === 'PGRST204' ||
+                fbErr.code === 'PGRST205' ||
+                (fbErr.message && (
+                    fbErr.message.includes('schema cache') ||
+                    fbErr.message.includes('relation') ||
+                    fbErr.message.includes('does not exist')
                 ));
 
             if (isTableMissing) {
@@ -168,7 +265,11 @@ async function healthCheck() {
                     connected: false,
                     configured: true,
                     status: 'tables_missing',
-                    reason: 'Connected to Supabase project, but SQL table "feedback" not created yet. Run schema SQL in Supabase SQL editor.'
+                    tables: {
+                        feedback: false,
+                        users: usersTableExists
+                    },
+                    reason: 'Connected to Supabase project, but SQL tables not created yet. Run schema SQL in Supabase SQL editor.'
                 };
             }
 
@@ -176,7 +277,7 @@ async function healthCheck() {
                 connected: false,
                 configured: true,
                 status: 'query_error',
-                reason: error.message
+                reason: fbErr.message
             };
         }
 
@@ -184,7 +285,11 @@ async function healthCheck() {
             connected: true,
             configured: true,
             status: 'ready',
-            url: url
+            url: url,
+            tables: {
+                feedback: feedbackTableExists,
+                users: usersTableExists
+            }
         };
     } catch (err) {
         return {
@@ -203,5 +308,7 @@ module.exports = {
     logRagQuery,
     saveRecommendations,
     getFeedbackStats,
+    registerUser,
+    loginUser,
     healthCheck
 };

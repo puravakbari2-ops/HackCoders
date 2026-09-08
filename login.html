@@ -356,23 +356,24 @@
         // Save session & redirect
         function completeAuthentication(user) {
             const sessionUser = {
+                id: user.id || null,
                 name: user.name,
                 email: user.email,
                 mobile: user.mobile,
                 state: user.state,
-                role: user.role || "Registered Citizen",
-                token: user.token || ("mock_jwt_token_" + Date.now()),
-                avatar: user.avatar || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80"
+                role: user.role || "Verified Citizen",
+                token: user.token || ("token_" + Date.now()),
+                avatar: user.avatar || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(user.name || user.email)}`
             };
             localStorage.setItem('jansahay_user', JSON.stringify(sessionUser));
             showNotification(`Welcome, ${user.name}! Redirecting to your dashboard...`, 'success');
             setTimeout(() => {
                 window.location.href = 'index.html';
-            }, 1200);
+            }, 800);
         }
 
-        // Sign In Submission - strictly Email and Password
-        document.getElementById('signInForm').addEventListener('submit', (e) => {
+        // Sign In Submission - connected to /api/auth/login with local fallback
+        document.getElementById('signInForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const emailInput = document.getElementById('loginEmail');
             const passwordInput = document.getElementById('loginPassword');
@@ -383,30 +384,56 @@
             btn.disabled = true;
             btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Verifying credentials...`;
 
-            setTimeout(() => {
-                const citizens = getRegisteredCitizens();
-                const matchedCitizen = citizens.find(c => c.email.toLowerCase() === email);
+            function resetBtn() {
+                btn.disabled = false;
+                btn.innerHTML = `<span>Sign In to Citizen Portal</span> <i class="fas fa-arrow-right"></i>`;
+            }
 
-                if (!matchedCitizen) {
-                    btn.disabled = false;
-                    btn.innerHTML = `<span>Sign In to Citizen Portal</span> <i class="fas fa-arrow-right"></i>`;
-                    showNotification('No citizen account found with this email. Please register first under New Citizen Register.', 'danger');
+            // 1. Try Backend / Supabase Auth API
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.success && data.user) {
+                        completeAuthentication(data.user);
+                        return;
+                    }
+                } else if (response.status === 401) {
+                    const data = await response.json().catch(() => ({}));
+                    resetBtn();
+                    showNotification(data.error || 'Incorrect email or password. Please try again.', 'danger');
                     return;
                 }
+            } catch (err) {
+                console.warn('[Auth] Server login fetch failed, trying local fallback:', err.message);
+            }
 
-                if (matchedCitizen.password !== password) {
-                    btn.disabled = false;
-                    btn.innerHTML = `<span>Sign In to Citizen Portal</span> <i class="fas fa-arrow-right"></i>`;
-                    showNotification('Incorrect password. Please enter the password you created during registration.', 'danger');
-                    return;
-                }
+            // 2. Local Fallback (ensures offline and pre-table resilience)
+            const citizens = getRegisteredCitizens();
+            const matchedCitizen = citizens.find(c => c.email.toLowerCase() === email);
 
-                completeAuthentication(matchedCitizen);
-            }, 750);
+            if (!matchedCitizen) {
+                resetBtn();
+                showNotification('No citizen account found with this email. Please register first under New Citizen Register.', 'danger');
+                return;
+            }
+
+            if (matchedCitizen.password !== password) {
+                resetBtn();
+                showNotification('Incorrect password. Please enter the password you created during registration.', 'danger');
+                return;
+            }
+
+            completeAuthentication(matchedCitizen);
         });
 
         // Sign Up / New Citizen Register Submission
-        document.getElementById('signUpForm').addEventListener('submit', (e) => {
+        document.getElementById('signUpForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const name = document.getElementById('registerName').value.trim();
             const email = document.getElementById('registerEmail').value.trim().toLowerCase();
@@ -415,10 +442,56 @@
             const password = document.getElementById('registerPassword').value;
             const btn = document.getElementById('submitSignUpBtn');
 
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creating citizen account...`;
+
+            function resetBtn() {
+                btn.disabled = false;
+                btn.innerHTML = `<span>Complete Registration</span> <i class="fas fa-arrow-right"></i>`;
+            }
+
+            // 1. Try Backend / Supabase Auth API
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, mobile, state, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.success && data.user) {
+                        // Also store in local cache
+                        const citizens = getRegisteredCitizens();
+                        citizens.push({ name, email, mobile, state, password, role: 'Verified Citizen' });
+                        saveRegisteredCitizens(citizens);
+                        completeAuthentication(data.user);
+                        return;
+                    }
+                } else {
+                    const data = await response.json().catch(() => ({}));
+                    if (data.error && data.error.includes('already exists')) {
+                        resetBtn();
+                        showNotification('An account with this email already exists. Switching to Sign In...', 'danger');
+                        setTimeout(() => {
+                            setMode('signin');
+                            const loginEmail = document.getElementById('loginEmail');
+                            if (loginEmail) loginEmail.value = email;
+                            document.getElementById('loginPassword')?.focus();
+                        }, 1200);
+                        return;
+                    }
+                }
+            } catch (err) {
+                console.warn('[Auth] Server registration fetch failed, using local fallback:', err.message);
+            }
+
+            // 2. Local Fallback
             const citizens = getRegisteredCitizens();
             const existingCitizen = citizens.find(c => c.email.toLowerCase() === email);
 
             if (existingCitizen) {
+                resetBtn();
                 showNotification('An account with this email already exists. Switching to Sign In...', 'danger');
                 setTimeout(() => {
                     setMode('signin');
@@ -429,27 +502,22 @@
                 return;
             }
 
-            btn.disabled = true;
-            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Creating citizen account...`;
+            const newCitizen = {
+                name: name,
+                email: email,
+                mobile: mobile,
+                state: state,
+                password: password,
+                role: "Verified Citizen",
+                token: "token_" + Date.now(),
+                avatar: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name || email)}`,
+                registeredAt: new Date().toISOString()
+            };
 
-            setTimeout(() => {
-                const newCitizen = {
-                    name: name,
-                    email: email,
-                    mobile: mobile,
-                    state: state,
-                    password: password,
-                    role: "Registered Citizen",
-                    token: "mock_jwt_token_" + Date.now(),
-                    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80",
-                    registeredAt: new Date().toISOString()
-                };
+            citizens.push(newCitizen);
+            saveRegisteredCitizens(citizens);
 
-                citizens.push(newCitizen);
-                saveRegisteredCitizens(citizens);
-
-                completeAuthentication(newCitizen);
-            }, 900);
+            completeAuthentication(newCitizen);
         });
 
 

@@ -180,14 +180,29 @@ CREATE TABLE IF NOT EXISTS scheme_recommendations (
     created_at   TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- 4. Citizen Users Table
+CREATE TABLE IF NOT EXISTS users (
+    id          BIGSERIAL PRIMARY KEY,
+    name        TEXT NOT NULL,
+    email       TEXT UNIQUE NOT NULL,
+    mobile      TEXT,
+    state       TEXT,
+    password    TEXT NOT NULL,
+    role        TEXT DEFAULT 'Verified Citizen',
+    avatar      TEXT,
+    created_at  TIMESTAMPTZ DEFAULT NOW()
+);
+
 -- Enable RLS & policies
 ALTER TABLE feedback               ENABLE ROW LEVEL SECURITY;
 ALTER TABLE rag_queries            ENABLE ROW LEVEL SECURITY;
 ALTER TABLE scheme_recommendations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE users                  ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "service_role_all_feedback" ON feedback FOR ALL USING (true);
 CREATE POLICY "service_role_all_rag" ON rag_queries FOR ALL USING (true);
 CREATE POLICY "service_role_all_recs" ON scheme_recommendations FOR ALL USING (true);
+CREATE POLICY "service_role_all_users" ON users FOR ALL USING (true);
 ```
 
 ---

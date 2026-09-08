@@ -21,6 +21,7 @@ const feedbackRouter = require('./routes/feedback');
 const knowledgeBaseRouter = require('./routes/knowledgeBase');
 const ragRouter = require('./routes/rag');
 const filterRouter = require('./routes/filter');
+const authRouter = require('./routes/auth');
 
 // RAG Services
 const vectorStore = require('./services/rag/vectorStore');
@@ -100,6 +101,7 @@ app.use('/api/eligibility', eligibilityRouter);
 app.use('/api/feedback', feedbackRouter);
 app.use('/api/knowledge-base', knowledgeBaseRouter);
 app.use('/api/filter', filterRouter);
+app.use('/api/auth', authRouter);
 
 // ── Catch-all: serve frontend for any non-API route ─────────
 app.get('*', (req, res) => {

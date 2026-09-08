@@ -75,17 +75,59 @@
         userDropdown && userDropdown.classList.remove('open');
     });
 
+    function checkUserSession() {
+        try {
+            const rawUser = localStorage.getItem('jansahay_user');
+            const signInBtn = document.getElementById('signInBtn');
+            const mobileSignInBtn = document.querySelector('.mobile-sign-in');
+            const userProfileMenu = document.getElementById('userProfileMenu');
+            const mobileUserProfile = document.getElementById('mobileUserProfile');
+            const navUserName = document.getElementById('navUserName');
+            const navUserAvatar = document.getElementById('navUserAvatar');
+            const dropdownFullName = document.getElementById('dropdownFullName');
+            const dropdownEmail = document.getElementById('dropdownEmail');
+            const mobileUserName = document.getElementById('mobileUserName');
+            const mobileUserAvatar = document.getElementById('mobileUserAvatar');
+
+            if (rawUser) {
+                const user = JSON.parse(rawUser);
+                if (signInBtn) signInBtn.style.display = 'none';
+                if (mobileSignInBtn) mobileSignInBtn.style.display = 'none';
+                if (userProfileMenu) userProfileMenu.style.display = 'inline-block';
+                if (mobileUserProfile) mobileUserProfile.style.display = 'block';
+
+                const displayName = user.name || 'Citizen';
+                if (navUserName) navUserName.textContent = displayName;
+                if (dropdownFullName) dropdownFullName.textContent = displayName;
+                if (dropdownEmail) dropdownEmail.textContent = user.email || 'citizen@jansahay.gov.in';
+                if (mobileUserName) mobileUserName.textContent = displayName;
+
+                const avatarUrl = user.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80';
+                if (navUserAvatar) navUserAvatar.src = avatarUrl;
+                if (mobileUserAvatar) mobileUserAvatar.src = avatarUrl;
+            } else {
+                if (signInBtn) signInBtn.style.display = '';
+                if (mobileSignInBtn) mobileSignInBtn.style.display = '';
+                if (userProfileMenu) userProfileMenu.style.display = 'none';
+                if (mobileUserProfile) mobileUserProfile.style.display = 'none';
+            }
+        } catch (e) {
+            console.error('Error reading citizen session:', e);
+        }
+    }
+
     function doLogout() {
         localStorage.removeItem('jansahay_user');
         sessionStorage.clear();
-        document.getElementById('userProfileMenu') && (document.getElementById('userProfileMenu').style.display = 'none');
-        document.getElementById('signInBtn')       && (document.getElementById('signInBtn').style.display = '');
-        document.getElementById('mobileUserProfile') && (document.getElementById('mobileUserProfile').style.display = 'none');
-        document.querySelector('.mobile-sign-in') && (document.querySelector('.mobile-sign-in').style.display = '');
+        checkUserSession();
         showToast('Signed out successfully.', 'info');
     }
     logoutBtn       && logoutBtn.addEventListener('click', doLogout);
     mobileLogoutBtn && mobileLogoutBtn.addEventListener('click', doLogout);
+
+    // Run check on initialization
+    checkUserSession();
+    window.addEventListener('storage', checkUserSession);
 
     // ── Categories/States/Ministries Renderer ────────────────
     let currentTabData  = CATEGORIES;
