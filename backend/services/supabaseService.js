@@ -1,41 +1,65 @@
-﻿/* ============================================================
+/* ============================================================
    JanSahay AI — Supabase Service
-   Centralized Supabase client for all DB operations.
+   Centralized Supabase client for feedback, queries & analytics.
    Uses service-role key for server-side writes (safe — server only).
    ============================================================ */
 
 const { createClient } = require('@supabase/supabase-js');
 
-const SUPABASE_URL          = process.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY     = process.env.SUPABASE_ANON_KEY;
-const SUPABASE_SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY;
+// ── Environment variable resolution (with backwards-compatible aliases) ──
+function getConfig() {
+    const url = process.env.SUPABASE_URL;
+    const anonKey = process.env.SUPABASE_ANON_KEY || 
+                    process.env.SUPABASE_PUBLISHABLE_KEY || 
+                    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 
+                       process.env.SUPABASE_SECRET_KEY || 
+                       process.env.SUPABASE_KEY;
 
-// ── Validate config ──────────────────────────────────────────
-if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
-    console.warn('⚠️  Supabase not configured. SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY missing.');
-    console.warn('   Supabase features (feedback, analytics) will be disabled.');
+    return { url, anonKey, serviceKey };
 }
 
-// ── Clients ──────────────────────────────────────────────────
-const adminClient = (SUPABASE_URL && SUPABASE_SERVICE_KEY)
-    ? createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
-        auth: { persistSession: false, autoRefreshToken: false }
-    })
-    : null;
+let _adminClient = null;
+let _anonClient  = null;
 
-const anonClient = (SUPABASE_URL && SUPABASE_ANON_KEY)
-    ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-        auth: { persistSession: false, autoRefreshToken: false }
-    })
-    : null;
+function getAdminClient() {
+    const { url, serviceKey } = getConfig();
+    if (!url || !serviceKey) return null;
+    if (!_adminClient) {
+        try {
+            _adminClient = createClient(url, serviceKey, {
+                auth: { persistSession: false, autoRefreshToken: false }
+            });
+        } catch (err) {
+            console.error('[Supabase] Failed to create admin client:', err.message);
+            return null;
+        }
+    }
+    return _adminClient;
+}
 
-const isConnected = !!adminClient;
+function getAnonClient() {
+    const { url, anonKey } = getConfig();
+    if (!url || !anonKey) return null;
+    if (!_anonClient) {
+        try {
+            _anonClient = createClient(url, anonKey, {
+                auth: { persistSession: false, autoRefreshToken: false }
+            });
+        } catch (err) {
+            console.error('[Supabase] Failed to create anon client:', err.message);
+            return null;
+        }
+    }
+    return _anonClient;
+}
 
 // ── Helper: safe insert ───────────────────────────────────────
 async function safeInsert(table, data) {
-    if (!adminClient) return { success: false, reason: 'supabase_not_configured' };
+    const client = getAdminClient();
+    if (!client) return { success: false, reason: 'supabase_not_configured' };
     try {
-        const { data: result, error } = await adminClient.from(table).insert(data).select();
+        const { data: result, error } = await client.from(table).insert(data).select();
         if (error) throw error;
         return { success: true, data: result };
     } catch (err) {
@@ -71,14 +95,15 @@ async function logRagQuery({ sessionId, query, profile, schemeCount, responseTim
 }
 
 // ── Scheme Recommendations ────────────────────────────────────
-async function saveRecommendations({ sessionId, profile, schemes }) {
-    const rows = (schemes || []).slice(0, 10).map((s, idx) => ({
+async function saveRecommendations({ sessionId, profile, schemes, recommendations }) {
+    const list = schemes || recommendations || [];
+    const rows = list.slice(0, 10).map((s, idx) => ({
         session_id:  sessionId || null,
-        scheme_id:   s.id      || null,
-        scheme_name: s.name    || s.schemeName || null,
+        scheme_id:   String(s.id || s.scheme_id || ''),
+        scheme_name: s.name || s.title || s.scheme_name || null,
         rank:        idx + 1,
-        score:       s.score   || s.matchScore || null,
-        profile:     profile   ? JSON.stringify(profile) : null,
+        score:       s.score || s.relevance_score || s.matchScore || null,
+        profile:     profile ? JSON.stringify(profile) : null,
         created_at:  new Date().toISOString()
     }));
     if (!rows.length) return { success: true, data: [] };
@@ -87,9 +112,10 @@ async function saveRecommendations({ sessionId, profile, schemes }) {
 
 // ── Feedback Stats ────────────────────────────────────────────
 async function getFeedbackStats() {
-    if (!adminClient) return null;
+    const client = getAdminClient();
+    if (!client) return null;
     try {
-        const { data, error } = await adminClient.from('feedback').select('rating, reason');
+        const { data, error } = await client.from('feedback').select('rating, reason');
         if (error) throw error;
         const total    = data.length;
         const positive = data.filter(f => f.rating === 'positive').length;
@@ -107,20 +133,72 @@ async function getFeedbackStats() {
 
 // ── Health Check ──────────────────────────────────────────────
 async function healthCheck() {
-    if (!adminClient) return { connected: false, reason: 'not_configured' };
+    const { url, serviceKey } = getConfig();
+    if (!url || !serviceKey) {
+        return {
+            connected: false,
+            configured: false,
+            status: 'not_configured',
+            reason: 'SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not set in environment'
+        };
+    }
+
+    const client = getAdminClient();
+    if (!client) {
+        return {
+            connected: false,
+            configured: true,
+            status: 'init_failed',
+            reason: 'Supabase client initialization failed'
+        };
+    }
+
     try {
-        const { error } = await adminClient.from('feedback').select('id').limit(1);
-        if (error) throw error;
-        return { connected: true, url: SUPABASE_URL };
+        const { error } = await client.from('feedback').select('id').limit(1);
+        if (error) {
+            const isTableMissing = error.code === 'PGRST204' ||
+                (error.message && (
+                    error.message.includes('schema cache') ||
+                    error.message.includes('relation') ||
+                    error.message.includes('does not exist')
+                ));
+
+            if (isTableMissing) {
+                return {
+                    connected: false,
+                    configured: true,
+                    status: 'tables_missing',
+                    reason: 'Connected to Supabase project, but SQL table "feedback" not created yet. Run schema SQL in Supabase SQL editor.'
+                };
+            }
+
+            return {
+                connected: false,
+                configured: true,
+                status: 'query_error',
+                reason: error.message
+            };
+        }
+
+        return {
+            connected: true,
+            configured: true,
+            status: 'ready',
+            url: url
+        };
     } catch (err) {
-        return { connected: false, error: err.message };
+        return {
+            connected: false,
+            configured: true,
+            status: 'connection_failed',
+            reason: err.message
+        };
     }
 }
 
 module.exports = {
-    adminClient,
-    anonClient,
-    isConnected,
+    getAdminClient,
+    getAnonClient,
     saveFeedback,
     logRagQuery,
     saveRecommendations,

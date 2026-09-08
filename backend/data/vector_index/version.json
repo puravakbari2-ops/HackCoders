@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "vectorCount": 4950,
+  "lastIndexed": "2026-09-08T02:55:06.244Z",
+  "embeddingModel": "gemini-embedding-001",
+  "embeddingDim": 512
+}

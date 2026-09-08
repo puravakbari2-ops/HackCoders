@@ -18,6 +18,7 @@ const pipeline = require('../services/rag/pipeline');
 const ragService = require('../services/ragService');
 const { filterSchemes } = require('../services/filterService');
 const schemes = require(path.join(__dirname, '..', 'data', 'schemes.json'));
+const supabase = require('../services/supabaseService');
 
 // ── POST /api/rag/query ───────────────────────────────────────
 // Unified endpoint supporting both:
@@ -71,7 +72,14 @@ exports.query = async (req, res) => {
                 filterStats
             });
 
-            // Step 3: Return with filter stats
+            // Step 3: Log recommendations to Supabase (non-blocking)
+            supabase.saveRecommendations({
+                sessionId: sessionId || conversation_id || 'rec_' + Date.now(),
+                recommendations: result.recommendations || [],
+                profile: userProfile
+            }).catch(e => console.warn('[Supabase] Log recommendation error:', e.message));
+
+            // Step 4: Return with filter stats
             return res.json({
                 ...result,
                 filterStats: filterStats || { filtersApplied: false, totalSchemes: schemes.length }
@@ -97,6 +105,16 @@ exports.query = async (req, res) => {
                 sessionId: sessionId || conversation_id || null,
                 source: 'rag_api'
             });
+
+            // Log query to Supabase (non-blocking)
+            supabase.logRagQuery({
+                sessionId: sessionId || conversation_id || result.sessionId,
+                query: userMessage,
+                profile: user_profile || profile || null,
+                schemeCount: result.schemes ? result.schemes.length : 0,
+                responseTime: result.elapsed_ms || 0,
+                source: 'rag_api'
+            }).catch(e => console.warn('[Supabase] Log query error:', e.message));
 
             return res.json(result);
 

@@ -29,7 +29,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Generated RAG/vector data
-backend/data/vector_index/
+backend/data/vector_index/hash_cache.json
 
 # Backups
 backend/backups/

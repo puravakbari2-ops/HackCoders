@@ -60,16 +60,29 @@ app.get('/api/health', async (req, res) => {
     const supabase   = require('./services/supabaseService');
     const sbHealth   = await supabase.healthCheck();
 
+    const hasGeminiKey = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim() !== '');
+    const isIndexed    = Boolean(indexStats.isLoaded && indexStats.vectorCount > 0);
+
+    let ragStatus = 'ready';
+    if (!isIndexed) {
+        ragStatus = vectorStore.indexExists() ? 'not_loaded' : 'index_empty';
+    }
+
     res.json({
         status: 'OK',
         message: 'JanSahay AI Backend is running',
         version: '2.0.0',
+        gemini: {
+            configured: hasGeminiKey,
+            model: process.env.LLM_MODEL || 'gemini-3.6-flash'
+        },
         rag: {
-            indexed:        indexStats.isLoaded,
+            status:         ragStatus,
+            indexed:        isIndexed,
             vectorCount:    indexStats.vectorCount || 0,
             schemeCount:    getSchemeCount(),
-            embeddingModel: process.env.EMBEDDING_MODEL || 'text-embedding-004',
-            llmModel:       process.env.LLM_MODEL || 'gemini-2.0-flash'
+            embeddingModel: process.env.EMBEDDING_MODEL || 'gemini-embedding-001',
+            llmModel:       process.env.LLM_MODEL || 'gemini-3.6-flash'
         },
         supabase: sbHealth,
         timestamp: new Date().toISOString()
@@ -97,22 +110,32 @@ app.get('*', (req, res) => {
 app.use(errorHandler);
 
 // ── Initialize RAG Pipeline ─────────────────────────────────
-function initializeRAG() {
+async function initializeRAG() {
     console.log('\n🧠 Initializing RAG Pipeline...');
 
     // Try to load existing vector index
+    let isReady = false;
     if (vectorStore.indexExists()) {
         const loaded = vectorStore.loadIndex();
         if (loaded) {
             const stats = vectorStore.getStats();
             console.log(`✅ Vector index loaded: ${stats.vectorCount} vectors`);
             console.log(`📊 Knowledge base: ${getSchemeCount()} schemes`);
-        } else {
-            console.warn('⚠️  Vector index exists but failed to load. Run: npm run ingest');
+            isReady = true;
         }
-    } else {
-        console.warn('⚠️  No vector index found. Run: npm run ingest');
-        console.warn('   This will create the knowledge base embeddings required for RAG.');
+    }
+
+    if (!isReady) {
+        console.warn('⚠️  No vector index found on disk. Auto-generating index for 1074 schemes...');
+        try {
+            const { ingest } = require('./services/rag/ingestion');
+            await ingest({ force: true });
+            vectorStore.loadIndex();
+            const stats = vectorStore.getStats();
+            console.log(`✅ Auto-ingestion complete: ${stats.vectorCount} vectors loaded.`);
+        } catch (err) {
+            console.error('❌ Auto-ingestion failed:', err.message);
+        }
     }
 
     // Check API key
