@@ -52099,7 +52099,7 @@ chatClose.addEventListener('click', () => {
 });
 
 // ── JanSahay AI Chat API Integration with Session Continuity ──
-const CHAT_API_BASE = (window.location.protocol === 'file:' || window.location.port !== '5000') ? 'http://localhost:5000' : '';
+const CHAT_API_BASE = (window.location.protocol === 'file:' || (window.location.port !== '5000' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'))) ? 'http://localhost:5000' : '';
 let chatSessionId = sessionStorage.getItem('jansahay_chat_sid');
 if (!chatSessionId) {
     chatSessionId = 'chat_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);

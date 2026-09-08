@@ -293,7 +293,8 @@
             return;
         }
 
-        const apiBase = (window.AppData && window.AppData.apiBase) ? window.AppData.apiBase : 'http://localhost:5000';
+        const defaultBase = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:') ? 'http://localhost:5000' : '';
+        const apiBase = (window.AppData && window.AppData.apiBase) ? window.AppData.apiBase : defaultBase;
         const normLang = (['en', 'hi', 'gu'].includes(lang)) ? lang : 'en';
         const audioUrl = `${apiBase}/api/tts?lang=${normLang}&text=${encodeURIComponent(text.trim())}`;
         try {
