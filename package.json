@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "jansahay-ai",
   "version": "2.0.0",
   "description": "JanSahay AI - Government Scheme Recommendation Platform with RAG + Gemini",
   "main": "backend/server.js",
   "scripts": {
-    "build": "npm --prefix backend install",
-    "start": "cd backend && node server.js",
+    "build": "npm --prefix backend install --production=false",
+    "start": "npm --prefix backend start",
     "test": "node test/filter_17_scenarios.test.js"
   },
   "engines": {

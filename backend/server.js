@@ -131,10 +131,10 @@ function initializeRAG() {
 }
 
 // ── Start Server ─────────────────────────────────────────────
-app.listen(PORT, () => {
-    console.log(`\n🚀 JanSahay AI Backend v2.0 running on http://localhost:${PORT}`);
-    console.log(`📋 API Health: http://localhost:${PORT}/api/health`);
-    console.log(`🌐 Frontend:   http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`\n🚀 JanSahay AI Backend v2.0 running on http://0.0.0.0:${PORT}`);
+    console.log(`📋 API Health: http://0.0.0.0:${PORT}/api/health`);
+    console.log(`🌐 Frontend:   http://0.0.0.0:${PORT}`);
 
     initializeRAG();
 });
