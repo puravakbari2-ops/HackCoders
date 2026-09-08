@@ -2,9 +2,8 @@
   - type: web
     name: jansahay-ai-backend
     runtime: node
-    rootDir: backend
-    buildCommand: npm install --production=false
-    startCommand: node server.js
+    buildCommand: npm install
+    startCommand: node backend/server.js
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
