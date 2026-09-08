@@ -38,9 +38,13 @@ exports.query = async (req, res) => {
 
     const userMessage = (query || message || '').trim();
 
+    const userProfile = profile || user_profile || {};
+    const hasProfile = (profile && typeof profile === 'object');
+    const hasFilters = (filters && typeof filters === 'object');
+
     // ── Branch A: Profile-based Recommendation with Scheme Filters ──
-    // Active when a profile object is supplied and request is for recommendations/filters
-    if (profile && typeof profile === 'object' && (!userMessage || filters || options)) {
+    // Active when a profile object or filter set is supplied and request is for recommendations/filters
+    if ((hasProfile || hasFilters) && (!userMessage || filters || options)) {
         try {
             // Step 1: Apply deterministic filters BEFORE RAG
             let preFilteredIds = null;
@@ -58,7 +62,7 @@ exports.query = async (req, res) => {
             }
 
             // Step 2: Run RAG pipeline (restricted to filtered IDs)
-            const result = await ragService.query(profile, {
+            const result = await ragService.query(userProfile, {
                 topK: options?.topK || 10,
                 includeExplanations: options?.includeExplanations !== false,
                 userQuery: userMessage || '',

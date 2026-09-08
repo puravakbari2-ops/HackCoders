@@ -10,7 +10,7 @@ class LLMService {
         this.genAI      = null;
         this.model       = null;
         this.isReady     = false;
-        this.modelName   = 'gemini-3.5-flash-lite';
+        this.modelName   = process.env.LLM_MODEL || 'gemini-3.5-flash-lite';
     }
 
     /* ── Initialize with API Key ──────────────────────────── */
@@ -20,6 +20,8 @@ class LLMService {
             this.isReady = false;
             return false;
         }
+
+        this.modelName = process.env.LLM_MODEL || this.modelName || 'gemini-3.5-flash-lite';
 
         try {
             this.genAI  = new GoogleGenerativeAI(apiKey);

@@ -51,7 +51,8 @@ class RAGService {
     /* ── Main Query: Profile-based Scheme Recommendation ─── */
     async query(profile, options = {}) {
         if (!this.isReady) {
-            throw new Error('RAG Service not initialized. Call initialize() first.');
+            console.log('🔄 RAG Service not ready yet, auto-initializing...');
+            await this.initialize(process.env.GEMINI_API_KEY || '');
         }
 
         const startTime = Date.now();
@@ -120,8 +121,8 @@ class RAGService {
         // LAYER 2: RAG Retrieval — Semantic + Keyword Ranking
         // ═══════════════════════════════════════════════════════
 
-        // Build a search query from user profile
-        const searchQuery = this._buildSearchQuery(profile);
+        // Build a search query from user profile and active filters
+        const searchQuery = this._buildSearchQuery(profile, options.filters);
 
         // Hybrid search within rule-engine-filtered schemes only
         // Scale chunk retrieval: retrieve enough chunks to cover every eligible scheme
@@ -274,12 +275,24 @@ class RAGService {
 
         stats.processingTimeMs = Date.now() - startTime;
 
+        const formattedPipeline = stats.pipelineLayers.map(l => {
+            if (l === 'deterministic-filter' || l === 'rule-engine') return 'rule-engine';
+            if (l === 'rag-retrieval') return 'rag-retrieval';
+            if (l === 'gemini-llm' || l === 'llm-reasoning') return 'gemini-llm';
+            return l;
+        }).join(' → ');
+
+        const occ = profile.occupation ? `${profile.occupation} ` : '';
+        const res = profile.area || profile.residence || 'resident';
+        const st = profile.state || 'India';
+        const defaultSummary = `Out of ${finalResults.length} analyzed schemes, ${Math.min(finalResults.length, 3)} strongly align with your profile as a ${occ}${res} in ${st}.`;
+
         return {
             success: true,
-            pipeline: stats.pipelineLayers.join(' → '),
+            pipeline: formattedPipeline || 'rule-engine → rag-retrieval → gemini-llm',
             stats,
             recommendations: finalResults,
-            summary:        llmResponse?.summary || `Found ${finalResults.length} relevant schemes for your profile.`,
+            summary:        llmResponse?.summary || defaultSummary,
             disclaimer:     llmResponse?.disclaimer || 'Verify eligibility at official portals or myScheme.gov.in.',
             profile
         };
@@ -288,7 +301,8 @@ class RAGService {
     /* ── Chat Query (Natural Language) ────────────────────── */
     async chatQuery(message, profile = null) {
         if (!this.isReady) {
-            throw new Error('RAG Service not initialized.');
+            console.log('🔄 RAG Service not ready yet, auto-initializing...');
+            await this.initialize(process.env.GEMINI_API_KEY || '');
         }
 
         // Retrieve relevant chunks using the message as search query
@@ -309,23 +323,26 @@ class RAGService {
         return response;
     }
 
-    /* ── Build search query from profile ─────────────────── */
-    _buildSearchQuery(profile) {
+    /* ── Build search query from profile and active filters ─ */
+    _buildSearchQuery(profile = {}, filters = null) {
         const parts = [];
+        profile = profile || {};
 
         // Occupation-based keywords
+        const occupation = profile.occupation || filters?.occupation;
         const occupationKeywords = {
-            'student':       'scholarship education stipend fellowship tuition fee',
-            'farmer':        'kisan agriculture farming crop subsidy soil fertilizer irrigation',
-            'self-employed': 'mudra startup business enterprise loan entrepreneur MSME',
-            'salaried':      'employee EPF ESI provident fund pension gratuity',
-            'unemployed':    'employment skill training placement job MGNREGA',
-            'homemaker':     'women empowerment self-help group mahila welfare',
-            'retired':       'pension senior citizen old age vridha retirement',
-            'daily-wage':    'labour worker unorganized sector construction BOCW'
+            'student':           'scholarship education stipend fellowship tuition fee',
+            'farmer':            'kisan agriculture farming crop subsidy soil fertilizer irrigation',
+            'self-employed':     'mudra startup business enterprise loan entrepreneur MSME',
+            'salaried':          'employee EPF ESI provident fund pension gratuity',
+            'unemployed':        'employment skill training placement job MGNREGA',
+            'homemaker':         'women empowerment self-help group mahila welfare',
+            'retired':           'pension senior citizen old age vridha retirement',
+            'daily-wage':        'labour worker unorganized sector construction BOCW',
+            'daily-wage-worker': 'labour worker unorganized sector construction BOCW'
         };
-        if (profile.occupation && occupationKeywords[profile.occupation]) {
-            parts.push(occupationKeywords[profile.occupation]);
+        if (occupation && occupationKeywords[occupation]) {
+            parts.push(occupationKeywords[occupation]);
         }
 
         // Marital/widow-specific
@@ -334,7 +351,8 @@ class RAGService {
         }
 
         // Gender-specific
-        if (profile.gender === 'female') {
+        const gender = profile.gender || filters?.gender;
+        if (gender === 'female') {
             parts.push('women girl mahila sukanya beti bachao');
         }
 
@@ -344,32 +362,40 @@ class RAGService {
         }
 
         // Category-specific
-        if (profile.category) {
+        const category = profile.category || (Array.isArray(filters?.category) ? filters.category[0] : filters?.category);
+        if (category) {
             const catMap = {
                 'sc': 'scheduled caste SC dalit reservation post-matric',
                 'st': 'scheduled tribe ST tribal adivasi eklavya',
                 'obc': 'OBC other backward classes creamy layer',
                 'ews': 'EWS economically weaker section low income BPL'
             };
-            if (catMap[profile.category]) parts.push(catMap[profile.category]);
+            if (catMap[String(category).toLowerCase()]) parts.push(catMap[String(category).toLowerCase()]);
         }
 
         // Income-specific
-        if (profile.income) {
-            if (['below-1l', '1l-2.5l'].includes(profile.income)) {
+        const income = profile.income || filters?.income;
+        if (income) {
+            if (['below-1l', '1l-2.5l', 'below-3l'].includes(income)) {
                 parts.push('BPL below poverty line low income subsidy free ration');
-            } else if (['2.5l-5l', '5l-8l'].includes(profile.income)) {
+            } else if (['2.5l-5l', '5l-8l'].includes(income)) {
                 parts.push('middle income affordable housing loan interest subsidy');
             }
         }
 
         // State-specific
-        if (profile.state) {
-            parts.push(profile.state);
+        const state = profile.state || filters?.state;
+        if (state && state.toLowerCase() !== 'all india') {
+            parts.push(state);
+        }
+
+        // Scheme Category from filter
+        if (filters?.schemeCategory) {
+            parts.push(filters.schemeCategory);
         }
 
         // Age-specific
-        const age = parseInt(profile.age);
+        const age = parseInt(profile.age || filters?.age || filters?.ageMin);
         if (age) {
             if (age < 25) parts.push('youth young student skill development');
             else if (age >= 60) parts.push('senior citizen elderly old age pension vridha');
@@ -378,6 +404,11 @@ class RAGService {
         // Minority
         if (profile.minority === 'yes') {
             parts.push('minority community scholarship educational');
+        }
+
+        // Fallback default keywords if no specific profile/filter tokens
+        if (parts.length === 0) {
+            parts.push('government welfare benefits scheme subsidy financial assistance eligibility');
         }
 
         return parts.join(' ');

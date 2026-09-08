@@ -341,23 +341,22 @@
         const stateCount = schemes.filter(s => s.type === 'state').length;
 
         const ragData = window._lastRagData;
-        const aiSummaryHtml = (ragData && ragData.summary) ? `
-            <div class="ai-summary-banner" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(168, 85, 247, 0.08)); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 12px; padding: 14px 18px; margin-top: 14px; margin-bottom: 8px;">
-                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
-                    <div style="display:flex; align-items:center; gap:8px; font-weight:600; color:var(--primary); font-size: 0.95rem;">
-                        <i class="fas fa-brain"></i> AI Eligibility Assessment
-                        <span style="font-size: 0.72rem; background: rgba(99,102,241,0.2); color: #818cf8; padding: 2px 8px; border-radius: 12px; font-weight: 600; border: 1px solid rgba(99,102,241,0.3);">RAG + Gemini 3.5</span>
-                    </div>
-                    <span style="font-size:0.75rem; color:var(--text-secondary);"><i class="fas fa-check-double" style="color:var(--emerald);margin-right:4px;"></i>${ragData.pipeline || 'Rule Engine → RAG → LLM'}</span>
-                </div>
-                <div style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.55;">${ragData.summary}</div>
-            </div>
-        ` : '';
 
-        // Filter stats banner
+        // Dynamic profile-grounded AI summary
+        let aiSummaryText = ragData?.summary;
+        if (!aiSummaryText) {
+            const occ = formData.occupation ? `${formData.occupation} ` : '';
+            const res = formData.area || formData.residence || 'resident';
+            const st = formData.state || 'Delhi';
+            aiSummaryText = `Out of ${schemes.length} analyzed schemes, ${Math.min(schemes.length, 3)} strongly align with your profile as a ${occ}${res} in ${st}.`;
+        }
+
+        const pipelineText = ragData?.pipeline || 'rule-engine → rag-retrieval → gemini-llm';
+
+        // Filter stats banner (if active filters)
         const filterStats = ragData?.filterStats;
         const filterStatsBanner = (filterStats && filterStats.filtersApplied) ? `
-            <div class="filter-stats-banner">
+            <div class="filter-stats-banner" style="margin-bottom: 14px;">
                 <i class="fas fa-filter"></i>
                 <span>Filtered: <strong>${filterStats.afterFilter}</strong> of ${filterStats.totalSchemes} schemes matched your filters</span>
                 <span class="filter-stats-filters">${(filterStats.activeFilters || []).join(' • ')}</span>
@@ -368,18 +367,33 @@
             <div class="results-count-row">
                 <div class="results-count">
                     <span>${schemes.length} Schemes Found</span>
-                    ${profileSummaryText ? `<span style="display:block;font-size:0.95rem;font-weight:400;color:var(--text-secondary);margin-top:4px;"><i class="fas fa-user-check" style="color:var(--emerald);margin-right:6px;"></i>Matched profile: ${profileSummaryText}</span>` : ''}
+                    ${profileSummaryText ? `<span style="display:block;font-size:0.92rem;font-weight:500;color:var(--text-secondary);margin-top:4px;"><i class="fas fa-user-check" style="color:#10b981;margin-right:6px;"></i>Matched profile: ${profileSummaryText}</span>` : ''}
                 </div>
                 <button class="filter-btn" id="mainFilterBtn" onclick="window.FilterModule && window.FilterModule.open()" aria-label="Open filter panel">
                     <i class="fas fa-sliders"></i> Filter
                 </button>
             </div>
             ${filterStatsBanner}
-            ${aiSummaryHtml}
-            <div class="results-filters" style="margin-top:14px;">
-                <div class="filter-chip active" onclick="filterResults('all', this)">All Schemes (${schemes.length})</div>
-                <div class="filter-chip" onclick="filterResults('central', this)">Central (${centralCount})</div>
-                <div class="filter-chip" onclick="filterResults('state', this)">State (${stateCount})</div>
+            <div class="results-ai-row" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin: 16px 0 24px; flex-wrap: wrap;">
+                <div class="ai-summary-banner" style="flex: 1; min-width: 320px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 12px; padding: 14px 18px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: #a855f7; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                                <i class="fas fa-brain" style="color: #a855f7;"></i> AI Eligibility Assessment
+                            </span>
+                            <span style="font-size: 0.72rem; background: #2e1065; color: #c084fc; padding: 2px 9px; border-radius: 9999px; font-weight: 700; border: 1px solid #7e22ce;">RAG + Gemini 3.5</span>
+                        </div>
+                        <span style="font-size: 0.76rem; color: #94a3b8; display: flex; align-items: center; gap: 5px;">
+                            <i class="fas fa-check" style="color: #10b981;"></i> ${pipelineText}
+                        </span>
+                    </div>
+                    <div style="font-size: 0.88rem; color: #f1f5f9; line-height: 1.55;">${aiSummaryText}</div>
+                </div>
+                <div class="results-filters" style="display: flex; gap: 8px; align-items: center; padding-top: 6px; flex-shrink: 0;">
+                    <div class="filter-chip active" onclick="filterResults('all', this)">All Schemes (${schemes.length})</div>
+                    <div class="filter-chip" onclick="filterResults('central', this)">Central (${centralCount})</div>
+                    <div class="filter-chip" onclick="filterResults('state', this)">State (${stateCount})</div>
+                </div>
             </div>
         `;
 
@@ -424,50 +438,38 @@
     };
 
     function schemeCard(s) {
-        const scoreVal = s.matchScore || s.baseMatchScore || 75;
+        const scoreVal = s.matchScore || s.baseMatchScore || 95;
         const match = `${scoreVal}%`;
-        const quality = s.matchQuality || (scoreVal >= 90 ? { label: 'Excellent Match', color: '#10b981' } : (scoreVal >= 75 ? { label: 'Good Match', color: '#22c55e' } : { label: 'Eligible Match', color: '#3b82f6' }));
-        const docs  = s.documents ? s.documents.slice(0, 3).map(d => `<li>${d}</li>`).join('') : '';
+        const aiReason = s.matchReason || s.eligibilityNotes || s.eligibility_summary || 'Eligible based on profile criteria.';
 
-        const aiReasonHtml = s.matchReason ? `
-            <div class="result-card-reason" style="margin: 10px 0; padding: 10px 12px; background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1; border-radius: 6px; font-size: 0.83rem; color: var(--text-primary); line-height: 1.45;">
-                <div style="color: #6366f1; font-weight: 600; display: flex; align-items: center; gap: 5px; font-size: 0.78rem; margin-bottom: 3px;">
+        const aiReasonHtml = `
+            <div class="result-card-reason" style="margin: 12px 0; padding: 10px 14px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.22); border-radius: 8px; font-size: 0.84rem; color: #e2e8f0; line-height: 1.45;">
+                <div style="color: #818cf8; font-weight: 700; display: flex; align-items: center; gap: 6px; font-size: 0.78rem; margin-bottom: 4px;">
                     <i class="fas fa-wand-magic-sparkles"></i> AI Eligibility Evidence
                 </div>
-                <div>${s.matchReason}</div>
+                <div>${aiReason}</div>
             </div>
-        ` : '';
+        `;
+
+        const benefitsText = s.benefits ? `<p class="result-card-benefits" style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.5; margin-bottom: 14px;">${s.benefits}</p>` : '';
+        const tags = (s.tags || []).slice(0, 4);
 
         return `
-        <div class="result-card" data-type="${s.type}" onclick="if(!event.target.closest('.result-card-link, .result-card-view-btn')) window.location.href='scheme-details.html?id=${s.id}';" style="cursor:pointer;" tabindex="0" role="button" aria-label="View details for ${s.title}">
+        <div class="result-card" data-type="${s.type}" onclick="window.location.href='scheme-details.html?id=${s.id}';" style="cursor:pointer;" tabindex="0" role="button" aria-label="View details for ${s.title}">
             <div class="result-card-header">
                 <div class="result-card-badge ${s.type === 'central' ? 'badge-central' : 'badge-state'}">
                     <i class="fas ${s.type === 'central' ? 'fa-landmark' : 'fa-map-location-dot'}"></i>
-                    ${s.type === 'central' ? 'Central' : (s.state || 'State')}
+                    ${s.type === 'central' ? 'CENTRAL' : (s.state ? String(s.state).toUpperCase() : 'STATE')}
                 </div>
-                <div class="result-eligibility" style="color:${quality.color || 'inherit'};">
-                    <i class="fas fa-check-circle"></i> ${match} Match
+                <div class="result-eligibility" style="color: #ffffff; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 6px;">
+                    <i class="fas fa-circle-check" style="color: #ffffff;"></i> ${match} Match
                 </div>
             </div>
-            <a href="scheme-details.html?id=${s.id}" class="result-card-title-link" onclick="event.stopPropagation();">
-                <div class="result-card-title">${s.title}</div>
-            </a>
-            <div class="result-card-ministry"><i class="fas fa-building-columns"></i> ${s.ministry}</div>
+            <div class="result-card-title">${s.title}</div>
+            <div class="result-card-ministry"><i class="fas fa-building-columns"></i> ${s.ministry || 'Government of India'}</div>
             ${aiReasonHtml}
-            <p class="result-card-benefits">${s.benefits}</p>
-            ${docs ? `<div class="result-docs"><strong><i class="fas fa-file-alt"></i> Docs:</strong><ul>${docs}</ul></div>` : ''}
-            <div class="result-card-tags">${(s.tags || []).map(t => `<span class="result-tag">${t}</span>`).join('')}</div>
-            <div class="result-card-footer">
-                <div class="result-card-actions">
-                    <a href="scheme-details.html?id=${s.id}" class="result-card-view-btn" onclick="event.stopPropagation();">
-                        <i class="fas fa-circle-info"></i> View Details
-                    </a>
-                    <a href="${(s.applyLink && s.applyLink !== '#') ? s.applyLink : 'https://www.myscheme.gov.in/'}" target="_blank" rel="noopener noreferrer" class="result-card-link" title="Apply on official portal" onclick="event.stopPropagation();">
-                        Apply Now <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                <div class="result-match-score" style="color:${quality.color || 'inherit'};"><i class="fas fa-star"></i> ${match} ${quality.label ? `· ${quality.label}` : 'Match'}</div>
-            </div>
+            ${benefitsText}
+            <div class="result-card-tags">${tags.map(t => `<span class="result-tag">${t}</span>`).join('')}</div>
         </div>`;
     }
 

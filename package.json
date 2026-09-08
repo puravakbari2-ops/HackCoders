@@ -1,0 +1,21 @@
+{
+  "name": "jansahay-ai",
+  "version": "2.0.0",
+  "description": "JanSahay AI - Government Scheme Recommendation Platform with RAG + Gemini",
+  "main": "backend/server.js",
+  "scripts": {
+    "build": "npm --prefix backend install",
+    "start": "node backend/server.js",
+    "test": "node test/filter_17_scenarios.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "jansahay",
+    "government-schemes",
+    "rag",
+    "gemini"
+  ],
+  "license": "MIT"
+}

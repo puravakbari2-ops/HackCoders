@@ -26,6 +26,11 @@ const corsOptions = {
             return callback(null, true);
         }
 
+        // Allow any onrender.com domain
+        if (/^https:\/\/[\w-]+\.onrender\.com$/.test(origin)) {
+            return callback(null, true);
+        }
+
         if (allowedOrigins.includes(origin)) {
             return callback(null, true);
         }

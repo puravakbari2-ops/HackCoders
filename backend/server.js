@@ -120,6 +120,12 @@ function initializeRAG() {
         console.log('✅ Gemini API key configured');
     }
 
+    // Initialize RAG Scheme Recommendation + Gemini reasoning pipeline
+    const ragService = require('./services/ragService');
+    ragService.initialize(process.env.GEMINI_API_KEY || '').catch(err => {
+        console.warn('⚠️  RAG Scheme Recommendation pipeline init warning:', err.message);
+    });
+
     console.log(`📝 RAG Debug mode: ${process.env.RAG_DEBUG === 'true' ? 'ON' : 'OFF'}`);
     console.log('');
 }
