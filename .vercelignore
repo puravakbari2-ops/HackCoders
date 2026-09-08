@@ -1,0 +1,12 @@
+# Backend files & secrets
+backend/
+
+# Local/internal submodules & utilities
+RagModel/
+test/
+scripts/
+
+# Miscellaneous pitch/documentation files
+*.txt
+*.pptx
+~$*.pptx
