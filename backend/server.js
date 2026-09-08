@@ -55,20 +55,23 @@ if (fs.existsSync(frontendPath)) {
 }
 
 // ── Health Check ────────────────────────────────────────────
-app.get('/api/health', (req, res) => {
+app.get('/api/health', async (req, res) => {
     const indexStats = vectorStore.getStats();
+    const supabase   = require('./services/supabaseService');
+    const sbHealth   = await supabase.healthCheck();
 
     res.json({
         status: 'OK',
         message: 'JanSahay AI Backend is running',
         version: '2.0.0',
         rag: {
-            indexed: indexStats.isLoaded,
-            vectorCount: indexStats.vectorCount || 0,
-            schemeCount: getSchemeCount(),
+            indexed:        indexStats.isLoaded,
+            vectorCount:    indexStats.vectorCount || 0,
+            schemeCount:    getSchemeCount(),
             embeddingModel: process.env.EMBEDDING_MODEL || 'text-embedding-004',
-            llmModel: process.env.LLM_MODEL || 'gemini-2.0-flash'
+            llmModel:       process.env.LLM_MODEL || 'gemini-2.0-flash'
         },
+        supabase: sbHealth,
         timestamp: new Date().toISOString()
     });
 });

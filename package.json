@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "jansahay-ai",
   "version": "2.0.0",
   "description": "JanSahay AI - Government Scheme Recommendation Platform with RAG + Gemini",
@@ -14,11 +14,17 @@
   "dependencies": {
     "@google-cloud/text-to-speech": "^5.7.0",
     "@google/generative-ai": "^0.21.0",
+    "@supabase/supabase-js": "^2.116.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "natural": "^8.0.1"
   },
-  "keywords": ["jansahay", "government-schemes", "rag", "gemini"],
+  "keywords": [
+    "jansahay",
+    "government-schemes",
+    "rag",
+    "gemini"
+  ],
   "license": "MIT"
 }
