@@ -57,6 +57,8 @@ class RAGService {
         const startTime = Date.now();
         const topK              = options.topK || 10;
         const includeExplanations = options.includeExplanations !== false;
+        // Pre-filtered IDs from the filter controller (deterministic pre-filter before RAG)
+        const preFilteredIds    = options.preFilteredIds || null;
 
         const stats = {
             totalSchemes:    schemes.length,
@@ -68,11 +70,37 @@ class RAGService {
 
         // ═══════════════════════════════════════════════════════
         // LAYER 1: Rule Engine — Hard Eligibility Gates
+        // (Skipped / restricted if preFilteredIds were supplied by the filter controller)
         // ═══════════════════════════════════════════════════════
         let filteredSchemes = schemes;
         let ruleEngineResults = null;
 
-        if (RuleEngine && typeof RuleEngine.matchSchemes === 'function') {
+        if (preFilteredIds) {
+            // Pre-filter already applied by filterService — restrict to those IDs only
+            filteredSchemes = schemes.filter(s => preFilteredIds.includes(String(s.id)));
+            stats.afterRuleEngine = filteredSchemes.length;
+            stats.pipelineLayers.push('deterministic-filter');
+
+            // If pre-filtering produced 0 matches, immediately return clean empty state
+            if (filteredSchemes.length === 0) {
+                stats.processingTimeMs = Date.now() - startTime;
+                return {
+                    success: true,
+                    pipeline: 'deterministic-filter (0 matches)',
+                    recommendations: [],
+                    totalMatches: 0,
+                    stats: {
+                        totalSchemes: schemes.length,
+                        afterPreFilter: 0,
+                        afterRuleEngine: 0,
+                        afterRagRanking: 0,
+                        pipelineLayers: stats.pipelineLayers,
+                        processingTimeMs: stats.processingTimeMs
+                    },
+                    summary: 'No government schemes match all your selected filters. Try removing one or more filters.'
+                };
+            }
+        } else if (RuleEngine && typeof RuleEngine.matchSchemes === 'function') {
             ruleEngineResults = RuleEngine.matchSchemes(profile, schemes, {
                 minScore: 65,
                 maxResults: null
@@ -85,7 +113,7 @@ class RAGService {
             stats.pipelineLayers.push('rule-engine-skipped');
         }
 
-        // Get IDs of schemes that passed rule engine
+        // Get IDs of schemes that passed pre-filtering / rule engine
         const eligibleIds = filteredSchemes.map(s => String(s.id));
 
         // ═══════════════════════════════════════════════════════
@@ -96,9 +124,12 @@ class RAGService {
         const searchQuery = this._buildSearchQuery(profile);
 
         // Hybrid search within rule-engine-filtered schemes only
-        const retrievedChunks = embeddingService.hybridSearch(searchQuery, topK * 5, {
+        // Scale chunk retrieval: retrieve enough chunks to cover every eligible scheme
+        // (at least 5 per scheme up to a sensible cap of 1500), not just topK * 5.
+        const chunkRetrievalCount = Math.min(Math.max(eligibleIds.length * 5, topK * 5), 1500);
+        const retrievedChunks = embeddingService.hybridSearch(searchQuery, chunkRetrievalCount, {
             schemeIds: eligibleIds,
-            state:     profile.state
+            state:     preFilteredIds ? undefined : profile.state
         });
 
         // Deduplicate by schemeId, keeping highest-scoring chunk per scheme
@@ -110,11 +141,11 @@ class RAGService {
             }
         }
 
-        // Merge RAG scores with rule-engine scores
+        // Merge RAG scores with rule-engine scores for all eligible schemes
         const rankedSchemes = [];
-        for (const [schemeId, ragResult] of schemeScores) {
-            const scheme = this.schemesMap[schemeId];
-            if (!scheme) continue;
+        for (const scheme of filteredSchemes) {
+            const schemeId = String(scheme.id);
+            const ragResult = schemeScores.get(schemeId);
 
             // Get rule engine score if available
             const reMatch = ruleEngineResults
@@ -122,10 +153,16 @@ class RAGService {
                 : null;
             const reScore = reMatch ? (reMatch.matchScore || 70) : 70;
 
-            // Combine: 60% rule-engine score + 40% RAG retrieval score
-            const ragNormalized = Math.min(ragResult.combinedScore * 10, 40);
-            const combinedScore = Math.round(reScore * 0.6 + ragNormalized + 36); // shift up
-            const clampedScore  = Math.min(Math.max(combinedScore, 60), 99);
+            let combinedScore = 70;
+            let ragScore = 0;
+            if (ragResult) {
+                const ragNormalized = Math.min(ragResult.combinedScore * 10, 40);
+                combinedScore = Math.round(reScore * 0.6 + ragNormalized + 36);
+                ragScore = ragResult.combinedScore;
+            } else {
+                combinedScore = Math.round(reScore * 0.8 + 15);
+            }
+            const clampedScore = Math.min(Math.max(combinedScore, 60), 99);
 
             rankedSchemes.push({
                 ...scheme,
@@ -134,50 +171,68 @@ class RAGService {
                             : clampedScore >= 80 ? 'Great Match'
                             : clampedScore >= 70 ? 'Good Match'
                             : 'Eligible Match',
-                ragScore:     ragResult.combinedScore,
+                ragScore,
                 ruleScore:    reScore
             });
         }
 
         // Sort by combined score descending
         rankedSchemes.sort((a, b) => b.matchScore - a.matchScore);
-        const topResults = rankedSchemes.slice(0, topK);
 
-        stats.afterRagRanking = topResults.length;
+        // ═══════════════════════════════════════════════════════
+        // When filters are active: return ALL ranked schemes.
+        // Without filters: return topK for speed.
+        // ═══════════════════════════════════════════════════════
+        const returnAll = preFilteredIds !== null;  // Always return all when filters applied
+        const displayResults = returnAll ? rankedSchemes : rankedSchemes.slice(0, topK);
+
+        stats.afterRagRanking = displayResults.length;
         stats.pipelineLayers.push('rag-retrieval');
 
         // ═══════════════════════════════════════════════════════
         // LAYER 3: LLM Reasoning — Evidence-Based Explanations
+        // Only applied to the top LLM_EXPLAIN_LIMIT schemes.
+        // The rest receive rich template-based reasons from data.
         // ═══════════════════════════════════════════════════════
+        const LLM_EXPLAIN_LIMIT = 12;
         let llmResponse = null;
 
-        if (includeExplanations && topResults.length > 0) {
-            // Get relevant chunks for top results only
-            const topIds = topResults.map(s => String(s.id));
-            const contextChunks = retrievedChunks.filter(c => topIds.includes(c.schemeId));
+        if (includeExplanations && displayResults.length > 0) {
+            // LLM only processes the top-scoring schemes
+            const llmCandidates = displayResults.slice(0, LLM_EXPLAIN_LIMIT);
+            const llmIds = llmCandidates.map(s => String(s.id));
+            const contextChunks = retrievedChunks.filter(c => llmIds.includes(c.schemeId));
 
             llmResponse = await llmService.generateRecommendations(
                 profile,
                 contextChunks,
-                this.schemesMap
+                this.schemesMap,
+                options.filters || null
             );
             stats.pipelineLayers.push(llmResponse.source || 'llm-reasoning');
         }
 
         // ═══════════════════════════════════════════════════════
-        // Merge LLM explanations into ranked results
+        // Merge LLM explanations into ALL ranked results.
+        // Top LLM_EXPLAIN_LIMIT get AI reasoning; rest get smart
+        // template reasons built from their structured data.
         // ═══════════════════════════════════════════════════════
-        const finalResults = topResults.map(scheme => {
+        const finalResults = displayResults.map((scheme, idx) => {
             const llmRec = llmResponse?.recommendations?.find(
                 r => String(r.schemeId) === String(scheme.id)
             );
 
-            const fallbackReason = scheme.eligibility_summary
-                ? `Qualifies under ${scheme.type === 'state' ? (scheme.state || 'state') : 'central'} eligibility criteria. ${scheme.eligibility_summary}`
-                : `Applicable scheme for your demographic and category profile (${scheme.category}).`;
+            // Build a rich template reason from structured eligibility data
+            const e = scheme.eligibility || {};
+            const ageRange   = (e.minAge !== undefined && e.maxAge !== undefined) ? ` ages ${e.minAge}–${e.maxAge}` : '';
+            const genderStr  = Array.isArray(e.gender) && !e.gender.includes('transgender') ? ` (${e.gender.join('/')})` : '';
+            const incomeStr  = Array.isArray(e.income) && e.income.length < 6 ? ` with income ${e.income.join(' or ')}` : '';
+            const schemeScope = scheme.type === 'state' ? (scheme.state || 'state') : 'central government';
+            const templateReason = scheme.eligibility_summary
+                ? `${schemeScope.charAt(0).toUpperCase() + schemeScope.slice(1)} scheme — ${scheme.eligibility_summary}`
+                : `${schemeScope.charAt(0).toUpperCase() + schemeScope.slice(1)} scheme for${ageRange}${genderStr} beneficiaries${incomeStr}. Matches your active filter criteria.`;
 
             const fallbackBenefits = scheme.benefits ? [scheme.benefits] : [];
-
             const finalScore = llmRec?.relevanceScore ? Number(llmRec.relevanceScore) : scheme.matchScore;
 
             return {
@@ -199,20 +254,22 @@ class RAGService {
                                     : finalScore >= 80 ? 'Great Match'
                                     : finalScore >= 70 ? 'Good Match'
                                     : 'Eligible Match',
-                // AI-enhanced fields
-                matchReason:         llmRec?.matchReason || fallbackReason,
+                // AI-enhanced for top 12, template-based for the rest
+                matchReason:         llmRec?.matchReason || templateReason,
                 keyBenefits:         (llmRec?.keyBenefits && llmRec.keyBenefits.length > 0) ? llmRec.keyBenefits : fallbackBenefits,
-                eligibilityNotes:    llmRec?.eligibilityNotes || scheme.eligibility_summary || 'Eligible based on criteria verification.',
+                eligibilityNotes:    llmRec?.eligibilityNotes || scheme.eligibility_summary || 'Eligible based on filter criteria.',
                 evidenceSections:    llmRec?.evidenceSections || ['overview', 'eligibility'],
                 aiEnhanced:          !!llmRec
             };
         });
 
-        // Prioritize AI-enhanced items first, then sort by matchScore descending
+        // AI-enhanced items bubble to top within their score tier
         finalResults.sort((a, b) => {
+            const scoreDiff = b.matchScore - a.matchScore;
+            if (Math.abs(scoreDiff) > 5) return scoreDiff;  // meaningful score gap takes priority
             if (a.aiEnhanced && !b.aiEnhanced) return -1;
             if (!a.aiEnhanced && b.aiEnhanced) return 1;
-            return b.matchScore - a.matchScore;
+            return scoreDiff;
         });
 
         stats.processingTimeMs = Date.now() - startTime;

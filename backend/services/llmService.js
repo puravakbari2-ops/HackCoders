@@ -57,13 +57,14 @@ CRITICAL RULES — FOLLOW STRICTLY:
 7. NEVER recommend schemes whose eligibility criteria clearly exclude the user's profile.
 8. For each recommendation, list which eligibility criteria the user meets and which are partial/unverified.
 9. If no schemes match well, return an empty recommendations array — do NOT force poor matches.
-10. Keep explanations concise but informative — max 2 sentences per field.`;
+10. Keep explanations concise but informative — max 2 sentences per field.
+11. STRICT FILTER HONORING: All provided schemes have been pre-filtered based on the user's active filters. You must ONLY consider and recommend schemes from the RETRIEVED SCHEME DATA provided below. NEVER suggest or hallucinate any schemes outside this pre-filtered context.`;
     }
 
     /* ── Generate Recommendations with Explanations ──────── */
-    async generateRecommendations(profile, retrievedChunks, schemesMap) {
+    async generateRecommendations(profile, retrievedChunks, schemesMap, filters = null) {
         if (!this.isReady) {
-            return this._templateFallback(profile, retrievedChunks, schemesMap);
+            return this._templateFallback(profile, retrievedChunks, schemesMap, filters);
         }
 
         try {
@@ -95,16 +96,20 @@ CRITICAL RULES — FOLLOW STRICTLY:
 
             // Build user profile description
             const profileDesc = this._describeProfile(profile);
+            const filterDesc = this._describeFilters(filters);
 
             const prompt = `${this._buildSystemPrompt()}
 
 USER PROFILE:
 ${profileDesc}
 
-RETRIEVED SCHEME DATA (from official schemes.json knowledge base):
+USER ACTIVE FILTERS (Pre-RAG):
+${filterDesc}
+
+RETRIEVED SCHEME DATA (from official schemes.json knowledge base - pre-filtered):
 ${contextBlocks.join('\n')}
 
-TASK: Analyze the retrieved scheme data against the user profile. For each scheme that genuinely matches, provide a recommendation with evidence-based reasoning. Return ONLY schemes that the user is likely eligible for.
+TASK: Analyze the retrieved scheme data against the user profile and active filters. For each scheme that genuinely matches, provide a recommendation with evidence-based reasoning. Return ONLY schemes from the retrieved list.
 
 Respond with this exact JSON structure:
 {
@@ -244,7 +249,7 @@ Respond with this JSON:
     }
 
     /* ── Template Fallback (no LLM) ───────────────────────── */
-    _templateFallback(profile, retrievedChunks, schemesMap) {
+    _templateFallback(profile, retrievedChunks, schemesMap, filters = null) {
         const schemeChunks = this._groupChunksByScheme(retrievedChunks);
         const recommendations = [];
 
@@ -351,6 +356,23 @@ Respond with this JSON:
         if (profile.disability) parts.push(`Disability: ${profile.disability}`);
         if (profile.minority) parts.push(`Minority: ${profile.minority}`);
         return parts.join(' | ') || 'No profile provided';
+    }
+
+    /* ── Helper: Describe active filters as text ─────────── */
+    _describeFilters(filters) {
+        if (!filters || typeof filters !== 'object' || Object.keys(filters).length === 0) return 'No active filters applied';
+        const parts = [];
+        if (filters.state) parts.push(`State: ${Array.isArray(filters.state) ? filters.state.join(', ') : filters.state}`);
+        if (filters.gender) parts.push(`Gender: ${filters.gender}`);
+        if (filters.age !== undefined && filters.age !== null) parts.push(`Age: ${filters.age}`);
+        if (filters.ageMin !== undefined && filters.ageMin !== null) parts.push(`Min Age: ${filters.ageMin}`);
+        if (filters.ageMax !== undefined && filters.ageMax !== null) parts.push(`Max Age: ${filters.ageMax}`);
+        if (filters.category) parts.push(`Category: ${Array.isArray(filters.category) ? filters.category.join(', ') : filters.category}`);
+        if (filters.income) parts.push(`Income: ${Array.isArray(filters.income) ? filters.income.join(', ') : filters.income}`);
+        if (filters.occupation) parts.push(`Occupation: ${Array.isArray(filters.occupation) ? filters.occupation.join(', ') : filters.occupation}`);
+        if (filters.schemeCategory) parts.push(`Scheme Category: ${Array.isArray(filters.schemeCategory) ? filters.schemeCategory.join(', ') : filters.schemeCategory}`);
+        if (filters.type) parts.push(`Type: ${filters.type}`);
+        return parts.join(' | ') || 'No active filters applied';
     }
 
     /* ── Helper: Sanitize LLM response ───────────────────── */
