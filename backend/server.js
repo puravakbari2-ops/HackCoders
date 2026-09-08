@@ -67,7 +67,7 @@ app.get('/api/health', (req, res) => {
             vectorCount: indexStats.vectorCount || 0,
             schemeCount: getSchemeCount(),
             embeddingModel: process.env.EMBEDDING_MODEL || 'text-embedding-004',
-            llmModel: process.env.LLM_MODEL || 'gemini-3.6-flash'
+            llmModel: process.env.LLM_MODEL || 'gemini-2.0-flash'
         },
         timestamp: new Date().toISOString()
     });

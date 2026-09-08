@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: jansahay-ai-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: gemini-2.0-flash
+      - key: EMBEDDING_MODEL
+        value: gemini-embedding-001
+      - key: USE_LOCAL_EMBEDDINGS
+        value: "true"
+      - key: TOP_K_RETRIEVAL
+        value: "15"
+      - key: TOP_K_CONTEXT
+        value: "5"
+      - key: SIMILARITY_THRESHOLD
+        value: "0.35"
+      - key: RAG_DEBUG
+        value: "false"
+      - key: KB_VERSION
+        value: 1.0.0
+      - key: GOOGLE_TTS_ENABLED
+        value: "false"
+      - key: FRONTEND_URL
+        value: "*"
+      - key: DEMO_MODE
+        value: "false"
