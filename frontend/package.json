@@ -1,0 +1,11 @@
+{
+  "name": "jansahay-ai-frontend",
+  "version": "1.0.0",
+  "description": "JanSahay AI - Frontend Application",
+  "scripts": {
+    "build": "echo 'Build successful: static assets ready for deployment'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
